@@ -1,0 +1,103 @@
+@layer components {
+
+    .btn {
+        @apply font-semibold text-white p-3 text-center text-base uppercase transition cursor-pointer outline-0 tracking-widest shadow;
+    }
+
+    .btn:hover {
+        @apply scale-105 shadow-lg;
+    }
+
+    .btn:disabled {
+        @apply cursor-default scale-100 text-slate-600 border-slate-500 bg-slate-400 pointer-events-none;
+    }
+
+    .btn:focus {
+        @apply scale-110 ring ring-accent;
+    }
+
+    .btn:focus-visible {
+        @apply ring ring-accent;
+    }
+
+    .btn-xs {
+        @apply !text-xs !p-1;
+    }
+
+    .btn-sm {
+        @apply !text-sm !p-2;
+    }
+
+    .btn-lg {
+        @apply !text-2xl !p-4;
+    }
+
+    .btn-xl {
+        @apply !text-4xl !p-6;
+    }
+
+    .btn-outline {
+        @apply btn bg-transparent border-solid border-4 border-current text-current;
+    }
+
+    .btn-primary {
+        @apply btn bg-primary;
+    }
+
+    .btn-secondary {
+        @apply btn bg-secondary;
+    }
+
+    .btn-info {
+        @apply btn bg-info;
+    }
+
+    .btn-success {
+        @apply btn bg-success;
+    }
+
+    .btn-warning {
+        @apply btn bg-warning;
+    }
+
+    .btn-danger {
+        @apply btn bg-danger;
+    }
+
+    .btn-dark {
+        @apply btn bg-dark;
+    }
+
+    .btn-light {
+        @apply btn bg-light text-slate-900;
+    }
+
+    .btn-link {
+        @apply btn bg-transparent text-primary !shadow-none;
+    }
+
+    .btn-icon {
+        @apply rounded-full aspect-square;
+    }
+
+    .btn-icon > svg {
+        @apply w-8;
+    }
+
+    .btn-xs > svg {
+        @apply w-2;
+    }
+
+    .btn-sm > svg {
+        @apply w-4;
+    }
+
+    .btn-lg > svg {
+        @apply w-10;
+    }
+
+    .btn-xl > svg {
+        @apply w-14;
+    }
+
+}

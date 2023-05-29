@@ -1,0 +1,29 @@
+@layer components {
+
+    .breadcrumbs {
+        
+        @apply text-base;
+
+        &.sm {
+                @apply text-sm;
+        }      
+
+        &.lg {
+            @apply text-xl;
+        }
+
+        & > ol {
+               @apply flex;
+        }
+
+        & li {
+            @apply pl-4 first:pl-0 rtl:pl-0 rtl:pr-4 first:rtl:pr-0 capitalize;
+        }
+
+        & li:not(:first-of-type)::before {
+            @apply float-left rtl:float-right content-[var(--breadcrumb-seperator)] pr-4 rtl:pr-0 rtl:pl-0 rtl:pl-4;
+        }
+                
+    }
+
+}

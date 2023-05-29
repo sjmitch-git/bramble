@@ -1,0 +1,20 @@
+@layer base {
+
+    a:link {
+        @apply text-primary transition;
+    }
+
+    a:visited {
+        @apply text-secondary;
+    }
+
+    a:hover {
+        @apply text-secondary scale-105;
+    }
+
+    a:active,
+    a.active {
+        @apply cursor-default text-info;
+    }
+
+}
