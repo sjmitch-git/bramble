@@ -10,7 +10,7 @@
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
 		"prettier": "prettier --write .",
-		"prepare": "node_modules/.bin/husky-run install"
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"@heroicons/react": "^2.0.18",
@@ -39,6 +39,7 @@
 		"@storybook/testing-library": "^0.0.14-next.2",
 		"@types/prismjs": "^1.26.0",
 		"eslint-plugin-storybook": "^0.6.12",
+		"husky": "^8.0.3",
 		"postcss-import": "^15.1.0",
 		"prettier": "^2.8.8",
 		"prettier-plugin-tailwindcss": "^0.3.0",
