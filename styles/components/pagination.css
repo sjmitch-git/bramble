@@ -1,0 +1,49 @@
+@layer components {
+
+    .pagination {
+
+        @apply flex flex-col gap-1 justify-center items-center;
+
+        & .btn-group {
+            @apply rounded-lg; 
+        }
+
+        &.dark .btn-group {
+            @apply bg-dark
+        }
+
+        &.light .btn-group {
+            @apply bg-light
+        }
+
+        & a.disabled {
+            @apply !bg-transparent;
+        }
+
+        & select {
+            @apply p-2 text-xl;
+
+            &:hover, &:focus{
+                @apply !bg-accent !text-dark;
+            }
+        }
+
+        &.dark select {
+            @apply bg-dark text-light;
+        }
+
+        &.light select {
+            @apply bg-light text-dark;
+        }
+
+        & .sm select {
+            @apply text-sm;
+        }
+
+        & .lg select {
+            @apply text-[2rem];
+        }
+        
+    }
+
+}

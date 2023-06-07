@@ -5,23 +5,27 @@
         @apply text-base;
 
         &.sm {
-                @apply text-sm;
+            @apply text-sm;
         }      
 
         &.lg {
+            @apply text-lg;
+        }
+
+        &.xl {
             @apply text-xl;
         }
 
         & > ol {
-               @apply flex;
+            @apply flex;
         }
 
         & li {
-            @apply pl-4 first:pl-0 rtl:pl-0 rtl:pr-4 first:rtl:pr-0 capitalize;
+            @apply ps-[var(--breadcrumb-px)] first:ps-0 capitalize;
         }
 
         & li:not(:first-of-type)::before {
-            @apply float-left rtl:float-right content-[var(--breadcrumb-seperator)] pr-4 rtl:pr-0 rtl:pl-0 rtl:pl-4;
+            @apply float-left rtl:float-right content-[var(--breadcrumb-separator)] rtl:content-[var(--breadcrumb-separator-rtl)] pe-[var(--breadcrumb-px)];
         }
                 
     }

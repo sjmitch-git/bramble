@@ -1,0 +1,6 @@
+@layer base {
+
+    hr {
+        @apply border-t-8 border-dotted my-8;
+    }
+}

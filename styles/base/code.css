@@ -1,0 +1,6 @@
+@layer base {
+
+    pre {
+        @apply bg-[#2d2d2d] mb-8 max-h-96;
+    }
+}

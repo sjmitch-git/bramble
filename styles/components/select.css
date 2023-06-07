@@ -1,0 +1,11 @@
+@layer components {
+
+        .select {
+            @apply cursor-pointer;
+
+            &:focus-visible {
+                @apply outline-0;
+            }
+        }
+
+}

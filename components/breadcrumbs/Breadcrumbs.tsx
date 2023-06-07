@@ -3,22 +3,20 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-interface BreadcrumbProps {
-	size: string
+interface BreadcrumbsProps {
+	size?: string | undefined
+	styles?: string | undefined
 }
 
-const Breadcrumb = ({ size }: BreadcrumbProps) => {
+const Breadcrumbs = ({ size = '', styles = '' }: BreadcrumbsProps) => {
 	const homeLabel = 'Home'
 	const pathname = usePathname()
 	const paths = pathname.split('/')
 
-	const buildHref = (path: string, index: number) => {
+	const buildHref = (path: string) => {
 		let href = ''
-		console.log(path, index, paths)
 		for (let i = 0; i < paths.length; i++) {
-			console.log(paths[i], href)
 			if (i > 0) href = href + '/' + path
-			console.log(href)
 			if (paths[i] === path) break
 		}
 		return href
@@ -28,7 +26,7 @@ const Breadcrumb = ({ size }: BreadcrumbProps) => {
 
 	return (
 		<nav
-			className={`breadcrumbs ${size}`}
+			className={`breadcrumbs ${size} ${styles}`}
 			aria-label='breadcrumb'
 		>
 			<ol>
@@ -47,7 +45,7 @@ const Breadcrumb = ({ size }: BreadcrumbProps) => {
 						) : index === paths.length - 1 ? (
 							path
 						) : (
-							<Link href={buildHref(path, index)}>{path}</Link>
+							<Link href={buildHref(path)}>{path}</Link>
 						)}
 					</li>
 				))}
@@ -56,4 +54,4 @@ const Breadcrumb = ({ size }: BreadcrumbProps) => {
 	)
 }
 
-export default Breadcrumb
+export default Breadcrumbs

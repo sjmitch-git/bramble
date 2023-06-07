@@ -1,0 +1,22 @@
+@layer base {
+
+    .wrapper {
+        @apply flex flex-col min-h-screen gap-16;
+    }
+
+    .header {
+        @apply p-4;
+    }
+
+    main {
+        @apply relative p-2 md:p-4 grow;
+    }
+
+    article {
+        @apply mx-auto w-full lg:max-w-6xl;
+    }
+
+    .footer {
+        @apply p-4;
+    }
+}

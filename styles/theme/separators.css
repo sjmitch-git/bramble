@@ -1,0 +1,4 @@
+:root {
+    --breadcrumb-separator: '\002F';
+    --breadcrumb-separator-rtl: '\005C';
+}

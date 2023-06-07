@@ -1,166 +1,304 @@
-import ButtonsTemplate from '@/templates/Buttons'
-import BreadcrumbsTemplate from '@/templates/Breadcrumbs'
+import Link from 'next/link'
+
+import Buttongroup from '@/components/buttongroup'
+import Button from '@/components/button'
+import Pagination from '@/components/pagination'
+
+import {
+	PlayIcon,
+	TrashIcon,
+	ArrowPathRoundedSquareIcon,
+	ArrowDownOnSquareIcon,
+	CheckIcon,
+	StarIcon,
+	EllipsisHorizontalIcon,
+	HeartIcon,
+	PlusIcon,
+} from '@heroicons/react/24/solid'
 
 export default function Home() {
 	return (
-		<main className='flex min-h-screen flex-col items-center justify-between bg-red-400 pb-24'>
-			<div>
-				<BreadcrumbsTemplate />
-			</div>
-			<div>
-				<ButtonsTemplate />
-			</div>
-			{/* <div className='z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex'>
-				<div className='fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none'>
-					<a
-						className='pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0'
-						href='https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						By{' '}
-						<Image
-							src='/vercel.svg'
-							alt='Vercel Logo'
-							className='dark:invert'
-							width={100}
-							height={24}
-							priority
-						/>
-					</a>
-				</div>
-			</div> */}
-
-			{/* 			<div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-				<Image
-					className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'
-					src='/next.svg'
-					alt='Next.js Logo'
-					width={180}
-					height={37}
-					priority
+		<>
+			<nav className='mb-8'>
+				<ul>
+					<li>
+						<Link href='/components'>Components</Link>
+					</li>
+				</ul>
+			</nav>
+			<div className='mb-8 flex justify-center'>
+				<Pagination
+					results={49}
+					range={12}
+					page={1}
 				/>
-			</div> */}
-
-			{/* 		<div>
-				<h1>h1. Bootstrap heading</h1>
-				<p>
-					Find in-depth information about Next.js features and API. Find in-depth
-					information about Next.js features and API. Find in-depth information about
-					Next.js features and API.
-				</p>
-				<p>
-					Find in-depth information about Next.js features and API. Find in-depth
-					information about Next.js features and API. Find in-depth information about
-					Next.js features and API.
-				</p>
-				<h2>h2. Bootstrap heading</h2>
-				<p>Find in-depth information about Next.js features and API.</p>
-				<h3>h3. Bootstrap heading</h3>
-				<p>Find in-depth information about Next.js features and API.</p>
-				<h4>h4. Bootstrap heading</h4>
-				<p>Find in-depth information about Next.js features and API.</p>
-				<h5>h5. Bootstrap heading</h5>
-				<p>Find in-depth information about Next.js features and API.</p>
-				<h6>h6. Bootstrap heading</h6>
-				<p>Find in-depth information about Next.js features and API.</p>
-				<p>
-					You can use the mark tag to <mark>highlight</mark> text.
-				</p>
-				<p>
-					<del>This line of text is meant to be treated as deleted text.</del>
-				</p>
-				<p>
-					<s>This line of text is meant to be treated as no longer accurate.</s>
-				</p>
-				<p>
-					<ins>
-						This line of text is meant to be treated as an addition to the document.
-					</ins>
-				</p>
-				<p>
-					<u>This line of text will render as underlined.</u>
-				</p>
-				<p>
-					<small>This line of text is meant to be treated as fine print.</small>
-				</p>
-				<p>
-					<strong>This line rendered as bold text.</strong>
-				</p>
-				<p>
-					<em>This line rendered as italicized text.</em>
-				</p>
-			</div> */}
-
-			{/* 			<div className='mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left'>
-				<a
-					href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-					className='hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100'
-					target='_blank'
-					rel='noopener noreferrer'
+			</div>
+			<div className='mb-8 flex justify-center'>
+				<Buttongroup size='xs'>
+					<Button
+						styles='dark active'
+						tabindex={-1}
+					>
+						Left
+					</Button>
+					<Button styles='dark'>Middle</Button>
+					<Button styles='dark'>Right</Button>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup>
+					<Button
+						styles='secondary'
+						title='play'
+					>
+						<PlayIcon />
+					</Button>
+					<Button
+						styles='secondary active'
+						tabindex={-1}
+					>
+						<StarIcon />
+					</Button>
+					<Button styles='secondary'>
+						<HeartIcon />
+					</Button>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup>
+					<Button
+						styles='info !gap-2'
+						title='Play'
+					>
+						<PlayIcon /> <span>Play</span>
+					</Button>
+					<Button
+						styles='info !gap-2 active'
+						title='Bookmark'
+						tabindex={-1}
+					>
+						<StarIcon /> <span>Bookmark</span>
+					</Button>
+					<Button
+						styles='info !gap-2'
+						title='Like'
+					>
+						<HeartIcon /> <span>Like</span>
+					</Button>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup styles='vertical'>
+					<Button
+						styles='info'
+						title='play'
+					>
+						<PlayIcon />
+					</Button>
+					<Button
+						styles='info active'
+						tabindex={-1}
+					>
+						<StarIcon />
+					</Button>
+					<Button styles='info'>
+						<HeartIcon />
+					</Button>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup styles='vertical'>
+					<Button
+						styles='info'
+						title='play'
+					>
+						<PlayIcon /> Play
+					</Button>
+					<Button styles='info active'>
+						<StarIcon /> Star
+					</Button>
+					<Button styles='info'>
+						<HeartIcon /> Heart
+					</Button>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup styles='vertical'>
+					<Button
+						styles='info outline'
+						title='play'
+					>
+						<PlayIcon /> Play
+					</Button>
+					<Button styles='info outline active'>
+						<StarIcon /> Star
+					</Button>
+					<Button styles='info outline'>
+						<HeartIcon /> Heart
+					</Button>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup size='xl'>
+					<Button styles='primary active'>Left</Button>
+					<Button>Middle</Button>
+					<Button>Right</Button>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup
+					size='xs'
+					styles=''
 				>
-					<h2 className={`mb-3 text-2xl font-semibold`}>
-						Docs{' '}
-						<span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-							-&gt;
-						</span>
-					</h2>
-					<p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-						Find in-depth information about Next.js features and API.
-					</p>
-				</a>
-
-				<a
-					href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-					className='hover:dark:border-neutral-700 hover:dark:bg-neutral-800 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:bg-opacity-30'
-					target='_blank'
-					rel='noopener noreferrer'
+					<Button styles='outline active'>Left</Button>
+					<Button styles='outline'>Middle</Button>
+					<Button styles='outline'>Right</Button>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup
+					size=''
+					styles=''
 				>
-					<h2 className={`mb-3 text-2xl font-semibold`}>
-						Learn{' '}
-						<span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-							-&gt;
-						</span>
-					</h2>
-					<p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-						Learn about Next.js in an interactive course with&nbsp;quizzes!
-					</p>
-				</a>
-
-				<a
-					href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-					className='hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100'
-					target='_blank'
-					rel='noopener noreferrer'
+					<Button styles='outline'>Left</Button>
+					<Button styles='outline'>Middle</Button>
+					<Button styles='outline'>Right</Button>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup
+					size='xl'
+					styles=''
 				>
-					<h2 className={`mb-3 text-2xl font-semibold`}>
-						Templates{' '}
-						<span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-							-&gt;
-						</span>
-					</h2>
-					<p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-						Explore the Next.js 13 playground.
-					</p>
-				</a>
+					<Button styles='outline active'>Active</Button>
+					<Button styles='outline'>Middle</Button>
+					<Button styles='outline'>Right</Button>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup styles='vertical'>
+					<Button styles='active'>Active</Button>
+					<Button>Middle</Button>
+					<Button>Right</Button>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup styles='vertical xs'>
+					<a
+						href='#'
+						className='btn link primary active outline'
+						aria-current='page'
+					>
+						Active link
+					</a>
+					<a
+						href='#'
+						className='btn link primary outline'
+					>
+						Link
+					</a>
+					<a
+						href='#'
+						className='btn link primary outline'
+					>
+						Link
+					</a>
+				</Buttongroup>
+			</div>
 
-				<a
-					href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-					className='hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					<h2 className={`mb-3 text-2xl font-semibold`}>
-						Deploy{' '}
-						<span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-							-&gt;
-						</span>
-					</h2>
-					<p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-						Instantly deploy your Next.js site to a shareable URL with Vercel.
-					</p>
-				</a>
-			</div> */}
-		</main>
+			<div className='mb-8'>
+				<Buttongroup styles='vertical sm'>
+					<a
+						href='#'
+						className='btn link primary active outline'
+						aria-current='page'
+					>
+						Active link
+					</a>
+					<a
+						href='#'
+						className='btn link primary outline'
+					>
+						Link
+					</a>
+					<a
+						href='#'
+						className='btn link primary outline'
+					>
+						Link
+					</a>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup styles='vertical'>
+					<a
+						href='#'
+						className='btn dark outline'
+					>
+						Link
+					</a>
+					<a
+						href='#'
+						className='btn active dark outline'
+						aria-current='page'
+					>
+						Active link
+					</a>
+					<a
+						href='#'
+						className='btn dark outline'
+					>
+						Link 3
+					</a>
+				</Buttongroup>
+			</div>
+
+			<div className='mb-8'>
+				<Buttongroup styles='vertical lg'>
+					<a
+						href='#'
+						className='btn link primary active outline'
+						aria-current='page'
+					>
+						Active link
+					</a>
+					<a
+						href='#'
+						className='btn link primary outline'
+					>
+						Link
+					</a>
+					<a
+						href='#'
+						className='btn link primary outline'
+					>
+						Link
+					</a>
+				</Buttongroup>
+			</div>
+			<div className='mb-8'>
+				<Buttongroup styles='vertical xl'>
+					<a
+						href='#'
+						className='btn link primary outline'
+						aria-current='page'
+					>
+						link
+					</a>
+					<a
+						href='#'
+						className='btn link primary active outline'
+					>
+						Active link
+					</a>
+					<a
+						href='#'
+						className='btn link primary outline'
+					>
+						Link
+					</a>
+				</Buttongroup>
+			</div>
+		</>
 	)
 }

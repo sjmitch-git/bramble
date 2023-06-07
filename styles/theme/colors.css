@@ -1,10 +1,11 @@
 :root {
     --primary-color: var(--purple);
     --secondary-color: var(--deep-purple);
-    --tertiary-color: var(--pink);
+    --tertiary-color: var(--light-blue);
     --accent-color: var(--yellow);
-    --neutral-color: var(--blue-grey);
-    --dark-color: var(--dark-grey);
+    --neutral-color: var(--mid-grey);
+    --disabled-color: var(--darker-grey);
+    --dark-color: var(--darkest-grey);
     --light-color: var(--lightest-grey);
 
     --info-color: #2563eb;

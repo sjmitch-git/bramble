@@ -1,0 +1,78 @@
+@layer components {
+
+    .btn-group {
+
+        @apply inline-flex shadow-lg overflow-hidden;
+
+        &.vertical {
+            @apply flex-col;
+
+            .btn {
+                @apply first:rounded-l-none first:rounded-t-lg last:rounded-r-none last:rounded-b-lg;
+            }
+
+            &.xs .btn {
+               @apply first:rounded-t last:rounded-b;
+            }
+        }
+
+        & .btn {
+
+                @apply first:rounded-l-lg last:rounded-r-lg transition-none shadow-none;
+
+                &:not(.active):hover {
+                        @apply scale-100 bg-accent text-dark;
+                }
+
+                &:focus {
+                    @apply ring-0 bg-accent text-dark scale-100;
+                }
+        }
+
+        &:not(.vertical) {
+            & .outline:not(:first-child) {
+                    @apply -ml-[4px]
+            }
+
+            &.xs .outline:not(:first-child) {
+                @apply -ml-[1px]
+            }
+
+            &.sm .outline:not(:first-child) {
+                @apply -ml-[2px]
+            }
+
+            &.lg .outline:not(:first-child) {
+                @apply -ml-[8px]
+            }
+
+            &.xl .outline:not(:first-child) {
+                @apply -ml-[12px]
+            }
+        }
+
+        &.vertical {
+            & .outline:not(:first-child) {
+                @apply -mt-[4px]
+            }
+
+            &.xs .outline:not(:first-child) {
+                @apply -mt-[1px]
+            }
+
+            &.sm .outline:not(:first-child) {
+                @apply -mt-[2px]
+            }
+
+            &.lg .outline:not(:first-child) {
+                @apply -mt-[8px]
+            }
+
+            &.xl .outline:not(:first-child) {
+                @apply -mt-[12px]
+            }
+        }
+
+    }
+
+}

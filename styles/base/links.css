@@ -1,14 +1,14 @@
 @layer base {
 
-    a:link {
+    a:link:not(.btn) {
         @apply text-primary transition;
     }
 
-    a:visited {
+    a:visited:not(.btn) {
         @apply text-secondary;
     }
 
-    a:hover {
+    a:hover:not(.btn) {
         @apply text-secondary scale-105;
     }
 
