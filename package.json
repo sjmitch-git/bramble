@@ -10,7 +10,7 @@
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
 		"prettier": "prettier --write .",
-		"prepare": "husky install"
+		"prepare": "node_modules/.bin/husky-run install"
 	},
 	"dependencies": {
 		"@heroicons/react": "^2.0.18",
