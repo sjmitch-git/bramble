@@ -8,7 +8,7 @@ interface SelectProps {
 }
 
 const Select = ({ styles, title, id, children, value, onChange }: SelectProps) => {
-	console.log(styles)
+	//console.log(styles)
 	return (
 		<select
 			className={`select ${styles}`}

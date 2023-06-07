@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 import { roundUp } from '@smitch/js-lib'
 
@@ -28,6 +28,8 @@ interface PaginationProps {
 const Pagination = ({ page, range, results, size, theme }: PaginationProps) => {
 	const [selectValue, setselectValue] = useState(page)
 	const router = useRouter()
+	const searchParams = useSearchParams()
+	let params = searchParams.toString()
 
 	useEffect(() => {
 		setselectValue(page)
@@ -37,9 +39,17 @@ const Pagination = ({ page, range, results, size, theme }: PaginationProps) => {
 
 	const totalPages = roundUp(results / range)
 
+	const buildParams = (p: string) => {
+		return !params
+			? `p=${p}`
+			: searchParams.has('p')
+			? params.replace(`p=${page}`, `p=${p}`)
+			: `${params}&p=${p}`
+	}
+
 	const handleChange = (e: React.FormEvent<HTMLSelectElement>): void => {
-		setselectValue(e.currentTarget.value)
-		router.push(`${pathname}?p=${e.currentTarget.value}`)
+		let p = e.currentTarget.value
+		router.push(`${pathname}?${buildParams(p)}`)
 	}
 
 	return (
@@ -52,20 +62,14 @@ const Pagination = ({ page, range, results, size, theme }: PaginationProps) => {
 				styles='mb-2'
 			>
 				<Link
-					href={{
-						pathname: pathname,
-						query: { p: 1 },
-					}}
+					href={`${pathname}?${buildParams('1')}`}
 					className={`btn link !gap-0 ${Number(selectValue) === 1 ? 'disabled' : ''}`}
 					title='First Page'
 				>
 					|<ChevronLeftIcon className='-ms-[0.55em]' />
 				</Link>
 				<Link
-					href={{
-						pathname: pathname,
-						query: { p: `${Number(selectValue) - 1}` },
-					}}
+					href={`${pathname}?${buildParams(`${Number(selectValue) - 1}`)}`}
 					className={`btn link ${Number(selectValue) === 1 ? 'disabled' : ''}`}
 					title='Previous Page'
 				>
@@ -87,20 +91,14 @@ const Pagination = ({ page, range, results, size, theme }: PaginationProps) => {
 					))}
 				</Select>
 				<Link
-					href={{
-						pathname: pathname,
-						query: { p: `${Number(selectValue) + 1}` },
-					}}
+					href={`${pathname}?${buildParams(`${Number(selectValue) + 1}`)}`}
 					title='Next Page'
 					className={`btn link ${Number(selectValue) === totalPages ? 'disabled' : ''}`}
 				>
 					<ChevronDoubleRightIcon />
 				</Link>
 				<Link
-					href={{
-						pathname: pathname,
-						query: { p: totalPages },
-					}}
+					href={`${pathname}?${buildParams(`${totalPages}`)}`}
 					title='Last Page'
 					className={`btn link !gap-0 ${
 						Number(selectValue) === totalPages ? 'disabled' : ''
