@@ -30,7 +30,7 @@ export default function Home() {
 				<Pagination
 					results={49}
 					range={12}
-					page={1}
+					page={'1'}
 				/>
 			</div>
 			<div className='mb-8 flex justify-center'>
