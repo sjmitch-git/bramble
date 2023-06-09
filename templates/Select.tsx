@@ -3,6 +3,7 @@
 import { useRef, useState } from 'react'
 import Select from '@/components/select'
 import Codeblock from '@/components/codeblock'
+import Link from 'next/link'
 
 const SelectTemplate = () => {
 	const [fruit, setFruit] = useState('')
@@ -35,6 +36,9 @@ const SelectTemplate = () => {
 	return (
 		<>
 			<h2>Usage</h2>
+			<p>
+				<a href='#numbers'>Numbers</a>
+			</p>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
 					{`import Select from '@/components/select'
@@ -822,6 +826,35 @@ return (
 	</Select>
 </label>`}</Codeblock>
 			</div>
+			<h2 id='numbers'>Numbers</h2>
+			<div className='mb-0 flex flex-wrap items-center justify-center gap-12 bg-gray-300 p-4'>
+				<Select
+					styles='lg dark'
+					title='Select Page'
+					onChange={handleChange}
+				>
+					{[...new Array(24)].map((_el, index) => (
+						<option
+							key={index}
+							value={(index + 1).toString()}
+						>
+							{index + 1}
+						</option>
+					))}
+				</Select>
+			</div>
+			<Codeblock language='jsx'>
+				{`<Select>
+	{[...new Array(24)].map((_el, index) => (
+		<option
+			key={index}
+			value={(index + 1).toString()}
+		>
+			{index + 1}
+		</option>
+	))}
+</Select>`}
+			</Codeblock>
 			<h2>Optgroup</h2>
 			<div className='mb-0 flex flex-wrap items-center justify-center gap-12 bg-gray-300 p-4'>
 				<label className='label col text-xl'>

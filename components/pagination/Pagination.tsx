@@ -45,7 +45,7 @@ const Pagination = ({
 
 	useEffect(() => {
 		setselectValue(searchParams.get('page') || '1')
-	}, [params])
+	}, [searchParams])
 
 	const pathname = usePathname()
 
