@@ -6,6 +6,17 @@
 
         & .btn-group {
             @apply rounded-lg; 
+
+            &.vertical .btn {
+                @apply mx-auto;
+            }
+
+            &.minimal {
+
+                & select, & .btn:first-child, & .btn:last-child {
+                    @apply hidden;
+                }
+            }
         }
 
         &.dark .btn-group {
@@ -21,7 +32,7 @@
         }
 
         & select {
-            @apply p-2 text-xl;
+            @apply p-2 text-xl mx-auto;
 
             &:hover, &:focus{
                 @apply !bg-accent !text-dark;
@@ -44,6 +55,17 @@
             @apply text-[2rem];
         }
         
+    }
+
+    .feedback {
+        
+        &.sm {
+            @apply text-sm;
+        }
+
+        &.lg {
+            @apply text-xl;
+        }
     }
 
 }

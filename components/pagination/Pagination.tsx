@@ -20,20 +20,32 @@ import Select from '@/components/select'
 interface PaginationProps {
 	size?: string
 	theme?: 'dark' | 'light' | undefined
-	page: string
 	range: number
 	results: number
+	feedback?: boolean
+	vertical?: boolean
+	icons?: boolean
+	minimal?: boolean
 }
 
-const Pagination = ({ page, range, results, size, theme }: PaginationProps) => {
-	const [selectValue, setselectValue] = useState(page)
+const Pagination = ({
+	range,
+	results,
+	size,
+	theme,
+	feedback = true,
+	vertical = false,
+	icons = false,
+	minimal = false,
+}: PaginationProps) => {
+	const [selectValue, setselectValue] = useState('')
 	const router = useRouter()
 	const searchParams = useSearchParams()
 	let params = searchParams.toString()
 
 	useEffect(() => {
-		setselectValue(page)
-	}, [page])
+		setselectValue(searchParams.get('page') || '1')
+	}, [params])
 
 	const pathname = usePathname()
 
@@ -41,15 +53,14 @@ const Pagination = ({ page, range, results, size, theme }: PaginationProps) => {
 
 	const buildParams = (p: string) => {
 		return !params
-			? `p=${p}`
-			: searchParams.has('p')
-			? params.replace(`p=${page}`, `p=${p}`)
-			: `${params}&p=${p}`
+			? `page=${p}`
+			: searchParams.has('page')
+			? params.replace(`page=${selectValue}`, `page=${p}`)
+			: `${params}&page=${p}`
 	}
 
 	const handleChange = (e: React.FormEvent<HTMLSelectElement>): void => {
-		let p = e.currentTarget.value
-		router.push(`${pathname}?${buildParams(p)}`)
+		router.push(`${pathname}?${buildParams(e.currentTarget.value)}`)
 	}
 
 	return (
@@ -59,21 +70,25 @@ const Pagination = ({ page, range, results, size, theme }: PaginationProps) => {
 		>
 			<Buttongroup
 				size={size}
-				styles='mb-2'
+				styles={`mb-2 ${vertical && 'vertical'} ${minimal && 'minimal'}`}
 			>
 				<Link
 					href={`${pathname}?${buildParams('1')}`}
-					className={`btn link !gap-0 ${Number(selectValue) === 1 ? 'disabled' : ''}`}
+					className={`btn link ${Number(selectValue) === 1 && 'disabled'} ${
+						icons && 'rtl:rotate-180'
+					}`}
 					title='First Page'
 				>
-					|<ChevronLeftIcon className='-ms-[0.55em]' />
+					{icons ? <ChevronDoubleLeftIcon /> : 'First'}
 				</Link>
 				<Link
 					href={`${pathname}?${buildParams(`${Number(selectValue) - 1}`)}`}
-					className={`btn link ${Number(selectValue) === 1 ? 'disabled' : ''}`}
+					className={`btn link ${Number(selectValue) === 1 && 'disabled'} ${
+						icons && 'rtl:rotate-180'
+					}`}
 					title='Previous Page'
 				>
-					<ChevronDoubleLeftIcon />
+					{icons ? <ChevronLeftIcon /> : 'Prev'}
 				</Link>
 				<Select
 					title='Select Page'
@@ -93,23 +108,27 @@ const Pagination = ({ page, range, results, size, theme }: PaginationProps) => {
 				<Link
 					href={`${pathname}?${buildParams(`${Number(selectValue) + 1}`)}`}
 					title='Next Page'
-					className={`btn link ${Number(selectValue) === totalPages ? 'disabled' : ''}`}
+					className={`btn link ${Number(selectValue) === totalPages && 'disabled'} ${
+						icons && 'rtl:rotate-180'
+					}`}
 				>
-					<ChevronDoubleRightIcon />
+					{icons ? <ChevronRightIcon /> : 'Next'}
 				</Link>
 				<Link
 					href={`${pathname}?${buildParams(`${totalPages}`)}`}
 					title='Last Page'
-					className={`btn link !gap-0 ${
-						Number(selectValue) === totalPages ? 'disabled' : ''
+					className={`btn link ${Number(selectValue) === totalPages && 'disabled'} ${
+						icons && 'rtl:rotate-180'
 					}`}
 				>
-					<ChevronRightIcon className='-me-[0.4em]' />|
+					{icons ? <ChevronDoubleRightIcon /> : 'Last'}
 				</Link>
 			</Buttongroup>
-			<div className={`text-${size}`}>
-				Page: {selectValue} of {totalPages}
-			</div>
+			{feedback && (
+				<div className={`feedback ${size}`}>
+					Page: {selectValue} of {totalPages}
+				</div>
+			)}
 		</nav>
 	)
 }

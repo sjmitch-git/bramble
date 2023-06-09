@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 import Buttongroup from '@/components/buttongroup'
 import Button from '@/components/button'
-import Pagination from '@/components/pagination'
 
 import {
 	PlayIcon,
@@ -26,13 +25,6 @@ export default function Home() {
 					</li>
 				</ul>
 			</nav>
-			<div className='mb-8 flex justify-center'>
-				<Pagination
-					results={49}
-					range={12}
-					page={'1'}
-				/>
-			</div>
 			<div className='mb-8 flex justify-center'>
 				<Buttongroup size='xs'>
 					<Button

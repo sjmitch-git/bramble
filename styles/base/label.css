@@ -1,0 +1,18 @@
+@layer base {
+
+    label {
+        @apply flex cursor-pointer items-center gap-4 relative;
+
+        &.col {
+            @apply flex-col items-start gap-2;
+        }
+
+        &:not(.col):has(> :required)::after {
+            @apply text-danger content-['_*'] -top-2 start-0 absolute
+        }
+
+        &.col:has(> :required)::after {
+            @apply text-danger content-['_*'] top-0 end-0 absolute
+        }
+    }
+}

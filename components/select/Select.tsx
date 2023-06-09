@@ -1,21 +1,38 @@
 interface SelectProps {
+	size?: string | 'sm' | 'lg' | undefined
 	styles?: string | undefined
 	id?: string | undefined
 	title?: string | undefined
 	children: React.ReactNode
 	value?: string | undefined
+	name?: string | undefined
 	onChange?: React.ChangeEventHandler<HTMLSelectElement> | undefined
+	disabled?: boolean | undefined
+	required?: boolean | undefined
+	nocaret?: boolean | undefined
 }
 
-const Select = ({ styles, title, id, children, value, onChange }: SelectProps) => {
-	//console.log(styles)
+const Select = ({
+	name = 'label',
+	styles,
+	title,
+	id,
+	children,
+	value,
+	onChange,
+	disabled,
+	required,
+	nocaret,
+}: SelectProps) => {
 	return (
 		<select
-			className={`select ${styles}`}
+			className={`select ${styles} ${nocaret && 'nocaret'}`}
 			title={title}
 			id={id}
 			onChange={onChange}
 			value={value}
+			required={required}
+			disabled={disabled}
 		>
 			{children}
 		</select>

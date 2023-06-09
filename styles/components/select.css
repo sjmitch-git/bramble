@@ -1,10 +1,50 @@
 @layer components {
 
         .select {
-            @apply cursor-pointer;
+            @apply cursor-pointer text-base p-3 capitalize;
 
-            &:focus-visible {
-                @apply outline-0;
+            &:disabled {
+                @apply cursor-default;
+            }
+
+            &:required {
+                @apply cursor-default;
+            }
+
+            &.text-xs {
+                @apply p-1;
+            }
+
+            &.text-xs {
+                @apply p-2;
+            }
+
+            &.text-lg {
+                @apply p-4;
+            }
+
+            &.text-xl {
+                @apply p-4;
+            }
+
+            &.light {
+                @apply bg-light;
+            }
+
+            &.dark {
+                @apply bg-dark text-light;
+            }
+
+            &.circle {
+                @apply rounded-full appearance-none aspect-square;
+            }
+
+            &.nocaret {
+                @apply appearance-none;
+            }
+
+             &:focus-visible {
+                @apply ring ring-accent;
             }
         }
 

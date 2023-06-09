@@ -1,11 +1,7 @@
 import Pagination from '@/components/pagination'
 import Codeblock from '@/components/codeblock'
 
-interface PaginationTemplateProps {
-	page: string
-}
-
-const PaginationTemplate = ({ page }: PaginationTemplateProps) => {
+const PaginationTemplate = () => {
 	return (
 		<>
 			<h2>Usage</h2>
@@ -15,11 +11,13 @@ const PaginationTemplate = ({ page }: PaginationTemplateProps) => {
 
 return (			
 	<Pagination
-        size={'base'}   // 'sm' | 'base' | 'lg'
-		theme={'dark'}  // 'dark' | 'light'
-		results={49}    // total results
-        range={12}      // results per page
-        page={1}        // current page
+        size={'base'}   	// 'sm' | 'base' | 'lg' | undefined
+		theme={'dark'}  	// 'dark' | 'light'
+		results={49}    	// total results
+        range={12}      	// results per page
+		feedback={true} 	// show feedback message
+		vertical={false} 	// vertical orientation
+		minimal={false} 	// minimal display
     />
 )`}
 				</Codeblock>
@@ -30,7 +28,7 @@ return (
 						theme='dark'
 						results={49}
 						range={12}
-						page={page}
+						icons={true}
 					/>
 				</div>
 				<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
@@ -39,7 +37,13 @@ return (
 						theme='light'
 						results={49}
 						range={12}
-						page={page}
+						icons={true}
+					/>
+					<Pagination
+						size='base'
+						theme='light'
+						results={49}
+						range={12}
 					/>
 				</div>
 				<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
@@ -48,9 +52,62 @@ return (
 						size='lg'
 						results={49}
 						range={12}
-						page={page}
+						feedback={true}
 					/>
 				</div>
+			</div>
+			<h3>Vertical</h3>
+			<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
+				<Pagination
+					size='sm'
+					theme='dark'
+					results={49}
+					range={12}
+					feedback={false}
+					vertical={true}
+				/>
+				<Pagination
+					size='sm'
+					theme='dark'
+					results={49}
+					range={12}
+					feedback={false}
+					vertical={true}
+					icons={true}
+				/>
+			</div>
+			<h3>RTL</h3>
+			<div
+				className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'
+				dir='rtl'
+			>
+				<Pagination
+					size='sm'
+					theme='dark'
+					results={49}
+					range={12}
+					feedback={false}
+				/>
+
+				<Pagination
+					size='sm'
+					theme='dark'
+					results={49}
+					range={12}
+					feedback={false}
+					icons={true}
+				/>
+			</div>
+			<h3>Minimal</h3>
+			<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
+				<Pagination
+					theme='light'
+					results={49}
+					range={12}
+					feedback={false}
+					icons={true}
+					minimal={true}
+				/>
 			</div>
 		</>
 	)

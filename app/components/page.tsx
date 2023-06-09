@@ -21,6 +21,9 @@ export default function Components() {
 					<li>
 						<Link href='./components/pagination'>Pagination</Link>
 					</li>
+					<li>
+						<Link href='./components/select'>Select</Link>
+					</li>
 				</ul>
 			</nav>
 		</>

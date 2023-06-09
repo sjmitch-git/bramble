@@ -2,5 +2,13 @@
 
     pre {
         @apply bg-[#2d2d2d] mb-8 max-h-96;
+
+        & code {
+            @apply opacity-100;
+        }
+    }
+
+    code {
+        @apply opacity-50;
     }
 }

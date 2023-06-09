@@ -1,0 +1,6 @@
+@layer utilities {
+
+    .text-size-inherit {
+        font-size: inherit;
+    }
+}
