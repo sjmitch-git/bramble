@@ -1,0 +1,27 @@
+@layer components {
+
+        .gallery {
+            @apply grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-6;
+
+            figure.portrait {
+                @apply aspect-[3/4];
+            }
+            
+            figure.square {
+                @apply aspect-square;
+            }
+
+            img {
+                @apply cursor-zoom-in w-full h-full object-cover;
+
+                &:hover {
+                    @apply opacity-75;
+                }
+
+                &:focus-visible {
+                    @apply opacity-75 outline-accent outline-8;
+                }
+            }
+        }
+
+}

@@ -1,0 +1,26 @@
+[
+	{
+		"name": "akita",
+		"src": "/img/dogs/akita.jpg"
+	},
+	{
+		"name": "beagle",
+		"src": "/img/dogs/beagle.jpg"
+	},
+	{
+		"name": "corgi",
+		"src": "/img/dogs/corgi.jpg"
+	},
+	{
+		"name": "dachshund",
+		"src": "/img/dogs/dachshund.jpg"
+	},
+	{
+		"name": "husky",
+		"src": "/img/dogs/husky.jpg"
+	},
+	{
+		"name": "poodle",
+		"src": "/img/dogs/poodle.jpg"
+	}
+]

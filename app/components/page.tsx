@@ -19,10 +19,22 @@ export default function Components() {
 						<Link href='./components/codeblock'>Codeblock</Link>
 					</li>
 					<li>
+						<Link href='./components/figure'>Figure</Link>
+					</li>
+					<li>
+						<Link href='./components/gallery'>Gallery</Link>
+					</li>
+					<li>
+						<Link href='./components/modal'>Modal</Link>
+					</li>
+					<li>
 						<Link href='./components/pagination'>Pagination</Link>
 					</li>
 					<li>
 						<Link href='./components/select'>Select</Link>
+					</li>
+					<li>
+						<Link href='./components/video'>Video</Link>
 					</li>
 				</ul>
 			</nav>

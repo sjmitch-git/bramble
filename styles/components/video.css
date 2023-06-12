@@ -1,0 +1,14 @@
+@layer components {
+
+    .video-wrapper {
+        @apply relative w-full h-auto max-w-4xl;
+    }
+
+    .video {
+        @apply w-full aspect-video bg-light;
+
+        &[poster] {
+            @apply object-cover;
+        }
+    }
+}

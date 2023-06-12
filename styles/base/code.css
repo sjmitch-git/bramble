@@ -1,7 +1,7 @@
 @layer base {
 
     pre {
-        @apply bg-[#2d2d2d] mb-8 max-h-96;
+        @apply bg-[#2d2d2d] !mb-12 max-h-96;
 
         & code {
             @apply opacity-100;

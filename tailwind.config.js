@@ -6,6 +6,11 @@ module.exports = {
 		'./app/**/*.{js,ts,jsx,tsx,mdx}',
 		'./templates/**/*.{js,ts,jsx,tsx,mdx}',
 	],
+	safelist: [
+		{
+			pattern: /bg-(warning|error)/,
+		},
+	],
 	theme: {
 		extend: {
 			backgroundImage: {

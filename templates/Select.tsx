@@ -36,9 +36,7 @@ const SelectTemplate = () => {
 	return (
 		<>
 			<h2>Usage</h2>
-			<p>
-				<a href='#numbers'>Numbers</a>
-			</p>
+
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
 					{`import Select from '@/components/select'

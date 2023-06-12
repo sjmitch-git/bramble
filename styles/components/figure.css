@@ -1,0 +1,42 @@
+@layer components {
+
+    .figure {
+        @apply w-full h-auto;
+
+        &:has(.video) {
+            @apply aspect-video;
+        }
+
+        &:has([data-nimg='fill']) {
+            @apply relative aspect-[4/3];
+
+            & img {
+                @apply w-full h-full object-cover;
+            }
+
+            &.portrait {
+                @apply aspect-[3/4];
+            }
+
+            &.square {
+                @apply aspect-square;
+            }
+
+            &:has(.figcaption) {
+                @apply mb-8
+            }
+
+            .figcaption {
+                @apply absolute -bottom-10 w-full;
+            }
+        }
+
+        .click:hover {
+             @apply opacity-75 cursor-zoom-in;
+         }
+
+        .figcaption {
+            @apply p-2 text-center;
+        }
+    }
+}
