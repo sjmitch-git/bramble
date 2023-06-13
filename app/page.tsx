@@ -1,15 +1,40 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 
-import Video from '@/components/video'
-import Figure from '@/components/figure'
-import Gallery from '@/components/gallery'
+import { useFetch, FetchProps } from '@/hooks/usefetch'
 
-import dogs from '@/data/dogs.json'
+interface DataProps {
+	title: string
+	id: string
+}
 
 export default function Home() {
+	const [data, setData] = useState<any>()
+	const [error, setError] = useState<any>()
+	const [loading, setLoading] = useState<boolean>(false)
+
+	const response: FetchProps = useFetch('https://jsonplaceholder.typicode.com/todos')
+
+	useEffect(() => {
+		if (response.loading) {
+			setLoading(true)
+			console.log('loading')
+		} else if (response.error) {
+			setLoading(false)
+			setError(response.error)
+			console.log('error', response)
+		} else {
+			setLoading(false)
+			setError(null)
+			setData(response.data)
+			console.log('DATA', response.data)
+		}
+	})
+
+	// if (!response.loading) console.log(response.data)
+
 	return (
 		<>
 			<nav className='mb-8'>
@@ -20,27 +45,15 @@ export default function Home() {
 				</ul>
 			</nav>
 
-			<Gallery
-				data={dogs}
-				styles='mb-12'
-			/>
-
-			{/* 	<div className='mb-8 grid grid-cols-6 gap-4'>
-				{dogs.map((dog, index) => (
-					<Figure
-						caption={dog.name}
-						key={index}
-						styles='portrait'
-					>
-						<Image
-							fill
-							src={`/img/${dog.image}`}
-							alt={dog.name}
-							title={dog.name}
-						/>
-					</Figure>
-				))}
-			</div> */}
+			{loading ? (
+				<p>Loading!</p>
+			) : error ? (
+				<p className='text-error'>{response.error}</p>
+			) : (
+				data.map((item: DataProps) => {
+					return <p key={item.id}>{item.title}</p>
+				})
+			)}
 		</>
 	)
 }

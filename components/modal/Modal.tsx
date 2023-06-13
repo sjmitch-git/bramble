@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import useDisableBackButton from '@/hooks/usedisabledbackbutton'
 
 import Figure from '@/components/figure'
 import ButtonClose from '@/components/button/ButtonClose'
@@ -14,19 +14,7 @@ interface ModalProps {
 }
 
 const Modal = ({ data: { src, name }, onClick }: ModalProps) => {
-	useEffect(() => {
-		window.history.pushState(null, document.title, window.location.href)
-
-		function onBackButtonEvent(e: Event) {
-			e.preventDefault()
-		}
-
-		window.addEventListener('popstate', onBackButtonEvent, true)
-
-		return () => {
-			window.removeEventListener('popstate', onBackButtonEvent, true)
-		}
-	}, [])
+	useDisableBackButton()
 
 	return (
 		<div className='modal'>
