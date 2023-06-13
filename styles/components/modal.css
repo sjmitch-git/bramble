@@ -10,9 +10,5 @@
         & .img {
             @apply cursor-zoom-out h-auto;
         }
-
-        & .btn {
-            @apply absolute top-4 right-8;
-        }
     }
 }

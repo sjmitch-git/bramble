@@ -1,7 +1,9 @@
-import Figure from '@/components/figure'
-import Button from '@/components/button'
+'use client'
 
-import { XCircleIcon } from '@heroicons/react/24/solid'
+import React, { useEffect } from 'react'
+
+import Figure from '@/components/figure'
+import ButtonClose from '@/components/button/ButtonClose'
 
 interface ModalProps {
 	data: {
@@ -12,15 +14,26 @@ interface ModalProps {
 }
 
 const Modal = ({ data: { src, name }, onClick }: ModalProps) => {
+	useEffect(() => {
+		window.history.pushState(null, document.title, window.location.href)
+
+		function onBackButtonEvent(e: Event) {
+			e.preventDefault()
+		}
+
+		window.addEventListener('popstate', onBackButtonEvent, true)
+
+		return () => {
+			window.removeEventListener('popstate', onBackButtonEvent, true)
+		}
+	}, [])
+
 	return (
 		<div className='modal'>
-			<Button
-				styles='dark icon circle'
+			<ButtonClose
+				styles='dark hover:scale-125 absolute top-4 right-4'
 				onClick={onClick}
-			>
-				<XCircleIcon />
-				<span className='sr-only'>Close</span>
-			</Button>
+			/>
 			<Figure caption={name}>
 				<img
 					className='img'

@@ -49,6 +49,7 @@ const ModalTemplate = () => {
 						alt='Beagle'
 						className='click'
 						onClick={handleClick}
+						tabIndex={0}
 					/>
 				</Figure>
 				{modal && (
