@@ -3,7 +3,10 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-import { useFetch, FetchProps } from '@/hooks/usefetch'
+// import { useFetch, FetchProps } from '@/hooks/usefetch'
+import { dehydrate, QueryClient } from '@tanstack/react-query'
+import PostList from '@/components/postlist'
+import { fetchPosts } from '@/hooks/usePosts'
 
 interface DataProps {
 	title: string
@@ -11,30 +14,6 @@ interface DataProps {
 }
 
 export default function Home() {
-	const [data, setData] = useState<any>()
-	const [error, setError] = useState<any>()
-	const [loading, setLoading] = useState<boolean>(false)
-
-	const response: FetchProps = useFetch('https://jsonplaceholder.typicode.com/todos')
-
-	useEffect(() => {
-		if (response.loading) {
-			setLoading(true)
-			console.log('loading')
-		} else if (response.error) {
-			setLoading(false)
-			setError(response.error)
-			console.log('error', response)
-		} else {
-			setLoading(false)
-			setError(null)
-			setData(response.data)
-			console.log('DATA', response.data)
-		}
-	})
-
-	// if (!response.loading) console.log(response.data)
-
 	return (
 		<>
 			<nav className='mb-8'>
@@ -42,18 +21,32 @@ export default function Home() {
 					<li>
 						<Link href='/components'>Components</Link>
 					</li>
+					<li>
+						<p>
+							<Link href='/hydration'>Prefetching Using Hydration</Link>
+						</p>
+					</li>
 				</ul>
 			</nav>
 
-			{loading ? (
-				<p>Loading!</p>
-			) : error ? (
-				<p className='text-error'>{response.error}</p>
-			) : (
-				data.map((item: DataProps) => {
-					return <p key={item.id}>{item.title}</p>
-				})
-			)}
+			<div>
+				<PostList />
+			</div>
 		</>
 	)
+}
+
+export async function getServerSiseProps() {
+	const queryClient = new QueryClient()
+
+	await queryClient.prefetchQuery({
+		queryKey: ['posts', 10],
+		queryFn: () => fetchPosts(10),
+	})
+
+	return {
+		props: {
+			dehydratedState: dehydrate(queryClient),
+		},
+	}
 }

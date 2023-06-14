@@ -1,3 +1,4 @@
+import Providers from '@/utils/provider'
 import '@/styles/index.css'
 import 'prismjs/themes/prism-tomorrow.min.css'
 import { Inter } from 'next/font/google'
@@ -19,7 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<div className='wrapper'>
 					<Header />
 					<main>
-						<article data-testid='article'>{children}</article>
+						<article data-testid='article'>
+							<Providers>{children}</Providers>
+						</article>
 					</main>
 					<Footer />
 				</div>

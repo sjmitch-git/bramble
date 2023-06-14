@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export type FetchProps = {
 	status: Number
@@ -19,7 +19,7 @@ export const useFetch = (url: string): FetchProps => {
 		method: 'GET',
 	}
 
-	const cache = {}
+	const cache = useRef<any[]>()
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -28,7 +28,7 @@ export const useFetch = (url: string): FetchProps => {
 			try {
 				const response = await fetch(url, options)
 				const json = await response.json()
-				// cache['url'] = json
+				//cache.current[url] = data
 				setStatus(response.status)
 				setStatusText(response.statusText)
 				if (response.status === 404) setError('Error 404: Not found!')
