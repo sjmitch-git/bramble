@@ -4,10 +4,11 @@ import getQueryClient from '@/utils/getQueryClient'
 import Hydrate from '@/utils/hydrate.client'
 import { dehydrate } from '@tanstack/query-core'
 import ClientPosts from './client-posts'
+import { Post } from '@/types/post'
 
 async function fetchPosts(limit: number) {
-	const parsed: any[] = await ky('https://jsonplaceholder.typicode.com/posts').json()
-	return parsed.filter((x: { id: number }) => x.id <= limit)
+	const parsed: Post[] = await ky('https://jsonplaceholder.typicode.com/posts').json()
+	return parsed.filter((x: { id: number }) => x.id <= limit) as Post[]
 }
 
 export default async function Hydration() {
