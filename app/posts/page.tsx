@@ -3,8 +3,7 @@ import ky from 'ky-universal'
 import getQueryClient from '@/utils/getQueryClient'
 import Hydrate from '@/utils/hydrate.client'
 import { dehydrate } from '@tanstack/query-core'
-import Client from './client'
-// import { Post } from '@/types/post'
+import ClientPosts from './client-posts'
 
 async function fetchPosts(limit: number) {
 	const parsed: any[] = await ky('https://jsonplaceholder.typicode.com/posts').json()
@@ -18,7 +17,7 @@ export default async function Hydration() {
 
 	return (
 		<Hydrate state={dehydratedState}>
-			<Client />
+			<ClientPosts />
 		</Hydrate>
 	)
 }
