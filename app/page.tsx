@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 
 import { dehydrate, QueryClient } from '@tanstack/react-query'
@@ -11,6 +13,9 @@ export default function Home() {
 				<ul>
 					<li>
 						<Link href='/components'>Components</Link>
+					</li>
+					<li>
+						<Link href='/posts'>Posts</Link>
 					</li>
 					<li>
 						<p>

@@ -17,6 +17,7 @@ export default async function Hydation() {
 
 	return (
 		<Hydrate state={dehydratedState}>
+			<h1>TESTING</h1>
 			<ListUsers />
 		</Hydrate>
 	)

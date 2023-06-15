@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import { usePosts } from '@/hooks/usePosts'
 
 const PostList = () => {
-	const [postCount, setPostCount] = useState(10)
-	const { data, isLoading, isFetching } = usePosts(postCount)
+	// const [postCount, setPostCount] = useState(10)
+	const { data, isLoading, isFetching } = usePosts(10)
 
 	if (isLoading) return <div>Loading</div>
 
@@ -19,14 +19,14 @@ const PostList = () => {
 					</li>
 				))}
 			</ul>
-			{postCount <= 90 && (
+			{/* 	{postCount <= 90 && (
 				<button
 					onClick={() => setPostCount(postCount + 10)}
 					disabled={isFetching}
 				>
 					{isFetching ? 'Loading...' : 'Show More'}
 				</button>
-			)}
+			)} */}
 			<style jsx>{`
 				section {
 					padding-bottom: 20px;
