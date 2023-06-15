@@ -2,10 +2,6 @@
 
 import Link from 'next/link'
 
-import { dehydrate, QueryClient } from '@tanstack/react-query'
-import PostList from '@/components/postlist'
-import { fetchPosts } from '@/hooks/usePosts'
-
 export default function Home() {
 	return (
 		<>
@@ -24,15 +20,11 @@ export default function Home() {
 					</li>
 				</ul>
 			</nav>
-
-			<div>
-				<PostList />
-			</div>
 		</>
 	)
 }
 
-export async function getServerSiseProps() {
+/* export async function getServerSiseProps() {
 	const queryClient = new QueryClient()
 
 	await queryClient.prefetchQuery({
@@ -46,3 +38,4 @@ export async function getServerSiseProps() {
 		},
 	}
 }
+ */
