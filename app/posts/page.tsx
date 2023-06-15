@@ -1,19 +1,18 @@
+import ky from 'ky-universal'
+
 import getQueryClient from '@/utils/getQueryClient'
 import Hydrate from '@/utils/hydrate.client'
 import { dehydrate } from '@tanstack/query-core'
 import Client from './client'
-import { Post } from '@/types/post'
 
-async function getPosts() {
-	const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-	const posts = (await res.json()) as Post[]
-	return posts
+const fetchPosts = async (limit = 10) => {
+	const parsed: any[] = await ky('https://jsonplaceholder.typicode.com/posts').json()
+	return parsed.filter((x: { id: number }) => x.id <= limit)
 }
 
 export default async function Hydation() {
 	const queryClient = getQueryClient()
-	await queryClient.prefetchQuery(['posts', 10], getPosts)
-	// await queryClient.prefetchQuery(['posts', 10], () => getPosts)
+	await queryClient.prefetchQuery(['posts', 10], () => fetchPosts(10))
 	const dehydratedState = dehydrate(queryClient)
 
 	return (

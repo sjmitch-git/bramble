@@ -1,25 +1,13 @@
 'use client'
 
 import React from 'react'
-import { useQuery } from '@tanstack/react-query'
-// import { Post } from '@/types/post'
-import { fetchPosts } from '@/hooks/usePosts'
 
-/* async function getPosts() {
-	const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-	const posts = (await res.json()) as Post[]
-	return posts
-} */
+import { usePosts } from '@/hooks/usePosts'
 
 export default function Client() {
 	const [limit, setLimit] = React.useState(10)
 
-	const { data, isLoading, error } = useQuery({
-		queryKey: ['posts', limit],
-		queryFn: () => fetchPosts(),
-	})
-
-	///const { data, isLoading, error } = useQuery.fetchPosts(limit)
+	const { data, isLoading, error } = usePosts(limit)
 
 	return (
 		<div>
