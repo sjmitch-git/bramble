@@ -4,7 +4,7 @@ import React from 'react'
 
 import { usePosts } from '@/hooks/usePosts'
 
-export default function Client() {
+const Client = () => {
 	const [limit, setLimit] = React.useState(10)
 
 	const { data, isLoading, error } = usePosts(limit)
@@ -34,3 +34,5 @@ export default function Client() {
 		</div>
 	)
 }
+
+export default Client
