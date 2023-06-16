@@ -2,13 +2,19 @@
 
 import React, { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import ky from 'ky-universal'
+// import ky from 'ky-universal'
 import { Post } from '@/types/post'
 // import { usePosts } from '@/hooks/usePosts'
 
-async function fetchPosts(limit: number) {
+/* async function fetchPosts(limit: number) {
 	const parsed: Post[] = await ky('https://jsonplaceholder.typicode.com/posts').json()
 	return parsed.filter((x: { id: number }) => x.id <= limit) as Post[]
+} */
+
+async function fetchPosts() {
+	const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+	const users = (await res.json()) as Post[]
+	return users
 }
 
 export default function ClientPosts() {
@@ -18,7 +24,7 @@ export default function ClientPosts() {
 
 	const { data, isLoading, error } = useQuery({
 		queryKey: ['posts'],
-		queryFn: () => fetchPosts(limit),
+		queryFn: () => fetchPosts(),
 	})
 
 	console.log(data)
