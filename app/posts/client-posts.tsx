@@ -23,23 +23,26 @@ export default function ClientPosts() {
 
 	console.log(data)
 	return (
-		<div>
-			{isLoading ? (
-				<div>LOADING!</div>
-			) : error ? (
-				<div>ERROR!</div>
-			) : (
-				data && (
-					<div className='grid grid-cols-4 gap-4'>
-						{data?.map((post, index) => (
-							<div key={post.id}>
-								<span>{index + 1}. </span>
-								<a href='#'>{post.title}</a>
-							</div>
-						))}
-					</div>
-				)
-			)}
-		</div>
+		<>
+			<h1>Posts</h1>
+			<div>
+				{isLoading ? (
+					<div>LOADING!</div>
+				) : error ? (
+					<div>ERROR!</div>
+				) : (
+					data && (
+						<div className='grid grid-cols-4 gap-4'>
+							{data?.map((post, index) => (
+								<div key={post.id}>
+									<span>{index + 1}. </span>
+									<a href='#'>{post.title}</a>
+								</div>
+							))}
+						</div>
+					)
+				)}
+			</div>
+		</>
 	)
 }
