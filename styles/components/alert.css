@@ -1,0 +1,77 @@
+@layer components {
+
+    .alert {
+        @apply text-lg px-4 py-1 border-s-8 relative;
+
+        /* basic */
+        &.error, &.danger {
+            @apply  border-error text-error bg-[var(--error-color-25)];
+        }
+
+        &.info {
+            @apply border-info text-info bg-[var(--info-color-25)];
+        }
+
+        &.success {
+            @apply border-success text-success bg-[var(--success-color-25)];
+        }
+
+        &.warning {
+            @apply border-warning text-warning bg-[var(--warning-color-25)];
+        }
+
+
+
+        &.outline {
+            @apply rounded border;
+        }
+
+        &.solid {
+            @apply rounded border-none !text-light;
+
+            &.info {
+                @apply bg-info;
+            }
+
+            &.success {
+                @apply bg-success;
+            }
+
+            &.warning {
+                @apply bg-warning;
+            }
+
+            &.danger, &.error {
+                @apply bg-error;
+            }
+        }
+
+        .status {
+            @apply leading-none mb-4;
+        }
+
+        .message {
+            @apply text-size-inherit mb-4 mt-4 leading-4;     
+        }
+
+        &.sm  {
+            @apply text-sm;
+
+            .status {
+                @apply text-base mb-2;
+            }
+        }
+
+        &.lg {
+            @apply text-xl py-2;
+
+            .status {
+                @apply text-3xl mb-4;
+            }
+        }
+
+        & .btn {
+            @apply absolute end-2 top-2
+        }
+    }
+}

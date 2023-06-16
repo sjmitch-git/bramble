@@ -7,6 +7,9 @@ export default function Components() {
 			<nav>
 				<ul>
 					<li>
+						<Link href='./components/alert'>Alert</Link>
+					</li>
+					<li>
 						<Link href='./components/breadcrumbs'>Breadcrumbs</Link>
 					</li>
 					<li>

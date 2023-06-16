@@ -1,9 +1,12 @@
+@import './alert.css';
 @import './breadcrumbs.css';
 @import './buttons.css';
 @import './buttongroup.css';
 @import './figure.css';
 @import './gallery.css';
+@import './loading.css';
 @import './modal.css';
 @import './pagination.css';
 @import './select.css';
+@import './spinner.css';
 @import './video.css';

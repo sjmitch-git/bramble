@@ -9,7 +9,11 @@
     --light-color: var(--lightest-grey);
 
     --info-color: #2563eb;
+    --info-color-25: #c8d8fa;
     --success-color: #059669;
+    --success-color-25: #c0e5d9;
     --warning-color: #f59e0b;
+    --warning-color-25: #fce7c2;
     --error-color: #c51162;
+    --error-color-25: #f0c3d8;
 }

@@ -1,0 +1,7 @@
+@layer components {
+
+    .spinner {
+        @apply mx-auto aspect-square text-center;
+    }
+
+}
