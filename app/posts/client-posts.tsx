@@ -17,7 +17,7 @@ export default function ClientPosts() {
 	// const { data, isLoading, error } = usePosts(limit)
 
 	const { data, isLoading, error } = useQuery({
-		queryKey: ['posts', limit],
+		queryKey: ['posts'],
 		queryFn: () => fetchPosts(limit),
 	})
 
