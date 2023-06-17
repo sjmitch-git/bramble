@@ -22,7 +22,7 @@ export default function ClientPosts() {
 				) : error ? (
 					<div className='mx-auto mb-12'>
 						<Alert
-							styles='bg-danger'
+							styles='error'
 							status='Error'
 							message={`error`}
 						/>

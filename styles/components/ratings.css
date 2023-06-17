@@ -1,0 +1,11 @@
+@layer components {
+
+    .ratings {
+        @apply relative inline-block;
+
+        & .badge {
+            @apply bg-transparent border-none shadow-none p-0 rounded-full aspect-square w-[1.5em] relative -top-2 -end-2;
+        }
+    }
+
+}

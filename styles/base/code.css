@@ -9,6 +9,6 @@
     }
 
     code {
-        @apply opacity-50;
+        @apply opacity-50 normal-case;
     }
 }

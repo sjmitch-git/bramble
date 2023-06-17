@@ -1,4 +1,5 @@
 @import './alert.css';
+@import './badge.css';
 @import './breadcrumbs.css';
 @import './buttons.css';
 @import './buttongroup.css';
@@ -7,6 +8,7 @@
 @import './loading.css';
 @import './modal.css';
 @import './pagination.css';
+@import './ratings.css';
 @import './select.css';
 @import './spinner.css';
 @import './video.css';

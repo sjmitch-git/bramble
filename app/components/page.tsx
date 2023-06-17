@@ -10,6 +10,9 @@ export default function Components() {
 						<Link href='./components/alert'>Alert</Link>
 					</li>
 					<li>
+						<Link href='./components/badge'>Badge</Link>
+					</li>
+					<li>
 						<Link href='./components/breadcrumbs'>Breadcrumbs</Link>
 					</li>
 					<li>
@@ -32,6 +35,9 @@ export default function Components() {
 					</li>
 					<li>
 						<Link href='./components/pagination'>Pagination</Link>
+					</li>
+					<li>
+						<Link href='./components/ratings'>Ratings</Link>
 					</li>
 					<li>
 						<Link href='./components/select'>Select</Link>

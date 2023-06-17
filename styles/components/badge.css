@@ -1,0 +1,23 @@
+@layer components {
+
+        .badge {
+                @apply rounded px-1 text-light bg-neutral relative font-semibold shadow inline-block -top-2;
+
+                &.circle {
+                    @apply rounded-full aspect-square w-[1.5em] p-1 border absolute -top-2 -end-2;
+                }
+
+                &.count {
+                    @apply absolute -top-3 -end-3;
+                }
+
+                &.pill {
+                    @apply rounded-full py-1 px-4;
+                }
+
+                &.icon {
+                    @apply relative
+                } 
+        }
+
+}

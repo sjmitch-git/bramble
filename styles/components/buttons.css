@@ -188,6 +188,11 @@
             }                        
         }
 
+        /* BADGE */
+        &:has(> .badge) {
+            @apply relative;
+        }
+
     }
 
 }
