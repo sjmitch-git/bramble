@@ -36,6 +36,10 @@ module.exports = {
 				danger: 'var(--error-color)',
 				current: 'currentColor',
 			},
+			transitionProperty: {
+				height: 'height',
+				'max-height': 'max-height',
+			},
 		},
 	},
 	plugins: [],

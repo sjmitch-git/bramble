@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 
-import Alert from '@/components/alert'
 import Badge from '@/components/badge'
 import Button from '@/components/button'
 import Codeblock from '@/components/codeblock'
@@ -24,7 +23,7 @@ const BadgeTemplate = () => {
 				</Codeblock>
 			</div>
 
-			<div className='mx-auto mb-12'>
+			<div className='mb-12 border px-4'>
 				<h2>
 					My Latest Blog Post <Badge styles='bg-info'>New</Badge>
 				</h2>
@@ -34,7 +33,7 @@ const BadgeTemplate = () => {
 
 			<h2>Count</h2>
 
-			<div className='mb-8'>
+			<div className='mb-12 border p-4 pt-8'>
 				<Button styles='success'>
 					Inbox <Badge styles='bg-warning text-dark count'>99+</Badge>
 				</Button>
@@ -51,7 +50,7 @@ const BadgeTemplate = () => {
 
 			<h2>Notifications</h2>
 
-			<div className='mb-8'>
+			<div className='mb-12 border p-4 pt-8'>
 				<Button styles='info'>
 					Notifications
 					<Badge styles='circle bg-warning' />
@@ -70,7 +69,7 @@ const BadgeTemplate = () => {
 
 			<h2>Icons</h2>
 
-			<div className='mb-8'>
+			<div className='mb-12 border px-4'>
 				<h2>
 					Latest Article
 					<Badge styles='bg-transparent text-warning circle icon'>
@@ -94,7 +93,7 @@ const BadgeTemplate = () => {
 
 			<h2>Pill</h2>
 
-			<div className='mb-8'>
+			<div className='mb-12 border p-4'>
 				<h3>
 					Example heading <Badge styles='bg-danger pill'>New</Badge>
 				</h3>
@@ -126,7 +125,7 @@ const BadgeTemplate = () => {
 				<Codeblock language='jsx'>
 					{`<Badge styles='bg-info'>Info</Badge>
 <Badge styles='bg-success'>Success</Badge>
-<Badge styles='bg-warning text-dark'>Warning</Badge>{' '}
+<Badge styles='bg-warning text-dark'>Warning</Badge>
 <Badge styles='bg-danger'>Danger</Badge>
 <Badge styles='bg-dark'>Dark</Badge>
 <Badge styles='bg-light text-dark'>Light</Badge>`}

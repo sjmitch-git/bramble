@@ -1,6 +1,6 @@
 import Button from '@/components/button'
 
-import { XCircleIcon, XMarkIcon } from '@heroicons/react/24/solid'
+import { XMarkIcon } from '@heroicons/react/24/solid'
 
 interface ButtonProps {
 	size?: string | undefined
@@ -14,7 +14,6 @@ const ButtonClose = ({ size = '', styles = '', onClick, disabled = false }: Butt
 		<Button
 			styles={`icon circle ${styles} ${size}`}
 			onClick={onClick}
-			type='button'
 			title='Close'
 			id='closebutton'
 			disabled={disabled}
