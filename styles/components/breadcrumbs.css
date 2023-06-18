@@ -17,7 +17,7 @@
         }
 
         & > ol {
-            @apply flex;
+            @apply flex flex-col lg:flex-row;
         }
 
         & li {

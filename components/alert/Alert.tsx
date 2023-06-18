@@ -16,7 +16,10 @@ const Alert = ({ styles = '', message, status = '', onClick }: AlertProps) => {
 			role='alert'
 		>
 			{status && <h4 className='status'>{status}</h4>}
-			<p className='message'>{message}</p>
+			<div
+				className='message'
+				dangerouslySetInnerHTML={{ __html: message }}
+			></div>
 			{onClick && (
 				<ButtonClose
 					styles='sm dark p-0'

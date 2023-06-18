@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Button from '@/components/button'
 import { PlusIcon, MinusIcon } from '@heroicons/react/24/solid'
@@ -12,15 +12,22 @@ interface DataProps {
 }
 
 interface AccordianProps {
+	size?: string | 'sm' | 'lg' | undefined
 	styles?: string | undefined
 	onClick?: () => void | undefined
 	data: DataProps[]
+	opened?: string | undefined
 }
 
-const Accordian = ({ styles = '', data }: AccordianProps) => {
+const Accordian = ({ size = '', styles = '', data, opened }: AccordianProps) => {
 	const [open, setOpen] = useState('')
+
+	useEffect(() => {
+		if (opened) setOpen(opened)
+	}, [opened])
+
 	return (
-		<div className={`accordian ${styles}`}>
+		<div className={`accordian ${size} ${styles}`}>
 			{data?.map((item, _index) => (
 				<div
 					className='accordian-container'
@@ -40,7 +47,7 @@ const Accordian = ({ styles = '', data }: AccordianProps) => {
 						</Button>
 					</h3>
 					<section className='accordion-content'>
-						<p className='mb-0'>{[item.body]}</p>
+						<div dangerouslySetInnerHTML={{ __html: item.body }}></div>
 					</section>
 				</div>
 			))}
