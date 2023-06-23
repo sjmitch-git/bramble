@@ -12,7 +12,6 @@ interface RatingsProps {
 }
 
 const Ratings = ({ styles = '', rating, range, badge, icon = 'star' }: RatingsProps) => {
-	console.log(round(rating), rating)
 	rating = round(rating)
 	if (rating === 0) rating = 1
 	if (!range) range = rating

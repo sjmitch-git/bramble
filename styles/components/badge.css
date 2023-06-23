@@ -1,7 +1,7 @@
 @layer components {
 
         .badge {
-                @apply rounded px-1 text-light bg-neutral relative font-semibold shadow inline-block -top-2;
+                @apply rounded px-1 text-light bg-neutral md:relative font-semibold shadow inline-block -top-2;
 
                 &.circle {
                     @apply rounded-full aspect-square w-[1.5em] p-1 border absolute -top-2 -end-2;

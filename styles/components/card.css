@@ -1,0 +1,96 @@
+@layer components {
+
+    .card {
+        @apply bg-light border rounded shadow-lg flex flex-row relative;
+
+        &.dark {
+            @apply bg-dark text-light border-dark;
+        }
+
+        &.column {
+            @apply flex-col;
+
+            & .card-message {
+                @apply line-clamp-2;
+            }
+        }
+
+        &:not(:has(.image)) {
+            .card-message {
+                @apply line-clamp-6;
+            }
+        }
+
+        &.full {
+                    
+            .card-message {
+                @apply md:line-clamp-none md:text-xl md:leading-normal;
+            }
+
+            .title {
+                @apply md:text-4xl;
+            }
+
+            .card-body {
+                @apply md:p-4;
+            }
+        }
+
+        .card-body {
+            @apply p-2 flex flex-col justify-between relative h-full;
+        }
+
+        .title {
+            @apply mb-1 text-base leading-tight opacity-100 text-gray-500 mt-0;
+
+            .full & {
+                @apply text-2xl;
+            }
+
+            .badge {
+                @apply absolute -top-8 right-0 z-50;
+            }
+        }
+
+
+
+        .card-message {
+            @apply mb-auto text-base line-clamp-4 leading-tight;
+        }
+
+        .img {
+            @apply cursor-zoom-in relative z-50;
+
+            &:focus, &:hover {
+                @apply outline-accent;
+            }
+        }
+    }
+
+    
+
+
+
+    .message {
+        @apply mb-0 text-base line-clamp-2;
+    }
+
+    .card-footer {
+        @apply flex justify-between items-center pt-2 flex-wrap;
+
+        .badge {
+            @apply !static;
+        }
+
+        & a {
+            @apply stretched-link uppercase font-bold;
+
+            &:focus {
+                @apply outline-accent;
+            }
+        }
+    }
+
+
+
+}

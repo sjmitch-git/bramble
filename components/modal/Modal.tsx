@@ -1,5 +1,7 @@
 'use client'
 
+import React, { useEffect } from 'react'
+
 import useDisableBackButton from '@/hooks/usedisabledbackbutton'
 
 import Figure from '@/components/figure'
@@ -14,6 +16,14 @@ interface ModalProps {
 }
 
 const Modal = ({ data: { src, name }, onClick }: ModalProps) => {
+	useEffect(() => {
+		document.body.style.overflow = 'hidden'
+
+		return () => {
+			document.body.style.overflow = ''
+		}
+	}, [])
+
 	useDisableBackButton()
 
 	return (

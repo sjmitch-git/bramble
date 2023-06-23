@@ -1,13 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import React, { useState } from 'react'
-import Accordian from '@/components/accordian'
-
-import Users from '@/data/users.json'
 
 export default function Home() {
-	const [open, setOpen] = useState('accordion-01')
 	return (
 		<>
 			<nav className='mb-8'>
@@ -25,9 +20,6 @@ export default function Home() {
 					</li>
 				</ul>
 			</nav>
-			<h2>Accordian</h2>
-
-			<Accordian data={Users} />
 		</>
 	)
 }

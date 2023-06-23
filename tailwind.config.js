@@ -40,6 +40,9 @@ module.exports = {
 				height: 'height',
 				'max-height': 'max-height',
 			},
+			zIndex: {
+				100: '100',
+			},
 		},
 	},
 	plugins: [],
