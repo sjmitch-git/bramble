@@ -1,3 +1,5 @@
+'use client'
+
 import Button from '@/components/button'
 
 import { XMarkIcon } from '@heroicons/react/24/solid'
@@ -7,6 +9,7 @@ interface ButtonProps {
 	styles?: string | undefined
 	onClick?: () => void | undefined
 	disabled?: boolean | undefined
+	//ref: HTMLButtonElement
 }
 
 const ButtonClose = ({ size = '', styles = '', onClick, disabled = false }: ButtonProps) => {
@@ -17,6 +20,7 @@ const ButtonClose = ({ size = '', styles = '', onClick, disabled = false }: Butt
 			title='Close'
 			id='closebutton'
 			disabled={disabled}
+			//ref={ref}
 		>
 			<XMarkIcon />
 			<span className='sr-only'>Close</span>

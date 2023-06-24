@@ -5,7 +5,7 @@ import CardBody from './CardBody'
 
 interface CardProps {
 	styles?: string | undefined
-	title: string
+	title?: string | undefined
 	description: string
 	image?: string | undefined
 	link: string
@@ -21,7 +21,7 @@ interface CardProps {
 
 const Card = ({
 	styles = '',
-	title,
+	title = '',
 	description,
 	layout = 'column',
 	link,

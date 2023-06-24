@@ -1,3 +1,7 @@
+'use client'
+
+import { forwardRef } from 'react'
+
 interface ButtonProps {
 	size?: string | undefined
 	styles?: string | undefined
@@ -10,17 +14,20 @@ interface ButtonProps {
 	tabindex?: number | undefined
 }
 
-const Button = ({
-	size = '',
-	styles = 'primary',
-	type = 'button',
-	title,
-	id,
-	disabled = undefined,
-	onClick,
-	tabindex = undefined,
-	children,
-}: ButtonProps) => {
+export type Ref = HTMLButtonElement
+
+const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
+	const {
+		size = '',
+		styles = 'primary',
+		type = 'button',
+		title,
+		id,
+		disabled = undefined,
+		onClick,
+		tabindex = undefined,
+		children,
+	} = props
 	return (
 		<button
 			type={type}
@@ -30,10 +37,13 @@ const Button = ({
 			disabled={disabled}
 			tabIndex={tabindex}
 			onClick={onClick}
+			ref={ref}
 		>
 			{children}
 		</button>
 	)
-}
+})
+
+Button.displayName = 'Button'
 
 export default Button

@@ -17,4 +17,8 @@
         @apply cursor-default text-info;
     }
 
+    a[target="_blank"]:after {
+        @apply content-['_↗'] relative;
+    }
+
 }

@@ -1,6 +1,6 @@
 @layer utilities {
 
-    .stretched-link:after {
+    .stretched-link:before {
         position: absolute; 
         content: ''; 
         top:0; 

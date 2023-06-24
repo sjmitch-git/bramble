@@ -3,6 +3,14 @@
     .alert {
         @apply text-lg px-4 py-1 border-s-8 relative;
 
+        .status {
+            @apply leading-none mb-4;
+        }
+    
+        .message {
+            @apply text-size-inherit mb-4 mt-4 leading-4 text-dark;
+        }
+
         /* basic */
         &.error, &.danger {
             @apply  border-error text-error bg-[var(--error-color-25)];
@@ -48,13 +56,7 @@
             }
         }
 
-        .status {
-            @apply leading-none mb-4;
-        }
-
-        .message {
-            @apply text-size-inherit mb-4 mt-4 leading-4 text-dark;     
-        }
+        
 
         &.sm  {
             @apply text-sm;

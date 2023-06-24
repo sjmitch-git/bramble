@@ -3,15 +3,10 @@
 import React, { useState } from 'react'
 
 import Alert from '@/components/alert'
-import Button from '@/components/button'
 import Codeblock from '@/components/codeblock'
 
 const AlertTemplate = () => {
 	const [error, setError] = useState('Page could not be found!')
-
-	const handleClick = () => {
-		alert('You clicked me!')
-	}
 
 	return (
 		<>
@@ -32,7 +27,7 @@ const AlertTemplate = () => {
 				<Alert
 					styles='info'
 					status='Info'
-					message="<p><strong>Ugh umami</strong> butcher <a href='#'>pickled kogi</a> stumptown, <em>subway tile</em> gatekeep flexitarian. Bespoke meggings health goth meh ascot listicle, cronut vaporware. Marfa church-key cred, kinfolk mlkshk tousled roof party XOXO readymade solarpunk tbh adaptogen. Raclette williamsburg chicharrones, +1 retro hashtag freegan sustainable tumblr polaroid deep v tote bag godard.</p>"
+					message="<p><strong>Ugh umami</strong> bacon butcher <a href='#'>pickled kogi</a> stumptown, <em>subway tile</em> gatekeep flexitarian. Bespoke meggings health goth meh ascot listicle, cronut vaporware. Marfa church-key cred, kinfolk mlkshk tousled roof party XOXO readymade solarpunk tbh adaptogen. Raclette williamsburg chicharrones, +1 retro hashtag freegan sustainable tumblr polaroid deep v tote bag godard.</p>"
 				/>
 			</div>
 
@@ -40,7 +35,7 @@ const AlertTemplate = () => {
 				<Alert
 					styles='success'
 					status='Success'
-					message='<p>Raclette williamsburg chicharrones, +1 retro hashtag freegan sustainable tumblr polaroid deep v tote bag godard<p>'
+					message="<p><strong>Ugh umami</strong> bacon butcher <a href='#'>pickled kogi</a> stumptown, <em>subway tile</em> gatekeep flexitarian. Bespoke meggings health goth meh ascot listicle, cronut vaporware.</p> <p>Marfa church-key cred, kinfolk mlkshk tousled roof party XOXO readymade solarpunk tbh adaptogen. Raclette williamsburg chicharrones, +1 retro hashtag freegan sustainable tumblr polaroid deep v tote bag godard.</p>"
 				/>
 			</div>
 

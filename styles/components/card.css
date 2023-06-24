@@ -48,7 +48,7 @@
             }
 
             .badge {
-                @apply absolute -top-8 right-0 z-50;
+                @apply absolute text-base -top-[18px] -right-3 z-50;
             }
         }
 
@@ -71,9 +71,9 @@
 
 
 
-    .message {
+/*     .message {
         @apply mb-0 text-base line-clamp-2;
-    }
+    } */
 
     .card-footer {
         @apply flex justify-between items-center pt-2 flex-wrap;

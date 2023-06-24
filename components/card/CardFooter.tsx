@@ -22,7 +22,15 @@ const CardFooter = ({ rating, range, link, linkLabel = 'Moxxre', price, cc }: Ca
 				/>
 			)}
 			<div className='ms-auto'>
-				{!price && <Link href={link}>{linkLabel}</Link>}
+				{!price && (
+					<Link
+						href={link}
+						// target='_blank'
+						target={link.startsWith('https://') ? '_blank' : '_self'}
+					>
+						{linkLabel}
+					</Link>
+				)}
 				{price && cc && <Link href={link}>{formatCurrency(price, cc, 'symbol')}</Link>}
 			</div>
 		</footer>

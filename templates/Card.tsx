@@ -5,6 +5,7 @@ import Codeblock from '@/components/codeblock'
 
 import Dogs from '@/data/dogs.json'
 import Data from '@/data/toasters.json'
+import Amazon from '@/data/amazon.json'
 
 const CardTemplate = () => {
 	return (
@@ -100,6 +101,7 @@ const CardTemplate = () => {
 								image={dog.src}
 								link={dog.link}
 								layout='full'
+								key={index}
 							/>
 						)
 				)}
@@ -120,7 +122,7 @@ const CardTemplate = () => {
 			<p>Column layout</p>
 
 			<div className='mb-12 grid gap-4 md:grid-cols-4 lg:grid-cols-6'>
-				{Data.map((item, _index) => (
+				{Data.map((item, index) => (
 					<Card
 						title={item.name}
 						description={item.description}
@@ -132,6 +134,7 @@ const CardTemplate = () => {
 						layout='column'
 						badge={item.price_previous ? 'Deal!' : ''}
 						badgeStyle={item.price_previous ? 'bg-info' : ''}
+						key={index}
 					/>
 				))}
 			</div>
@@ -169,7 +172,7 @@ const CardTemplate = () => {
 			<p>Row layout</p>
 
 			<div className='mb-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
-				{Data.map((item, _index) => (
+				{Data.map((item, index) => (
 					<Card
 						title={item.name}
 						description={item.description}
@@ -182,6 +185,7 @@ const CardTemplate = () => {
 						layout='row'
 						badge={item.price_previous ? 'Deal!' : ''}
 						badgeStyle={item.price_previous ? 'bg-info' : ''}
+						key={index}
 					/>
 				))}
 			</div>
@@ -202,10 +206,74 @@ const CardTemplate = () => {
 />`}
 			</Codeblock>
 
+			<h2>Amazon Example</h2>
+
+			<p>Column layout</p>
+
+			<div className='mb-12 grid gap-4 md:grid-cols-4 lg:grid-cols-6'>
+				{Amazon.map((item, index) => (
+					<Card
+						styles='amazon'
+						description={item.title}
+						image={item.image}
+						price={item.price.value}
+						cc={item.price.currency}
+						rating={item.rating}
+						link={item.link}
+						layout='column'
+						key={index}
+					/>
+				))}
+			</div>
+
+			<Codeblock language='jsx'>
+				{`<Card
+	styles='amazon'
+	description={item.title}
+	image={item.image}
+	price={item.price.value}
+	cc={item.price.currency}
+	rating={item.rating}
+	link={item.link}
+	layout='column'
+/>`}
+			</Codeblock>
+
+			<p>Row layout</p>
+
+			<div className='mb-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
+				{Amazon.map((item, index) => (
+					<Card
+						styles='amazon'
+						description={item.title}
+						image={item.image}
+						price={item.price.value}
+						cc={item.price.currency}
+						rating={item.rating}
+						link={item.link}
+						layout='row'
+						key={index}
+					/>
+				))}
+			</div>
+
+			<Codeblock language='jsx'>
+				{`<Card
+	styles='amazon'
+	description={item.title}
+	image={item.image}
+	price={item.price.value}
+	cc={item.price.currency}
+	rating={item.rating}
+	link={item.link}
+	layout='row'
+/>`}
+			</Codeblock>
+
 			<h2>Dark theme</h2>
 
 			<div className='mb-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
-				{Data.map((item, _index) => (
+				{Data.map((item, index) => (
 					<Card
 						styles='dark'
 						title={item.name}
@@ -219,6 +287,7 @@ const CardTemplate = () => {
 						layout='row'
 						badge={item.price_previous ? 'Discount!' : ''}
 						badgeStyle={item.price_previous ? 'bg-accent text-dark text-lg' : ''}
+						key={index}
 					/>
 				))}
 			</div>

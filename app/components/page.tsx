@@ -31,6 +31,9 @@ export default function Components() {
 						<Link href='./components/codeblock'>Codeblock</Link>
 					</li>
 					<li>
+						<Link href='./components/dialog'>Dialog</Link>
+					</li>
+					<li>
 						<Link href='./components/figure'>Figure</Link>
 					</li>
 					<li>

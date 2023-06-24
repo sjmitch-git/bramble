@@ -13,6 +13,12 @@ const nextConfig = {
 				port: '',
 				pathname: '/breeds/**',
 			},
+			{
+				protocol: 'https',
+				hostname: 'images-na.ssl-images-amazon.com',
+				port: '',
+				pathname: '/images/**',
+			},
 		],
 	},
 }
