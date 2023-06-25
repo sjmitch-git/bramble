@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import Dialog from '@/components/dialog'
 import Button from '@/components/button'
 import Codeblock from '@/components/codeblock'
+import Alert from '@/components/alert'
 
 const DialogTemplate = () => {
 	return (
@@ -109,6 +110,65 @@ const DialogTemplate = () => {
 	...
     modal={true}
 	...
+`}
+				</Codeblock>
+			</div>
+
+			<h2>Alerts</h2>
+
+			<div className='bg-light p-4 text-center'>
+				<Dialog
+					btnLabel='Open Alert'
+					btnStyles='info pill'
+					modal={true}
+				>
+					<form method='dialog'>
+						<Alert
+							styles='info solid text-start mb-8'
+							status='info'
+							message='Some contextual message useful to the user.'
+						/>
+
+						<div className='flex justify-center'>
+							<Button
+								styles='outline rounded info'
+								type='submit'
+							>
+								OK
+							</Button>
+						</div>
+					</form>
+				</Dialog>
+			</div>
+
+			<div className='mb-0'>
+				<Codeblock language='jsx'>
+					{`import Dialog from '@/components/dialog'
+import Button from '@/components/button'
+import Alert from '@/components/alert'
+					
+<Dialog
+	btnLabel='Open Alert'
+	btnStyles='info pill'
+	modal={true}
+>
+	<form method='dialog'>
+		<Alert
+			styles='info solid text-start mb-8'
+			status='info'
+			message='Some contextual message useful to the user.'
+		/>
+
+		<div className='flex justify-center'>
+			<Button
+				styles='outline rounded info'
+				type='submit'
+			>
+				OK
+			</Button>
+		</div>
+	</form>
+</Dialog>
 `}
 				</Codeblock>
 			</div>
