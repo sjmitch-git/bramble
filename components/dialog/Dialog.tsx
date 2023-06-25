@@ -5,6 +5,7 @@ import ButtonClose from '@/components/button/ButtonClose'
 
 interface DialogProps {
 	open?: boolean
+	modal?: boolean
 	btnLabel?: string | undefined
 	btnStyles?: string | undefined
 	addOpenButton?: boolean | undefined
@@ -13,6 +14,7 @@ interface DialogProps {
 
 const Dialog = ({
 	open = false,
+	modal = false,
 	addOpenButton = true,
 	btnLabel = 'Open dialog',
 	btnStyles = '',
@@ -21,15 +23,19 @@ const Dialog = ({
 	const dialog = useRef<HTMLDialogElement>(null!)
 
 	useEffect(() => {
-		if (open) dialog.current.showModal()
-	}, [open])
+		if (open) {
+			if (modal) dialog.current.showModal()
+			else dialog.current.show()
+		}
+	}, [open, modal])
 
 	const closeDialog = () => {
 		dialog.current.close()
 	}
 
 	const openDialog = () => {
-		dialog.current.showModal()
+		if (modal) dialog.current.showModal()
+		else dialog.current.show()
 	}
 
 	return (
@@ -38,11 +44,14 @@ const Dialog = ({
 				id='dialog'
 				ref={dialog}
 				className='dialog'
+				role='dialog'
 			>
-				<ButtonClose
-					styles='dark hover:scale-125 fixed top-4 right-4 sm'
-					onClick={closeDialog}
-				/>
+				{modal && (
+					<ButtonClose
+						styles='dark hover:scale-125 fixed top-4 right-4 sm'
+						onClick={closeDialog}
+					/>
+				)}
 				{children}
 			</dialog>
 			{addOpenButton && (
