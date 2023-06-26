@@ -1,0 +1,19 @@
+@layer components {
+
+    .carousel {
+        @apply relative flex justify-center rounded-lg border-4 border-dark bg-dark;
+
+        & .inner {
+            @apply max-w-sm relative overflow-hidden;
+        }
+
+        & .gallery {
+            @apply grid-cols-none h-[300px] transition-all duration-500 relative;
+        }
+
+        & .figcaption {
+            @apply relative -top-8 text-light text-lg bg-[var(--shim-color)] !pt-1;            
+        }
+    }
+
+}

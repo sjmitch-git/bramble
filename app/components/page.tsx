@@ -28,6 +28,9 @@ export default function Components() {
 						<Link href='./components/card'>Card</Link>
 					</li>
 					<li>
+						<Link href='./components/carousel'>Carousel</Link>
+					</li>
+					<li>
 						<Link href='./components/codeblock'>Codeblock</Link>
 					</li>
 					<li>

@@ -1,6 +1,8 @@
 'use client'
 
 import Link from 'next/link'
+import Data from '@/data/dogs.json'
+import Carousel from '@/components/carousel'
 
 export default function Home() {
 	return (
@@ -20,6 +22,13 @@ export default function Home() {
 					</li>
 				</ul>
 			</nav>
+
+			<div>
+				<Carousel
+					data={Data}
+					caption={false}
+				/>
+			</div>
 		</>
 	)
 }

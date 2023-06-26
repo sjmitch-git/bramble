@@ -13,11 +13,18 @@ interface DataProps {
 interface GalleryProps {
 	data: any[]
 	styles?: string | undefined
+	style?: React.CSSProperties | undefined
 	aspect?: string | undefined
 	caption?: boolean | undefined
 }
 
-const Gallery = ({ data, styles = '', caption = true, aspect = 'aspect-[4/3]' }: GalleryProps) => {
+const Gallery = ({
+	data,
+	styles = '',
+	caption = true,
+	aspect = 'aspect-[4/3]',
+	style,
+}: GalleryProps) => {
 	const [img, setImg] = useState<DataProps>({ name: '', src: '' })
 	const [modal, setModal] = useState(false)
 
@@ -32,7 +39,10 @@ const Gallery = ({ data, styles = '', caption = true, aspect = 'aspect-[4/3]' }:
 
 	return (
 		<>
-			<div className={`gallery ${styles}`}>
+			<div
+				className={`gallery ${styles}`}
+				style={style}
+			>
 				{data.map((item, index) => (
 					<Figure
 						caption={caption && item.name}
