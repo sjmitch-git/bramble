@@ -29,21 +29,11 @@ const Carousel = ({ data, caption, autoplay = false }: CarouselProps) => {
 		setInnerWidth(inner.current.offsetWidth)
 	}, [inner])
 
-	/* 	useEffect(() => {
-		const startAutoplay = () => {
-			console.log('startAutoplay', autoplay)
-			setTimeout(() => {
-				console.log('setTimeout', index, position, data.length)
-			}, 1000)
-		}
-		if (autoplay) startAutoplay()
-	}, [autoplay]) */
-
 	useEffect(() => {
 		const startAutoplay = () => {
 			intervalRef.current = window.setTimeout(() => {
-				if (index === 1) playDirection.current = 'forward'
-				else if (index === data.length) playDirection.current = 'backward'
+				if (index === 0) playDirection.current = 'forward'
+				else if (index === data.length - 1) playDirection.current = 'backward'
 				if (playDirection.current === 'forward') setNext()
 				else setPrevious()
 			}, 3000)
@@ -52,7 +42,7 @@ const Carousel = ({ data, caption, autoplay = false }: CarouselProps) => {
 		return () => {
 			clearInterval(intervalRef.current)
 		}
-	}, [autoplay, index])
+	})
 
 	const setNext = () => {
 		setPosition(position - innerWidth)

@@ -36,11 +36,22 @@ import Carousel from '@/components/carousel''
 				/>
 			</div>
 
+			<h2>Autoplay</h2>
+
 			<div>
 				<Carousel
 					data={Data}
 					autoplay={true}
 				/>
+			</div>
+
+			<div className='mb-0'>
+				<Codeblock language='jsx'>
+					{`<Carousel
+    data={Data}
+    autoplay={true}
+/>`}
+				</Codeblock>
 			</div>
 
 			<hr />
