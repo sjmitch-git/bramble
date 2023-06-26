@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import useDisableBackButton from '@/hooks/usedisabledbackbutton'
 
 import Figure from '@/components/figure'
-import ButtonClose from '@/components/button/ButtonClose'
+import CloseButton from '@/components/button/CloseButton'
 
 interface ModalProps {
 	data: {
@@ -28,7 +28,7 @@ const Modal = ({ data: { src, name }, onClick }: ModalProps) => {
 
 	return (
 		<div className='modal'>
-			<ButtonClose
+			<CloseButton
 				styles='dark hover:scale-125 absolute top-4 right-4'
 				onClick={onClick}
 			/>

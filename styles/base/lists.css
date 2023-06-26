@@ -1,0 +1,10 @@
+@layer base {
+
+    ul {
+
+        & ul {
+            @apply ms-4;
+        }
+
+    }
+}

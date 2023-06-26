@@ -9,18 +9,16 @@ interface ButtonProps {
 	styles?: string | undefined
 	onClick?: () => void | undefined
 	disabled?: boolean | undefined
-	//ref: HTMLButtonElement
 }
 
-const ButtonClose = ({ size = '', styles = '', onClick, disabled = false }: ButtonProps) => {
+const CloseButton = ({ size = '', styles = '', onClick, disabled = false }: ButtonProps) => {
 	return (
 		<Button
-			styles={`icon circle ${styles} ${size}`}
+			styles={`icon ${styles} ${size}`}
 			onClick={onClick}
 			title='Close'
-			id='closebutton'
 			disabled={disabled}
-			//ref={ref}
+			aria-label='Close'
 		>
 			<XMarkIcon />
 			<span className='sr-only'>Close</span>
@@ -28,4 +26,4 @@ const ButtonClose = ({ size = '', styles = '', onClick, disabled = false }: Butt
 	)
 }
 
-export default ButtonClose
+export default CloseButton

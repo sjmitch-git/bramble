@@ -1,6 +1,6 @@
 'use client'
 
-import ButtonClose from '@/components/button/ButtonClose'
+import CloseButton from '@/components/button/CloseButton'
 
 interface AlertProps {
 	styles?: string | undefined
@@ -21,7 +21,7 @@ const Alert = ({ styles = '', message, status = '', onClick }: AlertProps) => {
 				dangerouslySetInnerHTML={{ __html: message }}
 			></div>
 			{onClick && (
-				<ButtonClose
+				<CloseButton
 					styles='sm dark p-0'
 					onClick={onClick}
 				/>

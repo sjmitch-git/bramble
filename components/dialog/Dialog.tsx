@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 
 import Button from '@/components/button'
-import ButtonClose from '@/components/button/ButtonClose'
+import CloseButton from '@/components/button/CloseButton'
 
 interface DialogProps {
 	open?: boolean
@@ -47,7 +47,7 @@ const Dialog = ({
 				role='dialog'
 			>
 				{modal && (
-					<ButtonClose
+					<CloseButton
 						styles='dark hover:scale-125 fixed top-4 right-4 sm'
 						onClick={closeDialog}
 					/>

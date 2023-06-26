@@ -22,6 +22,10 @@ const Breadcrumbs = ({ size = '', styles = '' }: BreadcrumbsProps) => {
 		return href
 	}
 
+	const displayPath = (path: string) => {
+		return path.replaceAll('_', ' ')
+	}
+
 	if (paths.length === 2 && paths[paths.length - 1] === '') paths.length = paths.length - 1
 
 	return (
@@ -43,9 +47,9 @@ const Breadcrumbs = ({ size = '', styles = '' }: BreadcrumbsProps) => {
 								<Link href='/'>{homeLabel}</Link>
 							)
 						) : index === paths.length - 1 ? (
-							path
+							displayPath(path)
 						) : (
-							<Link href={buildHref(path)}>{path}</Link>
+							<Link href={buildHref(path)}>{displayPath(path)}</Link>
 						)}
 					</li>
 				))}

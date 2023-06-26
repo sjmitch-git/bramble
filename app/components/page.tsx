@@ -20,9 +20,14 @@ export default function Components() {
 					</li>
 					<li>
 						<Link href='./components/buttons'>Buttons</Link>
-					</li>
-					<li>
-						<Link href='./components/buttongroup'>Button Group</Link>
+						<ul>
+							<li>
+								<Link href='./components/buttons/button_group'>Button Group</Link>
+							</li>
+							<li>
+								<Link href='./components/buttons/close_button'>Close Button</Link>
+							</li>
+						</ul>
 					</li>
 					<li>
 						<Link href='./components/card'>Card</Link>
