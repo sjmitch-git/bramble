@@ -36,6 +36,13 @@ import Carousel from '@/components/carousel''
 				/>
 			</div>
 
+			<div>
+				<Carousel
+					data={Data}
+					autoplay={true}
+				/>
+			</div>
+
 			<hr />
 		</>
 	)
