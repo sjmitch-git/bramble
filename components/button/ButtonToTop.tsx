@@ -40,7 +40,7 @@ const ButtonToTop = ({ size = '', styles = '', disabled = false }: ButtonProps) 
 
 	return (
 		<Button
-			styles={`icon circle ${styles} ${size}`}
+			styles={`icon circle transition-all ${styles} ${size}`}
 			onClick={ScrollToTop}
 			title='Back to top?'
 			id='totopbutton'

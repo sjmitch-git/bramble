@@ -960,7 +960,6 @@ return (
 					<Select
 						styles='dark text-size-inherit'
 						onChange={handleDrinksChange}
-						value={drink}
 						nocaret={true}
 						disabled={true}
 					>
