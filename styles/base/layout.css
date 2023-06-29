@@ -5,7 +5,7 @@
     }
 
     .header {
-        @apply p-0;
+        @apply mx-auto w-full lg:max-w-6xl;
     }
 
     main {

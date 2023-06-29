@@ -1,6 +1,6 @@
 // set default app config
-const name = 'BramblePuff'
-const title = 'UI Design System'
+const name = 'Next-13 Starter'
+const title = 'A UI Design System'
 const description = 'Create a short story using the latest in AI technology.'
 
 const config = {
@@ -14,7 +14,7 @@ const config = {
 		author: process.env.NEXT_PUBLIC_AUTHOR_NAME || 'Stephen',
 		authorUrl: process.env.NEXT_PUBLIC_AUTHOR_URL || 'https://mitch.gatsbyjs.io/',
 		authorTwitter: process.env.NEXT_PUBLIC_AUTHOR_TWITTER || 'yourTwitterHandle',
-		image: '/brand.png',
+		image: '/logo.png',
 		siteLanguage: `en`,
 		keywords: [
 			'OpenAI',
@@ -30,11 +30,89 @@ const config = {
 	siteLinks: [
 		{
 			href: '/',
-			label: 'Create',
+			label: 'Home',
 		},
 		{
-			href: '/saved',
-			label: 'Saved',
+			href: '/components',
+			label: 'Components',
+
+			links: [
+				{
+					href: '/components/accordian',
+					label: 'Accordian',
+				},
+				{
+					href: '/components/alert',
+					label: 'Alert',
+				},
+				{
+					href: '/components/badge',
+					label: 'Badge',
+				},
+				{
+					href: '/components/breadcrumbs',
+					label: 'Breadcrumbs',
+				},
+				{
+					href: '/components/buttons',
+					label: 'Buttons',
+
+					links: [
+						{
+							href: '/components/buttons/button_group',
+							label: 'Button Group',
+						},
+						{
+							href: '/components/buttons/close_button',
+							label: 'Close Button',
+						},
+					],
+				},
+				{
+					href: '/components/card',
+					label: 'Card',
+				},
+				{
+					href: '/components/carousel',
+					label: 'Carousel',
+				},
+				{
+					href: '/components/codeblock',
+					label: 'Codeblock',
+				},
+				{
+					href: '/components/dialog',
+					label: 'Dialog',
+				},
+				{
+					href: '/components/figure',
+					label: 'Figure',
+				},
+				{
+					href: '/components/gallery',
+					label: 'Gallery',
+				},
+				{
+					href: '/components/modal',
+					label: 'Modal',
+				},
+				{
+					href: '/components/pagination',
+					label: 'Pagination',
+				},
+				{
+					href: '/components/ratings',
+					label: 'Ratings',
+				},
+				{
+					href: '/components/select',
+					label: 'Select',
+				},
+				{
+					href: '/components/video',
+					label: 'Video',
+				},
+			],
 		},
 	],
 	manifest_options: {

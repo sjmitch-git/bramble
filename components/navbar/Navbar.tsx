@@ -1,26 +1,11 @@
-import Link from 'next/link'
-import Image from 'next/image'
-
-import config from '../../app.config'
+import Navlinks from './Navlinks'
+import Navbrand from './Navbrand'
 
 const Navbar = () => {
-	const { image, name } = config.siteMetadata
-
 	return (
 		<nav className={`navbar`}>
-			<div className='brand'>
-				<Link href='/'>
-					<Image
-						src={image}
-						height='123'
-						width='178'
-						priority
-						data-testid='image'
-						alt={name}
-					/>
-					<span className='sr-only'>{name}</span>
-				</Link>
-			</div>
+			<Navbrand />
+			<Navlinks />
 		</nav>
 	)
 }

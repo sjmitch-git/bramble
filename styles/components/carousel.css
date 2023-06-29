@@ -11,7 +11,7 @@
             @apply grid-cols-none h-[300px] transition-all duration-500 relative;
         }
 
-        & .figcaption {
+        &:not(:has(.modal)) .figcaption {
             @apply relative -top-8 text-light text-lg bg-[var(--shim-color)] !pt-1;            
         }
     }

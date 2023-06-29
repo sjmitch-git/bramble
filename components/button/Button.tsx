@@ -8,7 +8,8 @@ interface ButtonProps {
 	id?: string | undefined
 	title?: string | undefined
 	children: React.ReactNode
-	onClick?: () => void | undefined
+	onClick?: (e: any) => void | undefined
+	onBlur?: (e: any) => void | undefined
 	type?: 'submit' | 'reset' | 'button' | undefined
 	disabled?: boolean | undefined
 	tabindex?: number | undefined
@@ -25,6 +26,7 @@ const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
 		id,
 		disabled = undefined,
 		onClick,
+		onBlur,
 		tabindex = undefined,
 		children,
 	} = props
@@ -37,6 +39,7 @@ const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
 			disabled={disabled}
 			tabIndex={tabindex}
 			onClick={onClick}
+			onBlur={onBlur}
 			ref={ref}
 		>
 			{children}

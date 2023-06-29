@@ -1,6 +1,53 @@
 @layer components {
 
     .navbar {
-        @apply bg-neutral;
+        @apply flex justify-between items-center gap-4 p-0;
+    }
+
+    .navbrand {
+        @apply font-mono;
+
+        a {
+            @apply flex gap-4 items-center hover:transform-none;
+        }
+
+        .brand {
+            @apply my-0 normal-case hidden md:block text-dark;
+        }
+    }
+
+    .navlinks {
+        ul {
+                @apply flex gap-4;
+
+            & ul {
+                @apply ms-0 bg-light border block;
+
+                & a:hover {
+                    @apply bg-primary text-light;
+                }
+            }
+
+        }
+
+        li {
+            @apply whitespace-nowrap flex items-center relative flex-wrap;
+
+            & li li {
+                @apply ps-4;
+            }
+        }
+
+        li a {
+            @apply flex items-center gap-1 hover:transform-none w-full px-2;
+        }
+
+        .wrap {
+            @apply absolute z-50 hidden top-8 right-4 border border-accent shadow-lg;
+        }
+
+        li.show .wrap {
+            @apply block;
+        }
     }
 }
