@@ -117,6 +117,10 @@ const config = {
 				},
 			],
 		},
+		{
+			href: '/posts',
+			label: 'Posts',
+		},
 	],
 	manifest_options: {
 		name: `${title} - ${description}`,

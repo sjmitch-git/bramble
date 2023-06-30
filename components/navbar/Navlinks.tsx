@@ -1,10 +1,11 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import config from '../../app.config'
 
+import NavToggle from './Navtoggle'
 import Button from '@/components/button'
 import { ChevronDownIcon, ChevronUpIcon, Bars3Icon } from '@heroicons/react/24/solid'
 
@@ -22,6 +23,7 @@ const Navlinks = () => {
 	const handleBlur = () => {
 		setTimeout(() => {
 			setShow('')
+			setNavShow(false)
 		}, 1000)
 	}
 
@@ -29,10 +31,14 @@ const Navlinks = () => {
 		setNavShow(!navShow)
 	}
 
+	const test = (e: React.MouseEvent<HTMLUListElement>) => {
+		console.log('test', e)
+	}
+
 	return (
 		<nav className={`navlinks`}>
 			<div className={`inner ${navShow && 'open'}`}>
-				<ul>
+				<ul onClick={(e) => test(e)}>
 					{siteLinks.map((link) => (
 						<li
 							key={link.label}
@@ -88,14 +94,10 @@ const Navlinks = () => {
 				</ul>
 			</div>
 
-			<div className='toggler'>
-				<Button
-					styles='solid secondary circle icon sm'
-					onClick={toggleNav}
-				>
-					<Bars3Icon />
-				</Button>
-			</div>
+			<NavToggle
+				onClick={toggleNav}
+				open={navShow}
+			/>
 		</nav>
 	)
 }

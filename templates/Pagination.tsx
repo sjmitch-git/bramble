@@ -18,11 +18,12 @@ return (
 		feedback={true} 	// show feedback message
 		vertical={false} 	// vertical orientation
 		minimal={false} 	// minimal display
+		icons={true}		// display icons rather than labels
     />
 )`}
 				</Codeblock>
 				<h3>Sizes</h3>
-				<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
+				<div className='mb-8 flex flex-col justify-center gap-4 bg-gray-300 p-4'>
 					<Pagination
 						size='sm'
 						theme='dark'
@@ -31,7 +32,7 @@ return (
 						icons={true}
 					/>
 				</div>
-				<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
+				<div className='mb-8 flex flex-col justify-center gap-4 bg-gray-300 p-4'>
 					<Pagination
 						size='base'
 						theme='light'
@@ -46,10 +47,11 @@ return (
 						range={12}
 					/>
 				</div>
-				<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
+				<div className='mb-8 flex flex-col justify-center gap-4 bg-gray-300 p-4'>
 					<Pagination
 						theme='dark'
 						size='lg'
+						icons={true}
 						results={49}
 						range={12}
 						feedback={true}
@@ -78,7 +80,7 @@ return (
 			</div>
 			<h3>RTL</h3>
 			<div
-				className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'
+				className='mb-8 flex flex-col justify-center gap-4 bg-gray-300 p-4'
 				dir='rtl'
 			>
 				<Pagination
