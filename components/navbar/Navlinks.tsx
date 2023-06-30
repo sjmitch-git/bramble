@@ -6,12 +6,13 @@ import { useState } from 'react'
 import config from '../../app.config'
 
 import Button from '@/components/button'
-import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
+import { ChevronDownIcon, ChevronUpIcon, Bars3Icon } from '@heroicons/react/24/solid'
 
 const Navlinks = () => {
 	const { siteLinks } = config
 
 	const [show, setShow] = useState('')
+	const [navShow, setNavShow] = useState(false)
 
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>, label: string) => {
 		e.preventDefault()
@@ -24,58 +25,77 @@ const Navlinks = () => {
 		}, 1000)
 	}
 
+	const toggleNav = () => {
+		setNavShow(!navShow)
+	}
+
 	return (
 		<nav className={`navlinks`}>
-			<ul>
-				{siteLinks.map((link) => (
-					<li
-						key={link.label}
-						className={`${show === link.label ? 'show' : ''}`}
-					>
-						<Link href={link.href}>
-							{link.label}{' '}
+			<div className={`inner ${navShow && 'open'}`}>
+				<ul>
+					{siteLinks.map((link) => (
+						<li
+							key={link.label}
+							className={`${show === link.label ? 'show' : ''}`}
+						>
+							<Link href={link.href}>
+								{link.label}{' '}
+								{link.links && (
+									<Button
+										styles='xs link p-0'
+										onClick={(e) => handleClick(e, link.label)}
+										onBlur={handleBlur}
+										tabindex={1}
+									>
+										{show === link.label ? (
+											<ChevronUpIcon />
+										) : (
+											<ChevronDownIcon />
+										)}
+									</Button>
+								)}
+							</Link>
 							{link.links && (
-								<Button
-									styles='xs link p-0'
-									onClick={(e) => handleClick(e, link.label)}
-									onBlur={handleBlur}
-									tabindex={1}
-								>
-									{show === link.label ? <ChevronUpIcon /> : <ChevronDownIcon />}
-								</Button>
-							)}
-						</Link>
-						{link.links && (
-							<div className='wrap'>
-								<ul>
-									{link.links.map((sub) => (
-										<li key={sub.label}>
-											<Link
-												href={sub.href}
-												key={sub.label}
-											>
-												{sub.label}
-											</Link>
+								<div className='wrap'>
+									<ul>
+										{link.links.map((sub) => (
+											<li key={sub.label}>
+												<Link
+													href={sub.href}
+													key={sub.label}
+												>
+													{sub.label}
+												</Link>
 
-											{sub.links && (
-												<ul>
-													{sub.links.map((subsub) => (
-														<li key={subsub.label}>
-															<Link href={subsub.href}>
-																{subsub.label}
-															</Link>
-														</li>
-													))}
-												</ul>
-											)}
-										</li>
-									))}
-								</ul>
-							</div>
-						)}
-					</li>
-				))}
-			</ul>
+												{sub.links && (
+													<ul>
+														{sub.links.map((subsub) => (
+															<li key={subsub.label}>
+																<Link href={subsub.href}>
+																	{subsub.label}
+																</Link>
+															</li>
+														))}
+													</ul>
+												)}
+											</li>
+										))}
+									</ul>
+								</div>
+							)}
+						</li>
+					))}
+				</ul>
+			</div>
+
+			<div className='toggler'>
+				<Button
+					styles='solid secondary circle icon sm'
+					onClick={toggleNav}
+				>
+					<Bars3Icon />
+				</Button>
+			</div>
 		</nav>
 	)
 }

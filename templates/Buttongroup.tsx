@@ -3,19 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 
-import {
-	PlayIcon,
-	PauseIcon,
-	StopIcon,
-	TrashIcon,
-	ArrowPathRoundedSquareIcon,
-	ArrowDownOnSquareIcon,
-	CheckIcon,
-	StarIcon,
-	EllipsisHorizontalIcon,
-	HeartIcon,
-	PlusIcon,
-} from '@heroicons/react/24/solid'
+import { PlayIcon, PauseIcon, StopIcon } from '@heroicons/react/24/solid'
 
 import Button from '@/components/button'
 import Buttongroup from '@/components/buttongroup'
@@ -238,33 +226,6 @@ return (
 				</div>
 
 				<Codeblock language='jsx'>{`<Buttongroup size='lg'>`}</Codeblock>
-
-				<h3>X-Large</h3>
-
-				<div className='mb-0 flex flex-wrap gap-4 bg-gray-300 p-4'>
-					<Buttongroup size='xl'>
-						<Button
-							styles='primary'
-							onClick={handleClick}
-						>
-							Left
-						</Button>
-						<Button
-							styles='primary'
-							onClick={handleClick}
-						>
-							Middle
-						</Button>
-						<Button
-							styles='primary'
-							onClick={handleClick}
-						>
-							Right
-						</Button>
-					</Buttongroup>
-				</div>
-
-				<Codeblock language='jsx'>{`<Buttongroup size='xl'>`}</Codeblock>
 			</section>
 
 			<section id='icons'>
@@ -474,7 +435,7 @@ return (
 			<hr />
 			<section>
 				<h2>Options</h2>
-				<Codeblock language='jsx'>{`size: 'xs' | 'sm' | 'lg' | 'xl' | undefined
+				<Codeblock language='jsx'>{`size: 'xs' | 'sm' | 'lg' | undefined
 styles: string | undefined // // Any Tailwind classes can be added here
 label: string | undefined // aria-label`}</Codeblock>
 			</section>

@@ -27,6 +27,9 @@ const config = {
 			'Jest',
 		],
 	},
+	labels: {
+		homeLabel: 'Home',
+	},
 	siteLinks: [
 		{
 			href: '/',

@@ -3,23 +3,30 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+import config from '@/app.config'
+
 interface BreadcrumbsProps {
 	size?: string | undefined
 	styles?: string | undefined
 }
 
 const Breadcrumbs = ({ size = '', styles = '' }: BreadcrumbsProps) => {
-	const homeLabel = 'Home'
+	const { homeLabel } = config.labels
+
 	const pathname = usePathname()
 	const paths = pathname.split('/')
 
 	const buildHref = (path: string) => {
-		let href = ''
 		for (let i = 0; i < paths.length; i++) {
-			if (i > 0) href = href + '/' + path
-			if (paths[i] === path) break
+			if (i === paths.length - 1) break
+
+			if (paths[1] === path) {
+				return '/' + path
+			} else if (paths[2] === path) {
+				return '/' + paths[1] + '/' + path
+			}
 		}
-		return href
+		return ''
 	}
 
 	const displayPath = (path: string) => {

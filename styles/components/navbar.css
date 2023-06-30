@@ -1,7 +1,7 @@
 @layer components {
 
     .navbar {
-        @apply flex justify-between items-center gap-4 p-0;
+        @apply flex justify-between items-center gap-4 px-1 md:px-3;
     }
 
     .navbrand {
@@ -17,8 +17,10 @@
     }
 
     .navlinks {
+        
+
         ul {
-                @apply flex gap-4;
+                @apply flex gap-4 flex-col md:flex-row;
 
             & ul {
                 @apply ms-0 bg-light border block;
@@ -43,11 +45,23 @@
         }
 
         .wrap {
-            @apply absolute z-50 hidden top-8 right-4 border border-accent shadow-lg;
+            @apply absolute z-50 hidden top-8 right-0 border border-accent shadow-lg;
         }
 
         li.show .wrap {
             @apply block;
+        }
+
+        .inner {
+            @apply absolute md:static -right-full transition-all duration-500 top-8 ease-in-out;
+
+            &.open {
+                @apply right-2;
+            }
+        }
+
+        .toggler {
+            @apply absolute right-2 top-4 md:hidden;
         }
     }
 }

@@ -9,11 +9,11 @@
         }      
 
         &.lg {
-            @apply text-lg;
+            @apply md:text-lg;
         }
 
         &.xl {
-            @apply text-xl;
+            @apply md:text-xl;
         }
 
         & > ol {
