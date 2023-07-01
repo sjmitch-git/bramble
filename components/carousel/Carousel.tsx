@@ -21,6 +21,7 @@ interface CarouselProps {
 	caption?: boolean | undefined
 	autoplay?: boolean | undefined
 	gallery?: boolean | undefined
+	rtl?: boolean | undefined
 }
 
 const Carousel = ({
@@ -30,6 +31,7 @@ const Carousel = ({
 	gallery,
 	styles = '',
 	theme = '',
+	rtl,
 }: CarouselProps) => {
 	const [index, setIndex] = useState(0)
 	const [position, setPosition] = useState(0)
@@ -41,6 +43,18 @@ const Carousel = ({
 	useEffect(() => {
 		setInnerWidth(inner.current.offsetWidth)
 	}, [inner])
+
+	let style
+
+	if (rtl) {
+		style = {
+			right: position + 'px',
+		}
+	} else {
+		style = {
+			left: position + 'px',
+		}
+	}
 
 	useEffect(() => {
 		const startAutoplay = () => {
@@ -70,11 +84,11 @@ const Carousel = ({
 	return (
 		<>
 			<div className={`carousel ${styles} ${theme}`}>
-				<div className='absolute bottom-0 left-1 top-0 flex'>
+				<div className='absolute bottom-0 start-1 top-0 flex'>
 					{!autoplay && (
 						<Button
 							onClick={setPrevious}
-							styles='icon circle light sm m-auto z-50'
+							styles='icon circle light sm m-auto z-50 rtl:rotate-180'
 							disabled={index === 0}
 						>
 							<ChevronLeftIcon />
@@ -88,7 +102,7 @@ const Carousel = ({
 					{gallery ? (
 						<Gallery
 							styles={`flex oveflow-hidden gap-0`}
-							style={{ left: `${position}px` }}
+							style={style}
 							data={data}
 							caption={caption}
 							aspect='aspect-[4/3]'
@@ -96,7 +110,7 @@ const Carousel = ({
 					) : (
 						<div
 							className='cardgroup'
-							style={{ left: `${position}px` }}
+							style={style}
 						>
 							{data.map((item, index) => (
 								<Card
@@ -112,11 +126,11 @@ const Carousel = ({
 						</div>
 					)}
 				</div>
-				<div className='absolute bottom-0 right-1 top-0 flex'>
+				<div className='absolute bottom-0 end-1 top-0 flex'>
 					{!autoplay && (
 						<Button
 							onClick={setNext}
-							styles='icon circle light sm m-auto'
+							styles='icon circle light sm m-auto rtl:rotate-180'
 							disabled={index === data.length - 1}
 						>
 							<ChevronRightIcon />

@@ -99,6 +99,30 @@ import Carousel from '@/components/carousel''
 				</Codeblock>
 			</div>
 
+			<h2>RTL</h2>
+
+			<div
+				className=''
+				dir='rtl'
+			>
+				<Carousel
+					data={Data}
+					theme='light'
+					rtl={true}
+				/>
+			</div>
+			<div className='mb-0'>
+				<Codeblock language='jsx'>
+					{`<div dir='rtl'>
+	<Carousel
+		data={Data}
+		theme='light'
+		rtl={true}
+	/>
+</div>`}
+				</Codeblock>
+			</div>
+
 			<hr />
 		</>
 	)
