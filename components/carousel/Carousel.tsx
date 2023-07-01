@@ -3,21 +3,34 @@ import React, { useState, useRef, useEffect } from 'react'
 
 import Gallery from '@/components/gallery'
 import Button from '@/components/button'
+import Card from '@/components/card'
 
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/24/solid'
 
 interface DataProps {
 	name: string
 	src: string
+	description: string
+	link: string
 }
 
 interface CarouselProps {
 	data: DataProps[]
+	styles?: string | undefined
+	theme?: string | undefined
 	caption?: boolean | undefined
 	autoplay?: boolean | undefined
+	gallery?: boolean | undefined
 }
 
-const Carousel = ({ data, caption, autoplay = false }: CarouselProps) => {
+const Carousel = ({
+	data,
+	caption,
+	autoplay = false,
+	gallery,
+	styles = '',
+	theme = '',
+}: CarouselProps) => {
 	const [index, setIndex] = useState(0)
 	const [position, setPosition] = useState(0)
 	const [innerWidth, setInnerWidth] = useState(0)
@@ -56,7 +69,7 @@ const Carousel = ({ data, caption, autoplay = false }: CarouselProps) => {
 
 	return (
 		<>
-			<div className={`carousel`}>
+			<div className={`carousel ${styles} ${theme}`}>
 				<div className='absolute bottom-0 left-1 top-0 flex'>
 					{!autoplay && (
 						<Button
@@ -72,13 +85,32 @@ const Carousel = ({ data, caption, autoplay = false }: CarouselProps) => {
 					className='inner'
 					ref={inner}
 				>
-					<Gallery
-						styles={`flex oveflow-hidden gap-0`}
-						style={{ left: `${position}px` }}
-						data={data}
-						caption={caption}
-						aspect='aspect-[4/3]'
-					/>
+					{gallery ? (
+						<Gallery
+							styles={`flex oveflow-hidden gap-0`}
+							style={{ left: `${position}px` }}
+							data={data}
+							caption={caption}
+							aspect='aspect-[4/3]'
+						/>
+					) : (
+						<div
+							className='cardgroup'
+							style={{ left: `${position}px` }}
+						>
+							{data.map((item, index) => (
+								<Card
+									title={item.name}
+									description={item.description}
+									link={item.link}
+									styles='aspect-[4/3] shadow-none'
+									layout='full'
+									linkLabel={item.name}
+									key={index}
+								/>
+							))}
+						</div>
+					)}
 				</div>
 				<div className='absolute bottom-0 right-1 top-0 flex'>
 					{!autoplay && (

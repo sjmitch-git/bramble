@@ -30,13 +30,13 @@ const ButtonsTemplate = () => {
 		<>
 			<h2>Usage</h2>
 			<div className='mb-0 flex flex-wrap justify-start gap-4 bg-gray-300 p-4'>
-				<Button onClick={handleClick}>Default</Button>
+				<Button onClick={handleClick}>Click</Button>
 			</div>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
 					{`import Button from '@/components/button'
 
-const label = 'Default'
+const label = 'Click'
 
 const handleClick = () => {
 	alert('You clicked me!')
@@ -1164,9 +1164,11 @@ size='xl'`}</Codeblock>
 styles: string | undefined
 id: string | undefined
 title: string | undefined
-type: 'submit' | 'reset' | 'button' | undefined
-disabled: boolean | undefined
-onClick: function | undefined
+onClick?: (e: any) => void | undefined
+onBlur?: (e: any) => void | undefined
+type?: 'submit' | 'reset' | 'button' | undefined
+disabled?: boolean | undefined
+tabindex?: number | undefined
 
 <Button
 	size='xl'

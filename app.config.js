@@ -100,6 +100,10 @@ const config = {
 					label: 'Modal',
 				},
 				{
+					href: '/components/navbar',
+					label: 'Navbar',
+				},
+				{
 					href: '/components/pagination',
 					label: 'Pagination',
 				},

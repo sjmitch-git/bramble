@@ -2,7 +2,7 @@
 
     .breadcrumbs {
         
-        @apply text-base w-full lg:max-w-6xl mx-auto px-2 md:px-4 lg:px-0 pt-12;
+        @apply text-base w-full lg:max-w-6xl mx-auto pt-12;
 
         &.sm {
             @apply text-sm;

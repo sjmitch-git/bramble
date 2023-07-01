@@ -10,10 +10,9 @@
 @import 'tailwindcss/utilities';
 @import './utilities/index.css';
 
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-}
+@import './regular/index.css';
+
+
 
 /* dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.8);

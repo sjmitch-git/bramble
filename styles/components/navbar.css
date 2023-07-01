@@ -1,7 +1,7 @@
 @layer components {
 
     .navbar {
-        @apply flex justify-between items-center gap-4 px-1 md:px-3 lg:px-0;
+        @apply flex justify-between items-center gap-4;
     }
 
     .navbrand {
@@ -36,7 +36,7 @@
             @apply whitespace-nowrap flex items-center relative flex-wrap;
 
             & li li {
-                @apply ps-2;
+                @apply indent-2;
             }
         }
 
@@ -45,11 +45,11 @@
         }
 
         .wrap {
-            @apply relative md:absolute z-50 top-2 md:top-8 left-2 md:right-0 md:shadow-lg transition-all duration-500 max-h-0 ease-in-out overflow-y-auto; 
+            @apply relative md:absolute z-50 top-2 md:top-8 left-2 md:right-0 md:shadow-lg transition-all duration-500 max-h-0 ease-in-out overflow-y-auto overflow-x-hidden; 
         }
 
         li.show .wrap {
-            @apply max-h-48 md:max-h-96 border;
+            @apply max-h-96 md:max-h-96 border;
         }
 
         .inner {
@@ -61,7 +61,15 @@
         }
 
         .toggler {
-            @apply absolute right-2 top-4 md:hidden z-50;
+            @apply absolute right-2 top-4 md:hidden z-50;  
+        }
+
+        .demo & .inner:not(.open) + .toggler {
+            @apply relative top-0;
+        }
+
+        .demo & .open + .toggler {
+            @apply fixed;
         }
     }
 }

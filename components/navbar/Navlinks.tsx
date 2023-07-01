@@ -1,13 +1,13 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
-import config from '../../app.config'
+import config from '@/app.config'
 
 import NavToggle from './Navtoggle'
 import Button from '@/components/button'
-import { ChevronDownIcon, ChevronUpIcon, Bars3Icon } from '@heroicons/react/24/solid'
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
 
 const Navlinks = () => {
 	const { siteLinks } = config
@@ -31,14 +31,10 @@ const Navlinks = () => {
 		setNavShow(!navShow)
 	}
 
-	const test = (e: React.MouseEvent<HTMLUListElement>) => {
-		console.log('test', e)
-	}
-
 	return (
 		<nav className={`navlinks`}>
 			<div className={`inner ${navShow && 'open'}`}>
-				<ul onClick={(e) => test(e)}>
+				<ul>
 					{siteLinks.map((link) => (
 						<li
 							key={link.label}
