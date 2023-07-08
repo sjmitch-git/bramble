@@ -26,7 +26,7 @@ const CloseButtonTemplate = () => {
 
 			<h2>Colours</h2>
 
-			<div className='mb-12 flex justify-center gap-4 bg-light p-4'>
+			<div className='mb-12 flex flex-wrap justify-center gap-4 bg-light p-4'>
 				<CloseButton onClick={handleClick} />
 				<CloseButton
 					onClick={handleClick}
@@ -84,7 +84,7 @@ const CloseButtonTemplate = () => {
 
 			<h2>Circle</h2>
 
-			<div className='mb-8 flex justify-center gap-4 bg-light p-4'>
+			<div className='mb-8 flex flex-wrap justify-center gap-4 bg-light p-4'>
 				<CloseButton
 					onClick={handleClick}
 					styles='circle'
@@ -127,7 +127,7 @@ const CloseButtonTemplate = () => {
 
 			<h2>Outline</h2>
 
-			<div className='flex justify-center gap-4 bg-neutral p-4'>
+			<div className='flex flex-wrap justify-center gap-4 bg-neutral p-4'>
 				<CloseButton
 					onClick={handleClick}
 					styles='primary circle outline'
@@ -166,7 +166,7 @@ const CloseButtonTemplate = () => {
 
 			<h2>Sizes</h2>
 
-			<div className='flex justify-center gap-4 bg-neutral p-4'>
+			<div className='flex flex-wrap justify-center gap-4 bg-neutral p-4'>
 				<CloseButton
 					onClick={handleClick}
 					styles='primary xs m-auto'

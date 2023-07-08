@@ -17,10 +17,16 @@ const Navlinks = () => {
 
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>, label: string) => {
 		e.preventDefault()
+		e.stopPropagation()
 		label === show ? setShow('') : setShow(label)
 	}
 
-	const handleBlur = () => {
+	const handleBlur = (e: React.MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault()
+		closeNav()
+	}
+
+	const closeNav = () => {
 		setTimeout(() => {
 			setShow('')
 			setNavShow(false)
@@ -40,13 +46,16 @@ const Navlinks = () => {
 							key={link.label}
 							className={`${show === link.label ? 'show' : ''}`}
 						>
-							<Link href={link.href}>
+							<Link
+								href={link.href}
+								onClick={closeNav}
+							>
 								{link.label}{' '}
 								{link.links && (
 									<Button
 										styles='xs link p-0'
 										onClick={(e) => handleClick(e, link.label)}
-										onBlur={handleBlur}
+										onBlur={(e) => handleBlur(e)}
 										tabindex={1}
 									>
 										{show === link.label ? (

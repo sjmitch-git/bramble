@@ -29,6 +29,7 @@ const config = {
 	},
 	labels: {
 		homeLabel: 'Home',
+		videoFallback: `Your browser does not support the video tag.`,
 	},
 	siteLinks: [
 		{
@@ -118,6 +119,13 @@ const config = {
 				{
 					href: '/components/video',
 					label: 'Video',
+
+					links: [
+						{
+							href: '/components/video/video_player',
+							label: 'Video Player',
+						},
+					],
 				},
 			],
 		},

@@ -5,10 +5,18 @@
     }
 
     .video {
-        @apply w-full aspect-video bg-light;
+        @apply w-full aspect-video bg-dark cursor-pointer;
 
         &[poster] {
             @apply object-cover;
+        }
+    }
+
+    .loading {
+        @apply bg-dark absolute top-0 left-0 right-0 bottom-0 z-10 flex justify-center items-center aspect-video;
+
+        .innerloading {
+            @apply aspect-square
         }
     }
 }
