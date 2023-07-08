@@ -10,7 +10,7 @@ interface VideoSliderProps {
 const VideoSlider = ({ time, onTime, duration, onScrubChange }: VideoSliderProps) => {
 	useEffect(() => {
 		if (time) setScrubRange((time / duration) * 100)
-	}, [time])
+	}, [time, duration])
 
 	const [scrubRange, setScrubRange] = useState(0)
 
