@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 
 import Button from '@/components/button'
-import { PlusIcon, MinusIcon } from '@heroicons/react/24/solid'
+import { PlusIcon, MinusIcon, ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/solid'
 
 interface DataProps {
 	id: string
@@ -13,13 +13,14 @@ interface DataProps {
 
 interface AccordianProps {
 	size?: string | 'sm' | 'lg' | undefined
-	styles?: string | undefined
+	className?: string | undefined
 	onClick?: () => void | undefined
 	data: DataProps[]
 	opened?: string | undefined
+	layout?: string | 'flush' | undefined
 }
 
-const Accordian = ({ size = '', styles = '', data, opened }: AccordianProps) => {
+const Accordian = ({ size = '', className = '', data, opened, layout = '' }: AccordianProps) => {
 	const [open, setOpen] = useState('')
 
 	useEffect(() => {
@@ -27,10 +28,10 @@ const Accordian = ({ size = '', styles = '', data, opened }: AccordianProps) => 
 	}, [opened])
 
 	return (
-		<div className={`accordian ${size} ${styles}`}>
+		<div className={`accordian ${size} ${className}`}>
 			{data?.map((item, _index) => (
 				<div
-					className='accordian-container'
+					className={`accordian-container ${layout}`}
 					key={item.id}
 				>
 					<h3
@@ -40,7 +41,7 @@ const Accordian = ({ size = '', styles = '', data, opened }: AccordianProps) => 
 						{item.title}
 
 						<Button
-							styles='bg-transparent text-primary circle icon !static text-3xl'
+							styles='bg-light text-primary circle icon !static text-3xl'
 							onClick={() => setOpen(`${open === item.id ? '' : item.id}`)}
 						>
 							{open === item.id ? <MinusIcon /> : <PlusIcon />}

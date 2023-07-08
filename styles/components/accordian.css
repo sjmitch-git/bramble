@@ -4,10 +4,18 @@
         @apply text-lg;
 
         .accordian-container {
-            @apply border p-4 mb-2;
+            @apply border border-neutral border-t-0 first:border-t p-4 mb-0;
 
             &:has(.open) {
-                @apply border-info;
+                @apply bg-[var(--info-color-25)];
+            }
+
+            &.flush {
+                @apply border-x-0 border-t-0 last:border-b-0;
+            }
+
+            &.spaced {
+                @apply mb-2 border;
             }
         }
 

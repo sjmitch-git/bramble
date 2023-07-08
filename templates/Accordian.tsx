@@ -22,7 +22,7 @@ import Users from '@/data/users.json'
 <Accordian
 	data={Users} 	// json data
 	opened='1'		// add id to open initially
-	styles=''		// add Tailwind classes here
+	className=''	// add Tailwind classes here
 />
 
 /* DATA Structure
@@ -42,18 +42,75 @@ import Users from '@/data/users.json'
 				styles='info'
 			/>
 
-			<h2>Output</h2>
+			<h2>Layouts</h2>
 
-			<div className='mx-auto mb-12 max-w-xl'>
+			<h3>Default Layout</h3>
+
+			<div className='mx-auto mb-4 max-w-xl'>
 				<Accordian
 					data={Users}
 					opened='1'
 				/>
 			</div>
+			<div className='mb-12'>
+				<Codeblock language='jsx'>
+					{`<Accordian
+	data={Users}
+	opened='1'
+/>`}
+				</Codeblock>
+			</div>
+
+			<h3>Flush Layout</h3>
+
+			<div className='mx-auto mb-4 max-w-xl'>
+				<Accordian
+					data={Users}
+					layout='flush'
+				/>
+			</div>
+
+			<div className='mb-12'>
+				<Codeblock language='jsx'>
+					{`<Accordian
+	data={Users}
+	layout='flush'
+/>`}
+				</Codeblock>
+			</div>
+
+			<h3>Spaced Layout</h3>
+
+			<div className='mx-auto mb-4 max-w-xl'>
+				<Accordian
+					data={Users}
+					layout='spaced'
+				/>
+			</div>
+
+			<div className='mb-12'>
+				<Codeblock language='jsx'>
+					{`<Accordian
+	data={Users}
+	layout='spaced'
+/>`}
+				</Codeblock>
+			</div>
+
+			<hr />
+
+			<h2>Sizes</h2>
 
 			<h3>Small</h3>
 
-			<div className='mb-0'>
+			<div className='mx-auto mb-8 max-w-sm'>
+				<Accordian
+					data={Users}
+					size='sm'
+				/>
+			</div>
+
+			<div className='mb-12'>
 				<Codeblock language='jsx'>
 					{`<Accordian
 	data={Users}
@@ -62,18 +119,16 @@ import Users from '@/data/users.json'
 				</Codeblock>
 			</div>
 
-			<div className='mx-auto mb-12 max-w-sm'>
+			<h3>Large</h3>
+
+			<div className='mx-auto mb-8 max-w-3xl'>
 				<Accordian
 					data={Users}
-					size='sm'
+					size='lg'
 				/>
 			</div>
 
-			<hr />
-
-			<h3>Large</h3>
-
-			<div className='mb-0'>
+			<div className='mb-12'>
 				<Codeblock language='jsx'>
 					{`<Accordian
 	data={Users}
@@ -82,18 +137,21 @@ import Users from '@/data/users.json'
 				</Codeblock>
 			</div>
 
-			<div className='mx-auto mb-12 max-w-3xl'>
-				<Accordian
-					data={Users}
-					size='lg'
-				/>
-			</div>
-
 			<hr />
 
 			<h2>RTL</h2>
 
-			<div className='mb-0'>
+			<div
+				className='mx-auto mb-8 max-w-sm'
+				dir='rtl'
+			>
+				<Accordian
+					data={Users}
+					size='sm'
+				/>
+			</div>
+
+			<div className='mb-12'>
 				<Codeblock language='jsx'>
 					{`<div dir='rtl'>
 	<Accordian
@@ -102,16 +160,6 @@ import Users from '@/data/users.json'
 	/>
 </div>`}
 				</Codeblock>
-			</div>
-
-			<div
-				className='mx-auto mb-12 max-w-sm'
-				dir='rtl'
-			>
-				<Accordian
-					data={Users}
-					size='sm'
-				/>
 			</div>
 		</>
 	)
