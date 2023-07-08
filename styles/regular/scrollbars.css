@@ -1,7 +1,7 @@
 ::-webkit-scrollbar {
     width: 0px;
-    height: 10px;
-    background-color: var(--dark-grey);
+    height: 4px;
+    background-color: var(--light-grey);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -10,6 +10,6 @@
 
 @media screen and (min-width: 48em) {
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 4px;
     }
 }

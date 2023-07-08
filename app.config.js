@@ -1,5 +1,5 @@
 // set default app config
-const name = 'Next-13 Starter'
+const name = 'Windi'
 const title = 'A UI Design System'
 const description = 'Create a short story using the latest in AI technology.'
 
@@ -128,10 +128,6 @@ const config = {
 					],
 				},
 			],
-		},
-		{
-			href: '/posts',
-			label: 'Posts',
 		},
 	],
 	manifest_options: {

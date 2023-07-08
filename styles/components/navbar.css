@@ -12,7 +12,7 @@
         }
 
         .brand {
-            @apply my-0 normal-case hidden md:block text-dark;
+            @apply my-0 normal-case hidden md:block text-dark text-4xl tracking-widest;
         }
     }
 
@@ -45,23 +45,23 @@
         }
 
         .wrap {
-            @apply relative md:absolute z-50 top-2 md:top-8 left-2 md:right-0 md:shadow-lg transition-all duration-500 max-h-0 ease-in-out overflow-y-auto overflow-x-hidden; 
+            @apply relative md:absolute z-50 left-2 md:left-auto top-2 md:top-8 md:right-2 md:shadow-lg transition-all duration-500 max-h-0 ease-in-out overflow-y-auto overflow-x-hidden overscroll-contain; 
         }
 
         li.show .wrap {
-            @apply max-h-96 md:max-h-96 border;
+            @apply max-h-96 md:max-h-96 border min-w-[100px];
         }
 
         .inner {
             @apply fixed md:static -right-full transition-all duration-500 top-0 bottom-0 ease-in-out w-80 md:w-auto z-50 bg-neutral md:bg-transparent pt-12 px-4 md:p-0;
 
             &.open {
-                @apply right-0;
+                @apply right-0 md:right-4;
             }
         }
 
         .toggler {
-            @apply absolute right-2 top-4 md:hidden z-50;  
+            @apply fixed right-2 top-4 md:hidden z-50;  
         }
 
         .demo & .inner:not(.open) + .toggler {
