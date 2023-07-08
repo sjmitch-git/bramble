@@ -3,7 +3,7 @@ interface VideoTimeProps {
 	duration: number
 }
 
-const VideoTime = ({ time, duration }: VideoTimeProps) => {
+const VideoTime = ({ time, duration = 0 }: VideoTimeProps) => {
 	const toHHMMSS = (secs: any) => {
 		let sec_num = parseInt(secs, 10)
 		let hours = Math.floor(sec_num / 3600)

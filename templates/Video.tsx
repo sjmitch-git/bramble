@@ -40,7 +40,7 @@ fallback?: string | undefined`}
 			<h2>CSS</h2>
 			<Codeblock language='css'>
 				{`.video-wrapper {
-    @apply relative w-full h-auto max-w-4xl;
+    @apply relative w-full h-auto max-w-4xl bg-dark aspect-video;
 }
 
 .video {

@@ -69,9 +69,9 @@ const Video = ({
 
 	useEffect(() => {
 		const handleEnded = () => {
-			if (el && onEnd) {
+			if (el) {
 				el.currentTime = 0
-				onEnd()
+				if (onEnd) onEnd()
 			}
 		}
 
@@ -98,7 +98,7 @@ const Video = ({
 			document.removeEventListener('ended', handleEnded)
 			document.removeEventListener('timeupdate', handleTimeupdate)
 		}
-	})
+	}, [onEnd, onTime, onDuration, play, pause])
 
 	const clickVideo = () => {
 		if (video.current.paused) {
