@@ -1,0 +1,12 @@
+@layer components {
+
+    .range {
+        @apply cursor-pointer;
+
+        &.vertical {
+            @apply -rotate-90 origin-left w-auto;
+        }
+
+    }
+
+}

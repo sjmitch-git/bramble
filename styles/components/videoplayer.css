@@ -25,21 +25,20 @@
 
         }
 
-       /*  .scrub-slider {
+        .scrub-slider {
             @apply p-0;
 
             input {
-                @apply h-2 rounded w-full appearance-none;
 
                  &::-webkit-slider-thumb {
-                    @apply transition-all duration-500 opacity-0 appearance-none bg-current w-5 h-5 text-warning rounded-full cursor-grab;
+                    @apply transition-all duration-500 opacity-0 text-warning;
                  }
 
                 &:hover::-webkit-slider-thumb {
                     @apply opacity-100;
                 }
             }
-        } */
+        }
 
 
         .inner {

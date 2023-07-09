@@ -109,6 +109,10 @@ const config = {
 					label: 'Pagination',
 				},
 				{
+					href: '/components/range',
+					label: 'Range',
+				},
+				{
 					href: '/components/ratings',
 					label: 'Ratings',
 				},
