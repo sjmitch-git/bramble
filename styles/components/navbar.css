@@ -2,6 +2,10 @@
 
     .navbar {
         @apply flex justify-between items-center gap-4;
+
+        .brand {
+            @apply hidden md:block;
+        }
     }
 
     .navbrand {
@@ -12,7 +16,7 @@
         }
 
         .brand {
-            @apply my-0 normal-case hidden md:block text-dark text-4xl tracking-widest;
+            @apply my-0 normal-case text-4xl tracking-widest text-dark;
         }
     }
 

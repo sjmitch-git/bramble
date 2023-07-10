@@ -7,10 +7,10 @@ import config from '@/app.config'
 
 interface BreadcrumbsProps {
 	size?: string | undefined
-	styles?: string | undefined
+	className?: string | undefined
 }
 
-const Breadcrumbs = ({ size = '', styles = '' }: BreadcrumbsProps) => {
+const Breadcrumbs = ({ size = '', className = '' }: BreadcrumbsProps) => {
 	const { homeLabel } = config.labels
 
 	const pathname = usePathname()
@@ -35,9 +35,11 @@ const Breadcrumbs = ({ size = '', styles = '' }: BreadcrumbsProps) => {
 
 	if (paths.length === 2 && paths[paths.length - 1] === '') paths.length = paths.length - 1
 
-	return (
+	return pathname === '/' ? (
+		<nav></nav>
+	) : (
 		<nav
-			className={`breadcrumbs ${size} ${styles}`}
+			className={`breadcrumbs ${size} ${className}`}
 			aria-label='breadcrumb'
 		>
 			<ol>

@@ -1,0 +1,49 @@
+@layer components {
+
+    .dropdown {
+
+        @apply relative;
+         
+        &:hover {
+            @apply scale-100;
+        }
+
+        ul {
+            @apply flex gap-4 flex-col md:flex-row;
+
+            & ul {
+                @apply ms-0 bg-light border block;
+
+                & a:hover {
+                    @apply bg-primary text-light;
+                }
+            }
+
+        }
+
+        li {
+            @apply whitespace-nowrap flex items-center flex-wrap;
+
+            & li li {
+                @apply indent-2;
+            }
+        }
+
+        li a {
+            @apply flex items-center gap-1 hover:transform-none w-full px-2;
+        }
+
+        .wrap {
+            @apply absolute z-50 top-full right-3 shadow-lg transition-all duration-500 max-h-0 ease-in-out overflow-y-auto overflow-x-hidden overscroll-contain text-base leading-7;
+        }
+
+        li.show .wrap {
+            @apply max-h-96 md:max-h-96 border min-w-[100px];
+        }
+
+       /*  .dropdown-button {
+            @apply circle;
+        } */
+
+    }
+}

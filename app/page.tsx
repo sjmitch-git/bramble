@@ -1,25 +1,32 @@
-'use client'
+import { Metadata } from 'next'
 
-import Link from 'next/link'
+import Dropdown from '@/components/dropdown'
+import config from '@/app.config'
+
+const title = config.siteMetadata.name
+const description = config.siteMetadata.description
+
+export const metadata: Metadata = {
+	title: title,
+	description: description,
+}
 
 export default function Home() {
+	const { siteLinks } = config
+
 	return (
 		<>
-			<nav className='mb-8'>
-				<ul>
-					<li>
-						<Link href='/components'>Components</Link>
-					</li>
-					<li>
-						<Link href='/posts'>Posts</Link>
-					</li>
-					<li>
-						<p>
-							<Link href='/hydration'>Prefetching Using Hydration</Link>
-						</p>
-					</li>
-				</ul>
-			</nav>
+			<div className='mx-auto flex flex-col justify-center gap-4'>
+				<h1 className='sr-only'>{title}</h1>
+				<p className='lead mx-auto text-center'>{description}</p>
+				<div className='flex justify-center'>
+					<Dropdown
+						className='btn pill dark outline'
+						size='lg'
+						links={[siteLinks[0]]}
+					/>
+				</div>
+			</div>
 		</>
 	)
 }

@@ -5,7 +5,10 @@ const Header = () => {
 	return (
 		<header className='header'>
 			<Navbar />
-			<Breadcrumbs size='lg' />
+			<Breadcrumbs
+				size='lg'
+				className='pt-12'
+			/>
 		</header>
 	)
 }

@@ -50,10 +50,10 @@ return (
 			</div>
 			<h2>Styles</h2>
 			<div className='mb-0'>
-				<Codeblock language='jsx'>{`<Breadcrumbs styles='invert italic mb-4' /> // Add any Tailwind classes in styles`}</Codeblock>
+				<Codeblock language='jsx'>{`<Breadcrumbs className='invert italic' /> // Add any Tailwind classes`}</Codeblock>
 			</div>
 			<div className='mb-8 flex bg-gray-900 p-4'>
-				<Breadcrumbs styles='invert italic mb-4' />
+				<Breadcrumbs className='italic invert' />
 			</div>
 			<h2>HTML</h2>
 			<div className='mb-0'>
@@ -69,7 +69,7 @@ return (
 			<div className='mb-0'>
 				<Codeblock language='css'>{`.breadcrumbs {
         
-	@apply text-base;
+	@apply text-base w-full lg:max-w-6xl mx-auto;
 
 	&.sm {
 		@apply text-sm;

@@ -1,7 +1,7 @@
 // set default app config
-const name = 'Windi'
-const title = 'A UI Design System'
-const description = 'Create a short story using the latest in AI technology.'
+const name = 'RoKit'
+const title = 'RoKit UI'
+const description = 'A library of resuable UI components for React'
 
 const config = {
 	siteMetadata: {
@@ -9,7 +9,7 @@ const config = {
 		title: title,
 		titleTemplate: `%s · ${title}`,
 		description: description,
-		url: 'https://microstory.vercel.app',
+		url: 'https://rokit.vercel.app/',
 		githubRepo: 'https://github.com/sjmitch-git/ministory',
 		author: process.env.NEXT_PUBLIC_AUTHOR_NAME || 'Stephen',
 		authorUrl: process.env.NEXT_PUBLIC_AUTHOR_URL || 'https://mitch.gatsbyjs.io/',
@@ -32,10 +32,6 @@ const config = {
 		videoFallback: `Your browser does not support the video tag.`,
 	},
 	siteLinks: [
-		{
-			href: '/',
-			label: 'Home',
-		},
 		{
 			href: '/components',
 			label: 'Components',

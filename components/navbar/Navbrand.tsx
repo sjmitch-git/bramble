@@ -3,16 +3,26 @@ import Image from 'next/image'
 
 import config from '@/app.config'
 
-const Navbrand = () => {
+interface NavbrandProps {
+	height?: number
+	width?: number
+	className?: string
+	layout?: string
+}
+
+const Navbrand = ({ height = 70, width = 70, className = '', layout }: NavbrandProps) => {
 	const { image, name } = config.siteMetadata
 
 	return (
-		<div className='navbrand'>
-			<Link href='/'>
+		<div className={`navbrand ${className}`}>
+			<Link
+				href='/'
+				className={`${layout}`}
+			>
 				<Image
 					src={image}
-					height='70'
-					width='70'
+					height={height}
+					width={width}
 					priority
 					data-testid='image'
 					alt={name}
