@@ -20,8 +20,7 @@ interface DropdownProps {
 }
 
 const Dropdown = ({ size = '', className = '', links, button = '' }: DropdownProps) => {
-	console.log(links)
-	const [show, setShow] = useState('Components')
+	const [show, setShow] = useState('')
 
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>, label: string) => {
 		e.preventDefault()
