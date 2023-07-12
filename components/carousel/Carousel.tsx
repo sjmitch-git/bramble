@@ -36,14 +36,13 @@ const Carousel = ({
 	const [index, setIndex] = useState(0)
 	const [position, setPosition] = useState(0)
 	const [touchPosition, setTouchPosition] = useState<number>(null!)
-	const [innerWidth, setInnerWidth] = useState(0)
 	const inner = useRef<HTMLDivElement>(null!)
 	const intervalRef = useRef<number>(null!)
 	const playDirection = useRef<string>('forward')
 
-	useEffect(() => {
-		setInnerWidth(inner.current.offsetWidth)
-	})
+	const getInnerWidth = () => {
+		return inner.current.offsetWidth
+	}
 
 	let style
 
@@ -74,13 +73,13 @@ const Carousel = ({
 
 	const setNext = () => {
 		if (index === data.length - 1) return
-		setPosition(position - innerWidth)
+		setPosition(position - getInnerWidth())
 		setIndex(index + 1)
 	}
 
 	const setPrevious = () => {
 		if (index === 0) return
-		setPosition(position + innerWidth)
+		setPosition(position + getInnerWidth())
 		setIndex(index - 1)
 	}
 
@@ -143,7 +142,7 @@ const Carousel = ({
 									title={item.name}
 									description={item.description}
 									link={item.link}
-									styles='aspect-[4/3] shadow-none w-full'
+									styles='aspect-[4/3] shadow-none w-full even:bg-dark even:text-light'
 									layout='full'
 									linkLabel={item.name}
 									key={index}

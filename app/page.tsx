@@ -5,10 +5,12 @@ import config from '@/app.config'
 
 const title = config.siteMetadata.name
 const description = config.siteMetadata.description
+const keywords = config.siteMetadata.keywords
 
 export const metadata: Metadata = {
 	title: title,
 	description: description,
+	keywords: keywords,
 }
 
 export default function Home() {

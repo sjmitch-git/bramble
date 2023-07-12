@@ -1,7 +1,7 @@
 // set default app config
-const name = 'windit'
-const title = 'windit UI'
-const description = 'A library of resuable UI components for React'
+const name = 'Bramble'
+const title = 'Bramble UI'
+const description = 'A Next.js 13 starter and library of resuable UI components for React'
 
 const config = {
 	siteMetadata: {
@@ -9,23 +9,14 @@ const config = {
 		title: title,
 		titleTemplate: `%s · ${title}`,
 		description: description,
-		url: 'https://windit.vercel.app/',
+		url: 'https://bramble-ui.vercel.app/',
 		githubRepo: 'https://github.com/sjmitch-git/ministory',
 		author: process.env.NEXT_PUBLIC_AUTHOR_NAME || 'Stephen',
 		authorUrl: process.env.NEXT_PUBLIC_AUTHOR_URL || 'https://mitch.gatsbyjs.io/',
 		authorTwitter: process.env.NEXT_PUBLIC_AUTHOR_TWITTER || 'yourTwitterHandle',
 		image: '/logo.png',
 		siteLanguage: `en`,
-		keywords: [
-			'OpenAI',
-			'Story Generator',
-			'AI Technology',
-			'TailwindCSS',
-			'jsx',
-			'Next.js',
-			'ReactJS',
-			'Jest',
-		],
+		keywords: ['TailwindCSS', 'Next.js', 'ReactJS'],
 	},
 	labels: {
 		homeLabel: 'Home',
