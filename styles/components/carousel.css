@@ -30,6 +30,22 @@
         &:not(:has(.modal)) .figcaption {
             @apply relative -top-8 text-light text-lg bg-[var(--shim-color)] !pt-1;            
         }
+
+        .prev-btn {
+            @apply absolute bottom-0 start-1 top-0 flex
+        }
+
+        .next-btn {
+            @apply absolute bottom-0 end-1 top-0 flex
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+
+            .prev-btn,
+            .next-btn {
+                display: none;
+            }
+        }
     }
 
 }

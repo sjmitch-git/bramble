@@ -5,14 +5,26 @@
         @apply relative;
          
         &:hover {
-            @apply scale-100;
+            @apply scale-100 ring-4 ring-accent;
         }
+
+        /* &:active {
+            @apply bg-current;
+        } */
+
+        &:visited {
+            @apply text-current;
+        }
+
+       /*  .dropdown-link:hover {
+            @apply ring-offset-2 ring-4;
+        } */
 
         ul {
             @apply flex gap-4 flex-col md:flex-row;
 
             & ul {
-                @apply ms-0 bg-light border block;
+                @apply ms-0 bg-light border block w-full;
 
                 & a:hover {
                     @apply bg-primary text-light;
@@ -30,7 +42,7 @@
         }
 
         li a {
-            @apply flex items-center gap-1 hover:transform-none w-full px-2;
+            @apply flex items-center gap-1 hover:!transform-none w-full px-2 hover:!text-light;
         }
 
         .wrap {

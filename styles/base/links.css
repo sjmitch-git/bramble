@@ -4,15 +4,15 @@
         @apply text-primary transition;
     }
 
-    a:visited:not(.btn) {
+    a:visited:not(.btn):not(.dropdown-link) {
         @apply text-secondary;
     }
 
-    a:hover:not(.btn) {
+    a:hover:not(.btn):not(.dropdown-link) {
         @apply text-secondary scale-105;
     }
 
-    a:active,
+    a:active:not(.dropdown-link),
     a.active {
         @apply cursor-default text-info;
     }

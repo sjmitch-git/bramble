@@ -21,7 +21,7 @@
         }
 
         &.lg, .lg > & {
-            @apply text-2xl p-[var(--button-p-lg)];
+            @apply text-xl md:text-2xl p-[var(--button-p-lg)];
         }
 
         &.xl, .xl > & {
@@ -51,7 +51,7 @@
         }
 
         &.lg > svg, .lg > & > svg{
-            @apply w-10;
+            @apply w-8 md:w-10;
         }
 
         &.xl > svg, .xl > & > svg {
@@ -150,7 +150,7 @@
             }
 
             &.lg, .lg > & {
-                @apply border-8;
+                @apply border-6 md:border-8;
             }
 
             &.xl, .xl > & {
@@ -175,7 +175,7 @@
             @apply ring ring-accent;
         }
 
-        &:active, &.active {
+        &:active:not(.dropdown), &.active {
             @apply cursor-default bg-tertiary !text-dark scale-100 ring-0;
         }
 

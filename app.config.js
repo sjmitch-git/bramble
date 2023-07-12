@@ -1,6 +1,6 @@
 // set default app config
-const name = 'RoKit'
-const title = 'RoKit UI'
+const name = 'windit'
+const title = 'windit UI'
 const description = 'A library of resuable UI components for React'
 
 const config = {
@@ -9,7 +9,7 @@ const config = {
 		title: title,
 		titleTemplate: `%s · ${title}`,
 		description: description,
-		url: 'https://rokit.vercel.app/',
+		url: 'https://windit.vercel.app/',
 		githubRepo: 'https://github.com/sjmitch-git/ministory',
 		author: process.env.NEXT_PUBLIC_AUTHOR_NAME || 'Stephen',
 		authorUrl: process.env.NEXT_PUBLIC_AUTHOR_URL || 'https://mitch.gatsbyjs.io/',

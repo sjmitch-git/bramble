@@ -50,6 +50,7 @@ const Dropdown = ({ size = '', className = '', links, button = '' }: DropdownPro
 						<Link
 							href={link.href}
 							onClick={closeNav}
+							className='dropdown-link'
 						>
 							{link.label}{' '}
 							{link.links && (
@@ -57,6 +58,7 @@ const Dropdown = ({ size = '', className = '', links, button = '' }: DropdownPro
 									styles={`circle icon ml-4 ${button}`}
 									onClick={(e) => handleClick(e, link.label)}
 									onBlur={(e) => handleBlur(e)}
+									title='Dropdown Menu'
 								>
 									{show === link.label ? <ChevronUpIcon /> : <ChevronDownIcon />}
 								</Button>

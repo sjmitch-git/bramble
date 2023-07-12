@@ -9,8 +9,8 @@ const Footer = () => {
 		<footer className='footer'>
 			<div className='flex flex-col items-center justify-center gap-8'>
 				<Navbrand
-					height={400}
-					width={400}
+					height={380}
+					width={380}
 					layout='flex flex-col'
 				/>
 				<p className='text-base'>

@@ -35,6 +35,7 @@ const Carousel = ({
 }: CarouselProps) => {
 	const [index, setIndex] = useState(0)
 	const [position, setPosition] = useState(0)
+	const [touchPosition, setTouchPosition] = useState<number>(null!)
 	const [innerWidth, setInnerWidth] = useState(0)
 	const inner = useRef<HTMLDivElement>(null!)
 	const intervalRef = useRef<number>(null!)
@@ -42,7 +43,7 @@ const Carousel = ({
 
 	useEffect(() => {
 		setInnerWidth(inner.current.offsetWidth)
-	}, [inner])
+	})
 
 	let style
 
@@ -72,19 +73,44 @@ const Carousel = ({
 	})
 
 	const setNext = () => {
+		if (index === data.length - 1) return
 		setPosition(position - innerWidth)
 		setIndex(index + 1)
 	}
 
 	const setPrevious = () => {
+		if (index === 0) return
 		setPosition(position + innerWidth)
 		setIndex(index - 1)
 	}
 
+	const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+		setTouchPosition(e.touches[0].clientX)
+	}
+
+	const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+		if (touchPosition === null || autoplay) return
+		const diff = touchPosition - e.touches[0].clientX
+
+		if (diff > 5) {
+			if (rtl) setPrevious()
+			else setNext()
+		} else if (diff < -5) {
+			if (rtl) setNext()
+			else setPrevious()
+		}
+
+		setTouchPosition(null!)
+	}
+
 	return (
 		<>
-			<div className={`carousel ${styles} ${theme}`}>
-				<div className='absolute bottom-0 start-1 top-0 flex'>
+			<div
+				className={`carousel ${styles} ${theme}`}
+				onTouchStart={handleTouchStart}
+				onTouchMove={handleTouchMove}
+			>
+				<div className='prev-btn'>
 					{!autoplay && (
 						<Button
 							onClick={setPrevious}
@@ -117,7 +143,7 @@ const Carousel = ({
 									title={item.name}
 									description={item.description}
 									link={item.link}
-									styles='aspect-[4/3] shadow-none'
+									styles='aspect-[4/3] shadow-none w-full'
 									layout='full'
 									linkLabel={item.name}
 									key={index}
@@ -126,7 +152,7 @@ const Carousel = ({
 						</div>
 					)}
 				</div>
-				<div className='absolute bottom-0 end-1 top-0 flex'>
+				<div className='next-btn'>
 					{!autoplay && (
 						<Button
 							onClick={setNext}

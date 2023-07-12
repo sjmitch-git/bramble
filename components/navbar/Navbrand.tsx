@@ -10,7 +10,7 @@ interface NavbrandProps {
 	layout?: string
 }
 
-const Navbrand = ({ height = 70, width = 70, className = '', layout }: NavbrandProps) => {
+const Navbrand = ({ height = 70, width = 70, className = '', layout = '' }: NavbrandProps) => {
 	const { image, name } = config.siteMetadata
 
 	return (
