@@ -1,0 +1,6 @@
+@layer components {
+
+    .brand {
+        @apply font-mono normal-case tracking-widest hover:!transform-none;
+    }
+}

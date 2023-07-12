@@ -42,11 +42,11 @@
         }
 
         li a {
-            @apply flex items-center gap-1 hover:!transform-none w-full px-2 hover:!text-light;
+            @apply flex items-center gap-1 hover:!transform-none w-full px-2 hover:!text-light text-current;
         }
 
         .wrap {
-            @apply absolute z-50 top-full right-3 shadow-lg transition-all duration-500 max-h-0 ease-in-out overflow-y-auto overflow-x-hidden overscroll-contain text-base leading-7;
+            @apply absolute z-50 top-full right-3 shadow-lg transition-all duration-500 max-h-0 ease-in-out overflow-y-auto overflow-x-hidden text-base leading-7;
         }
 
         li.show .wrap {
