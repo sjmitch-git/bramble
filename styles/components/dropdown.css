@@ -2,7 +2,7 @@
 
     .dropdown {
 
-        @apply relative;
+        @apply relative text-current;
          
         &:hover {
             @apply scale-100 ring-4 ring-accent;
