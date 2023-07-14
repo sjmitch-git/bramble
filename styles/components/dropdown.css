@@ -41,7 +41,7 @@
             }
         }
 
-        li a {
+        li a:link {
             @apply flex items-center gap-1 hover:!transform-none w-full px-2 hover:!text-light text-current;
         }
 
