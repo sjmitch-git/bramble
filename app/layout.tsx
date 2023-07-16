@@ -7,6 +7,8 @@ import { Inter } from 'next/font/google'
 
 import config from '@/app.config'
 
+import { siteName } from '@/shared/metadata/'
+
 const title = config.siteMetadata.title
 const description = config.siteMetadata.description
 const url = config.siteMetadata.url
@@ -28,10 +30,12 @@ export const metadata: Metadata = {
 		title: { default: `${title}`, template: `%s | ${title}` },
 		description: `${description}`,
 		url: `${url}`,
-		siteName: `${title}`,
+		//siteName: `${title}`,
+		...siteName,
 		images: [
 			{
 				url: `${image}`,
+				secureUrl: `${image}`,
 				width: 429,
 				height: 429,
 				alt: `${title}`,
@@ -43,6 +47,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+	console.log('siteName', siteName)
 	const { title } = config.siteMetadata
 	return (
 		<html lang='en'>

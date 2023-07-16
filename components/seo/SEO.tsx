@@ -96,14 +96,6 @@ const SEO = () => {
 				name='theme-color'
 				content={`${themecolor}`}
 			/>
-			<meta
-				key='ogsitename'
-				property='og:site_name'
-			></meta>
-			<meta
-				content='article'
-				property='og:type'
-			></meta>
 		</>
 	)
 }

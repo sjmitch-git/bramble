@@ -7,6 +7,12 @@ const description =
 	'Dropdowns are toggleable, contextual overlays for displaying lists of grouped links'
 const keywords = 'Dropdown,Components,React,React Components'
 
+const openGraph = {
+	title: title,
+	description: description,
+	type: 'article',
+}
+
 export const metadata: Metadata = {
 	title: title,
 	alternates: {
@@ -15,9 +21,7 @@ export const metadata: Metadata = {
 	description: description,
 	keywords: keywords,
 	openGraph: {
-		title: title,
-		description: description,
-		type: 'article',
+		...openGraph,
 	},
 }
 
