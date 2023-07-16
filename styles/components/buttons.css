@@ -175,7 +175,7 @@
             @apply ring ring-accent;
         }
 
-        &:active:not(.dropdown), &.active {
+        &:active:not(.dropdown):not(.menu_btn), &.active {
             @apply cursor-default bg-tertiary !text-dark scale-100 ring-0;
         }
 

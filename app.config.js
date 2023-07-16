@@ -76,6 +76,10 @@ const config = {
 					label: 'Dialog',
 				},
 				{
+					href: '/components/dropdown',
+					label: 'Dropdown',
+				},
+				{
 					href: '/components/figure',
 					label: 'Figure',
 				},

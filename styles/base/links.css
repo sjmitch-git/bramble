@@ -1,18 +1,18 @@
 @layer base {
 
-    a:link:not(.btn) {
+    a:link:not(.btn):not(.nobase) {
         @apply text-primary transition;
     }
 
-    a:visited:not(.btn):not(.dropdown-link) {
+    a:visited:not(.btn):not(.nobase) {
         @apply text-secondary;
     }
 
-    a:hover:not(.btn):not(.dropdown-link) {
+    a:hover:not(.btn):not(.nobase) {
         @apply text-secondary scale-105;
     }
 
-    a:active:not(.dropdown-link),
+    a:active:not(.nobase),
     a.active {
         @apply cursor-default text-info;
     }

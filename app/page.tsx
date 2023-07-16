@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import Dropdown from '@/components/dropdown'
 import config from '@/app.config'
 
-const title = config.siteMetadata.name
+const title = config.siteMetadata.title
 const description = config.siteMetadata.description
 const keywords = config.siteMetadata.keywords
 
@@ -24,7 +24,7 @@ export default function Home() {
 				<div className='flex justify-center'>
 					<Dropdown
 						className='btn pill dark text-light'
-						button='bg-secondary'
+						button='bg-secondary circle icon ms-2'
 						size='lg'
 						links={[siteLinks[0]]}
 					/>

@@ -19,7 +19,7 @@ interface DropdownProps {
 	button?: string | undefined
 }
 
-const Dropdown = ({ size = '', className = '', links, button = '' }: DropdownProps) => {
+const Dropdown = ({ size = '', className = '', links, button = 'xs link p-0' }: DropdownProps) => {
 	const [show, setShow] = useState('')
 
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>, label: string) => {
@@ -50,12 +50,12 @@ const Dropdown = ({ size = '', className = '', links, button = '' }: DropdownPro
 						<Link
 							href={link.href}
 							onClick={closeNav}
-							className='dropdown-link'
+							className='dropdown-link nobase'
 						>
 							{link.label}{' '}
 							{link.links && (
 								<Button
-									styles={`circle icon ml-4 ${button}`}
+									styles={`menu_btn ${button}`}
 									onClick={(e) => handleClick(e, link.label)}
 									onBlur={(e) => handleBlur(e)}
 									title='Dropdown Menu'
@@ -65,31 +65,37 @@ const Dropdown = ({ size = '', className = '', links, button = '' }: DropdownPro
 							)}
 						</Link>
 						{link.links && (
-							<div className='wrap'>
-								<ul>
-									{link.links.map((sub) => (
-										<li key={sub.label}>
-											<Link
-												href={sub.href}
-												key={sub.label}
-											>
-												{sub.label}
-											</Link>
+							<div className='relative top-2 w-full'>
+								<div className='wrap'>
+									<ul>
+										{link.links.map((sub) => (
+											<li key={sub.label}>
+												<Link
+													href={sub.href}
+													key={sub.label}
+													className='nobase text-dark hover:text-light'
+												>
+													{sub.label}
+												</Link>
 
-											{sub.links && (
-												<ul>
-													{sub.links.map((subsub: LinksProps) => (
-														<li key={subsub.label}>
-															<Link href={subsub.href}>
-																{subsub.label}
-															</Link>
-														</li>
-													))}
-												</ul>
-											)}
-										</li>
-									))}
-								</ul>
+												{sub.links && (
+													<ul>
+														{sub.links.map((subsub: LinksProps) => (
+															<li key={subsub.label}>
+																<Link
+																	href={subsub.href}
+																	className='nobase text-dark hover:text-light'
+																>
+																	{subsub.label}
+																</Link>
+															</li>
+														))}
+													</ul>
+												)}
+											</li>
+										))}
+									</ul>
+								</div>
 							</div>
 						)}
 					</li>
