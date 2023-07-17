@@ -1,16 +1,16 @@
-import { Metadata } from 'next'
+import useMetadata from '@/hooks/useMetadata'
 
 import ButtonsTemplate from '@/templates/Buttons'
 
 const title = 'Buttons'
 const description = 'Buttons description TBD'
+const keywords = 'Buttons Component'
+const url = 'components/buttons'
 
-export const metadata: Metadata = {
-	title: title,
-	description: description,
-}
+export let metadata: any
 
 export default function Buttons() {
+	metadata = useMetadata({ title, description, keywords, url })
 	return (
 		<>
 			<h1>{title}</h1>

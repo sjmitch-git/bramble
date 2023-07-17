@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import useMetadata from '@/hooks/useMetadata'
 
 import Link from 'next/link'
 
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 }
 
 export default function Components() {
+	metadata = useMetadata({ title, description, keywords, url })
 	return (
 		<>
 			<h1>Components</h1>

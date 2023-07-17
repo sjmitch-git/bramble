@@ -30,12 +30,11 @@ export const metadata: Metadata = {
 		title: { default: `${title}`, template: `%s | ${title}` },
 		description: `${description}`,
 		url: `${url}`,
-		//siteName: `${title}`,
 		...siteName,
 		images: [
 			{
 				url: `${image}`,
-				secureUrl: `${image}`,
+				secureUrl: `${url}${image}`,
 				width: 429,
 				height: 429,
 				alt: `${title}`,
@@ -47,8 +46,6 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-	console.log('siteName', siteName)
-	const { title } = config.siteMetadata
 	return (
 		<html lang='en'>
 			<head>

@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import useMetadata from '@/hooks/useMetadata'
 
 import BreadcrumbsTemplate from '@/templates/Breadcrumbs'
 
@@ -9,13 +9,13 @@ import BreadcrumbsTemplate from '@/templates/Breadcrumbs'
 const title = 'Breadcrumbs'
 const description =
 	'Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.'
+const keywords = 'Breadcrumbs Component'
+const url = 'components/breadcrumbs'
 
-export const metadata: Metadata = {
-	title: title,
-	description: description,
-}
+export let metadata: any
 
 export default function Breadcrumbs() {
+	metadata = useMetadata({ title, description, keywords, url })
 	return (
 		<>
 			<h1>{title}</h1>

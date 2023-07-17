@@ -1,31 +1,17 @@
-import { Metadata } from 'next'
+import useMetadata from '@/hooks/useMetadata'
 
 import DropdownTemplate from '@/templates/Dropdown'
 
 const title = 'Dropdown'
 const description =
 	'Dropdowns are toggleable, contextual overlays for displaying lists of grouped links'
-const keywords = 'Dropdown,Components,React,React Components'
+const keywords = 'Dropdown Component'
+const url = 'components/dropdown'
 
-const openGraph = {
-	title: title,
-	description: description,
-	type: 'article',
-}
-
-export const metadata: Metadata = {
-	title: title,
-	alternates: {
-		canonical: '/components/dropdown',
-	},
-	description: description,
-	keywords: keywords,
-	openGraph: {
-		...openGraph,
-	},
-}
+export let metadata: any
 
 export default function Dropdown() {
+	metadata = useMetadata({ title, description, keywords, url })
 	return (
 		<>
 			<h1>{title}</h1>

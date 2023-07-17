@@ -16,7 +16,7 @@ const config = {
 		authorTwitter: process.env.NEXT_PUBLIC_AUTHOR_TWITTER || 'yourTwitterHandle',
 		image: '/logo.png',
 		siteLanguage: `en`,
-		keywords: ['TailwindCSS', 'Next.js', 'ReactJS'],
+		keywords: ['Components', 'Next.js', 'ReactJS', 'TailwindCSS'],
 	},
 	labels: {
 		homeLabel: 'Home',

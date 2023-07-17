@@ -1,16 +1,16 @@
-import { Metadata } from 'next'
+import useMetadata from '@/hooks/useMetadata'
 
 import VideoTemplate from '@/templates/Video'
 
 const title = 'Video'
 const description = 'Video description TBD'
+const keywords = 'Video Component'
+const url = 'components/video'
 
-export const metadata: Metadata = {
-	title: title,
-	description: description,
-}
+export let metadata: any
 
 export default function Video() {
+	metadata = useMetadata({ title, description, keywords, url })
 	return (
 		<>
 			<h1>{title}</h1>
