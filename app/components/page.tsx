@@ -6,12 +6,9 @@ const title = 'Components'
 const description = 'A library of reusable components for React'
 const keywords =
 	'Components,React,React Components,Accordian,Alert,Badge,Breadcrumbs,Buttons,Button Group,Close Button,Card,Carousel,Dropdown,Codeblock,Dialog,Figure,Gallery,Modal,Navbar,Pagination,Range,Ratings,Select,Video,Video Player'
+const url = 'components'
 
-export const metadata: Metadata = {
-	title: title,
-	description: description,
-	keywords: keywords,
-}
+export let metadata: any
 
 export default function Components() {
 	metadata = useMetadata({ title, description, keywords, url })
