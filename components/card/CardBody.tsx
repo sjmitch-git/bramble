@@ -31,7 +31,7 @@ const CardBody = ({
 	return (
 		<div className='card-body'>
 			<h5 className='title'>
-				{title} {badge && <Badge styles={badgeStyle}>{badge}</Badge>}
+				{title} {badge && <Badge className={badgeStyle}>{badge}</Badge>}
 			</h5>
 			<p className='card-message'>{description}</p>
 			<CardFooter

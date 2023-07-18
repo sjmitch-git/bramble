@@ -13,7 +13,7 @@ const VideoFullscreen = ({ onFullscreen, fullscreen }: VideoFullscreenProps) => 
 		<Buttongroup>
 			{!fullscreen && (
 				<Button
-					styles='dark sm'
+					className='sm dark'
 					title='Fullscreen'
 					onClick={onFullscreen}
 				>
@@ -23,7 +23,7 @@ const VideoFullscreen = ({ onFullscreen, fullscreen }: VideoFullscreenProps) => 
 			)}
 			{fullscreen && (
 				<Button
-					styles='dark sm'
+					className='sm dark'
 					title='Exit Fullscreen'
 					onClick={onFullscreen}
 				>

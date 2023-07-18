@@ -38,7 +38,7 @@ return (
 
 			<h3>Theme</h3>
 			<div className='mb-0'>
-				<Codeblock language='jsx'>{`import '../styles/index.css'
+				<Codeblock language='jsx'>{`import '../className/index.css'
 // Add below line to layout.tsx
 import 'prismjs/themes/prism-tomorrow.min.css'`}</Codeblock>
 			</div>

@@ -12,7 +12,7 @@ interface DataProps {
 
 interface GalleryProps {
 	data: any[]
-	styles?: string | undefined
+	className?: string | undefined
 	style?: React.CSSProperties | undefined
 	aspect?: string | undefined
 	caption?: boolean | undefined
@@ -20,7 +20,7 @@ interface GalleryProps {
 
 const Gallery = ({
 	data,
-	styles = '',
+	className = '',
 	caption = true,
 	aspect = 'aspect-[4/3]',
 	style,
@@ -40,14 +40,14 @@ const Gallery = ({
 	return (
 		<>
 			<div
-				className={`gallery ${styles}`}
+				className={`gallery ${className}`}
 				style={style}
 			>
 				{data.map((item, index) => (
 					<Figure
 						caption={caption && item.name}
 						key={index}
-						styles={aspect}
+						className={aspect}
 					>
 						<img
 							src={item.src}

@@ -4,22 +4,22 @@ import Badge from '@/components/badge'
 import { StarIcon, HandThumbUpIcon, FaceSmileIcon, HeartIcon } from '@heroicons/react/24/solid'
 
 interface RatingsProps {
-	styles?: string | undefined
+	className?: string | undefined
 	badge?: string | undefined
 	icon?: 'star' | 'smiley' | 'thumb' | 'heart' | undefined
 	rating: number
 	range?: number | undefined
 }
 
-const Ratings = ({ styles = '', rating, range, badge, icon = 'star' }: RatingsProps) => {
+const Ratings = ({ className = '', rating, range, badge, icon = 'star' }: RatingsProps) => {
 	rating = round(rating)
 	if (rating === 0) rating = 1
 	if (!range) range = rating
 	return (
-		<div className={`ratings  ${styles}`}>
+		<div className={`ratings  ${className}`}>
 			{[...new Array(range)].map((_el, index) => (
 				<Badge
-					styles={`${rating <= index ? 'text-neutral' : badge}`}
+					className={`${rating <= index ? 'text-neutral' : badge}`}
 					key={index}
 				>
 					{icon === 'smiley' ? (

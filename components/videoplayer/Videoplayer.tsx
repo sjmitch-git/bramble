@@ -8,11 +8,11 @@ import VideoControls from './controls/'
 interface VideoPlayerProps {
 	src: string
 	poster?: string | undefined
-	styles?: string | undefined
+	className?: string | undefined
 	formats?: any[] | undefined
 }
 
-const VideoPlayer = ({ src, formats, styles = '', poster }: VideoPlayerProps) => {
+const VideoPlayer = ({ src, formats, className = '', poster }: VideoPlayerProps) => {
 	const [play, setPlay] = useState(false)
 	const [pause, setPause] = useState(false)
 	const [time, setTime] = useState(0)
@@ -46,7 +46,6 @@ const VideoPlayer = ({ src, formats, styles = '', poster }: VideoPlayerProps) =>
 		setPlay(false)
 	}
 	const handleEnd = () => {
-		console.log('END')
 		setPause(true)
 		setPlay(false)
 	}
@@ -68,7 +67,7 @@ const VideoPlayer = ({ src, formats, styles = '', poster }: VideoPlayerProps) =>
 
 	return (
 		<div
-			className={`video-player ${styles} ${fullscreen ? 'fullscreen' : ''}`}
+			className={`video-player ${className} ${fullscreen ? 'fullscreen' : ''}`}
 			id='player'
 		>
 			<Video

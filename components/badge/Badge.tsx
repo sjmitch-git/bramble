@@ -1,11 +1,11 @@
 interface BadgeProps {
 	size?: string | undefined
-	styles?: string | undefined
+	className?: string | undefined
 	children?: React.ReactNode | undefined
 }
 
-const Badge = ({ size = '', styles = '', children='' }: BadgeProps) => {
-	return <small className={`badge ${styles} ${size}`}>{children}</small>
+const Badge = ({ size = '', className = '', children = '' }: BadgeProps) => {
+	return <small className={`badge ${className} ${size}`}>{children}</small>
 }
 
 export default Badge

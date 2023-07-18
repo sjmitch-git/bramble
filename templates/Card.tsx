@@ -213,7 +213,7 @@ const CardTemplate = () => {
 			<div className='mb-12 grid gap-4 md:grid-cols-4 lg:grid-cols-6'>
 				{Amazon.map((item, index) => (
 					<Card
-						styles='amazon'
+						className='amazon'
 						description={item.title}
 						image={item.image}
 						price={item.price.value}
@@ -228,7 +228,7 @@ const CardTemplate = () => {
 
 			<Codeblock language='jsx'>
 				{`<Card
-	styles='amazon'
+	className='amazon'
 	description={item.title}
 	image={item.image}
 	price={item.price.value}
@@ -244,7 +244,7 @@ const CardTemplate = () => {
 			<div className='mb-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
 				{Amazon.map((item, index) => (
 					<Card
-						styles='amazon'
+						className='amazon'
 						description={item.title}
 						image={item.image}
 						price={item.price.value}
@@ -259,7 +259,7 @@ const CardTemplate = () => {
 
 			<Codeblock language='jsx'>
 				{`<Card
-	styles='amazon'
+	className='amazon'
 	description={item.title}
 	image={item.image}
 	price={item.price.value}
@@ -275,7 +275,7 @@ const CardTemplate = () => {
 			<div className='mb-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
 				{Data.map((item, index) => (
 					<Card
-						styles='dark'
+						className='dark'
 						title={item.name}
 						description={item.description}
 						image={item.src}
@@ -294,7 +294,7 @@ const CardTemplate = () => {
 
 			<Codeblock language='jsx'>
 				{`<Card
-    styles='dark'
+    className='dark'
     ...
     badge={item.price_previous ? 'Discount!' : ''}
     badgeStyle={item.price_previous ? 'bg-accent text-dark text-lg' : ''}

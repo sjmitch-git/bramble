@@ -2,13 +2,16 @@ import Spinner from '@/components/spinner'
 import Figure from '@/components/figure'
 
 interface LoadingProps {
-	styles?: string | undefined
+	className?: string | undefined
 	caption?: string | undefined
 }
 
-const Loading = ({ styles = '', caption = '' }: LoadingProps) => {
+const Loading = ({ className = '', caption = '' }: LoadingProps) => {
 	return (
-		<Figure styles={`loading ${styles}`} caption={caption}>
+		<Figure
+			className={`loading ${className}`}
+			caption={caption}
+		>
 			<Spinner />
 		</Figure>
 	)

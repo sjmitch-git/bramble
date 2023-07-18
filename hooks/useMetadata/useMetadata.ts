@@ -9,10 +9,8 @@ export type MetadataProps = {
 	url: string
 }
 
-export let metadata: Metadata
-
 const useMetadata = ({ title, description, keywords, url }: MetadataProps) => {
-	metadata = {
+	const metadata: Metadata = {
 		title: title,
 		alternates: {
 			canonical: url,

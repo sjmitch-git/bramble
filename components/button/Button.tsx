@@ -4,7 +4,7 @@ import { forwardRef } from 'react'
 
 interface ButtonProps {
 	size?: string | undefined
-	styles?: string | undefined
+	className?: string | undefined
 	id?: string | undefined
 	title?: string | undefined
 	children: React.ReactNode
@@ -20,7 +20,7 @@ export type Ref = HTMLButtonElement
 const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
 	const {
 		size = '',
-		styles = 'primary',
+		className = 'primary',
 		type = 'button',
 		title,
 		id,
@@ -35,7 +35,7 @@ const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
 			type={type}
 			title={title}
 			id={id}
-			className={`btn ${size} ${styles}`}
+			className={`btn ${size} ${className}`}
 			disabled={disabled}
 			tabIndex={tabindex}
 			onClick={onClick}

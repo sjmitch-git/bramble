@@ -1,12 +1,12 @@
 interface FigureProps {
-	styles?: string | undefined
+	className?: string | undefined
 	children: React.ReactNode
 	caption?: string | undefined
 }
 
-const Figure = ({ styles = '', caption = '', children }: FigureProps) => {
+const Figure = ({ className = '', caption = '', children }: FigureProps) => {
 	return (
-		<figure className={`figure ${styles}`}>
+		<figure className={`figure ${className}`}>
 			{children}
 			{caption && <figcaption className='figcaption'>{caption}</figcaption>}
 		</figure>

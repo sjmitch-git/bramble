@@ -56,7 +56,7 @@ const data = [
     
 return (			
 	<Select
-		styles='text-xs'
+		className='text-xs'
 		onChange={handleChange}
 		value={fruit}
 		id='select01'
@@ -79,7 +79,7 @@ return (
 	</Select>
 
 	<Select
-		styles='light text-sm'
+		className='light text-sm'
 		onChange={handleChange}
 		value={fruit}
 		id='select01'
@@ -102,7 +102,7 @@ return (
 	</Select>
 
 	<Select
-		styles='dark'
+		className='dark'
 		onChange={handleChange}
 		value={fruit}
 	>
@@ -124,7 +124,7 @@ return (
 	</Select>
 
 	<Select
-		styles='bg-info text-light outline text-xl'
+		className='bg-info text-light outline text-xl'
 		onChange={handleChange}
 		value={fruit}
 	>
@@ -146,7 +146,7 @@ return (
 	</Select>
 
 	<Select
-		styles='bg-success text-light outline outline-4 text-3xl'
+		className='bg-success text-light outline outline-4 text-3xl'
 		onChange={handleChange}
 		value={fruit}
 	>
@@ -172,12 +172,12 @@ return (
 
 			<h2>Sizes</h2>
 			<p>
-				Add TailwindCSS font-size utility class to <code>styles</code> attribute:{' '}
-				<code>styles='text-xs'</code>
+				Add TailwindCSS font-size utility class to <code>className</code> attribute:{' '}
+				<code>className='text-xs'</code>
 			</p>
 			<div className='mb-8 flex flex-wrap items-center justify-center gap-4 bg-gray-300 p-4'>
 				<Select
-					styles='text-xs'
+					className='text-xs'
 					onChange={handleChange}
 					value={fruit}
 					id='select01'
@@ -200,7 +200,7 @@ return (
 				</Select>
 
 				<Select
-					styles='light text-sm'
+					className='light text-sm'
 					onChange={handleChange}
 					value={fruit}
 					id='select01'
@@ -223,7 +223,7 @@ return (
 				</Select>
 
 				<Select
-					styles='dark'
+					className='dark'
 					onChange={handleChange}
 					value={fruit}
 				>
@@ -245,7 +245,7 @@ return (
 				</Select>
 
 				<Select
-					styles='bg-info text-light outline text-xl'
+					className='bg-info text-xl text-light outline'
 					onChange={handleChange}
 					value={fruit}
 				>
@@ -267,7 +267,7 @@ return (
 				</Select>
 
 				<Select
-					styles='bg-success text-light outline outline-4 text-3xl'
+					className='bg-success text-3xl text-light outline outline-4'
 					onChange={handleChange}
 					value={fruit}
 				>
@@ -294,7 +294,7 @@ return (
 			</p>
 			<div className='mb-8 flex flex-wrap items-center justify-center gap-4 bg-gray-300 p-4'>
 				<Select
-					styles='dark circle text-sm'
+					className='circle dark text-sm'
 					onChange={handleChange}
 					value={fruit}
 				>
@@ -316,7 +316,7 @@ return (
 				</Select>
 
 				<Select
-					styles='dark circle text-xl'
+					className='circle dark text-xl'
 					onChange={handleChange}
 					value={fruit}
 				>
@@ -338,7 +338,7 @@ return (
 				</Select>
 
 				<Select
-					styles='dark circle text-3xl'
+					className='circle dark text-3xl'
 					onChange={handleChange}
 					value={fruit}
 				>
@@ -360,7 +360,7 @@ return (
 				</Select>
 
 				<Select
-					styles='dark circle text-5xl'
+					className='circle dark text-5xl'
 					onChange={handleChange}
 					value={fruit}
 				>
@@ -382,7 +382,7 @@ return (
 				</Select>
 
 				<Select
-					styles='dark circle text-7xl'
+					className='circle dark text-7xl'
 					onChange={handleChange}
 					value={fruit}
 				>
@@ -404,7 +404,7 @@ return (
 				</Select>
 
 				<Select
-					styles='dark rounded-lg text-3xl'
+					className='dark rounded-lg text-3xl'
 					onChange={handleChange}
 					value={fruit}
 					nocaret={true}
@@ -429,7 +429,7 @@ return (
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
 					{`<Select
-	styles='dark circle text-sm'
+	className='dark circle text-sm'
 	onChange={handleChange}
 	value={fruit}
 >
@@ -451,7 +451,7 @@ return (
 </Select>
 
 <Select
-	styles='dark circle text-xl'
+	className='dark circle text-xl'
 	onChange={handleChange}
 	value={fruit}
 >
@@ -473,7 +473,7 @@ return (
 </Select>
 
 <Select
-	styles='dark circle text-3xl'
+	className='dark circle text-3xl'
 	onChange={handleChange}
 	value={fruit}
 >
@@ -495,7 +495,7 @@ return (
 </Select>
 
 <Select
-	styles='dark circle text-5xl'
+	className='dark circle text-5xl'
 	onChange={handleChange}
 	value={fruit}
 >
@@ -517,7 +517,7 @@ return (
 </Select>
 
 <Select
-	styles='dark circle text-7xl'
+	className='dark circle text-7xl'
 	onChange={handleChange}
 	value={fruit}
 >
@@ -539,7 +539,7 @@ return (
 </Select>
 
 <Select
-	styles='dark rounded-lg text-3xl'
+	className='dark rounded-lg text-3xl'
 	onChange={handleChange}
 	value={fruit}
 >
@@ -573,7 +573,7 @@ return (
 				<label className='label'>
 					Select Fruit
 					<Select
-						styles='dark'
+						className='dark'
 						onChange={handleChange}
 						value={fruit}
 					>
@@ -598,7 +598,7 @@ return (
 				<label className='label text-3xl'>
 					Select Fruit
 					<Select
-						styles='dark text-size-inherit'
+						className='text-size-inherit dark'
 						onChange={handleChange}
 						value={fruit}
 					>
@@ -624,7 +624,7 @@ return (
 				<Codeblock language='jsx'>{`<label className='label'>
 	Select Fruit
 	<Select
-		styles='dark'
+		className='dark'
 		onChange={handleChange}
 		value={fruit}
 	>
@@ -649,7 +649,7 @@ return (
 <label className='label text-3xl'>
 	Select Fruit
 	<Select
-		styles='dark text-size-inherit'
+		className='dark text-size-inherit'
 		onChange={handleChange}
 		value={fruit}
 	>
@@ -676,7 +676,7 @@ return (
 				<label className='label col'>
 					Select Fruit
 					<Select
-						styles='dark'
+						className='dark'
 						onChange={handleChange}
 						value={fruit}
 					>
@@ -701,7 +701,7 @@ return (
 				<label className='label col'>
 					Select Fruit
 					<Select
-						styles='dark text-3xl'
+						className='dark text-3xl'
 						onChange={handleChange}
 						value={fruit}
 					>
@@ -726,7 +726,7 @@ return (
 				<label className='label col text-3xl'>
 					Select Fruit
 					<Select
-						styles='dark text-size-inherit'
+						className='text-size-inherit dark'
 						onChange={handleChange}
 						value={fruit}
 					>
@@ -752,7 +752,7 @@ return (
 				<Codeblock language='jsx'>{`<label className='label col'>
 	Select Fruit
 	<Select
-		styles='dark'
+		className='dark'
 		onChange={handleChange}
 		value={fruit}
 	>
@@ -777,7 +777,7 @@ return (
 <label className='label col'>
 	Select Fruit
 	<Select
-		styles='dark text-3xl'
+		className='dark text-3xl'
 		onChange={handleChange}
 		value={fruit}
 	>
@@ -802,7 +802,7 @@ return (
 <label className='label col text-3xl'>
 	Select Fruit
 	<Select
-		styles='dark text-size-inherit'
+		className='dark text-size-inherit'
 		onChange={handleChange}
 		value={fruit}
 	>
@@ -827,7 +827,7 @@ return (
 			<h2 id='numbers'>Numbers</h2>
 			<div className='mb-0 flex flex-wrap items-center justify-center gap-12 bg-gray-300 p-4'>
 				<Select
-					styles='lg dark'
+					className='lg dark'
 					title='Select Page'
 					onChange={handleChange}
 				>
@@ -858,7 +858,7 @@ return (
 				<label className='label col text-xl'>
 					Select Drink
 					<Select
-						styles='dark text-size-inherit'
+						className='text-size-inherit dark'
 						onChange={handleDrinksChange}
 						value={drink}
 						nocaret={true}
@@ -912,7 +912,7 @@ return (
 <label className='label col text-xl'>
 	Select Drink
 	<Select
-		styles='dark text-size-inherit'
+		className='dark text-size-inherit'
 		onChange={handleDrinksChange}
 		value={drink}
 		nocaret={true}
@@ -958,7 +958,7 @@ return (
 				<label className='label col text-xl'>
 					Select Drink
 					<Select
-						styles='dark text-size-inherit'
+						className='text-size-inherit dark'
 						onChange={handleDrinksChange}
 						nocaret={true}
 						disabled={true}
@@ -1008,7 +1008,7 @@ return (
 				<label className='label col me-auto text-xl'>
 					Select Drink
 					<Select
-						styles='dark text-size-inherit'
+						className='text-size-inherit dark'
 						onChange={handleDrinksChange}
 						value={drink}
 						nocaret={true}
@@ -1052,7 +1052,7 @@ return (
 				<label className='label text-xl'>
 					Select Drink
 					<Select
-						styles='dark text-size-inherit'
+						className='text-size-inherit dark'
 						onChange={handleDrinksChange}
 						value={drink}
 						nocaret={true}
@@ -1103,7 +1103,7 @@ return (
 				<label className='label col me-auto text-xl'>
 					Select Drink
 					<Select
-						styles='dark text-size-inherit'
+						className='text-size-inherit dark'
 						onChange={handleDrinksChange}
 						value={drink}
 						nocaret={true}
@@ -1147,7 +1147,7 @@ return (
 				<label className='label text-xl'>
 					Select Drink
 					<Select
-						styles='dark text-size-inherit'
+						className='text-size-inherit dark'
 						onChange={handleDrinksChange}
 						value={drink}
 						nocaret={true}

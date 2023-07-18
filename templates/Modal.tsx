@@ -38,7 +38,7 @@ const ModalTemplate = () => {
 			<div className='mb-0 flex flex-wrap justify-center gap-8 bg-gray-300 p-4'>
 				<Figure
 					caption='Beagle'
-					styles='max-w-sm m-auto'
+					className='m-auto max-w-sm'
 				>
 					<Image
 						fill
@@ -87,7 +87,7 @@ const closeModal = () => {
      
 <Figure
 	caption='Beagle'
-	styles='max-w-sm m-auto'
+	className='max-w-sm m-auto'
 >
 	<Image
 		fill

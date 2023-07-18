@@ -24,7 +24,7 @@ const Footer = () => {
 					</a>
 				</p>
 			</div>
-			<ButtonToTop styles='fixed right-4 bottom-4 bg-secondary' />
+			<ButtonToTop className='fixed bottom-4 right-4 bg-secondary' />
 		</footer>
 	)
 }

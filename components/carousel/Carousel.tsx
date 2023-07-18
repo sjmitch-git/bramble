@@ -16,7 +16,7 @@ interface DataProps {
 
 interface CarouselProps {
 	data: DataProps[]
-	styles?: string | undefined
+	className?: string | undefined
 	theme?: string | undefined
 	caption?: boolean | undefined
 	autoplay?: boolean | undefined
@@ -29,7 +29,7 @@ const Carousel = ({
 	caption,
 	autoplay = false,
 	gallery,
-	styles = '',
+	className = '',
 	theme = '',
 	rtl,
 }: CarouselProps) => {
@@ -105,7 +105,7 @@ const Carousel = ({
 	return (
 		<>
 			<div
-				className={`carousel ${styles} ${theme}`}
+				className={`carousel ${className} ${theme}`}
 				onTouchStart={handleTouchStart}
 				onTouchMove={handleTouchMove}
 			>
@@ -113,7 +113,7 @@ const Carousel = ({
 					{!autoplay && (
 						<Button
 							onClick={setPrevious}
-							styles='icon circle light sm m-auto z-50 rtl:rotate-180'
+							className='icon circle light sm z-50 m-auto rtl:rotate-180'
 							disabled={index === 0}
 						>
 							<ChevronLeftIcon />
@@ -126,7 +126,7 @@ const Carousel = ({
 				>
 					{gallery ? (
 						<Gallery
-							styles={`flex oveflow-hidden gap-0`}
+							className={`oveflow-hidden flex gap-0`}
 							style={style}
 							data={data}
 							caption={caption}
@@ -142,7 +142,7 @@ const Carousel = ({
 									title={item.name}
 									description={item.description}
 									link={item.link}
-									styles='aspect-[4/3] shadow-none w-full even:bg-dark even:text-light'
+									className='aspect-[4/3] w-full shadow-none even:bg-dark even:text-light'
 									layout='full'
 									linkLabel={item.name}
 									key={index}
@@ -155,7 +155,7 @@ const Carousel = ({
 					{!autoplay && (
 						<Button
 							onClick={setNext}
-							styles='icon circle light sm m-auto rtl:rotate-180'
+							className='icon circle light sm m-auto rtl:rotate-180'
 							disabled={index === data.length - 1}
 						>
 							<ChevronRightIcon />

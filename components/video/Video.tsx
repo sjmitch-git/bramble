@@ -2,11 +2,13 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 
+import config from '@/app.config'
+
 import VideoLoading from './Videoloading'
 
 interface VideoProps {
 	src: string
-	styles?: string | undefined
+	className?: string | undefined
 	formats?: any[] | undefined
 	loop?: boolean | undefined
 	controls?: boolean | undefined
@@ -27,7 +29,7 @@ interface VideoProps {
 }
 
 const posterSrc = '/poster.png'
-const fallbacktMessage = `Your browser does not support the video tag.`
+const fallbacktMessage = config.labels.videoFallback
 
 const Video = ({
 	src,
@@ -36,7 +38,7 @@ const Video = ({
 	controls = true,
 	poster = posterSrc,
 	preload = 'metadata',
-	styles = '',
+	className = '',
 	fallback = fallbacktMessage,
 	play,
 	onPlay,
@@ -116,7 +118,7 @@ const Video = ({
 				preload={preload}
 				poster={poster}
 				controls={controls}
-				className={`video ${styles}`}
+				className={`video ${className}`}
 				loop={loop}
 				ref={video}
 				id='video'
@@ -138,7 +140,7 @@ const Video = ({
 				)}
 				{fallback}
 			</video>
-			{loading && <VideoLoading styles='text-light' />}
+			{loading && <VideoLoading className='text-light' />}
 		</>
 	)
 }

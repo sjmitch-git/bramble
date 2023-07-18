@@ -10,7 +10,7 @@ const NavToggle = ({ onClick, open = false }: NavToggleProps) => {
 	return (
 		<div className='toggler'>
 			<Button
-				styles={`solid secondary circle icon sm transition-all ${
+				className={`solid secondary circle icon sm transition-all ${
 					open ? 'rotate-90' : 'rotate-0'
 				}`}
 				onClick={onClick}

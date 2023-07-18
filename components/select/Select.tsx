@@ -1,6 +1,6 @@
 interface SelectProps {
 	size?: string | 'sm' | 'lg' | undefined
-	styles?: string | undefined
+	className?: string | undefined
 	id?: string | undefined
 	title?: string | undefined
 	children: React.ReactNode
@@ -14,7 +14,7 @@ interface SelectProps {
 
 const Select = ({
 	name = 'label',
-	styles,
+	className = '',
 	title,
 	id,
 	children,
@@ -26,7 +26,7 @@ const Select = ({
 }: SelectProps) => {
 	return (
 		<select
-			className={`select ${styles} ${nocaret && 'nocaret'}`}
+			className={`select ${className} ${nocaret && 'nocaret'}`}
 			title={title}
 			id={id}
 			onChange={onChange}

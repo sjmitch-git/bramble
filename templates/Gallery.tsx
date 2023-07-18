@@ -21,7 +21,7 @@ import dogs from '@/data/dogs.json'
                 
 <Gallery
 	data={dogs}
-	styles='mb-12'
+	className='mb-12'
 	caption={false} // true | false
 	aspect='square' // 'aspect-[4/3]' | 'square' | 'portrait'
 />`}
@@ -30,14 +30,14 @@ import dogs from '@/data/dogs.json'
 			<div className='mb-8 flex justify-center'>
 				<Gallery
 					data={dogs}
-					styles='mb-12'
+					className='mb-12'
 				/>
 			</div>
 			<h3>No Caption</h3>
 			<div className='mb-8 flex justify-center'>
 				<Gallery
 					data={dogs}
-					styles='mb-12'
+					className='mb-12'
 					caption={false}
 				/>
 			</div>
@@ -45,7 +45,7 @@ import dogs from '@/data/dogs.json'
 			<div className='mb-8 flex justify-center'>
 				<Gallery
 					data={dogs}
-					styles='mb-12'
+					className='mb-12'
 					caption={false}
 					aspect='portrait'
 				/>
@@ -54,7 +54,7 @@ import dogs from '@/data/dogs.json'
 			<div className='mb-8 flex justify-center'>
 				<Gallery
 					data={dogs}
-					styles='mb-12'
+					className='mb-12'
 					caption={true}
 					aspect='square'
 				/>
@@ -68,7 +68,7 @@ import dogs from '@/data/dogs.json'
 	name: string
 	src: string
 }
-styles?: string | undefined
+className?: string | undefined
 aspect?: string | undefined
 caption?: boolean | undefined`}
 			</Codeblock>

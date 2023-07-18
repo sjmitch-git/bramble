@@ -53,7 +53,7 @@ const Navlinks = () => {
 								{link.label}{' '}
 								{link.links && (
 									<Button
-										styles='xs link p-0'
+										className='xs link p-0'
 										onClick={(e) => handleClick(e, link.label)}
 										onBlur={(e) => handleBlur(e)}
 										tabindex={1}

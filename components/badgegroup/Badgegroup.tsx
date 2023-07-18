@@ -3,19 +3,19 @@ import Badge from '@/components/badge'
 import { StarIcon, HandThumbUpIcon, FaceSmileIcon } from '@heroicons/react/24/solid'
 
 interface BadgegroupProps {
-	styles?: string | undefined
+	className?: string | undefined
 	badge?: string | undefined
 	icon?: 'star' | 'smiley' | 'thumb' | undefined
 	rating: number
 	range: number
 }
 
-const Badgegroup = ({ styles = '', rating, range, badge, icon = 'star' }: BadgegroupProps) => {
+const Badgegroup = ({ className = '', rating, range, badge, icon = 'star' }: BadgegroupProps) => {
 	return (
-		<div className={`badgegroup  ${styles}`}>
+		<div className={`badgegroup  ${className}`}>
 			{[...new Array(range)].map((_el, index) => (
 				<Badge
-					styles={`bg-transparent  border-none shadow-none circle p-0 icon ${
+					className={`circle  icon border-none bg-transparent p-0 shadow-none ${
 						rating <= index ? 'text-neutral' : badge
 					}`}
 					key={index}

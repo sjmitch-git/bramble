@@ -28,14 +28,13 @@ const VideoControls = ({
 	pause = false,
 	time,
 	onTime,
-	duration,
+	duration = 0,
 	onScrubChange,
 	onFullscreen,
 	fullscreen,
 	mute,
 	onMute,
 	onVolume,
-	volume,
 }: VideoControlsProps) => {
 	return (
 		<div className='controls'>

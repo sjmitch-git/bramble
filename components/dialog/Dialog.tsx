@@ -48,7 +48,7 @@ const Dialog = ({
 			>
 				{modal && (
 					<CloseButton
-						styles='dark hover:scale-125 fixed top-4 right-4 sm'
+						className='sm dark fixed right-4 top-4 hover:scale-125'
 						onClick={closeDialog}
 					/>
 				)}
@@ -56,7 +56,7 @@ const Dialog = ({
 			</dialog>
 			{addOpenButton && (
 				<Button
-					styles={btnStyles}
+					className={btnStyles}
 					onClick={openDialog}
 				>
 					{btnLabel}

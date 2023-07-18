@@ -55,7 +55,7 @@ const Dropdown = ({ size = '', className = '', links, button = 'xs link p-0' }: 
 							{link.label}{' '}
 							{link.links && (
 								<Button
-									styles={`menu_btn ${button}`}
+									className={`menu_btn ${button}`}
 									onClick={(e) => handleClick(e, link.label)}
 									onBlur={(e) => handleBlur(e)}
 									title='Dropdown Menu'

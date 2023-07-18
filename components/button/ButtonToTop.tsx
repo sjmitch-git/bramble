@@ -7,11 +7,11 @@ import { ArrowUpCircleIcon } from '@heroicons/react/24/solid'
 
 interface ButtonProps {
 	size?: string | undefined
-	styles?: string | undefined
+	className?: string | undefined
 	disabled?: boolean | undefined
 }
 
-const ButtonToTop = ({ size = '', styles = '', disabled = false }: ButtonProps) => {
+const ButtonToTop = ({ size = '', className = '', disabled = false }: ButtonProps) => {
 	const button = useRef<HTMLButtonElement>(null!)
 
 	useEffect(() => {
@@ -40,7 +40,7 @@ const ButtonToTop = ({ size = '', styles = '', disabled = false }: ButtonProps) 
 
 	return (
 		<Button
-			styles={`icon circle transition-all ${styles} ${size}`}
+			className={`icon circle transition-all ${className} ${size}`}
 			onClick={ScrollToTop}
 			title='Back to top?'
 			id='totopbutton'

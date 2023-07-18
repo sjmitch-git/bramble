@@ -16,7 +16,7 @@ const AlertTemplate = () => {
 					{`import Alert from '@/components/alert'
                     
 <Alert
-    styles='info' // 'info' | 'success' | 'warning' | 'error' | 'danger'
+    className='info' // 'info' | 'success' | 'warning' | 'error' | 'danger'
 	status='info'
 	message='Some contextual message useful to the user.' // can be HTML content
 />`}
@@ -25,7 +25,7 @@ const AlertTemplate = () => {
 
 			<div className='mx-auto mb-12'>
 				<Alert
-					styles='info'
+					className='info'
 					status='Info'
 					message="<p><strong>Ugh umami</strong> bacon butcher <a href='#'>pickled kogi</a> stumptown, <em>subway tile</em> gatekeep flexitarian. Bespoke meggings health goth meh ascot listicle, cronut vaporware. Marfa church-key cred, kinfolk mlkshk tousled roof party XOXO readymade solarpunk tbh adaptogen. Raclette williamsburg chicharrones, +1 retro hashtag freegan sustainable tumblr polaroid deep v tote bag godard.</p>"
 				/>
@@ -33,7 +33,7 @@ const AlertTemplate = () => {
 
 			<div className='mx-auto mb-12'>
 				<Alert
-					styles='success'
+					className='success'
 					status='Success'
 					message="<p><strong>Ugh umami</strong> bacon butcher <a href='#'>pickled kogi</a> stumptown, <em>subway tile</em> gatekeep flexitarian. Bespoke meggings health goth meh ascot listicle, cronut vaporware.</p> <p>Marfa church-key cred, kinfolk mlkshk tousled roof party XOXO readymade solarpunk tbh adaptogen. Raclette williamsburg chicharrones, +1 retro hashtag freegan sustainable tumblr polaroid deep v tote bag godard.</p>"
 				/>
@@ -41,7 +41,7 @@ const AlertTemplate = () => {
 
 			<div className='mx-auto mb-12'>
 				<Alert
-					styles='warning'
+					className='warning'
 					status='Warning'
 					message='Some contextual message useful to the user.'
 				/>
@@ -49,7 +49,7 @@ const AlertTemplate = () => {
 
 			<div className='mx-auto mb-12'>
 				<Alert
-					styles='error'
+					className='error'
 					status='Error'
 					message='Some contextual message useful to the user.'
 				/>
@@ -57,7 +57,7 @@ const AlertTemplate = () => {
 
 			<div className='mx-auto mb-12'>
 				<Alert
-					styles='danger'
+					className='danger'
 					message='Some contextual message useful to the user.'
 				/>
 			</div>
@@ -68,7 +68,7 @@ const AlertTemplate = () => {
 
 			<div className='mx-auto mb-12'>
 				<Alert
-					styles='info sm'
+					className='info sm'
 					status='Small'
 					message='Some contextual message useful to the user.'
 				/>
@@ -76,7 +76,7 @@ const AlertTemplate = () => {
 
 			<div className='mx-auto mb-12'>
 				<Alert
-					styles='success lg'
+					className='success lg'
 					status='Large'
 					message='Some contextual message useful to the user.'
 				/>
@@ -84,7 +84,7 @@ const AlertTemplate = () => {
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
 					{`<Alert
-    styles='sm' // 'sm' | 'lg' | undefined
+    className='sm' // 'sm' | 'lg' | undefined
 	...
 />`}
 				</Codeblock>
@@ -96,7 +96,7 @@ const AlertTemplate = () => {
 
 			<div className='mx-auto mb-12'>
 				<Alert
-					styles='info outline'
+					className='info outline'
 					status='Info'
 					message='Form submission was successful!'
 				/>
@@ -104,7 +104,7 @@ const AlertTemplate = () => {
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
 					{`<Alert
-    styles='info outline'
+    className='info outline'
 	...
 />`}
 				</Codeblock>
@@ -116,7 +116,7 @@ const AlertTemplate = () => {
 
 			<div className='mx-auto mb-12'>
 				<Alert
-					styles='info solid'
+					className='info solid'
 					status='Info'
 					message='Form submission was successful!'
 				/>
@@ -124,14 +124,14 @@ const AlertTemplate = () => {
 
 			<div className='mx-auto mb-12'>
 				<Alert
-					styles='warning solid lg'
+					className='warning solid lg'
 					message='Form submission was successful!'
 				/>
 			</div>
 
 			<div className='mx-auto mb-12'>
 				<Alert
-					styles='success solid'
+					className='success solid'
 					status='Info'
 					message='Form submission was successful!'
 				/>
@@ -140,7 +140,7 @@ const AlertTemplate = () => {
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
 					{`<Alert
-    styles='info solid'
+    className='info solid'
 	...
 />`}
 				</Codeblock>
@@ -153,7 +153,7 @@ const AlertTemplate = () => {
 			<div className='mx-auto mb-12'>
 				{error && (
 					<Alert
-						styles='error'
+						className='error'
 						status='404'
 						message={error}
 						onClick={() => setError('')}
@@ -167,7 +167,7 @@ const AlertTemplate = () => {
                     
 {error && (
     <Alert
-        styles='error'
+        className='error'
         status='404'
         message={error}
         onClick={() => setError('')}
@@ -186,7 +186,7 @@ const AlertTemplate = () => {
 			>
 				{error && (
 					<Alert
-						styles='error'
+						className='error'
 						status='404'
 						message={error}
 						onClick={() => setError('')}

@@ -1,19 +1,19 @@
 interface ButtongroupProps {
 	size?: string | undefined
-	styles?: string | undefined
+	className?: string | undefined
 	label?: string | undefined
 	children: React.ReactNode
 }
 
 const Buttongroup = ({
 	size = '',
-	styles = '',
+	className = '',
 	label = 'Button group',
 	children,
 }: ButtongroupProps) => {
 	return (
 		<div
-			className={`btn-group ${size} ${styles}`}
+			className={`btn-group ${size} ${className}`}
 			role='group'
 			aria-label={label}
 		>

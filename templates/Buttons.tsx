@@ -60,63 +60,63 @@ return (
 
 			<div className='mb-0 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles='primary'
+					className='primary'
 					onClick={handleClick}
 				>
 					Primary
 				</Button>
 
 				<Button
-					styles='secondary'
+					className='secondary'
 					onClick={handleClick}
 				>
 					Secondary
 				</Button>
 
 				<Button
-					styles='info'
+					className='info'
 					onClick={handleClick}
 				>
 					Info
 				</Button>
 
 				<Button
-					styles='success'
+					className='success'
 					onClick={handleClick}
 				>
 					Success
 				</Button>
 
 				<Button
-					styles='warning'
+					className='warning'
 					onClick={handleClick}
 				>
 					Warning
 				</Button>
 
 				<Button
-					styles='danger'
+					className='danger'
 					onClick={handleClick}
 				>
 					Danger
 				</Button>
 
 				<Button
-					styles='dark'
+					className='dark'
 					onClick={handleClick}
 				>
 					Dark
 				</Button>
 
 				<Button
-					styles='light'
+					className='light'
 					onClick={handleClick}
 				>
 					Light
 				</Button>
 
 				<Button
-					styles='link'
+					className='link'
 					onClick={handleClick}
 				>
 					Link
@@ -126,63 +126,63 @@ return (
 			<div className='mb-8'>
 				<Codeblock language='jsx'>
 					{`<Button 
-	styles='primary'
+	className='primary'
 	onClick={handleClick}
 >
 	Primary
 </Button>
 
 <Button
-	styles='secondary'
+	className='secondary'
 	onClick={handleClick}
 >
 	Secondary
 </Button>
 
 <Button
-	styles='info'
+	className='info'
 	onClick={handleClick}
 >
 	Info
 </Button>
 
 <Button
-	styles='success'
+	className='success'
 	onClick={handleClick}
 >
 	Success
 </Button>
 
 <Button
-	styles='warning'
+	className='warning'
 	onClick={handleClick}
 >
 	Warning
 </Button>
 
 <Button
-	styles='danger'
+	className='danger'
 	onClick={handleClick}
 >
 	Danger
 </Button>
 
 <Button
-	styles='dark'
+	className='dark'
 	onClick={handleClick}
 >
 	Dark
 </Button>
 
 <Button
-	styles='light'
+	className='light'
 	onClick={handleClick}
 >
 	Light
 </Button>
 
 <Button
-	styles='link'
+	className='link'
 	onClick={handleClick}
 >
 	Link
@@ -192,60 +192,60 @@ return (
 
 			<h2>Rounded</h2>
 
-			<Codeblock language='jsx'>{`styles='... rounded'`}</Codeblock>
+			<Codeblock language='jsx'>{`className='... rounded'`}</Codeblock>
 
 			<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles='primary rounded'
+					className='primary rounded'
 					onClick={handleClick}
 				>
 					Primary
 				</Button>
 
 				<Button
-					styles='secondary rounded'
+					className='secondary rounded'
 					onClick={handleClick}
 				>
 					Secondary
 				</Button>
 
 				<Button
-					styles='info rounded'
+					className='info rounded'
 					onClick={handleClick}
 				>
 					Info
 				</Button>
 
 				<Button
-					styles='success rounded'
+					className='success rounded'
 					onClick={handleClick}
 				>
 					Success
 				</Button>
 
 				<Button
-					styles='warning rounded'
+					className='warning rounded'
 					onClick={handleClick}
 				>
 					Warning
 				</Button>
 
 				<Button
-					styles='danger rounded'
+					className='danger rounded'
 					onClick={handleClick}
 				>
 					Danger
 				</Button>
 
 				<Button
-					styles='dark rounded'
+					className='dark rounded'
 					onClick={handleClick}
 				>
 					Dark
 				</Button>
 
 				<Button
-					styles='light rounded'
+					className='light rounded'
 					onClick={handleClick}
 				>
 					Light
@@ -254,60 +254,60 @@ return (
 
 			<h2>Pill</h2>
 
-			<Codeblock language='jsx'>{`styles='... pill'`}</Codeblock>
+			<Codeblock language='jsx'>{`className='... pill'`}</Codeblock>
 
 			<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles='primary pill'
+					className='primary pill'
 					onClick={handleClick}
 				>
 					Primary
 				</Button>
 
 				<Button
-					styles='secondary pill'
+					className='secondary pill'
 					onClick={handleClick}
 				>
 					Secondary
 				</Button>
 
 				<Button
-					styles='info pill'
+					className='info pill'
 					onClick={handleClick}
 				>
 					Info
 				</Button>
 
 				<Button
-					styles='success pill'
+					className='success pill'
 					onClick={handleClick}
 				>
 					Success
 				</Button>
 
 				<Button
-					styles='warning pill'
+					className='warning pill'
 					onClick={handleClick}
 				>
 					Warning
 				</Button>
 
 				<Button
-					styles='danger pill'
+					className='danger pill'
 					onClick={handleClick}
 				>
 					Danger
 				</Button>
 
 				<Button
-					styles='dark pill'
+					className='pill dark'
 					onClick={handleClick}
 				>
 					Dark
 				</Button>
 
 				<Button
-					styles='light pill'
+					className='light pill'
 					onClick={handleClick}
 				>
 					Light
@@ -316,180 +316,180 @@ return (
 
 			<h2>Outline</h2>
 
-			<Codeblock language='jsx'>{`styles='... outline'`}</Codeblock>
+			<Codeblock language='jsx'>{`className='... outline'`}</Codeblock>
 
 			<div className='mb-0 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles='primary outline'
+					className='primary outline'
 					onClick={handleClick}
 				>
 					Primary
 				</Button>
 
 				<Button
-					styles='secondary outline'
+					className='secondary outline'
 					onClick={handleClick}
 				>
 					Secondary
 				</Button>
 
 				<Button
-					styles='info outline'
+					className='info outline'
 					onClick={handleClick}
 				>
 					Info
 				</Button>
 
 				<Button
-					styles='success outline'
+					className='success outline'
 					onClick={handleClick}
 				>
 					Success
 				</Button>
 
 				<Button
-					styles='warning outline'
+					className='warning outline'
 					onClick={handleClick}
 				>
 					Warning
 				</Button>
 
 				<Button
-					styles='danger outline'
+					className='danger outline'
 					onClick={handleClick}
 				>
 					Danger
 				</Button>
 
 				<Button
-					styles='dark outline'
+					className='dark outline'
 					onClick={handleClick}
 				>
 					Dark
 				</Button>
 
 				<Button
-					styles='light outline'
+					className='light outline'
 					onClick={handleClick}
 				>
 					Light
 				</Button>
 			</div>
 
-			<Codeblock language='jsx'>{`styles='... outline rounded'`}</Codeblock>
+			<Codeblock language='jsx'>{`className='... outline rounded'`}</Codeblock>
 
 			<div className='mb-0 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles='primary outline rounded'
+					className='primary rounded outline'
 					onClick={handleClick}
 				>
 					Primary
 				</Button>
 
 				<Button
-					styles='secondary outline rounded'
+					className='secondary rounded outline'
 					onClick={handleClick}
 				>
 					Secondary
 				</Button>
 
 				<Button
-					styles='info outline rounded'
+					className='info rounded outline'
 					onClick={handleClick}
 				>
 					Info
 				</Button>
 
 				<Button
-					styles='success outline rounded'
+					className='success rounded outline'
 					onClick={handleClick}
 				>
 					Success
 				</Button>
 
 				<Button
-					styles='warning outline rounded'
+					className='warning rounded outline'
 					onClick={handleClick}
 				>
 					Warning
 				</Button>
 
 				<Button
-					styles='danger outline rounded'
+					className='danger rounded outline'
 					onClick={handleClick}
 				>
 					Danger
 				</Button>
 
 				<Button
-					styles='dark outline rounded'
+					className='dark rounded outline'
 					onClick={handleClick}
 				>
 					Dark
 				</Button>
 
 				<Button
-					styles='light outline rounded'
+					className='light rounded outline'
 					onClick={handleClick}
 				>
 					Light
 				</Button>
 			</div>
 
-			<Codeblock language='jsx'>{`styles='... outline pill'`}</Codeblock>
+			<Codeblock language='jsx'>{`className='... outline pill'`}</Codeblock>
 
 			<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles='primary outline pill'
+					className='primary pill outline'
 					onClick={handleClick}
 				>
 					Primary
 				</Button>
 
 				<Button
-					styles='secondary outline pill'
+					className='secondary pill outline'
 					onClick={handleClick}
 				>
 					Secondary
 				</Button>
 
 				<Button
-					styles='info outline pill'
+					className='info pill outline'
 					onClick={handleClick}
 				>
 					Info
 				</Button>
 
 				<Button
-					styles='success outline pill'
+					className='success pill outline'
 					onClick={handleClick}
 				>
 					Success
 				</Button>
 
 				<Button
-					styles='warning outline pill'
+					className='warning pill outline'
 					onClick={handleClick}
 				>
 					Warning
 				</Button>
 
 				<Button
-					styles='danger outline pill'
+					className='danger pill outline'
 					onClick={handleClick}
 				>
 					Danger
 				</Button>
 
 				<Button
-					styles='dark outline pill'
+					className='pill dark outline'
 					onClick={handleClick}
 				>
 					Dark
 				</Button>
 
 				<Button
-					styles='light outline pill'
+					className='light pill outline'
 					onClick={handleClick}
 				>
 					Light
@@ -501,7 +501,7 @@ return (
 			<Codeblock language='jsx'>{`import { PlayIcon } from '@heroicons/react/24/solid'
 
 <Button
-	styles='primary icon'
+	className='primary icon'
 	onClick={handleClick}
 >
 	<PlayIcon />
@@ -510,7 +510,7 @@ return (
 
 			<div className='mb-0 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles='primary icon'
+					className='primary icon'
 					onClick={handleClick}
 				>
 					<PlayIcon />
@@ -518,7 +518,7 @@ return (
 				</Button>
 
 				<Button
-					styles='secondary icon'
+					className='secondary icon'
 					onClick={handleClick}
 				>
 					<ArrowPathRoundedSquareIcon />
@@ -526,7 +526,7 @@ return (
 				</Button>
 
 				<Button
-					styles='info icon'
+					className='info icon'
 					onClick={handleClick}
 				>
 					<ArrowDownOnSquareIcon />
@@ -534,7 +534,7 @@ return (
 				</Button>
 
 				<Button
-					styles='success icon'
+					className='success icon'
 					onClick={handleClick}
 				>
 					<CheckIcon />
@@ -542,7 +542,7 @@ return (
 				</Button>
 
 				<Button
-					styles='warning icon'
+					className='warning icon'
 					onClick={handleClick}
 				>
 					<StarIcon />
@@ -550,7 +550,7 @@ return (
 				</Button>
 
 				<Button
-					styles='danger icon'
+					className='danger icon'
 					onClick={handleClick}
 				>
 					<TrashIcon />
@@ -558,7 +558,7 @@ return (
 				</Button>
 
 				<Button
-					styles='dark icon'
+					className='icon dark'
 					onClick={handleClick}
 				>
 					<EllipsisHorizontalIcon />
@@ -566,7 +566,7 @@ return (
 				</Button>
 
 				<Button
-					styles='light icon'
+					className='light icon'
 					onClick={handleClick}
 				>
 					<HeartIcon />
@@ -575,7 +575,7 @@ return (
 			</div>
 			<h3>Circle</h3>
 			<Codeblock language='jsx'>{`<Button
-	styles='primary icon circle'
+	className='primary icon circle'
 	onClick={handleClick}
 >
 	<PlayIcon />
@@ -583,7 +583,7 @@ return (
 </Button>`}</Codeblock>
 			<div className='mb-0 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles='primary icon circle'
+					className='primary icon circle'
 					onClick={handleClick}
 				>
 					<PlayIcon />
@@ -591,7 +591,7 @@ return (
 				</Button>
 
 				<Button
-					styles='secondary icon circle'
+					className='secondary icon circle'
 					onClick={handleClick}
 				>
 					<ArrowPathRoundedSquareIcon />
@@ -599,7 +599,7 @@ return (
 				</Button>
 
 				<Button
-					styles='info icon circle'
+					className='info icon circle'
 					onClick={handleClick}
 				>
 					<ArrowDownOnSquareIcon />
@@ -607,7 +607,7 @@ return (
 				</Button>
 
 				<Button
-					styles='success icon circle'
+					className='success icon circle'
 					onClick={handleClick}
 				>
 					<CheckIcon />
@@ -615,7 +615,7 @@ return (
 				</Button>
 
 				<Button
-					styles='warning icon circle'
+					className='warning icon circle'
 					onClick={handleClick}
 				>
 					<StarIcon />
@@ -623,7 +623,7 @@ return (
 				</Button>
 
 				<Button
-					styles='danger icon circle'
+					className='danger icon circle'
 					onClick={handleClick}
 				>
 					<TrashIcon />
@@ -631,7 +631,7 @@ return (
 				</Button>
 
 				<Button
-					styles='dark icon circle'
+					className='icon circle dark'
 					onClick={handleClick}
 				>
 					<EllipsisHorizontalIcon />
@@ -639,7 +639,7 @@ return (
 				</Button>
 
 				<Button
-					styles='light icon circle'
+					className='light icon circle'
 					onClick={handleClick}
 				>
 					<HeartIcon />
@@ -650,7 +650,7 @@ return (
 			<h3>Outline</h3>
 
 			<Codeblock language='jsx'>{`<Button
-	styles='primary icon outline'
+	className='primary icon outline'
 	onClick={handleClick}
 >
 	<PlayIcon />
@@ -658,7 +658,7 @@ return (
 </Button>`}</Codeblock>
 			<div className='mb-0 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles='primary icon outline'
+					className='primary icon outline'
 					onClick={handleClick}
 				>
 					<PlayIcon />
@@ -666,7 +666,7 @@ return (
 				</Button>
 
 				<Button
-					styles='secondary icon outline'
+					className='secondary icon outline'
 					onClick={handleClick}
 				>
 					<ArrowPathRoundedSquareIcon />
@@ -674,7 +674,7 @@ return (
 				</Button>
 
 				<Button
-					styles='info icon outline'
+					className='info icon outline'
 					onClick={handleClick}
 				>
 					<ArrowDownOnSquareIcon />
@@ -682,7 +682,7 @@ return (
 				</Button>
 
 				<Button
-					styles='success icon outline'
+					className='success icon outline'
 					onClick={handleClick}
 				>
 					<CheckIcon />
@@ -690,7 +690,7 @@ return (
 				</Button>
 
 				<Button
-					styles='warning icon outline'
+					className='warning icon outline'
 					onClick={handleClick}
 				>
 					<StarIcon />
@@ -698,7 +698,7 @@ return (
 				</Button>
 
 				<Button
-					styles='danger icon outline'
+					className='danger icon outline'
 					onClick={handleClick}
 				>
 					<TrashIcon />
@@ -706,7 +706,7 @@ return (
 				</Button>
 
 				<Button
-					styles='dark icon outline'
+					className='icon dark outline'
 					onClick={handleClick}
 				>
 					<EllipsisHorizontalIcon />
@@ -714,7 +714,7 @@ return (
 				</Button>
 
 				<Button
-					styles='light icon outline'
+					className='light icon outline'
 					onClick={handleClick}
 				>
 					<HeartIcon />
@@ -723,7 +723,7 @@ return (
 			</div>
 			<h3>Circle Outline</h3>
 			<Codeblock language='jsx'>{`<Button
-	styles='primary circle outline'
+	className='primary circle outline'
 	onClick={handleClick}
 >
 	<PlayIcon />
@@ -731,7 +731,7 @@ return (
 </Button>`}</Codeblock>
 			<div className='mb-0 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles='primary icon circle outline'
+					className='primary icon circle outline'
 					onClick={handleClick}
 				>
 					<PlayIcon />
@@ -739,7 +739,7 @@ return (
 				</Button>
 
 				<Button
-					styles='secondary icon circle outline'
+					className='secondary icon circle outline'
 					onClick={handleClick}
 				>
 					<ArrowPathRoundedSquareIcon />
@@ -747,7 +747,7 @@ return (
 				</Button>
 
 				<Button
-					styles='info icon circle outline'
+					className='info icon circle outline'
 					onClick={handleClick}
 				>
 					<ArrowDownOnSquareIcon />
@@ -755,7 +755,7 @@ return (
 				</Button>
 
 				<Button
-					styles='success icon circle outline'
+					className='success icon circle outline'
 					onClick={handleClick}
 				>
 					<CheckIcon />
@@ -763,7 +763,7 @@ return (
 				</Button>
 
 				<Button
-					styles='warning icon circle outline'
+					className='warning icon circle outline'
 					onClick={handleClick}
 				>
 					<StarIcon />
@@ -771,7 +771,7 @@ return (
 				</Button>
 
 				<Button
-					styles='danger icon circle outline'
+					className='danger icon circle outline'
 					onClick={handleClick}
 				>
 					<TrashIcon />
@@ -779,7 +779,7 @@ return (
 				</Button>
 
 				<Button
-					styles='dark icon circle outline'
+					className='icon circle dark outline'
 					onClick={handleClick}
 				>
 					<EllipsisHorizontalIcon />
@@ -787,7 +787,7 @@ return (
 				</Button>
 
 				<Button
-					styles='light icon circle outline'
+					className='light icon circle outline'
 					onClick={handleClick}
 				>
 					<HeartIcon />
@@ -796,7 +796,7 @@ return (
 			</div>
 			<h3>Text with Icon</h3>
 			<Codeblock language='jsx'>{`<Button
-	styles='primary icon circle'
+	className='primary icon circle'
 	onClick={handleClick}
 >
 	<PlayIcon />
@@ -804,63 +804,63 @@ return (
 </Button>
 
 <Button
-	styles='danger rounded'
+	className='danger rounded'
 	onClick={handleClick}
 >
 	<TrashIcon /> Delete
 </Button>
 
 <Button
-	styles='dark outline'
+	className='dark outline'
 	onClick={handleClick}
 >
 	More <EllipsisHorizontalIcon />
 </Button>
 
 <Button
-	styles='light pill outline'
+	className='light pill outline'
 	onClick={handleClick}
 >
 	<HeartIcon /> Like
 </Button>
 
 <Button
-	styles='link'
+	className='link'
 	onClick={handleClick}
 >
 	<ArrowDownOnSquareIcon /> Download
 </Button>`}</Codeblock>
 			<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles='primary'
+					className='primary'
 					onClick={handleClick}
 				>
 					<PlayIcon /> Play
 				</Button>
 
 				<Button
-					styles='danger rounded'
+					className='danger rounded'
 					onClick={handleClick}
 				>
 					<TrashIcon /> Delete
 				</Button>
 
 				<Button
-					styles='dark outline'
+					className='dark outline'
 					onClick={handleClick}
 				>
 					More <EllipsisHorizontalIcon />
 				</Button>
 
 				<Button
-					styles='light pill outline'
+					className='light pill outline'
 					onClick={handleClick}
 				>
 					<HeartIcon /> Like
 				</Button>
 
 				<Button
-					styles='link'
+					className='link'
 					onClick={handleClick}
 				>
 					<ArrowDownOnSquareIcon /> Download
@@ -877,7 +877,7 @@ size='xl'`}</Codeblock>
 			<div className='align-center mb-0 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
 					size='xs'
-					styles='primary m-auto'
+					className='primary m-auto'
 					onClick={handleClick}
 				>
 					X-Small
@@ -885,14 +885,14 @@ size='xl'`}</Codeblock>
 
 				<Button
 					size='sm'
-					styles='secondary m-auto'
+					className='secondary m-auto'
 					onClick={handleClick}
 				>
 					Small
 				</Button>
 
 				<Button
-					styles='info m-auto'
+					className='info m-auto'
 					onClick={handleClick}
 				>
 					Default
@@ -900,7 +900,7 @@ size='xl'`}</Codeblock>
 
 				<Button
 					size='lg'
-					styles='success m-auto'
+					className='success m-auto'
 					onClick={handleClick}
 				>
 					Large
@@ -908,7 +908,7 @@ size='xl'`}</Codeblock>
 
 				<Button
 					size='xl'
-					styles='warning m-auto'
+					className='warning m-auto'
 					onClick={handleClick}
 				>
 					X-Large
@@ -917,7 +917,7 @@ size='xl'`}</Codeblock>
 			<div className='align-center mb-0 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
 					size='xs'
-					styles='primary pill outline m-auto'
+					className='primary pill m-auto outline'
 					onClick={handleClick}
 				>
 					X-Small
@@ -925,14 +925,14 @@ size='xl'`}</Codeblock>
 
 				<Button
 					size='sm'
-					styles='secondary pill outline m-auto'
+					className='secondary pill m-auto outline'
 					onClick={handleClick}
 				>
 					Small
 				</Button>
 
 				<Button
-					styles='info pill outline m-auto'
+					className='info pill m-auto outline'
 					onClick={handleClick}
 				>
 					Default
@@ -940,7 +940,7 @@ size='xl'`}</Codeblock>
 
 				<Button
 					size='lg'
-					styles='success pill outline m-auto'
+					className='success pill m-auto outline'
 					onClick={handleClick}
 				>
 					Large
@@ -948,7 +948,7 @@ size='xl'`}</Codeblock>
 
 				<Button
 					size='xl'
-					styles='warning pill outline m-auto'
+					className='warning pill m-auto outline'
 					onClick={handleClick}
 				>
 					X-Large
@@ -957,7 +957,7 @@ size='xl'`}</Codeblock>
 			<div className='align-center mb-0 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
 					size='xs'
-					styles='link'
+					className='link'
 					onClick={handleClick}
 				>
 					<ArrowDownOnSquareIcon /> X-Small
@@ -965,14 +965,14 @@ size='xl'`}</Codeblock>
 
 				<Button
 					size='sm'
-					styles='link'
+					className='link'
 					onClick={handleClick}
 				>
 					<ArrowDownOnSquareIcon /> Small
 				</Button>
 
 				<Button
-					styles='link'
+					className='link'
 					onClick={handleClick}
 				>
 					<ArrowDownOnSquareIcon /> Default
@@ -980,7 +980,7 @@ size='xl'`}</Codeblock>
 
 				<Button
 					size='lg'
-					styles='link'
+					className='link'
 					onClick={handleClick}
 				>
 					<ArrowDownOnSquareIcon /> Large
@@ -988,7 +988,7 @@ size='xl'`}</Codeblock>
 
 				<Button
 					size='xl'
-					styles='link'
+					className='link'
 					onClick={handleClick}
 				>
 					<ArrowDownOnSquareIcon /> X-Large
@@ -997,7 +997,7 @@ size='xl'`}</Codeblock>
 			<div className='align-center mb-0 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
 					size='xs'
-					styles='btn icon dark circle m-auto'
+					className='btn icon circle dark m-auto'
 					onClick={handleClick}
 				>
 					<PlusIcon />
@@ -1006,7 +1006,7 @@ size='xl'`}</Codeblock>
 
 				<Button
 					size='sm'
-					styles='btn icon primary circle m-auto'
+					className='btn icon primary circle m-auto'
 					onClick={handleClick}
 				>
 					<PlusIcon />
@@ -1014,7 +1014,7 @@ size='xl'`}</Codeblock>
 				</Button>
 
 				<Button
-					styles='btn icon info circle m-auto'
+					className='btn icon info circle m-auto'
 					onClick={handleClick}
 				>
 					<PlusIcon />
@@ -1023,7 +1023,7 @@ size='xl'`}</Codeblock>
 
 				<Button
 					size='lg'
-					styles='btn icon dark circle outline m-auto'
+					className='btn icon circle dark m-auto outline'
 					onClick={handleClick}
 				>
 					<PlusIcon />
@@ -1032,7 +1032,7 @@ size='xl'`}</Codeblock>
 
 				<Button
 					size='xl'
-					styles='btn icon light circle m-auto'
+					className='btn icon light circle m-auto'
 					onClick={handleClick}
 				>
 					<PlusIcon />
@@ -1046,7 +1046,7 @@ size='xl'`}</Codeblock>
 
 			<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles='primary m-auto'
+					className='primary m-auto'
 					onClick={handleClick}
 					disabled={disabled}
 				>
@@ -1054,7 +1054,7 @@ size='xl'`}</Codeblock>
 				</Button>
 
 				<Button
-					styles='primary outline pill m-auto'
+					className='primary pill m-auto outline'
 					onClick={handleClick}
 					disabled
 				>
@@ -1062,7 +1062,7 @@ size='xl'`}</Codeblock>
 				</Button>
 
 				<Button
-					styles='primary icon circle m-auto'
+					className='primary icon circle m-auto'
 					onClick={handleClick}
 					disabled
 				>
@@ -1071,7 +1071,7 @@ size='xl'`}</Codeblock>
 				</Button>
 
 				<Button
-					styles='primary icon outline circle m-auto'
+					className='primary icon circle m-auto outline'
 					onClick={handleClick}
 					disabled
 				>
@@ -1080,7 +1080,7 @@ size='xl'`}</Codeblock>
 				</Button>
 
 				<Button
-					styles='primary pill m-auto'
+					className='primary pill m-auto'
 					onClick={handleClick}
 					disabled
 				>
@@ -1088,7 +1088,7 @@ size='xl'`}</Codeblock>
 				</Button>
 
 				<Button
-					styles='primary pill outline m-auto'
+					className='primary pill m-auto outline'
 					onClick={handleClick}
 					disabled
 				>
@@ -1102,7 +1102,7 @@ size='xl'`}</Codeblock>
 				{`const [toggle, setToggle] = useState(false)
 
 <Button
-	styles={\`$\{toggle ? 'light' : 'dark'} pill\`}
+	className={\`$\{toggle ? 'light' : 'dark'} pill\`}
 	onClick={() => setToggle(!toggle)}
 >
 	<StarIcon /> Fave
@@ -1111,21 +1111,21 @@ size='xl'`}</Codeblock>
 
 			<div className='mb-8 flex flex-wrap justify-center gap-4 bg-gray-300 p-4'>
 				<Button
-					styles={`${toggle ? 'light' : 'dark'} m-auto`}
+					className={`${toggle ? 'light' : 'dark'} m-auto`}
 					onClick={() => setToggle(!toggle)}
 				>
 					Toggle
 				</Button>
 
 				<Button
-					styles={`${toggle ? 'warning' : 'primary'} outline pill m-auto`}
+					className={`${toggle ? 'warning' : 'primary'} pill m-auto outline`}
 					onClick={() => setToggle(!toggle)}
 				>
 					Toggle
 				</Button>
 
 				<Button
-					styles={`${toggle ? 'text-success bg-light' : 'light'} icon circle m-auto`}
+					className={`${toggle ? 'bg-light text-success' : 'light'} icon circle m-auto`}
 					onClick={() => setToggle(!toggle)}
 				>
 					<StarIcon />
@@ -1133,7 +1133,7 @@ size='xl'`}</Codeblock>
 				</Button>
 
 				<Button
-					styles={`${toggle ? 'light' : 'dark'} icon outline circle m-auto`}
+					className={`${toggle ? 'light' : 'dark'} icon circle m-auto outline`}
 					onClick={() => setToggle(!toggle)}
 				>
 					<StarIcon />
@@ -1141,14 +1141,14 @@ size='xl'`}</Codeblock>
 				</Button>
 
 				<Button
-					styles={`${toggle ? 'light' : 'dark'} pill m-auto`}
+					className={`${toggle ? 'light' : 'dark'} pill m-auto`}
 					onClick={() => setToggle(!toggle)}
 				>
 					<StarIcon /> Fave
 				</Button>
 
 				<Button
-					styles={`${toggle ? 'success' : 'info'} pill outline m-auto`}
+					className={`${toggle ? 'success' : 'info'} pill m-auto outline`}
 					onClick={() => setToggle(!toggle)}
 				>
 					<StarIcon /> Fave
@@ -1161,7 +1161,7 @@ size='xl'`}</Codeblock>
 
 			<Codeblock language='jsx'>
 				{`size: 'xs' | 'sm' | 'lg' | 'xl' | undefined
-styles: string | undefined
+className: string | undefined
 id: string | undefined
 title: string | undefined
 onClick?: (e: any) => void | undefined
@@ -1172,7 +1172,7 @@ tabindex?: number | undefined
 
 <Button
 	size='xl'
-	styles='secondary icon circle outline' // Any Tailwind classes can be added here
+	className='secondary icon circle outline' // Any Tailwind classes can be added here
 	id='reset'
 	title='Reset'
 	type='reset'
@@ -1185,7 +1185,7 @@ tabindex?: number | undefined
 			<div className='mb-8 flex flex-wrap gap-4 bg-gray-300 p-4'>
 				<Button
 					size='xl'
-					styles='secondary icon circle outline'
+					className='secondary icon circle outline'
 					id='reset'
 					title='Reset'
 					type='reset'

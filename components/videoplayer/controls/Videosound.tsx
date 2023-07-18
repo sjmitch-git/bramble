@@ -35,7 +35,7 @@ const VideoSound = ({ mute = false, onMute, onVolume }: VideoSoundProps) => {
 			<Buttongroup>
 				{!mute && (
 					<Button
-						styles='dark sm'
+						className='sm dark'
 						title='Mute'
 						onClick={onMute}
 					>
@@ -45,7 +45,7 @@ const VideoSound = ({ mute = false, onMute, onVolume }: VideoSoundProps) => {
 				)}
 				{mute && (
 					<Button
-						styles='dark sm'
+						className='sm dark'
 						title='Un-mute'
 						onClick={onMute}
 					>

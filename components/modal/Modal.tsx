@@ -8,6 +8,7 @@ import Figure from '@/components/figure'
 import CloseButton from '@/components/button/CloseButton'
 
 interface ModalProps {
+	className?: string | undefined
 	data: {
 		src: string
 		name: string
@@ -15,7 +16,7 @@ interface ModalProps {
 	onClick?: () => void | undefined
 }
 
-const Modal = ({ data: { src, name }, onClick }: ModalProps) => {
+const Modal = ({ data: { src, name }, className = '', onClick }: ModalProps) => {
 	useEffect(() => {
 		document.body.style.overflow = 'hidden'
 
@@ -27,9 +28,9 @@ const Modal = ({ data: { src, name }, onClick }: ModalProps) => {
 	useDisableBackButton()
 
 	return (
-		<div className='modal'>
+		<div className={`modal ${className}`}>
 			<CloseButton
-				styles='dark hover:scale-125 absolute top-4 right-4'
+				className='dark absolute right-4 top-4 hover:scale-125'
 				onClick={onClick}
 			/>
 			<Figure caption={name}>

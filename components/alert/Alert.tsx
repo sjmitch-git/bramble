@@ -3,16 +3,16 @@
 import CloseButton from '@/components/button/CloseButton'
 
 interface AlertProps {
-	styles?: string | undefined
+	className?: string | undefined
 	status?: string | undefined
 	message: string
 	onClick?: () => void | undefined
 }
 
-const Alert = ({ styles = '', message, status = '', onClick }: AlertProps) => {
+const Alert = ({ className = '', message, status = '', onClick }: AlertProps) => {
 	return (
 		<blockquote
-			className={`alert ${styles}`}
+			className={`alert ${className}`}
 			role='alert'
 		>
 			{status && <h4 className='status'>{status}</h4>}
@@ -22,7 +22,7 @@ const Alert = ({ styles = '', message, status = '', onClick }: AlertProps) => {
 			></div>
 			{onClick && (
 				<CloseButton
-					styles='sm dark p-0'
+					className='sm dark p-0'
 					onClick={onClick}
 				/>
 			)}

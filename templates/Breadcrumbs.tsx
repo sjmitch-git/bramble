@@ -48,7 +48,7 @@ return (
 			>
 				<Breadcrumbs />
 			</div>
-			<h2>Styles</h2>
+			<h2>className</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>{`<Breadcrumbs className='invert italic' /> // Add any Tailwind classes`}</Codeblock>
 			</div>

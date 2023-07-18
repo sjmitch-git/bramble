@@ -41,7 +41,7 @@ const Accordian = ({ size = '', className = '', data, opened, layout = '' }: Acc
 						{item.title}
 
 						<Button
-							styles='bg-light text-primary circle icon !static text-3xl'
+							className='circle icon !static bg-light text-3xl text-primary'
 							onClick={() => setOpen(`${open === item.id ? '' : item.id}`)}
 						>
 							{open === item.id ? <MinusIcon /> : <PlusIcon />}

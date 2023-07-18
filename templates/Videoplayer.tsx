@@ -25,7 +25,7 @@ const VideoplayerTemplate = () => {
 			<h2>Options</h2>
 			<Codeblock language='jsx'>
 				{`src: string
-styles?: string | undefined
+className?: string | undefined
 formats?: any[] | undefined
 poster?: string | undefined`}
 			</Codeblock>

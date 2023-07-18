@@ -16,7 +16,7 @@ const FigureTemplate = () => {
      
 <Figure
 	caption='Beagle' 	// optional
-	styles='max-w-sm' 	// set width
+	className='max-w-sm' 	// set width
 >
 	<img
 		src='/img/dogs/beagle.jpg'
@@ -30,7 +30,7 @@ const FigureTemplate = () => {
 			<div className='mb-8 flex flex-wrap justify-center gap-8 bg-gray-300 p-4'>
 				<Figure
 					caption='Beagle'
-					styles='max-w-sm m-auto'
+					className='m-auto max-w-sm'
 				>
 					<img
 						src='/img/dogs/beagle.jpg'
@@ -40,7 +40,7 @@ const FigureTemplate = () => {
 				</Figure>
 				<Figure
 					caption='Irish Wolfhound'
-					styles='max-w-sm m-auto'
+					className='m-auto max-w-sm'
 				>
 					<img
 						src='/img/dogs/wolfhound.jpg'
@@ -59,7 +59,7 @@ import Figure from '@/components/figure'
      
 <Figure
 	caption='Beagle'
-	styles='max-w-sm'
+	className='max-w-sm'
 >
 	<Image
 		width='500'		// set width
@@ -75,7 +75,7 @@ import Figure from '@/components/figure'
 			<div className='mb-8 flex flex-wrap justify-center gap-8 bg-gray-300 p-4'>
 				<Figure
 					caption='Beagle'
-					styles='max-w-sm m-auto'
+					className='m-auto max-w-sm'
 				>
 					<Image
 						width='500'
@@ -87,7 +87,7 @@ import Figure from '@/components/figure'
 				</Figure>
 				<Figure
 					caption='Irish Wolfhound'
-					styles='max-w-sm m-auto'
+					className='m-auto max-w-sm'
 				>
 					<Image
 						width='333'
@@ -121,7 +121,7 @@ import Figure from '@/components/figure'
 			<div className='mb-8 flex flex-wrap justify-center gap-8 bg-gray-300 p-4'>
 				<Figure
 					caption='Beagle'
-					styles='max-w-sm m-auto'
+					className='m-auto max-w-sm'
 				>
 					<Image
 						fill
@@ -132,7 +132,7 @@ import Figure from '@/components/figure'
 				</Figure>
 				<Figure
 					caption='Irish Wolfhound'
-					styles='max-w-sm m-auto'
+					className='m-auto max-w-sm'
 				>
 					<Image
 						fill
@@ -149,7 +149,7 @@ import Figure from '@/components/figure'
 			<div className='mb-0 flex flex-wrap justify-center gap-8 bg-gray-300 p-4'>
 				<Figure
 					caption='Beagle'
-					styles='max-w-sm m-auto portrait'
+					className='portrait m-auto max-w-sm'
 				>
 					<Image
 						fill
@@ -160,7 +160,7 @@ import Figure from '@/components/figure'
 				</Figure>
 				<Figure
 					caption='Irish Wolfhound'
-					styles='max-w-sm m-auto portrait'
+					className='portrait m-auto max-w-sm'
 				>
 					<Image
 						fill
@@ -170,7 +170,7 @@ import Figure from '@/components/figure'
 					/>
 				</Figure>
 			</div>
-			<Codeblock language='jsx'>{`<Figure styles='... portrait'`}</Codeblock>
+			<Codeblock language='jsx'>{`<Figure className='... portrait'`}</Codeblock>
 
 			<h4>
 				Square <small>- aspect-[1/1]</small>
@@ -178,7 +178,7 @@ import Figure from '@/components/figure'
 			<div className='mb-0 flex flex-wrap justify-center gap-8 bg-gray-300 p-4'>
 				<Figure
 					caption='Beagle'
-					styles='max-w-sm m-auto square'
+					className='square m-auto max-w-sm'
 				>
 					<Image
 						fill
@@ -189,7 +189,7 @@ import Figure from '@/components/figure'
 				</Figure>
 				<Figure
 					caption='Irish Wolfhound'
-					styles='max-w-sm m-auto square'
+					className='square m-auto max-w-sm'
 				>
 					<Image
 						fill
@@ -199,12 +199,12 @@ import Figure from '@/components/figure'
 					/>
 				</Figure>
 			</div>
-			<Codeblock language='jsx'>{`<Figure styles='... square'`}</Codeblock>
+			<Codeblock language='jsx'>{`<Figure className='... square'`}</Codeblock>
 
 			<h2>Video</h2>
 			<Codeblock language='jsx'>{`<Figure
 	caption='Big Buck Bunny'
-	styles='max-w-lg'
+	className='max-w-lg'
 >
 	<Video
 		src='https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
@@ -215,7 +215,7 @@ import Figure from '@/components/figure'
 			<div className='mb-8 flex flex-wrap justify-center gap-8 bg-black p-4 text-light'>
 				<Figure
 					caption='Big Buck Bunny'
-					styles='max-w-lg'
+					className='max-w-lg'
 				>
 					<Video
 						src='https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
@@ -228,7 +228,7 @@ import Figure from '@/components/figure'
 
 			<h2>Props</h2>
 			<Codeblock language='jsx'>
-				{`styles?: string | undefined
+				{`className?: string | undefined
 children: React.ReactNode
 caption?: string | undefined`}
 			</Codeblock>

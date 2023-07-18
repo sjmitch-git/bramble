@@ -15,7 +15,7 @@ const VideoPlay = ({ onPlay, play = false, onPause }: VideoPlayProps) => {
 		<Buttongroup>
 			{!play && (
 				<Button
-					styles='dark sm'
+					className='sm dark'
 					title='Play'
 					onClick={onPlay}
 				>
@@ -25,7 +25,7 @@ const VideoPlay = ({ onPlay, play = false, onPause }: VideoPlayProps) => {
 			)}
 			{play && (
 				<Button
-					styles='dark sm'
+					className='sm dark'
 					onClick={onPause}
 				>
 					<PauseIcon />

@@ -39,7 +39,7 @@ import Users from '@/data/users.json'
 			<Alert
 				status='tip'
 				message='HTML can be added in <code>body</code> prop.'
-				styles='info'
+				className='info'
 			/>
 
 			<h2>Layouts</h2>

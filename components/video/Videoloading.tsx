@@ -1,12 +1,12 @@
 import Spinner from '@/components/spinner'
 
 interface SpinnerProps {
-	styles?: string
+	className?: string
 }
 
-const VideoLoading = ({ styles = '' }: SpinnerProps) => {
+const VideoLoading = ({ className = '' }: SpinnerProps) => {
 	return (
-		<div className={`loading ${styles}`}>
+		<div className={`loading ${className}`}>
 			<div className={`innerloading w-24`}>
 				<Spinner />
 			</div>

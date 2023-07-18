@@ -1,11 +1,5 @@
-import { Metadata } from 'next'
-
 import config from '@/app.config'
 
-const title = config.siteMetadata.title
-const description = config.siteMetadata.description
-const url = config.siteMetadata.url
-const image = config.siteMetadata.image
 const themecolor = config.manifest_options.theme_color
 
 const SEO = () => {

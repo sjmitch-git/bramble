@@ -21,7 +21,7 @@ const RatingsTemplate = () => {
 <h2>
     Savoy Grill
     <Ratings
-        styles='text-lg'
+        className='text-lg'
         badge='text-warning'
         rating={4}
     />
@@ -33,7 +33,7 @@ const RatingsTemplate = () => {
 				<h2>
 					Savoy Grill{' '}
 					<Ratings
-						styles='text-lg'
+						className='text-lg'
 						badge='text-warning'
 						rating={4}
 					/>
@@ -48,7 +48,7 @@ const RatingsTemplate = () => {
 				<h3>
 					Default
 					<Ratings
-						styles='text-lg'
+						className='text-lg'
 						badge='text-warning'
 						rating={4}
 						range={5}
@@ -57,7 +57,7 @@ const RatingsTemplate = () => {
 				<h3>
 					Smiley
 					<Ratings
-						styles='text-xl'
+						className='text-xl'
 						icon='smiley'
 						badge='text-info'
 						rating={2}
@@ -66,7 +66,7 @@ const RatingsTemplate = () => {
 				<h3>
 					Heart
 					<Ratings
-						styles='text-2xl'
+						className='text-2xl'
 						icon='heart'
 						badge='text-primary'
 						rating={4}
@@ -75,7 +75,7 @@ const RatingsTemplate = () => {
 				<h3>
 					Thumb
 					<Ratings
-						styles='text-4xl'
+						className='text-4xl'
 						icon='thumb'
 						badge='text-danger'
 						rating={2}
@@ -89,7 +89,7 @@ const RatingsTemplate = () => {
 					{`<h3>
     Default
     <Ratings
-        styles='text-lg'
+        className='text-lg'
         badge='text-warning'
         rating={4}
         range={5}
@@ -98,7 +98,7 @@ const RatingsTemplate = () => {
 <h3>
     Smiley
     <Ratings
-        styles='text-xl'
+        className='text-xl'
         icon='smiley'
         badge='text-info'
         rating={2}
@@ -107,7 +107,7 @@ const RatingsTemplate = () => {
 <h3>
     Heart
     <Ratings
-        styles='text-2xl'
+        className='text-2xl'
         icon='heart'
         badge='text-primary'
         rating={4}
@@ -116,7 +116,7 @@ const RatingsTemplate = () => {
 <h3>
     Thumb
     <Ratings
-        styles='text-4xl'
+        className='text-4xl'
         icon='thumb'
         badge='text-danger'
         rating={2}
@@ -137,7 +137,7 @@ const RatingsTemplate = () => {
 				<h3>
 					ابو السيد
 					<Ratings
-						styles='text-2xl'
+						className='text-2xl'
 						icon='heart'
 						badge='text-primary'
 						rating={4}

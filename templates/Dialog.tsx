@@ -21,7 +21,7 @@ const DialogTemplate = () => {
 	modal={false}         	// FALSE by default
 	addOpenButton={true} 	// TRUE by default
     btnLabel='Open Dialog' 	// Set label text for 'addOpenButton'
-    btnStyles='link'     	// Style 'addOpenButton'
+    btnclassName='link'     	// Style 'addOpenButton'
 >
     <!-- Enter your html here -->
     <form method='dialog'>
@@ -32,7 +32,7 @@ const DialogTemplate = () => {
         </p>
         <div className='flex justify-center'>
             <Button
-                styles='outline rounded primary'
+                className='outline rounded primary'
                 type='submit'
             >
                 OK
@@ -58,7 +58,7 @@ const DialogTemplate = () => {
 						</p>
 						<div className='flex justify-center'>
 							<Button
-								styles='outline rounded primary'
+								className='primary rounded outline'
 								type='submit'
 							>
 								OK
@@ -83,7 +83,7 @@ const DialogTemplate = () => {
 			<div className='bg-light p-4 text-center'>
 				<Dialog
 					btnLabel='Open Modal'
-					btnStyles='link'
+					btnclassName='link'
 					modal={true}
 				>
 					<form method='dialog'>
@@ -94,7 +94,7 @@ const DialogTemplate = () => {
 						</p>
 						<div className='flex justify-center'>
 							<Button
-								styles='outline rounded primary'
+								className='primary rounded outline'
 								type='submit'
 							>
 								OK
@@ -119,19 +119,19 @@ const DialogTemplate = () => {
 			<div className='bg-light p-4 text-center'>
 				<Dialog
 					btnLabel='Open Alert'
-					btnStyles='info pill'
+					btnclassName='info pill'
 					modal={true}
 				>
 					<form method='dialog'>
 						<Alert
-							styles='info solid text-start mb-8'
+							className='info solid mb-8 text-start'
 							status='info'
 							message='Some contextual message useful to the user.'
 						/>
 
 						<div className='flex justify-center'>
 							<Button
-								styles='outline rounded info'
+								className='info rounded outline'
 								type='submit'
 							>
 								OK
@@ -149,19 +149,19 @@ import Alert from '@/components/alert'
 					
 <Dialog
 	btnLabel='Open Alert'
-	btnStyles='info pill'
+	btnclassName='info pill'
 	modal={true}
 >
 	<form method='dialog'>
 		<Alert
-			styles='info solid text-start mb-8'
+			className='info solid text-start mb-8'
 			status='info'
 			message='Some contextual message useful to the user.'
 		/>
 
 		<div className='flex justify-center'>
 			<Button
-				styles='outline rounded info'
+				className='outline rounded info'
 				type='submit'
 			>
 				OK

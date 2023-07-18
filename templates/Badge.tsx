@@ -18,14 +18,14 @@ const BadgeTemplate = () => {
 					{`import Badge from '@/components/badge'
                     
 <h1>
-    My Latest Blog Post <Badge styles='bg-info'>New</Badge>
+    My Latest Blog Post <Badge className='bg-info'>New</Badge>
 </h1>`}
 				</Codeblock>
 			</div>
 
 			<div className='mb-12 border px-4'>
 				<h2>
-					My Latest Blog Post <Badge styles='bg-info'>New</Badge>
+					My Latest Blog Post <Badge className='bg-info'>New</Badge>
 				</h2>
 			</div>
 
@@ -34,14 +34,14 @@ const BadgeTemplate = () => {
 			<h2>Count</h2>
 
 			<div className='mb-12 border p-4 pt-8'>
-				<Button styles='success'>
-					Inbox <Badge styles='bg-warning text-dark count'>99+</Badge>
+				<Button className='success'>
+					Inbox <Badge className='count bg-warning text-dark'>99+</Badge>
 				</Button>
 			</div>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`<Button styles='success'>
-    Inbox <Badge styles='count bg-warning text-dark'>99+</Badge>
+					{`<Button className='success'>
+    Inbox <Badge className='count bg-warning text-dark'>99+</Badge>
 </Button>`}
 				</Codeblock>
 			</div>
@@ -51,16 +51,16 @@ const BadgeTemplate = () => {
 			<h2>Notifications</h2>
 
 			<div className='mb-12 border p-4 pt-8'>
-				<Button styles='info'>
+				<Button className='info'>
 					Notifications
-					<Badge styles='circle bg-warning' />
+					<Badge className='circle bg-warning' />
 				</Button>
 			</div>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`<Button styles='info'>
+					{`<Button className='info'>
     Notifications
-    <Badge styles='circle bg-warning' />
+    <Badge className='circle bg-warning' />
 </Button>`}
 				</Codeblock>
 			</div>
@@ -72,7 +72,7 @@ const BadgeTemplate = () => {
 			<div className='mb-12 border px-4'>
 				<h2>
 					Latest Article
-					<Badge styles='bg-transparent text-warning circle icon'>
+					<Badge className='circle icon bg-transparent text-warning'>
 						<StarIcon />
 					</Badge>
 				</h2>
@@ -82,7 +82,7 @@ const BadgeTemplate = () => {
 				<Codeblock language='jsx'>
 					{`<h1>
     Latest Article
-    <Badge styles='bg-transparent text-warning circle icon'>
+    <Badge className='bg-transparent text-warning circle icon'>
         <StarIcon />
     </Badge>
 </h1>`}
@@ -95,14 +95,14 @@ const BadgeTemplate = () => {
 
 			<div className='mb-12 border p-4'>
 				<h3>
-					Example heading <Badge styles='bg-danger pill'>New</Badge>
+					Example heading <Badge className='pill bg-danger'>New</Badge>
 				</h3>
 			</div>
 
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
 					{`<h3>
-    Example heading <Badge styles='bg-danger pill'>New</Badge>
+    Example heading <Badge className='bg-danger pill'>New</Badge>
 </h3>`}
 				</Codeblock>
 			</div>
@@ -113,22 +113,23 @@ const BadgeTemplate = () => {
 
 			<div className='mb-8'>
 				<h3>
-					<code>bg-</code> <Badge styles='bg-info'>Info</Badge>{' '}
-					<Badge styles='bg-success'>Success</Badge>{' '}
-					<Badge styles='bg-warning text-dark'>Warning</Badge>{' '}
-					<Badge styles='bg-danger'>Danger</Badge> <Badge styles='bg-dark'>Dark</Badge>{' '}
-					<Badge styles='bg-light text-dark'>Light</Badge>
+					<code>bg-</code> <Badge className='bg-info'>Info</Badge>{' '}
+					<Badge className='bg-success'>Success</Badge>{' '}
+					<Badge className='bg-warning text-dark'>Warning</Badge>{' '}
+					<Badge className='bg-danger'>Danger</Badge>{' '}
+					<Badge className='bg-dark'>Dark</Badge>{' '}
+					<Badge className='bg-light text-dark'>Light</Badge>
 				</h3>
 			</div>
 
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`<Badge styles='bg-info'>Info</Badge>
-<Badge styles='bg-success'>Success</Badge>
-<Badge styles='bg-warning text-dark'>Warning</Badge>
-<Badge styles='bg-danger'>Danger</Badge>
-<Badge styles='bg-dark'>Dark</Badge>
-<Badge styles='bg-light text-dark'>Light</Badge>`}
+					{`<Badge className='bg-info'>Info</Badge>
+<Badge className='bg-success'>Success</Badge>
+<Badge className='bg-warning text-dark'>Warning</Badge>
+<Badge className='bg-danger'>Danger</Badge>
+<Badge className='bg-dark'>Dark</Badge>
+<Badge className='bg-light text-dark'>Light</Badge>`}
 				</Codeblock>
 			</div>
 
@@ -142,7 +143,7 @@ const BadgeTemplate = () => {
 			>
 				<h2>
 					Latest Article
-					<Badge styles='bg-transparent text-warning circle icon'>
+					<Badge className='circle icon bg-transparent text-warning'>
 						<StarIcon />
 					</Badge>
 				</h2>

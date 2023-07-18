@@ -6,15 +6,15 @@ import { XMarkIcon } from '@heroicons/react/24/solid'
 
 interface ButtonProps {
 	size?: string | undefined
-	styles?: string | undefined
+	className?: string | undefined
 	onClick?: () => void | undefined
 	disabled?: boolean | undefined
 }
 
-const CloseButton = ({ size = '', styles = '', onClick, disabled = false }: ButtonProps) => {
+const CloseButton = ({ size = '', className = '', onClick, disabled = false }: ButtonProps) => {
 	return (
 		<Button
-			styles={`icon ${styles} ${size}`}
+			className={`icon ${className} ${size}`}
 			onClick={onClick}
 			title='Close'
 			disabled={disabled}

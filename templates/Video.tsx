@@ -29,7 +29,7 @@ const VideoTemplate = () => {
 			<h2>Props</h2>
 			<Codeblock language='jsx'>
 				{`src: string
-styles?: string | undefined
+className?: string | undefined
 formats?: any[] | undefined
 loop?: boolean | undefined
 controls?: boolean | undefined

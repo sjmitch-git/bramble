@@ -40,7 +40,7 @@ const CardProduct = ({ title, description, price, cc, layout = 'column' }: CardP
 		<>
 			<div className={`card ${layout}`}>
 				<div className='image'>
-					<Figure styles={aspect}>
+					<Figure className={aspect}>
 						<img
 							src='/img/products/Toaster.jpg'
 							className='img'

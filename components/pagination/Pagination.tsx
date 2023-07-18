@@ -18,6 +18,7 @@ import Buttongroup from '@/components/buttongroup'
 import Select from '@/components/select'
 
 interface PaginationProps {
+	className?: string | undefined
 	size?: string
 	theme?: 'dark' | 'light' | undefined
 	range: number
@@ -29,6 +30,7 @@ interface PaginationProps {
 }
 
 const Pagination = ({
+	className = '',
 	range,
 	results,
 	size,
@@ -65,12 +67,12 @@ const Pagination = ({
 
 	return (
 		<nav
-			className={`pagination ${theme}`}
+			className={`pagination ${className} ${theme}`}
 			aria-label='...'
 		>
 			<Buttongroup
 				size={size}
-				styles={`mb-2 ${vertical && 'vertical'} ${minimal && 'minimal'}`}
+				className={`mb-2 ${vertical && 'vertical'} ${minimal && 'minimal'}`}
 			>
 				<Link
 					href={`${pathname}?${buildParams('1')}`}
@@ -92,7 +94,7 @@ const Pagination = ({
 				</Link>
 				<Select
 					title='Select Page'
-					styles={`${size}`}
+					className={`${size}`}
 					value={selectValue}
 					onChange={handleChange}
 				>

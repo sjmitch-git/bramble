@@ -37,7 +37,7 @@ const CardImage = ({ title, image }: CardProps) => {
 	return (
 		<>
 			<div className='image w-full max-w-sm'>
-				<Figure styles={aspect}>
+				<Figure className={aspect}>
 					<Image
 						fill
 						src={image}

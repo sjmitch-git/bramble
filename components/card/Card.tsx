@@ -4,7 +4,7 @@ import CardImage from './CardImage'
 import CardBody from './CardBody'
 
 interface CardProps {
-	styles?: string | undefined
+	className?: string | undefined
 	title?: string | undefined
 	description: string
 	image?: string | undefined
@@ -20,7 +20,7 @@ interface CardProps {
 }
 
 const Card = ({
-	styles = '',
+	className = '',
 	title = '',
 	description,
 	layout = 'column',
@@ -36,7 +36,7 @@ const Card = ({
 }: CardProps) => {
 	return (
 		<>
-			<div className={`card ${layout} ${styles}`}>
+			<div className={`card ${layout} ${className}`}>
 				{image && (
 					<CardImage
 						image={image}

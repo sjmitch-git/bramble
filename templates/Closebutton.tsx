@@ -30,56 +30,56 @@ const CloseButtonTemplate = () => {
 				<CloseButton onClick={handleClick} />
 				<CloseButton
 					onClick={handleClick}
-					styles='secondary'
+					className='secondary'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='info'
+					className='info'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='success'
+					className='success'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='danger'
+					className='danger'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='warning'
+					className='warning'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='dark'
+					className='dark'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='light'
+					className='light'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='link'
+					className='link'
 				/>
 			</div>
 
 			<Codeblock language='jsx'>
 				{`<CloseButton /> // default
 
-<CloseButton styles='secondary'/>
+<CloseButton className='secondary'/>
 
-<CloseButton styles='info'/>
+<CloseButton className='info'/>
 
-<CloseButton styles='success'/>
+<CloseButton className='success'/>
 
-<CloseButton styles='danger'/>
+<CloseButton className='danger'/>
 
-<CloseButton styles='warning'/>
+<CloseButton className='warning'/>
 
-<CloseButton styles='dark'/>
+<CloseButton className='dark'/>
 
-<CloseButton styles='light'/>
+<CloseButton className='light'/>
 
-<CloseButton styles='link'/>`}
+<CloseButton className='link'/>`}
 			</Codeblock>
 
 			<h2>Circle</h2>
@@ -87,117 +87,117 @@ const CloseButtonTemplate = () => {
 			<div className='mb-8 flex flex-wrap justify-center gap-4 bg-light p-4'>
 				<CloseButton
 					onClick={handleClick}
-					styles='circle'
+					className='circle'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='secondary circle'
+					className='secondary circle'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='info circle'
+					className='info circle'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='success circle'
+					className='success circle'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='danger circle'
+					className='danger circle'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='warning circle'
+					className='warning circle'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='dark circle'
+					className='circle dark'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='light circle'
+					className='light circle'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='link circle'
+					className='link circle'
 				/>
 			</div>
 
-			<Codeblock language='jsx'>{`<CloseButton styles='circle ...' />`}</Codeblock>
+			<Codeblock language='jsx'>{`<CloseButton className='circle ...' />`}</Codeblock>
 
 			<h2>Outline</h2>
 
 			<div className='flex flex-wrap justify-center gap-4 bg-neutral p-4'>
 				<CloseButton
 					onClick={handleClick}
-					styles='primary circle outline'
+					className='primary circle outline'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='secondary circle outline'
+					className='secondary circle outline'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='info circle outline'
+					className='info circle outline'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='success circle outline'
+					className='success circle outline'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='danger circle outline'
+					className='danger circle outline'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='warning circle outline'
+					className='warning circle outline'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='dark circle outline'
+					className='circle dark outline'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='light circle outline'
+					className='light circle outline'
 				/>
 			</div>
 
-			<Codeblock language='jsx'>{`<CloseButton styles='outline ...' />`}</Codeblock>
+			<Codeblock language='jsx'>{`<CloseButton className='outline ...' />`}</Codeblock>
 
 			<h2>Sizes</h2>
 
 			<div className='flex flex-wrap justify-center gap-4 bg-neutral p-4'>
 				<CloseButton
 					onClick={handleClick}
-					styles='primary xs m-auto'
+					className='primary xs m-auto'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='secondary circle sm m-auto'
+					className='secondary circle sm m-auto'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='info circle outline m-auto'
+					className='info circle m-auto outline'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='success lg m-auto'
+					className='success lg m-auto'
 				/>
 				<CloseButton
 					onClick={handleClick}
-					styles='danger circle xl m-auto'
+					className='danger circle xl m-auto'
 				/>
 			</div>
 
-			<Codeblock language='jsx'>{`<CloseButton styles='xs ...' />
+			<Codeblock language='jsx'>{`<CloseButton className='xs ...' />
 
-<CloseButton styles='sm ...' />
+<CloseButton className='sm ...' />
 
 <CloseButton />  // default
 
-<CloseButton styles='lg ...' />
+<CloseButton className='lg ...' />
 
-<CloseButton styles='xl ...' />`}</Codeblock>
+<CloseButton className='xl ...' />`}</Codeblock>
 		</>
 	)
 }
