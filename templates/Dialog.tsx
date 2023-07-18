@@ -21,7 +21,7 @@ const DialogTemplate = () => {
 	modal={false}         	// FALSE by default
 	addOpenButton={true} 	// TRUE by default
     btnLabel='Open Dialog' 	// Set label text for 'addOpenButton'
-    btnclassName='link'     	// Style 'addOpenButton'
+    btnStyles='link'     	// Style 'addOpenButton'
 >
     <!-- Enter your html here -->
     <form method='dialog'>
@@ -83,7 +83,7 @@ const DialogTemplate = () => {
 			<div className='bg-light p-4 text-center'>
 				<Dialog
 					btnLabel='Open Modal'
-					btnclassName='link'
+					btnStyles='link'
 					modal={true}
 				>
 					<form method='dialog'>
@@ -119,7 +119,7 @@ const DialogTemplate = () => {
 			<div className='bg-light p-4 text-center'>
 				<Dialog
 					btnLabel='Open Alert'
-					btnclassName='info pill'
+					btnStyles='info pill'
 					modal={true}
 				>
 					<form method='dialog'>
@@ -149,7 +149,7 @@ import Alert from '@/components/alert'
 					
 <Dialog
 	btnLabel='Open Alert'
-	btnclassName='info pill'
+	btnStyles='info pill'
 	modal={true}
 >
 	<form method='dialog'>
