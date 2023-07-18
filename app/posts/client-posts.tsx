@@ -15,14 +15,14 @@ export default function ClientPosts() {
 				{isLoading ? (
 					<div className='mx-auto mb-12 max-w-[6rem]'>
 						<Loading
-							styles='text-info'
+							className='text-info'
 							caption='Loading'
 						/>
 					</div>
 				) : error ? (
 					<div className='mx-auto mb-12'>
 						<Alert
-							styles='error'
+							className='error'
 							status='Error'
 							message={`error`}
 						/>
