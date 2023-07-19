@@ -5,6 +5,7 @@ interface VideoTimeProps {
 
 const VideoTime = ({ time, duration = 0 }: VideoTimeProps) => {
 	const toHHMMSS = (secs: any) => {
+		secs = secs || 0
 		let sec_num = parseInt(secs, 10)
 		let hours = Math.floor(sec_num / 3600)
 		let minutes = Math.floor(sec_num / 60) % 60

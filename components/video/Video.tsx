@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
+import React, { SyntheticEvent, useEffect, useRef, useState } from 'react'
 
 import config from '@/app.config'
 
@@ -81,6 +81,11 @@ const Video = ({
 			if (el && onTime) onTime(el.currentTime)
 		}
 
+		const handleDurationupdate = () => {
+			console.log('handleDurationupdate')
+			if (onDuration && el.duration) onDuration(el.duration)
+		}
+
 		let el = video.current
 
 		if (el) {
@@ -88,8 +93,11 @@ const Video = ({
 
 			el.addEventListener('timeupdate', handleTimeupdate)
 
-			if (onDuration) onDuration(el.duration)
+			if (onDuration && el.duration) onDuration(el.duration)
+
 			setLoading(false)
+
+			el.addEventListener('loadedmetadata', handleDurationupdate, true)
 
 			if (play) el.play()
 
@@ -99,6 +107,7 @@ const Video = ({
 		return () => {
 			document.removeEventListener('ended', handleEnded)
 			document.removeEventListener('timeupdate', handleTimeupdate)
+			document.removeEventListener('loadedmetadata', handleDurationupdate)
 		}
 	}, [onEnd, onTime, onDuration, play, pause])
 
