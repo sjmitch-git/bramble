@@ -1,11 +1,8 @@
 import { Metadata } from 'next'
-import { lazy, Suspense } from 'react'
 
 import Dropdown from '@/components/dropdown'
-import Loading from '@/components/loading'
-import config from '@/app.config'
 
-const TwitterEmbed = lazy(() => delayForDemo(import('@/components/twitterembed')))
+import config from '@/app.config'
 
 const title = config.siteMetadata.title
 const description = config.siteMetadata.description
@@ -33,21 +30,7 @@ export default function Home() {
 						links={[siteLinks[0]]}
 					/>
 				</div>
-				<div className='flex justify-center'>
-					<Suspense fallback={<Loading />}>
-						<TwitterEmbed
-							handle='brambleUI'
-							className='w-full max-w-lg text-center'
-						/>
-					</Suspense>
-				</div>
 			</div>
 		</>
 	)
-}
-
-function delayForDemo(promise: any) {
-	return new Promise((resolve) => {
-		setTimeout(resolve, 20000)
-	}).then(() => promise)
 }
