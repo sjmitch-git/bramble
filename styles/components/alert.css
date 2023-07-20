@@ -1,85 +1,90 @@
 @layer components {
+	.alert {
+		@apply relative border-s-8 px-4 py-1 text-lg;
 
-    .alert {
-        @apply text-lg px-4 py-1 border-s-8 relative;
+		.status {
+			@apply mb-4 leading-none;
+		}
 
-        .status {
-            @apply leading-none mb-4;
-        }
-    
-        .message {
-            @apply text-size-inherit mb-4 mt-4 leading-4 text-dark;
-        }
+		.message {
+			@apply text-size-inherit mb-4 mt-4 text-dark;
+		}
 
-        /* basic */
-        &.error, &.danger {
-            @apply  border-error text-error bg-[var(--error-color-25)];
-        }
+		/* basic */
+		&.error,
+		&.danger {
+			@apply border-error bg-[var(--error-color-25)] text-error;
+		}
 
-        &.info {
-            @apply border-info text-info bg-[var(--info-color-25)];
-        }
+		&.info {
+			@apply border-info bg-[var(--info-color-25)] text-info;
+		}
 
-        &.success {
-            @apply border-success text-success bg-[var(--success-color-25)];
-        }
+		&.success {
+			@apply border-success bg-[var(--success-color-25)] text-success;
+		}
 
-        &.warning {
-            @apply border-warning text-warning bg-[var(--warning-color-25)];
-        }
+		&.warning {
+			@apply border-warning bg-[var(--warning-color-25)] text-warning;
+		}
 
-        &.outline {
-            @apply rounded outline-2 border-0;
-        }
+		&.outline {
+			@apply rounded border-0 outline-2;
+		}
 
-        &.solid {
-            @apply rounded border-none !text-light;
+		&.solid {
+			@apply rounded border-none text-light;
 
-            &.info {
-                @apply bg-info;
-            }
+			&.info {
+				@apply bg-info;
+			}
 
-            &.success {
-                @apply bg-success;
-            }
+			&.success {
+				@apply bg-success;
+			}
 
-            &.warning {
-                @apply bg-warning;
-            }
+			&.warning {
+				@apply bg-warning;
+			}
 
-            &.danger, &.error {
-                @apply bg-error;
-            }
+			&.danger,
+			&.error {
+				@apply bg-error;
+			}
 
-            .message {
-                @apply text-light;
-            }
-        }
+			.message {
+				@apply text-light;
+			}
 
-        
+			&.warning {
+				.message {
+					@apply text-dark;
+				}
+			}
+		}
 
-        &.sm  {
-            @apply text-sm;
+		&.sm {
+			@apply text-sm;
 
-            .status {
-                @apply text-base mb-2;
-            }
-        }
+			.status {
+				@apply mb-2 text-base;
+			}
+		}
 
-        &.lg {
-            @apply text-xl py-2;
+		&.lg {
+			@apply py-2 text-xl;
 
-            .status {
-                @apply text-3xl mb-4;
-            }
-        }
+			.status {
+				@apply mb-4 text-3xl;
+			}
+		}
 
-        & .btn {
-            @apply absolute end-2 top-2
-        }
+		& .btn {
+			@apply absolute end-2 top-2;
+		}
 
-        & a {
-            @apply underline font-bold !text-current hover:no-underline hover:opacity-75;
-        }
-    }
+		& a {
+			@apply font-bold !text-current underline hover:no-underline hover:opacity-75;
+		}
+	}
 }

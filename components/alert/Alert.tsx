@@ -22,7 +22,7 @@ const Alert = ({ className = '', message, status = '', onClick }: AlertProps) =>
 			></div>
 			{onClick && (
 				<CloseButton
-					className='sm dark p-0'
+					className='xs icon circle p-0'
 					onClick={onClick}
 				/>
 			)}

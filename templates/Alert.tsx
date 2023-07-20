@@ -27,7 +27,7 @@ const AlertTemplate = () => {
 				<Alert
 					className='info'
 					status='Info'
-					message="<p><strong>Ugh umami</strong> bacon butcher <a href='#'>pickled kogi</a> stumptown, <em>subway tile</em> gatekeep flexitarian. Bespoke meggings health goth meh ascot listicle, cronut vaporware. Marfa church-key cred, kinfolk mlkshk tousled roof party XOXO readymade solarpunk tbh adaptogen. Raclette williamsburg chicharrones, +1 retro hashtag freegan sustainable tumblr polaroid deep v tote bag godard.</p>"
+					message="<p><strong>Ugh umami</strong> bacon butcher <a href='#'>pickled kogi</a> stumptown, <em>subway tile</em> gatekeep flexitarian. Bespoke meggings health goth meh ascot listicle, cronut vaporware.</p>"
 				/>
 			</div>
 
@@ -35,7 +35,7 @@ const AlertTemplate = () => {
 				<Alert
 					className='success'
 					status='Success'
-					message="<p><strong>Ugh umami</strong> bacon butcher <a href='#'>pickled kogi</a> stumptown, <em>subway tile</em> gatekeep flexitarian. Bespoke meggings health goth meh ascot listicle, cronut vaporware.</p> <p>Marfa church-key cred, kinfolk mlkshk tousled roof party XOXO readymade solarpunk tbh adaptogen. Raclette williamsburg chicharrones, +1 retro hashtag freegan sustainable tumblr polaroid deep v tote bag godard.</p>"
+					message="<p><strong>Ugh umami</strong> bacon butcher <a href='#'>pickled kogi</a> stumptown, <em>subway tile</em> gatekeep flexitarian.</p> <p>Marfa church-key cred, kinfolk mlkshk tousled roof party XOXO readymade solarpunk tbh adaptogen.</p>"
 				/>
 			</div>
 

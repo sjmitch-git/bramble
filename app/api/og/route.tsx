@@ -18,14 +18,29 @@ export async function GET(req: NextRequest) {
 					width: '100%',
 					display: 'flex',
 					justifyContent: 'center',
+					flexDirection: 'column',
 					alignItems: 'center',
 					color: 'white',
 					backgroundColor: 'black',
 					backgroundImage: `url(${host}/og-bg.png)`,
+					padding: '100px',
 				}}
 			>
-				<h1>{title}</h1>
-				<h2>{description}</h2>
+				<h1
+					style={{
+						fontSize: '8rem',
+					}}
+				>
+					{title}
+				</h1>
+				<h2
+					style={{
+						fontSize: '4rem',
+						padding: '0 4rem',
+					}}
+				>
+					{description}
+				</h2>
 			</div>
 		),
 		{
