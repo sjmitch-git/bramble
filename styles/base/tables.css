@@ -1,0 +1,29 @@
+@layer base {
+	.table {
+		@apply bg-white dark:bg-black;
+	}
+
+	.fixed-height {
+		tbody {
+			@apply flex flex-col items-center justify-between overflow-y-auto;
+		}
+
+		tr {
+			@apply flex w-full;
+		}
+
+		& th,
+		& td {
+			@apply flex w-full;
+		}
+	}
+
+	th {
+		@apply border-b;
+	}
+
+	td,
+	th {
+		@apply p-2 text-start;
+	}
+}

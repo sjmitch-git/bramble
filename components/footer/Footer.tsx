@@ -13,7 +13,11 @@ const Footer = () => {
 	return (
 		<footer className='footer'>
 			<div className='mb-12 flex justify-center'>
-				<Suspense fallback={<Spinner />}>
+				<Suspense fallback={
+						<div className='w-[50px]'>
+							<Spinner />
+						</div>
+					}>
 					<TwitterEmbed
 						handle='brambleUI'
 						status='1681278654268035073'
@@ -23,8 +27,8 @@ const Footer = () => {
 			</div>
 			<div className='flex flex-col items-center justify-center gap-8'>
 				<Navbrand
-					height={380}
-					width={380}
+					height={280}
+					width={280}
 					layout='flex flex-col'
 				/>
 				<p className='text-base'>

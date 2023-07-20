@@ -15,7 +15,7 @@ interface TwitterEmbedProps {
 const TwitterEmbed = ({
 	handle,
 	limit = 1,
-	className = '',
+	className = 'w-full max-w-lg',
 	chrome = '',
 	lang = 'en',
 	status,
@@ -53,7 +53,7 @@ const TwitterEmbed = ({
 						data-theme={theme}
 						data-lang={lang}
 					>
-						@{handle}
+						Tweets from @{handle}
 					</a>
 				)}
 			</div>

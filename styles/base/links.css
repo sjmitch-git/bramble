@@ -1,24 +1,22 @@
 @layer base {
+	a:link:not(.btn):not(.nobase) {
+		@apply text-primary transition;
+	}
 
-    a:link:not(.btn):not(.nobase) {
-        @apply text-primary transition;
-    }
+	a:visited:not(.btn):not(.nobase) {
+		@apply text-secondary;
+	}
 
-    a:visited:not(.btn):not(.nobase) {
-        @apply text-secondary;
-    }
+	a:hover:not(.btn):not(.nobase) {
+		@apply scale-105 text-secondary;
+	}
 
-    a:hover:not(.btn):not(.nobase) {
-        @apply text-secondary scale-105;
-    }
+	a:active:not(.nobase),
+	a.active {
+		@apply cursor-default text-info;
+	}
 
-    a:active:not(.nobase),
-    a.active {
-        @apply cursor-default text-info;
-    }
-
-    a[target="_blank"]:after {
-        @apply content-['_↗'] relative;
-    }
-
+	a[target='_blank']:after {
+		@apply relative content-['_↗'];
+	}
 }

@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"*.postcss": "tailwindcss"
+	},
+	"[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"editor.defaultColorDecorators": true,
+	"editor.quickSuggestions": {
+		"strings": true
+	}
+}

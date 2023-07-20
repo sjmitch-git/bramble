@@ -112,6 +112,10 @@ const config = {
 					label: 'Select',
 				},
 				{
+					href: '/components/twitter_embed',
+					label: 'Twitter Embed',
+				},
+				{
 					href: '/components/video',
 					label: 'Video',
 

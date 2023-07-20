@@ -7,7 +7,7 @@ const Header = () => {
 			<Navbar />
 			<Breadcrumbs
 				size='lg'
-				className='pt-12'
+				className='pt-6 md:pt-12'
 			/>
 		</header>
 	)
