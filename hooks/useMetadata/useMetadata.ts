@@ -10,6 +10,8 @@ export type MetadataProps = {
 }
 
 const useMetadata = ({ title, description, keywords, url }: MetadataProps) => {
+	const image = `/api/og?title=${title}&description=${description}`
+
 	const metadata: Metadata = {
 		title: title,
 		alternates: {
@@ -20,6 +22,15 @@ const useMetadata = ({ title, description, keywords, url }: MetadataProps) => {
 		openGraph: {
 			title: title,
 			description: description,
+			images: [
+				{
+					url: `${image}`,
+					secureUrl: `${url}${image}`,
+					width: 1920,
+					height: 1080,
+					alt: `${title}`,
+				},
+			],
 			...OpenGraph,
 		},
 		twitter: {
