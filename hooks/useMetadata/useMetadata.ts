@@ -25,7 +25,7 @@ const useMetadata = ({ title, description, keywords, url }: MetadataProps) => {
 			images: [
 				{
 					url: `${image}`,
-					secureUrl: `${url}${image}`,
+					secureUrl: `${image}`,
 					width: 1920,
 					height: 1080,
 					alt: `${title}`,
