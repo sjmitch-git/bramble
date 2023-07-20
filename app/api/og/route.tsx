@@ -20,6 +20,7 @@ export async function GET(req: NextRequest) {
 					justifyContent: 'center',
 					flexDirection: 'column',
 					alignItems: 'center',
+					textAlign: 'center',
 					color: 'white',
 					backgroundColor: 'black',
 					backgroundImage: `url(${host}/og-bg.png)`,

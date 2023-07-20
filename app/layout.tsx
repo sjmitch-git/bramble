@@ -49,6 +49,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang='en'>
 			<head>
+				{/* Global Site Tag (gtag.js) - Google Analytics */}
+				<script
+					defer
+					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+				></script>
+				{/* prettier-ignore */}
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments)}
+                        gtag('js', new Date());
+
+                        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`,
+					}}
+				/>
 				<SEO />
 			</head>
 			<body className={inter.className}>
