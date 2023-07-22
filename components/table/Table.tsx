@@ -22,7 +22,6 @@ const Table = ({ className = '', data, height, ignore, caption, dividers }: Tabl
 		return false
 	}
 
-	//let asc: boolean = true
 	const sort = (key: string) => {
 		let asc: boolean
 		if (key === sortby) {
@@ -53,11 +52,17 @@ const Table = ({ className = '', data, height, ignore, caption, dividers }: Tabl
 									<th
 										key={index}
 										onClick={() => sort(key)}
-										className={`cursor-pointer hover:text-info
+										className={`cursor-pointer
 											${typeof data[0][key] === 'number' ? 'justify-end text-end' : 'justify-start text-start'}
 										`}
 									>
-										{titleCase(key)}
+										<span
+											className={`border-b border-dashed border-current hover:text-info ${
+												key === sortby ? 'text-info' : ''
+											}`}
+										>
+											{titleCase(key)}
+										</span>
 									</th>
 								)
 						)}

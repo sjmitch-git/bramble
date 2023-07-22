@@ -1,5 +1,3 @@
-'use client'
-
 import { Metadata } from 'next'
 
 import Dropdown from '@/components/dropdown'
