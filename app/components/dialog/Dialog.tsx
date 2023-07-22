@@ -3,7 +3,8 @@ import useMetadata from '@/hooks/useMetadata'
 import DialogTemplate from '@/templates/Dialog'
 
 const title = 'Dialog'
-const description = 'Dialog description TBD'
+const description =
+	'The dialog element is a useful element for representing any kind of dialog in HTML'
 const keywords = 'Dialog Component'
 const url = 'components/dialog'
 

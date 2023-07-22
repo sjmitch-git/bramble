@@ -125,6 +125,7 @@ const data = [
 </div>`}
 				</Codeblock>
 			</div>
+			<hr />
 		</>
 	)
 }

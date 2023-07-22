@@ -1,6 +1,6 @@
 // set default app config
 const name = 'Bramble'
-const title = 'Bramble UI'
+const title = 'Bramble UI Component Library'
 const description = 'A Next.js 13 boilerplate and library of reusable UI components for React'
 
 const config = {
@@ -11,7 +11,7 @@ const config = {
 		description: description,
 		url: 'https://bramble-ui.vercel.app',
 		githubRepo: 'https://github.com/sjmitch-git/bramble',
-		author: process.env.NEXT_PUBLIC_AUTHOR_NAME || 'Stephen',
+		author: process.env.NEXT_PUBLIC_AUTHOR_NAME || 'YOUR NAME',
 		authorUrl: process.env.NEXT_PUBLIC_AUTHOR_URL || 'https://mitch.gatsbyjs.io/',
 		authorTwitter: process.env.NEXT_PUBLIC_AUTHOR_TWITTER || 'yourTwitterHandle',
 		image: '/logo.png',

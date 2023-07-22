@@ -6,6 +6,9 @@ import CloseButton from '@/components/button/CloseButton'
 interface DialogProps {
 	open?: boolean
 	modal?: boolean
+	title?: string | undefined
+	message?: string | undefined
+	node?: React.ReactNode | undefined
 	btnLabel?: string | undefined
 	btnStyles?: string | undefined
 	addOpenButton?: boolean | undefined
@@ -15,6 +18,9 @@ interface DialogProps {
 const Dialog = ({
 	open = false,
 	modal = false,
+	title,
+	message,
+	node,
 	addOpenButton = true,
 	btnLabel = 'Open dialog',
 	btnStyles = '',
@@ -48,11 +54,21 @@ const Dialog = ({
 			>
 				{modal && (
 					<CloseButton
-						className='sm dark fixed right-4 top-4 hover:scale-125'
+						className='sm circle icon light absolute right-3 top-3 hover:scale-125'
 						onClick={closeDialog}
 					/>
 				)}
-				{children}
+				<form method='dialog'>
+					{title && <h2>{title}</h2>}
+					{message && (
+						<div
+							className='message'
+							dangerouslySetInnerHTML={{ __html: message }}
+						></div>
+					)}
+					{node && <div className='node'>{node}</div>}
+					<div className='flex justify-center gap-4'>{children}</div>
+				</form>
 			</dialog>
 			{addOpenButton && (
 				<Button

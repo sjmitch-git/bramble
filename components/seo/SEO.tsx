@@ -1,6 +1,7 @@
 import config from '@/app.config'
 
 const themecolor = config.manifest_options.theme_color
+const author = config.siteMetadata.author
 
 const SEO = () => {
 	return (
@@ -85,6 +86,10 @@ const SEO = () => {
 			<meta
 				name='msapplication-TileImage'
 				content='/ms-icon-144x144.png'
+			/>
+			<meta
+				name='author'
+				content={`${author}`}
 			/>
 			<meta
 				name='theme-color'

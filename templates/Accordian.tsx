@@ -1,7 +1,3 @@
-'use client'
-
-import React, { useState } from 'react'
-
 import Accordian from '@/components/accordian'
 
 import Users from '@/data/users.json'
@@ -9,8 +5,6 @@ import Alert from '@/components/alert'
 import Codeblock from '@/components/codeblock'
 
 const AccordianTemplate = () => {
-	const [error, setError] = useState('Page could not be found!')
-
 	return (
 		<>
 			<h2>Usage</h2>
@@ -161,6 +155,7 @@ import Users from '@/data/users.json'
 </div>`}
 				</Codeblock>
 			</div>
+			<hr />
 		</>
 	)
 }

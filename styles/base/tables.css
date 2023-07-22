@@ -27,7 +27,7 @@
 
 	td,
 	th {
-		@apply p-2 text-start;
+		@apply p-2 text-start text-base;
 	}
 
 	caption {
