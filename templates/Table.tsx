@@ -20,7 +20,6 @@ import data from '@/data/carts.json'
     ignore={['id']}
     caption='Shopping Cart'
     dividers={true}
-    order='title'
 />`}
 				</Codeblock>
 			</div>
@@ -34,7 +33,6 @@ import data from '@/data/carts.json'
 					ignore={['id']}
 					caption='Shopping Cart'
 					dividers={true}
-					order='title'
 				/>
 			</div>
 
@@ -49,7 +47,7 @@ width?: number | undefined
 ignore?: string[] | undefined
 caption?: string | undefined
 dividers?: boolean | undefined
-order?: string | undefined`}
+`}
 				</Codeblock>
 			</div>
 
@@ -67,7 +65,6 @@ order?: string | undefined`}
 					ignore={['id']}
 					caption='Shopping Cart'
 					dividers={true}
-					order='title'
 				/>
 			</div>
 
@@ -80,7 +77,6 @@ order?: string | undefined`}
         ignore={['id']}
         caption='Shopping Cart'
         dividers={true}
-        order='title'
     />
 </div>`}
 				</Codeblock>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { titleCase } from '@smitch/js-lib'
 
 interface TableProps {
@@ -9,25 +9,12 @@ interface TableProps {
 	ignore?: string[] | undefined
 	caption?: string | undefined
 	dividers?: boolean | undefined
-	order?: string | undefined
 }
 
-const Table = ({
-	className = '',
-	data,
-	height,
-	ignore,
-	caption,
-	dividers,
-	order = '',
-}: TableProps) => {
+const Table = ({ className = '', data, height, ignore, caption, dividers }: TableProps) => {
 	const [tabledata, setTabledata] = useState(data)
 	const [sortby, setSortby] = useState('')
 	const [ascending, setAscending] = useState(true)
-
-	useEffect(() => {
-		if (order) sort(order)
-	}, [])
 
 	const isIgnore = (key: any) => {
 		if (!ignore?.length) return false
@@ -35,22 +22,18 @@ const Table = ({
 		return false
 	}
 
-	let asc: boolean = true
+	//let asc: boolean = true
 	const sort = (key: string) => {
+		let asc: boolean
 		if (key === sortby) {
 			if (ascending === true) asc = false
 			else asc = true
 		} else asc = true
 
-		if (asc === true) {
-			setAscending(true)
-			setTabledata(data.sort((a, b) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : 0)))
-		}
+		if (asc) setTabledata(data.sort((a, b) => (a[key] > b[key] ? 1 : b[key] > a[key] ? -1 : 0)))
+		else setTabledata(data.sort((a, b) => (a[key] < b[key] ? 1 : b[key] < a[key] ? -1 : 0)))
 
-		if (asc === false) {
-			setAscending(false)
-			setTabledata(data.sort((a, b) => (a[key] < b[key] ? 1 : b[key] < a[key] ? -1 : 0)))
-		}
+		setAscending(asc)
 		setSortby(key)
 	}
 
