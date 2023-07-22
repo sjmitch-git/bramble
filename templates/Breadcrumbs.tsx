@@ -33,10 +33,6 @@ return (
 			<div className='mb-8 flex bg-gray-300 p-4'>
 				<Breadcrumbs size='lg' />
 			</div>
-			<h2>X-Large</h2>
-			<div className='mb-0'>
-				<Codeblock language='jsx'>{`<Breadcrumbs size='xl' />`}</Codeblock>
-			</div>
 			<h2>RTL</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>{`dir='rtl'
@@ -48,7 +44,7 @@ return (
 			>
 				<Breadcrumbs />
 			</div>
-			<h2>className</h2>
+			<h2>Styling</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>{`<Breadcrumbs className='invert italic' /> // Add any Tailwind classes`}</Codeblock>
 			</div>

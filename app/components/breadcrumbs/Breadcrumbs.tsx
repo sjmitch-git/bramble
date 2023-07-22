@@ -7,8 +7,7 @@ import BreadcrumbsTemplate from '@/templates/Breadcrumbs'
 } */
 
 const title = 'Breadcrumbs'
-const description =
-	'Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.'
+const description = 'Indicate the current page’s location within a navigational hierarchy'
 const keywords = 'Breadcrumbs Component'
 const url = 'components/breadcrumbs'
 

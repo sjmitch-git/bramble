@@ -1,33 +1,25 @@
 @layer components {
+	.breadcrumbs {
+		@apply mx-auto w-full text-base lg:max-w-6xl;
 
-    .breadcrumbs {
-        
-        @apply text-base w-full lg:max-w-6xl mx-auto;
+		&.sm {
+			@apply text-sm;
+		}
 
-        &.sm {
-            @apply text-sm;
-        }      
+		&.lg {
+			@apply md:text-lg;
+		}
 
-        &.lg {
-            @apply md:text-lg;
-        }
+		& > ol {
+			@apply flex flex-col md:flex-row;
+		}
 
-        &.xl {
-            @apply md:text-xl;
-        }
+		& li {
+			@apply ps-[var(--breadcrumb-px)] capitalize first:ps-0;
+		}
 
-        & > ol {
-            @apply flex flex-col md:flex-row;
-        }
-
-        & li {
-            @apply ps-[var(--breadcrumb-px)] first:ps-0 capitalize;
-        }
-
-        & li:not(:first-of-type)::before {
-            @apply float-left rtl:float-right content-[var(--breadcrumb-separator)] rtl:content-[var(--breadcrumb-separator-rtl)] pe-[var(--breadcrumb-px)];
-        }
-                
-    }
-
+		& li:not(:first-of-type)::before {
+			@apply float-left pe-[var(--breadcrumb-px)] content-[var(--breadcrumb-separator)] rtl:float-right rtl:content-[var(--breadcrumb-separator-rtl)];
+		}
+	}
 }

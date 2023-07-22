@@ -10,6 +10,7 @@ export async function GET(req: NextRequest) {
 	const { searchParams } = req.nextUrl
 	const title = searchParams.get('title')
 	const description = searchParams.get('description')
+
 	return new ImageResponse(
 		(
 			<div
@@ -25,11 +26,12 @@ export async function GET(req: NextRequest) {
 					backgroundColor: 'black',
 					backgroundImage: `url(${host}/og-bg.png)`,
 					padding: '100px',
+					fontFamily: '"Courier Prime" monospace',
 				}}
 			>
 				<h1
 					style={{
-						fontSize: '8rem',
+						fontSize: '6rem',
 						opacity: '.8',
 					}}
 				>
@@ -37,7 +39,7 @@ export async function GET(req: NextRequest) {
 				</h1>
 				<h2
 					style={{
-						fontSize: '4rem',
+						fontSize: '2rem',
 						padding: '0 8rem',
 						opacity: '.8',
 					}}
@@ -47,8 +49,8 @@ export async function GET(req: NextRequest) {
 			</div>
 		),
 		{
-			width: 1920,
-			height: 1080,
+			width: 1200,
+			height: 675,
 		}
 	)
 }
