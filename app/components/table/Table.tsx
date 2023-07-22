@@ -5,7 +5,7 @@ import TableTemplate from '@/templates/Table'
 const title = 'Table'
 const description = 'Responsive data table with fixed-height option and built-in sorting capability'
 const keywords = 'Table Component'
-const url = 'components/select'
+const url = 'components/table'
 
 export let metadata: any
 

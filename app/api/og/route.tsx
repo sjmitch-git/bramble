@@ -26,12 +26,11 @@ export async function GET(req: NextRequest) {
 					backgroundColor: 'black',
 					backgroundImage: `url(${host}/og-bg.png)`,
 					padding: '100px',
-					fontFamily: '"Courier Prime" monospace',
 				}}
 			>
 				<h1
 					style={{
-						fontSize: '6rem',
+						fontSize: '4rem',
 						opacity: '.8',
 					}}
 				>
