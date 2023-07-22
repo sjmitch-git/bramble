@@ -30,6 +30,7 @@ export async function GET(req: NextRequest) {
 				<h1
 					style={{
 						fontSize: '8rem',
+						opacity: '.8',
 					}}
 				>
 					{title}
@@ -37,7 +38,8 @@ export async function GET(req: NextRequest) {
 				<h2
 					style={{
 						fontSize: '4rem',
-						padding: '0 4rem',
+						padding: '0 8rem',
+						opacity: '.8',
 					}}
 				>
 					{description}

@@ -17,6 +17,9 @@
 			@apply flex w-full;
 		}
 	}
+	.dividers tr {
+		@apply border-b;
+	}
 
 	th {
 		@apply border-b;
@@ -25,5 +28,9 @@
 	td,
 	th {
 		@apply p-2 text-start;
+	}
+
+	caption {
+		@apply pb-2 text-start text-2xl uppercase;
 	}
 }

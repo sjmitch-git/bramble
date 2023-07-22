@@ -1,3 +1,5 @@
+'use client'
+
 import { Metadata } from 'next'
 
 import Dropdown from '@/components/dropdown'
@@ -19,7 +21,7 @@ export default function Home() {
 
 	return (
 		<>
-			<div className='mx-auto flex flex-col justify-center gap-4'>
+			<div className='mx-auto mb-12 flex flex-col justify-center gap-4'>
 				<h1 className='brand text-center text-4xl md:hidden'>{title}</h1>
 				<p className='lead mx-auto max-w-md text-center'>{description}</p>
 				<div className='mb-12 flex justify-center'>
