@@ -4,14 +4,6 @@ import { ButtonToTop, Spinner } from '@/components'
 
 import { Navbrand } from '@/components/navbar'
 
-/* const TwitterEmbed = dynamic(
-	() => import('../twitterembed/TwitterEmbed'),
-	{
-		ssr: false,
-		loading: () => <Loading className='aspect-square w-11' />,
- }
-)
-*/
 const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
 	ssr: false,
 	loading: () => <Spinner className='aspect-square w-11 text-info' />,

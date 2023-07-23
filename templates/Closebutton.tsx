@@ -1,3 +1,5 @@
+'use client'
+
 import { CloseButton, Codeblock } from '@/components'
 
 const CloseButtonTemplate = () => {
