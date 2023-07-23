@@ -106,7 +106,7 @@ onRangeChange: (number: number) => void | undefined // returns range value`}
 					onRangeChange={handleRangeChange2}
 					className='absolute bottom-2 left-8'
 				/>
-				<p className='mx-auto py-8 text-center'>RANGE: {range}</p>
+				<p className='mx-auto py-8 text-center'>RANGE: {range2}</p>
 			</div>
 			<div className='mb-8'>
 				<Codeblock language='jsx'>
@@ -254,6 +254,8 @@ const getRGBvalue = (value: number) => {
 />`}
 				</Codeblock>
 			</div>
+
+			<hr />
 		</>
 	)
 }

@@ -10,7 +10,7 @@ const FigureTemplate = () => {
 				Using <code>img</code>
 			</h3>
 			<Codeblock language='jsx'>
-				{`import Figure from '@/components/figure'
+				{`import {Figure} from '@/components'
      
 <Figure
 	caption='Beagle' 	// optional
@@ -269,6 +269,8 @@ caption?: string | undefined`}
 }
 `}
 			</Codeblock>
+
+			<hr />
 		</>
 	)
 }

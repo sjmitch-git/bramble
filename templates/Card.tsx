@@ -25,7 +25,7 @@ const CardTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import Card from '@/components/card'
+				{`import {Card} from '@/components'
 				
 <Card
     title={name}

@@ -41,7 +41,7 @@ const DropdownTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import Dropdown from '@/components/dropdown'
+					{`import {Dropdown} from '@/components'
 
 const data = [
 	{

@@ -48,8 +48,7 @@ const ButtonsgroupTemplate = () => {
 				</div>
 				<div className='mb-8'>
 					<Codeblock language='jsx'>
-						{`import Button from '@/components/button'
-import Buttongroup from '@/components/buttongroup'
+						{`import { Button, Buttongroup } from '@/components'
 
 const handleClick = () => {
 	alert('You clicked me!')

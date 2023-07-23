@@ -1,20 +1,14 @@
-'use client'
-
-import React, { useState } from 'react'
-
 import { Badge, Button, Codeblock } from '@/components'
 
 import { StarIcon } from '@heroicons/react/24/solid'
 
 const BadgeTemplate = () => {
-	const [error, setError] = useState('Page could not be found!')
-
 	return (
 		<>
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import Badge from '@/components/badge'
+					{`import {Badge} from '@/components'
                     
 <h1>
     My Latest Blog Post <Badge className='bg-info'>New</Badge>

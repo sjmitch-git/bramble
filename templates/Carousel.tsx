@@ -10,7 +10,7 @@ const CarouselTemplate = () => {
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
 					{`import Data from '@/data/dogs.json'
-import Carousel from '@/components/carousel''
+import {Carousel} from '@/components''
 
 /* Data example
 [

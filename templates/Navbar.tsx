@@ -15,12 +15,13 @@ const NavbarTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import Navbar from '@/components/navbar'
+				{`import {Navbar} from '@/components/navbar'
 				
 <header className='header'>
 	<Navbar />
 </header>`}
 			</Codeblock>
+			<hr />
 		</>
 	)
 }

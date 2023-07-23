@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { Dropdown, Loading } from '@/components'
+import { Dropdown } from '@/components'
 
 import config from '@/app.config'
 

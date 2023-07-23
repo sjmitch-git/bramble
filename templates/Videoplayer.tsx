@@ -5,7 +5,7 @@ const VideoplayerTemplate = () => {
 		<>
 			<h2>Usage</h2>
 			<Codeblock language='jsx'>
-				{`import VideoPlayer from '@/components/videoplayer'
+				{`import {VideoPlayer} from '@/components'
                 
 <VideoPlayer
     src='https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
@@ -28,6 +28,7 @@ className?: string | undefined
 formats?: any[] | undefined
 poster?: string | undefined`}
 			</Codeblock>
+			<hr />
 		</>
 	)
 }

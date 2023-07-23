@@ -8,7 +8,7 @@ const AccordianTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import Accordian from '@/components/accordian'
+					{`import {Accordian} from '@/components'
 import Users from '@/data/users.json'
                     
 <Accordian
@@ -30,7 +30,7 @@ import Users from '@/data/users.json'
 
 			<Alert
 				status='tip'
-				message='HTML can be added in <code>body</code> prop.'
+				message='HTML can be added in data <code>body</code>'
 				className='info'
 			/>
 

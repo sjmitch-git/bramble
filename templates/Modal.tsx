@@ -54,8 +54,7 @@ const ModalTemplate = () => {
 			<Codeblock language='jsx'>
 				{`import Image from 'next/image'
 				
-import Modal from '@/components/modal'		
-import Figure from '@/components/figure'
+import { Figure, Modal } from '@/components'
 
 interface DataProps {
 	name: string
@@ -100,6 +99,8 @@ const closeModal = () => {
 	/>
 )}`}
 			</Codeblock>
+
+			<hr />
 		</>
 	)
 }

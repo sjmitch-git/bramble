@@ -15,7 +15,7 @@ const CloseButtonTemplate = () => {
 			</div>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import CloseButton from '@/components/button/CloseButton'
+					{`import {CloseButton} from '@/components'
 
 <CloseButton onClick={handleClick} />`}
 				</Codeblock>

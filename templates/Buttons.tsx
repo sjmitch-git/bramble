@@ -33,7 +33,7 @@ const ButtonsTemplate = () => {
 			</div>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import Button from '@/components/button'
+					{`import {Button} from '@/components'
 
 const label = 'Click'
 

@@ -38,7 +38,7 @@ const SelectTemplate = () => {
 
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import Select from '@/components/select'
+					{`import {Select} from '@/components'
                     
 const [fruit, setFruit] = useState('')
 

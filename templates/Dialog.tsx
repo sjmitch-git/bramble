@@ -44,8 +44,7 @@ const DialogTemplate = () => {
 
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import Dialog from '@/components/dialog'
-import Button from '@/components/button'
+					{`import { Button, Dialog } from '@/components'
 
 <Dialog
 	title='Dialog Title'
@@ -100,9 +99,7 @@ import Button from '@/components/button'
 
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import Dialog from '@/components/dialog'
-import Button from '@/components/button'
-import Alert from '@/components/alert'
+					{`import { Alert, Button, Dialog } from '@/components'
 					
 <Dialog
 	node={

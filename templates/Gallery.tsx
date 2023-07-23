@@ -7,7 +7,7 @@ const GalleryTemplate = () => {
 		<>
 			<h2>Usage</h2>
 			<Codeblock language='jsx'>
-				{`import Gallery from '@/components/gallery'
+				{`import {Gallery} from '@/components'
 
 import dogs from '@/data/dogs.json'
 
@@ -97,6 +97,8 @@ caption?: boolean | undefined`}
 	}
 }`}
 			</Codeblock>
+
+			<hr />
 		</>
 	)
 }

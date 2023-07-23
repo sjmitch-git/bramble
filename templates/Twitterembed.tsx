@@ -13,8 +13,18 @@ const TwitterembedTemplate = () => {
 	return (
 		<>
 			<h2>Single Tweet</h2>
+			<p>
+				Use <code>dynamic</code> lazy loading.
+			</p>
 			<Codeblock language='jsx'>
-				{`import TwitterEmbed from '@/components/twitterembed'
+				{`import dynamic from 'next/dynamic'
+
+import { Spinner } from '@/components'
+
+const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
+	ssr: false,
+	loading: () => <Spinner className='aspect-square w-11 text-info' />,
+})
                 
 <TwitterEmbed
     handle='nextjs'
