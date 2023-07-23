@@ -1,8 +1,8 @@
-interface SpinnerPrps {
-	className: string | undefined
+interface SpinnerProps {
+	className?: string | undefined
 }
 
-export const Spinner = ({ className = '' }: SpinnerPrps) => {
+export const Spinner = ({ className = '' }: SpinnerProps) => {
 	return (
 		<>
 			<div className={`spinner ${className}`}>
