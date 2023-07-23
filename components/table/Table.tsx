@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import { titleCase } from '@smitch/js-lib'
 
@@ -11,7 +13,7 @@ interface TableProps {
 	dividers?: boolean | undefined
 }
 
-const Table = ({ className = '', data, height, ignore, caption, dividers }: TableProps) => {
+export const Table = ({ className = '', data, height, ignore, caption, dividers }: TableProps) => {
 	const [tabledata, setTabledata] = useState(data)
 	const [sortby, setSortby] = useState('')
 	const [ascending, setAscending] = useState(true)
@@ -93,5 +95,3 @@ const Table = ({ className = '', data, height, ignore, caption, dividers }: Tabl
 		</div>
 	)
 }
-
-export default Table

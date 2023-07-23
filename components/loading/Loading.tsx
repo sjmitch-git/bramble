@@ -1,12 +1,11 @@
-import Spinner from '@/components/spinner'
-import Figure from '@/components/figure'
+import { Figure, Spinner } from '@/components'
 
 interface LoadingProps {
 	className?: string | undefined
 	caption?: string | undefined
 }
 
-const Loading = ({ className = '', caption = '' }: LoadingProps) => {
+export const Loading = ({ className = '', caption = '' }: LoadingProps) => {
 	return (
 		<Figure
 			className={`loading ${className}`}
@@ -16,5 +15,3 @@ const Loading = ({ className = '', caption = '' }: LoadingProps) => {
 		</Figure>
 	)
 }
-
-export default Loading

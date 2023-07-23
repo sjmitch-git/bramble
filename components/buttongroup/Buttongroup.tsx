@@ -5,7 +5,7 @@ interface ButtongroupProps {
 	children: React.ReactNode
 }
 
-const Buttongroup = ({
+export const Buttongroup = ({
 	size = '',
 	className = '',
 	label = 'Button group',
@@ -21,5 +21,3 @@ const Buttongroup = ({
 		</div>
 	)
 }
-
-export default Buttongroup

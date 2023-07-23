@@ -14,8 +14,7 @@ import {
 	ChevronDoubleLeftIcon,
 } from '@heroicons/react/24/solid'
 
-import Buttongroup from '@/components/buttongroup'
-import Select from '@/components/select'
+import { Buttongroup, Select } from '@/components'
 
 interface PaginationProps {
 	className?: string | undefined
@@ -29,7 +28,7 @@ interface PaginationProps {
 	minimal?: boolean
 }
 
-const Pagination = ({
+export const Pagination = ({
 	className = '',
 	range,
 	results,
@@ -134,5 +133,3 @@ const Pagination = ({
 		</nav>
 	)
 }
-
-export default Pagination

@@ -4,8 +4,7 @@ import React, { useState } from 'react'
 
 import { SpeakerWaveIcon, SpeakerXMarkIcon } from '@heroicons/react/24/solid'
 
-import Button from '@/components/button'
-import Buttongroup from '@/components/buttongroup'
+import { Button, Buttongroup } from '@/components'
 
 interface VideoSoundProps {
 	mute: boolean

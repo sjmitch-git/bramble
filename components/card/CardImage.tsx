@@ -2,8 +2,8 @@
 
 import React, { useState, KeyboardEvent } from 'react'
 import Image from 'next/image'
-import Figure from '@/components/figure'
-import Modal from '@/components/modal'
+
+import { Figure, Modal } from '@/components'
 
 interface CardProps {
 	title: string

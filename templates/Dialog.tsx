@@ -1,11 +1,4 @@
-'use client'
-
-import React, { useState } from 'react'
-
-import Dialog from '@/components/dialog'
-import Button from '@/components/button'
-import Codeblock from '@/components/codeblock'
-import Alert from '@/components/alert'
+import { Alert, Button, Codeblock, Dialog } from '@/components'
 
 const DialogTemplate = () => {
 	return (

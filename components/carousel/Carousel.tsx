@@ -1,9 +1,7 @@
 'use client'
 import React, { useState, useRef, useEffect } from 'react'
 
-import Gallery from '@/components/gallery'
-import Button from '@/components/button'
-import Card from '@/components/card'
+import { Button, Card, Gallery } from '@/components'
 
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/24/solid'
 
@@ -24,7 +22,7 @@ interface CarouselProps {
 	rtl?: boolean | undefined
 }
 
-const Carousel = ({
+export const Carousel = ({
 	data,
 	caption,
 	autoplay = false,
@@ -166,5 +164,3 @@ const Carousel = ({
 		</>
 	)
 }
-
-export default Carousel

@@ -10,7 +10,7 @@ interface CodeblockProps {
 	language: string
 }
 
-const Codeblock = ({ language, children }: CodeblockProps) => {
+export const Codeblock = ({ language, children }: CodeblockProps) => {
 	useEffect(() => {
 		Prism.highlightAll()
 	}, [children])
@@ -24,5 +24,3 @@ const Codeblock = ({ language, children }: CodeblockProps) => {
 		</pre>
 	)
 }
-
-export default Codeblock

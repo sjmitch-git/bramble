@@ -19,7 +19,7 @@ interface CardProps {
 	badgeStyle?: string | undefined
 }
 
-const Card = ({
+export const Card = ({
 	className = '',
 	title = '',
 	description,
@@ -59,5 +59,3 @@ const Card = ({
 		</>
 	)
 }
-
-export default Card

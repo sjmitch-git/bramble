@@ -14,8 +14,7 @@ import {
 	PlusIcon,
 } from '@heroicons/react/24/solid'
 
-import Button from '@/components/button'
-import Codeblock from '@/components/codeblock'
+import { Button, Codeblock } from '@/components'
 
 const ButtonsTemplate = () => {
 	const [toggle, setToggle] = useState(false)

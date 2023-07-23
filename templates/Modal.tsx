@@ -3,21 +3,15 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 
-import Modal from '@/components/modal'
-import Codeblock from '@/components/codeblock'
-import Figure from '@/components/figure'
-
-interface DataProps {
-	name: string
-	src: string
-}
+import { Figure, Codeblock, Modal } from '@/components'
 
 const ModalTemplate = () => {
-	const [img, setImg] = useState<DataProps>({
+	const [modal, setModal] = useState(false)
+
+	const imgData = {
 		name: 'Beagle',
 		src: 'https://images.dog.ceo/breeds/beagle/n02088364_6866.jpg',
-	})
-	const [modal, setModal] = useState(false)
+	}
 
 	const handleClick = () => {
 		setModal(true)
@@ -52,7 +46,7 @@ const ModalTemplate = () => {
 				</Figure>
 				{modal && (
 					<Modal
-						data={img}
+						data={imgData}
 						onClick={closeModal}
 					/>
 				)}

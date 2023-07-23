@@ -1,5 +1,4 @@
-import VideoPlayer from '@/components/videoplayer'
-import Codeblock from '@/components/codeblock'
+import { Codeblock, VideoPlayer } from '@/components'
 
 const VideoplayerTemplate = () => {
 	return (

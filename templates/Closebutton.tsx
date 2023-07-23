@@ -1,9 +1,4 @@
-'use client'
-
-import React, { useState } from 'react'
-
-import CloseButton from '@/components/button/CloseButton'
-import Codeblock from '@/components/codeblock'
+import { CloseButton, Codeblock } from '@/components'
 
 const CloseButtonTemplate = () => {
 	const handleClick = () => {

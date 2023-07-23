@@ -1,9 +1,8 @@
 'use client'
 
-import { useRef, useState } from 'react'
-import Select from '@/components/select'
-import Codeblock from '@/components/codeblock'
-import Link from 'next/link'
+import { useState } from 'react'
+
+import { Codeblock, Select } from '@/components'
 
 const SelectTemplate = () => {
 	const [fruit, setFruit] = useState('')

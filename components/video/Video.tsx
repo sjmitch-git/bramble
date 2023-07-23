@@ -1,6 +1,6 @@
 'use client'
 
-import React, { SyntheticEvent, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import config from '@/app.config'
 
@@ -31,7 +31,7 @@ interface VideoProps {
 const posterSrc = '/poster.png'
 const fallbacktMessage = config.labels.videoFallback
 
-const Video = ({
+export const Video = ({
 	src,
 	formats,
 	loop = false,
@@ -82,7 +82,6 @@ const Video = ({
 		}
 
 		const handleDurationupdate = () => {
-			console.log('handleDurationupdate')
 			if (onDuration && el.duration) onDuration(el.duration)
 		}
 
@@ -153,5 +152,3 @@ const Video = ({
 		</>
 	)
 }
-
-export default Video

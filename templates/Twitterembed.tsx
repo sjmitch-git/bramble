@@ -1,12 +1,13 @@
 'use client'
 
-import { lazy, Suspense } from 'react'
+import dynamic from 'next/dynamic'
 
-const TwitterEmbed = lazy(() => import('@/components/twitterembed'))
-import Spinner from '@/components/spinner'
-//import Alert from '@/components/alert'
+import { Codeblock, Spinner } from '@/components'
 
-import Codeblock from '@/components/codeblock'
+const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
+	ssr: false,
+	loading: () => <Spinner className='aspect-square w-11 text-info' />,
+})
 
 const TwitterembedTemplate = () => {
 	return (
@@ -22,18 +23,10 @@ const TwitterembedTemplate = () => {
 			</Codeblock>
 			<h3>Output</h3>
 			<div className='mb-12 flex justify-center'>
-				<Suspense
-					fallback={
-						<div className='w-[50px]'>
-							<Spinner />
-						</div>
-					}
-				>
-					<TwitterEmbed
-						handle='nextjs'
-						status='1672021371919175682'
-					/>
-				</Suspense>
+				<TwitterEmbed
+					handle='nextjs'
+					status='1672021371919175682'
+				/>
 			</div>
 			<h3>Options</h3>
 			<Codeblock language='jsx'>
@@ -262,19 +255,11 @@ lang?: string | undefined = 'English' // see options below`}
 			</div>
 			<h3>RTL - Arabic</h3>
 			<div className='mb-4 flex justify-center'>
-				<Suspense
-					fallback={
-						<div className='w-[50px]'>
-							<Spinner />
-						</div>
-					}
-				>
-					<TwitterEmbed
-						handle='PLinArabic'
-						status='1680161970698215424'
-						lang='ar'
-					/>
-				</Suspense>
+				<TwitterEmbed
+					handle='PLinArabic'
+					status='1680161970698215424'
+					lang='ar'
+				/>
 			</div>
 			<Codeblock language='jsx'>
 				{`<TwitterEmbed
@@ -285,19 +270,11 @@ lang?: string | undefined = 'English' // see options below`}
 			</Codeblock>
 			<h3>Dark Theme</h3>
 			<div className='mb-4 flex justify-center'>
-				<Suspense
-					fallback={
-						<div className='w-[50px]'>
-							<Spinner />
-						</div>
-					}
-				>
-					<TwitterEmbed
-						handle='BBCSport'
-						status='1681997467137523714'
-						theme='dark'
-					/>
-				</Suspense>
+				<TwitterEmbed
+					handle='BBCSport'
+					status='1681997467137523714'
+					theme='dark'
+				/>
 			</div>
 			<Codeblock language='jsx'>
 				{`<TwitterEmbed

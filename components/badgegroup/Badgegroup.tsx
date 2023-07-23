@@ -1,4 +1,4 @@
-import Badge from '@/components/badge'
+import { Badge } from '@/components'
 
 import { StarIcon, HandThumbUpIcon, FaceSmileIcon } from '@heroicons/react/24/solid'
 
@@ -10,7 +10,13 @@ interface BadgegroupProps {
 	range: number
 }
 
-const Badgegroup = ({ className = '', rating, range, badge, icon = 'star' }: BadgegroupProps) => {
+export const Badgegroup = ({
+	className = '',
+	rating,
+	range,
+	badge,
+	icon = 'star',
+}: BadgegroupProps) => {
 	return (
 		<div className={`badgegroup  ${className}`}>
 			{[...new Array(range)].map((_el, index) => (
@@ -32,5 +38,3 @@ const Badgegroup = ({ className = '', rating, range, badge, icon = 'star' }: Bad
 		</div>
 	)
 }
-
-export default Badgegroup

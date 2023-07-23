@@ -1,5 +1,5 @@
 import { round } from '@smitch/js-lib'
-import Badge from '@/components/badge'
+import { Badge } from '@/components'
 
 import { StarIcon, HandThumbUpIcon, FaceSmileIcon, HeartIcon } from '@heroicons/react/24/solid'
 
@@ -11,7 +11,7 @@ interface RatingsProps {
 	range?: number | undefined
 }
 
-const Ratings = ({ className = '', rating, range, badge, icon = 'star' }: RatingsProps) => {
+export const Ratings = ({ className = '', rating, range, badge, icon = 'star' }: RatingsProps) => {
 	rating = round(rating)
 	if (rating === 0) rating = 1
 	if (!range) range = rating
@@ -37,5 +37,3 @@ const Ratings = ({ className = '', rating, range, badge, icon = 'star' }: Rating
 		</div>
 	)
 }
-
-export default Ratings

@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react'
 
-import Figure from '@/components/figure'
-import Modal from '@/components/modal'
+import { Figure, Modal } from '@/components'
 
 interface DataProps {
 	name: string
@@ -18,7 +17,7 @@ interface GalleryProps {
 	caption?: boolean | undefined
 }
 
-const Gallery = ({
+export const Gallery = ({
 	data,
 	className = '',
 	caption = true,
@@ -69,5 +68,3 @@ const Gallery = ({
 		</>
 	)
 }
-
-export default Gallery

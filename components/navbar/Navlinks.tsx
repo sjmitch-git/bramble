@@ -6,7 +6,7 @@ import { useState } from 'react'
 import config from '@/app.config'
 
 import NavToggle from './Navtoggle'
-import Button from '@/components/button'
+import { Button } from '@/components'
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
 
 const Navlinks = () => {

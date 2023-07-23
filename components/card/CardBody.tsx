@@ -1,5 +1,5 @@
 import CardFooter from './CardFooter'
-import Badge from '@/components/badge'
+import { Badge } from '@/components'
 
 interface CardBodyProps {
 	title: string

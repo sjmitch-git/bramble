@@ -1,6 +1,6 @@
 'use client'
 
-import CloseButton from '@/components/button/CloseButton'
+import { CloseButton } from '@/components'
 
 interface AlertProps {
 	className?: string | undefined
@@ -9,7 +9,7 @@ interface AlertProps {
 	onClick?: () => void | undefined
 }
 
-const Alert = ({ className = '', message, status = '', onClick }: AlertProps) => {
+export const Alert = ({ className = '', message, status = '', onClick }: AlertProps) => {
 	return (
 		<blockquote
 			className={`alert ${className}`}
@@ -30,4 +30,4 @@ const Alert = ({ className = '', message, status = '', onClick }: AlertProps) =>
 	)
 }
 
-export default Alert
+//export default Alert

@@ -1,5 +1,4 @@
-import Dropdown from '@/components/dropdown'
-import Codeblock from '@/components/codeblock'
+import { Codeblock, Dropdown } from '@/components'
 
 import config from '@/app.config'
 

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-import Video from '@/components/video'
+import { Video } from '@/components'
 import VideoControls from './controls/'
 
 interface VideoPlayerProps {
@@ -12,7 +12,7 @@ interface VideoPlayerProps {
 	formats?: any[] | undefined
 }
 
-const VideoPlayer = ({ src, formats, className = '', poster }: VideoPlayerProps) => {
+export const VideoPlayer = ({ src, formats, className = '', poster }: VideoPlayerProps) => {
 	const [play, setPlay] = useState(false)
 	const [pause, setPause] = useState(false)
 	const [time, setTime] = useState(0)
@@ -106,5 +106,3 @@ const VideoPlayer = ({ src, formats, className = '', poster }: VideoPlayerProps)
 		</div>
 	)
 }
-
-export default VideoPlayer

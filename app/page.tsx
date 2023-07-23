@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import Dropdown from '@/components/dropdown'
+import { Dropdown, Loading } from '@/components'
 
 import config from '@/app.config'
 
@@ -31,6 +31,9 @@ export default function Home() {
 					/>
 				</div>
 			</div>
+			{/* <div className='relative'>
+				<Loading className='relative aspect-square w-20' />
+			</div> */}
 		</>
 	)
 }

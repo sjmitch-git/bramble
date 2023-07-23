@@ -1,5 +1,6 @@
-import Breadcrumbs from '@/components/breadcrumbs'
-import Navbar from '@/components/navbar'
+import { Breadcrumbs } from '@/components'
+
+import { Navbar } from '@/components/navbar'
 
 const Header = () => {
 	return (

@@ -1,7 +1,6 @@
 'use client'
 
-import Card from '@/components/card'
-import Codeblock from '@/components/codeblock'
+import { Card, Codeblock } from '@/components'
 
 import Dogs from '@/data/dogs.json'
 import Data from '@/data/toasters.json'

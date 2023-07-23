@@ -1,5 +1,4 @@
-import Breadcrumbs from '@/components/breadcrumbs'
-import Codeblock from '@/components/codeblock'
+import { Breadcrumbs, Codeblock } from '@/components'
 
 const BreadcrumbsTemplate = () => {
 	return (

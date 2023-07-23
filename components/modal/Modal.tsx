@@ -4,8 +4,7 @@ import React, { useEffect } from 'react'
 
 import useDisableBackButton from '@/hooks/usedisabledbackbutton'
 
-import Figure from '@/components/figure'
-import CloseButton from '@/components/button/CloseButton'
+import { Figure, CloseButton } from '@/components'
 
 interface ModalProps {
 	className?: string | undefined
@@ -16,7 +15,7 @@ interface ModalProps {
 	onClick?: () => void | undefined
 }
 
-const Modal = ({ data: { src, name }, className = '', onClick }: ModalProps) => {
+export const Modal = ({ data: { src, name }, className = '', onClick }: ModalProps) => {
 	useEffect(() => {
 		document.body.style.overflow = 'hidden'
 
@@ -45,5 +44,3 @@ const Modal = ({ data: { src, name }, className = '', onClick }: ModalProps) => 
 		</div>
 	)
 }
-
-export default Modal

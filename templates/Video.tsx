@@ -1,12 +1,11 @@
-import Video from '@/components/video'
-import Codeblock from '@/components/codeblock'
+import { Codeblock, Video } from '@/components'
 
 const VideoTemplate = () => {
 	return (
 		<>
 			<h2>Usage</h2>
 			<Codeblock language='jsx'>
-				{`import Video from '@/components/video'
+				{`import {Video} from '@/components'
 
 <div className='video-wrapper'>           
 	<Video

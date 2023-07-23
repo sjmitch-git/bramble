@@ -1,10 +1,21 @@
-import { lazy, Suspense } from 'react'
+import dynamic from 'next/dynamic'
 
-import ButtonToTop from '@/components/button/ButtonToTop'
-import Navbrand from '@/components/navbar/Navbrand'
-import Spinner from '@/components/spinner'
+import { ButtonToTop, Spinner } from '@/components'
 
-const TwitterEmbed = lazy(() => import('@/components/twitterembed'))
+import { Navbrand } from '@/components/navbar'
+
+/* const TwitterEmbed = dynamic(
+	() => import('../twitterembed/TwitterEmbed'),
+	{
+		ssr: false,
+		loading: () => <Loading className='aspect-square w-11' />,
+ }
+)
+*/
+const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
+	ssr: false,
+	loading: () => <Spinner className='aspect-square w-11 text-info' />,
+})
 
 import config from '@/app.config'
 
@@ -12,18 +23,12 @@ const Footer = () => {
 	const { author, authorUrl } = config.siteMetadata
 	return (
 		<footer className='footer'>
-			<div className='mb-12 flex justify-center'>
-				<Suspense fallback={
-						<div className='w-[50px]'>
-							<Spinner />
-						</div>
-					}>
-					<TwitterEmbed
-						handle='brambleUI'
-						status='1681278654268035073'
-						className='w-full max-w-lg text-center'
-					/>
-				</Suspense>
+			<div className='relative mb-12 flex justify-center'>
+				<TwitterEmbed
+					handle='brambleUI'
+					status='1681278654268035073'
+					className='w-full max-w-lg text-center'
+				/>
 			</div>
 			<div className='flex flex-col items-center justify-center gap-8'>
 				<Navbrand

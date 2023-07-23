@@ -1,6 +1,6 @@
 'use client'
 
-import Button from '@/components/button'
+import { Button } from './Button'
 
 import { XMarkIcon } from '@heroicons/react/24/solid'
 
@@ -11,7 +11,12 @@ interface ButtonProps {
 	disabled?: boolean | undefined
 }
 
-const CloseButton = ({ size = '', className = '', onClick, disabled = false }: ButtonProps) => {
+export const CloseButton = ({
+	size = '',
+	className = '',
+	onClick,
+	disabled = false,
+}: ButtonProps) => {
 	return (
 		<Button
 			className={`icon ${className} ${size}`}
@@ -25,5 +30,3 @@ const CloseButton = ({ size = '', className = '', onClick, disabled = false }: B
 		</Button>
 	)
 }
-
-export default CloseButton

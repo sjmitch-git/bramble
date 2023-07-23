@@ -1,7 +1,8 @@
+'use client'
+
 import { useRef, useEffect } from 'react'
 
-import Button from '@/components/button'
-import CloseButton from '@/components/button/CloseButton'
+import { Button, CloseButton } from '@/components'
 
 interface DialogProps {
 	open?: boolean
@@ -15,7 +16,7 @@ interface DialogProps {
 	children: React.ReactNode
 }
 
-const Dialog = ({
+export const Dialog = ({
 	open = false,
 	modal = false,
 	title,
@@ -81,5 +82,3 @@ const Dialog = ({
 		</>
 	)
 }
-
-export default Dialog

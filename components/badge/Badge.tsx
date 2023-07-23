@@ -4,8 +4,6 @@ interface BadgeProps {
 	children?: React.ReactNode | undefined
 }
 
-const Badge = ({ size = '', className = '', children = '' }: BadgeProps) => {
+export const Badge = ({ size = '', className = '', children = '' }: BadgeProps) => {
 	return <small className={`badge ${className} ${size}`}>{children}</small>
 }
-
-export default Badge

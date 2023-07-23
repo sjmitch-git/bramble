@@ -1,22 +1,12 @@
-'use client'
-
-import React, { useState } from 'react'
-
-import Ratings from '@/components/ratings'
-import Badge from '@/components/badge'
-import Button from '@/components/button'
-import Codeblock from '@/components/codeblock'
-import { StarIcon } from '@heroicons/react/24/solid'
+import { Codeblock, Ratings } from '@/components'
 
 const RatingsTemplate = () => {
-	const [error, setError] = useState('Page could not be found!')
-
 	return (
 		<>
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import Ratings from '@/components/ratings'
+					{`import {Ratings} from '@/components'
                     
 <h2>
     Savoy Grill

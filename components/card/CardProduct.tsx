@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import Figure from '@/components/figure'
-import Modal from '@/components/modal'
-import Ratings from '@/components/ratings'
+
+import { Figure, Modal, Ratings } from '@/components'
+
 import { formatCurrency } from '@smitch/js-lib'
 
 interface CardProps {

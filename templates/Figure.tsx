@@ -1,8 +1,6 @@
 import Image from 'next/image'
 
-import Figure from '@/components/figure'
-import Video from '@/components/video'
-import Codeblock from '@/components/codeblock'
+import { Figure, Codeblock, Video } from '@/components'
 
 const FigureTemplate = () => {
 	return (

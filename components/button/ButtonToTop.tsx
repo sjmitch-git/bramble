@@ -1,7 +1,8 @@
 'use client'
 
 import { useRef, useEffect } from 'react'
-import Button from '@/components/button'
+
+import { Button } from './Button'
 
 import { ArrowUpCircleIcon } from '@heroicons/react/24/solid'
 
@@ -11,7 +12,7 @@ interface ButtonProps {
 	disabled?: boolean | undefined
 }
 
-const ButtonToTop = ({ size = '', className = '', disabled = false }: ButtonProps) => {
+export const ButtonToTop = ({ size = '', className = '', disabled = false }: ButtonProps) => {
 	const button = useRef<HTMLButtonElement>(null!)
 
 	useEffect(() => {
@@ -52,5 +53,3 @@ const ButtonToTop = ({ size = '', className = '', disabled = false }: ButtonProp
 		</Button>
 	)
 }
-
-export default ButtonToTop

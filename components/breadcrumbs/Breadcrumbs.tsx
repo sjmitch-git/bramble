@@ -10,7 +10,7 @@ interface BreadcrumbsProps {
 	className?: string | undefined
 }
 
-const Breadcrumbs = ({ size = '', className = '' }: BreadcrumbsProps) => {
+export const Breadcrumbs = ({ size = '', className = '' }: BreadcrumbsProps) => {
 	const { homeLabel } = config.labels
 
 	const pathname = usePathname()
@@ -66,5 +66,3 @@ const Breadcrumbs = ({ size = '', className = '' }: BreadcrumbsProps) => {
 		</nav>
 	)
 }
-
-export default Breadcrumbs

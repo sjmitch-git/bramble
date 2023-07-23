@@ -1,5 +1,4 @@
-import Pagination from '@/components/pagination'
-import Codeblock from '@/components/codeblock'
+import { Codeblock, Pagination } from '@/components'
 
 const PaginationTemplate = () => {
 	return (
@@ -7,7 +6,7 @@ const PaginationTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import Pagination from '@/components/pagination'
+					{`import {Pagination} from '@/components'
 
 return (			
 	<Pagination

@@ -1,10 +1,9 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { round } from '@smitch/js-lib'
 
-import Codeblock from '@/components/codeblock'
-import Range from '@/components/range'
+import { Codeblock, Range } from '@/components'
 
 const RangeTemplate = () => {
 	const [range, setRange] = useState(0)
@@ -60,7 +59,7 @@ const RangeTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import Range from '@/components/range'
+					{`import {Range} from '@/components'
 
 const [range, setRange] = useState(0)
 
@@ -104,7 +103,7 @@ onRangeChange: (number: number) => void | undefined // returns range value`}
 			<div className='relative mb-4 bg-light p-4'>
 				<Range
 					vertical={true}
-					onRangeChange={handleRangeChange}
+					onRangeChange={handleRangeChange2}
 					className='absolute bottom-2 left-8'
 				/>
 				<p className='mx-auto py-8 text-center'>RANGE: {range}</p>

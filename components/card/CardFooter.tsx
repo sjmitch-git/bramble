@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Ratings from '@/components/ratings'
+import { Ratings } from '@/components'
 import { formatCurrency } from '@smitch/js-lib'
 
 interface CardFooterProps {

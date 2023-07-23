@@ -1,5 +1,4 @@
-import Gallery from '@/components/gallery'
-import Codeblock from '@/components/codeblock'
+import { Codeblock, Gallery } from '@/components'
 
 import dogs from '@/data/dogs.json'
 

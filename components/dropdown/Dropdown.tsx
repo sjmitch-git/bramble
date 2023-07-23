@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-import Button from '@/components/button'
+import { Button } from '@/components'
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
 
 interface LinksProps {
@@ -19,7 +19,12 @@ interface DropdownProps {
 	button?: string | undefined
 }
 
-const Dropdown = ({ size = '', className = '', links, button = 'xs link p-0' }: DropdownProps) => {
+export const Dropdown = ({
+	size = '',
+	className = '',
+	links,
+	button = 'xs link p-0',
+}: DropdownProps) => {
 	const [show, setShow] = useState('')
 
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>, label: string) => {
@@ -104,5 +109,3 @@ const Dropdown = ({ size = '', className = '', links, button = 'xs link p-0' }: 
 		</div>
 	)
 }
-
-export default Dropdown

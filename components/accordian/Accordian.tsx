@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react'
 
-import Button from '@/components/button'
-import { PlusIcon, MinusIcon, ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/solid'
+import { Button } from '@/components'
+import { PlusIcon, MinusIcon } from '@heroicons/react/24/solid'
 
 interface DataProps {
 	id: string
@@ -20,7 +20,13 @@ interface AccordianProps {
 	layout?: string | 'flush' | undefined
 }
 
-const Accordian = ({ size = '', className = '', data, opened, layout = '' }: AccordianProps) => {
+export const Accordian = ({
+	size = '',
+	className = '',
+	data,
+	opened,
+	layout = '',
+}: AccordianProps) => {
 	const [open, setOpen] = useState('')
 
 	useEffect(() => {
@@ -55,5 +61,3 @@ const Accordian = ({ size = '', className = '', data, opened, layout = '' }: Acc
 		</div>
 	)
 }
-
-export default Accordian

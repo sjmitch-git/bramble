@@ -1,7 +1,7 @@
 'use client'
 
 import Navbar from '@/components/navbar'
-import Codeblock from '@/components/codeblock'
+import { Codeblock } from '@/components'
 
 const NavbarTemplate = () => {
 	return (

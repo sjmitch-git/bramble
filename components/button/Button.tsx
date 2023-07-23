@@ -17,7 +17,7 @@ interface ButtonProps {
 
 export type Ref = HTMLButtonElement
 
-const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
+export const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
 	const {
 		size = '',
 		className = 'primary',
@@ -48,5 +48,3 @@ const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
 })
 
 Button.displayName = 'Button'
-
-export default Button

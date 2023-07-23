@@ -2,9 +2,8 @@
 
 import React, { useState } from 'react'
 
-import Badge from '@/components/badge'
-import Button from '@/components/button'
-import Codeblock from '@/components/codeblock'
+import { Badge, Button, Codeblock } from '@/components'
+
 import { StarIcon } from '@heroicons/react/24/solid'
 
 const BadgeTemplate = () => {

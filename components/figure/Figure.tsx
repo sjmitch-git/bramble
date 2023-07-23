@@ -4,7 +4,7 @@ interface FigureProps {
 	caption?: string | undefined
 }
 
-const Figure = ({ className = '', caption = '', children }: FigureProps) => {
+export const Figure = ({ className = '', caption = '', children }: FigureProps) => {
 	return (
 		<figure className={`figure ${className}`}>
 			{children}
@@ -12,5 +12,3 @@ const Figure = ({ className = '', caption = '', children }: FigureProps) => {
 		</figure>
 	)
 }
-
-export default Figure

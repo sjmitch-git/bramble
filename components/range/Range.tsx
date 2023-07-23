@@ -1,3 +1,5 @@
+'use client'
+
 import { useState, useEffect } from 'react'
 
 interface RangeProps {
@@ -12,7 +14,7 @@ interface RangeProps {
 	className?: string
 }
 
-const Range = ({
+export const Range = ({
 	onRangeChange,
 	min = 0,
 	max = 100,
@@ -63,5 +65,3 @@ const Range = ({
 		</>
 	)
 }
-
-export default Range

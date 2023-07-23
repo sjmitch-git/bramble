@@ -10,7 +10,12 @@ interface NavbrandProps {
 	layout?: string
 }
 
-const Navbrand = ({ height = 70, width = 70, className = '', layout = '' }: NavbrandProps) => {
+export const Navbrand = ({
+	height = 70,
+	width = 70,
+	className = '',
+	layout = '',
+}: NavbrandProps) => {
 	const { image, name } = config.siteMetadata
 
 	return (
@@ -33,5 +38,3 @@ const Navbrand = ({ height = 70, width = 70, className = '', layout = '' }: Navb
 		</div>
 	)
 }
-
-export default Navbrand

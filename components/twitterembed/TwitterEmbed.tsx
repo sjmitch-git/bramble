@@ -12,7 +12,7 @@ interface TwitterEmbedProps {
 	lang?: string
 }
 
-const TwitterEmbed = ({
+export const TwitterEmbed = ({
 	handle,
 	limit = 1,
 	className = 'w-full max-w-lg',

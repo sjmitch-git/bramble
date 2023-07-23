@@ -12,7 +12,7 @@ interface SelectProps {
 	nocaret?: boolean | undefined
 }
 
-const Select = ({
+export const Select = ({
 	name = 'label',
 	className = '',
 	title,
@@ -38,5 +38,3 @@ const Select = ({
 		</select>
 	)
 }
-
-export default Select

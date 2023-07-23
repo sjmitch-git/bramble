@@ -1,8 +1,6 @@
-import Accordian from '@/components/accordian'
+import { Accordian, Alert, Codeblock } from '@/components'
 
 import Users from '@/data/users.json'
-import Alert from '@/components/alert'
-import Codeblock from '@/components/codeblock'
 
 const AccordianTemplate = () => {
 	return (

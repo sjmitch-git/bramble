@@ -1,7 +1,6 @@
 import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid'
 
-import Button from '@/components/button'
-import Buttongroup from '@/components/buttongroup'
+import { Button, Buttongroup } from '@/components'
 
 interface VideoPlayProps {
 	onPlay: () => void | undefined

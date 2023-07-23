@@ -1,4 +1,4 @@
-import Codeblock from '@/components/codeblock'
+import { Codeblock } from '@/components'
 
 const CodeblockTemplate = () => {
 	return (
@@ -6,7 +6,7 @@ const CodeblockTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import Codeblock from '@/components/codeblock'
+					{`import {Codeblock} from '@/components'
 
 return (			
 	<Codeblock language=\'jsx'>

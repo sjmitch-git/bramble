@@ -5,9 +5,7 @@ import Link from 'next/link'
 
 import { PlayIcon, PauseIcon, StopIcon } from '@heroicons/react/24/solid'
 
-import Button from '@/components/button'
-import Buttongroup from '@/components/buttongroup'
-import Codeblock from '@/components/codeblock'
+import { Button, Buttongroup, Codeblock } from '@/components'
 
 const ButtonsgroupTemplate = () => {
 	const [toggle, setToggle] = useState(false)

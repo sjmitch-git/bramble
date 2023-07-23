@@ -1,7 +1,6 @@
 import Data from '@/data/dogs.json'
 
-import Carousel from '@/components/carousel'
-import Codeblock from '@/components/codeblock'
+import { Carousel, Codeblock } from '@/components'
 
 const CarouselTemplate = () => {
 	return (
