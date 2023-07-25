@@ -10,7 +10,7 @@ const config = {
 		titleTemplate: `%s · ${title}`,
 		description: description,
 		url: 'https://bramble-ui.vercel.app',
-		githubRepo: 'https://github.com/sjmitch-git/bramble',
+		githubRepo: process.env.NEXT_PUBLIC_AUTHOR_GITHUB_REPO || 'github repo for this site',
 		author: process.env.NEXT_PUBLIC_AUTHOR_NAME || 'YOUR NAME',
 		authorUrl: process.env.NEXT_PUBLIC_AUTHOR_URL || 'https://mitch.gatsbyjs.io/',
 		authorTwitter: process.env.NEXT_PUBLIC_AUTHOR_TWITTER || 'yourTwitterHandle',
@@ -18,10 +18,51 @@ const config = {
 		siteLanguage: `en`,
 		keywords: ['Components', 'Next.js', 'ReactJS', 'TailwindCSS'],
 	},
+	author: {
+		authorName: process.env.NEXT_PUBLIC_AUTHOR_NAME || null,
+		authorUrl: process.env.NEXT_PUBLIC_AUTHOR_URL || null,
+		authorEmail: process.env.NEXT_PUBLIC_AUTHOR_EMAIL || null,
+		social: [
+			{
+				id: 'twitter',
+				value: process.env.NEXT_PUBLIC_AUTHOR_TWITTER || null,
+			},
+			{
+				id: 'github',
+				value: process.env.NEXT_PUBLIC_AUTHOR_GITHUB || null,
+			},
+			{
+				id: 'linkedin',
+				value: process.env.NEXT_PUBLIC_AUTHOR_LINKEDIN || null,
+			},
+			{
+				id: 'facebook',
+				value: process.env.NEXT_PUBLIC_AUTHOR_FACEBOOK || null,
+			},
+		],
+	},
 	labels: {
 		homeLabel: 'Home',
 		videoFallback: `Your browser does not support the video tag.`,
 	},
+	footerLinks: [
+		{
+			href: '/about',
+			label: 'About',
+		},
+		{
+			href: '/terms_and_conditions',
+			label: 'Terms',
+		},
+		{
+			href: '/privacy_policy',
+			label: 'Privacy',
+		},
+		{
+			href: '/contact',
+			label: 'Contact',
+		},
+	],
 	siteLinks: [
 		{
 			href: '/components',

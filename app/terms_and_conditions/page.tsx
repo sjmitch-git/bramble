@@ -18,7 +18,7 @@ export default function Termsandconditions() {
 	return (
 		<>
 			<h1>{title}</h1>
-			<div className='prose'>
+			<div className='prose mb-12'>
 				<p>
 					Welcome to <strong>{name}</strong>!
 				</p>

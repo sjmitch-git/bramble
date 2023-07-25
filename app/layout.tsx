@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 
 import Providers from '@/utils/provider'
 import '@/styles/index.css'
@@ -17,6 +18,13 @@ const image = config.siteMetadata.image
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import SEO from '@/components/seo'
+import { Navbrand } from '@/components/navbar'
+import { Spinner } from '@/components'
+
+const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
+	ssr: false,
+	loading: () => <Spinner className='aspect-square w-11 text-info' />,
+})
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -46,6 +54,9 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+	const { footerLinks } = config
+	const { authorName, authorUrl, social } = config.author
+
 	return (
 		<html lang='en'>
 			<head>
@@ -74,7 +85,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 							<Providers>{children}</Providers>
 						</article>
 					</main>
-					<Footer />
+					<Footer
+						author={authorName}
+						authorUrl={authorUrl}
+						socialLinks={social}
+						footerLinks={footerLinks}
+						className=''
+					>
+						<TwitterEmbed
+							handle='brambleUI'
+							status='1681278654268035073'
+							className='mx-auto w-full max-w-lg text-center'
+						/>
+
+						<Navbrand
+							height={280}
+							width={280}
+							layout='flex flex-col'
+						/>
+					</Footer>
 				</div>
 			</body>
 		</html>

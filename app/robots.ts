@@ -7,6 +7,7 @@ export default function robots() {
 			{
 				userAgent: '*',
 				allow: '/',
+				disallow: '/contact, /about, /terms_and_conditions, /privacy_policy',
 			},
 		],
 		sitemap: `${url}/sitemap.xml`,

@@ -1,0 +1,33 @@
+@layer components {
+	.footer {
+		@apply px-4;
+
+		.footer-custom {
+			@apply mb-12 flex flex-col justify-center gap-12;
+		}
+
+		.footer-content {
+			@apply flex flex-col justify-center;
+
+			.copyright {
+				@apply flex justify-center;
+
+				& p {
+					@apply mb-8 text-base;
+				}
+			}
+
+			.socilallinks {
+				@apply flex justify-center gap-8;
+
+				a {
+					@apply inline-block aspect-square w-8 text-gray-500 hover:text-gray-900;
+				}
+			}
+
+			.footerlinks {
+				@apply mb-12 flex justify-center gap-4 text-lg;
+			}
+		}
+	}
+}

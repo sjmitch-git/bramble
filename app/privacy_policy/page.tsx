@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import useMetadata from '@/hooks/useMetadata'
 
 import config from '@/app.config'
@@ -18,7 +16,7 @@ export default function Privacy() {
 	return (
 		<>
 			<h1>{title}</h1>
-			<div className='prose'>
+			<div className='prose mb-12'>
 				<h2>Introduction</h2>
 				<p>
 					This privacy policy will explain how <strong>{name}</strong> uses the personal
@@ -90,7 +88,6 @@ export default function Privacy() {
 					2023.
 				</p>
 			</div>
-			<hr />
 		</>
 	)
 }

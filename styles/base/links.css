@@ -16,7 +16,7 @@
 		@apply cursor-default text-info;
 	}
 
-	a[target='_blank']:after {
+	a[target='_blank']:not(.nobase):after {
 		@apply relative content-['_↗'];
 	}
 }

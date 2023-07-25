@@ -1,44 +1,44 @@
-import dynamic from 'next/dynamic'
+import Copyright from './copyright'
+import SocialLinks from './sociallinks'
+import FooterLinks from './footerlinks'
+import { ButtonToTop } from '@/components'
 
-import { ButtonToTop, Spinner } from '@/components'
+interface FooterProps {
+	children: React.ReactNode
+	className?: string | undefined
+	author?: string | null
+	authorUrl?: string | null
+	copywright?: boolean | null
+	socialLinks?: any[]
+	footerLinks?: any[]
+}
 
-import { Navbrand } from '@/components/navbar'
-
-const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
-	ssr: false,
-	loading: () => <Spinner className='aspect-square w-11 text-info' />,
-})
-
-import config from '@/app.config'
-
-const Footer = () => {
-	const { author, authorUrl } = config.siteMetadata
+const Footer = ({
+	className = '',
+	author,
+	authorUrl,
+	copywright = true,
+	socialLinks,
+	footerLinks,
+	children,
+}: FooterProps) => {
 	return (
-		<footer className='footer'>
-			<div className='relative mb-12 flex justify-center'>
-				<TwitterEmbed
-					handle='brambleUI'
-					status='1681278654268035073'
-					className='w-full max-w-lg text-center'
-				/>
+		<footer className={`footer ${className}`}>
+			<div className='footer-custom'>{children}</div>
+
+			<div className='footer-content'>
+				{footerLinks && <FooterLinks links={footerLinks} />}
+
+				{socialLinks && <SocialLinks socialLinks={socialLinks} />}
+
+				{copywright && (
+					<Copyright
+						author={author}
+						authorUrl={authorUrl}
+					/>
+				)}
 			</div>
-			<div className='flex flex-col items-center justify-center gap-8'>
-				<Navbrand
-					height={280}
-					width={280}
-					layout='flex flex-col'
-				/>
-				<p className='text-base'>
-					Made by{' '}
-					<a
-						href={authorUrl}
-						rel='noopener'
-						target='_blank'
-					>
-						{author}
-					</a>
-				</p>
-			</div>
+
 			<ButtonToTop className='fixed bottom-4 right-4 bg-secondary' />
 		</footer>
 	)
