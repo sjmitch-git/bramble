@@ -7,7 +7,6 @@ export const authorName = { author: `${author}` }
 export const keyWords = keywords
 export const host = url
 export const OpenGraph = {
-	url: `${url}`,
 	...siteName,
 	locale: 'en-GB',
 	type: 'article',

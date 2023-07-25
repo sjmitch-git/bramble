@@ -1,57 +1,53 @@
 @layer components {
+	.dropdown {
+		@apply text-base text-current;
 
-    .dropdown {
+		&:hover {
+			@apply transform-none ring-0 ring-accent;
+		}
 
-        @apply text-current text-base;
-         
-        &:hover {
-            @apply scale-100 ring-0 ring-accent;
-        }
+		&.lg:hover {
+			@apply ring-4;
+		}
 
-        &.lg:hover {
-            @apply ring-4;
-        }
+		&:visited {
+			@apply text-current;
+		}
 
-        &:visited {
-            @apply text-current;
-        }
+		ul {
+			@apply flex flex-col gap-4 md:flex-row;
 
-        ul {
-            @apply flex gap-4 flex-col md:flex-row;
+			& ul {
+				@apply ms-0 block w-full border bg-light;
+			}
+		}
 
-            & ul {
-                @apply ms-0 bg-light border block w-full;
-            }
+		.dropdown-link {
+			@apply hover:!text-current;
+		}
 
-        }
+		li {
+			@apply flex flex-wrap items-center whitespace-nowrap;
 
-        .dropdown-link {
-            @apply hover:!text-current;
-        }
+			& li li {
+				@apply indent-2;
+			}
+		}
 
-        li {
-            @apply whitespace-nowrap flex items-center flex-wrap;
+		li a:link {
+			@apply flex w-full items-center  gap-1 px-2;
+		}
 
-            & li li {
-                @apply indent-2;
-            }
-        }
+		li li a:link {
+			@apply hover:bg-info hover:!text-light;
+		}
 
-        li a:link {
-            @apply flex items-center gap-1  w-full px-2;
-        }
+		.wrap {
+			@apply absolute right-0 top-full z-50 max-h-0 overflow-y-auto overflow-x-hidden text-base leading-7 shadow-lg transition-all duration-500 ease-in-out;
+		}
 
-        li li a:link {
-            @apply hover:!text-light hover:bg-info;
-        }
-
-        .wrap {
-            @apply absolute z-50 top-full right-0 shadow-lg transition-all duration-500 max-h-0 ease-in-out overflow-y-auto overflow-x-hidden text-base leading-7;
-        }
-
-        li.show .wrap {
-            @apply max-h-96 md:max-h-96 border min-w-[100px];
-        }
-
-    }
+		li.show .wrap {
+			@apply max-h-96 min-w-[100px] border md:max-h-96;
+		}
+	}
 }

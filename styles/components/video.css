@@ -1,22 +1,21 @@
 @layer components {
+	.video-wrapper {
+		@apply relative aspect-video h-auto w-full max-w-4xl bg-dark;
+	}
 
-    .video-wrapper {
-        @apply relative w-full h-auto max-w-4xl bg-dark aspect-video;
-    }
+	.video {
+		@apply aspect-video w-full cursor-pointer bg-dark;
 
-    .video {
-        @apply w-full aspect-video bg-dark cursor-pointer;
+		&[poster] {
+			@apply object-cover;
+		}
 
-        &[poster] {
-            @apply object-cover;
-        }
-    }
+		& + .loading {
+			@apply absolute bottom-0 left-0 right-0 top-0 z-10 flex aspect-video items-center justify-center bg-dark;
 
-    .loading {
-        @apply bg-dark absolute top-0 left-0 right-0 bottom-0 z-10 flex justify-center items-center aspect-video;
-
-        .innerloading {
-            @apply aspect-square
-        }
-    }
+			.innerloading {
+				@apply aspect-square;
+			}
+		}
+	}
 }

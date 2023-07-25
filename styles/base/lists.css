@@ -1,10 +1,15 @@
 @layer base {
+	ul {
+		&.disc {
+			@apply mb-8 ms-8 list-disc text-base;
 
-    ul {
+			li {
+				@apply p-2;
+			}
+		}
 
-        & ul {
-            @apply ms-4;
-        }
-
-    }
+		& ul {
+			@apply ms-4;
+		}
+	}
 }

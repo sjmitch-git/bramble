@@ -31,9 +31,6 @@ export default function Home() {
 					/>
 				</div>
 			</div>
-			{/* <div className='relative'>
-				<Loading className='relative aspect-square w-20' />
-			</div> */}
 		</>
 	)
 }

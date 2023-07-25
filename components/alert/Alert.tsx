@@ -9,7 +9,7 @@ interface AlertProps {
 	onClick?: () => void | undefined
 }
 
-export const Alert = ({ className = '', message, status = '', onClick }: AlertProps) => {
+export function Alert ({ className = '', message, status = '', onClick }: AlertProps)  {
 	return (
 		<blockquote
 			className={`alert ${className}`}
@@ -30,4 +30,4 @@ export const Alert = ({ className = '', message, status = '', onClick }: AlertPr
 	)
 }
 
-//export default Alert
+//export  Alert

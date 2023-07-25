@@ -88,6 +88,10 @@ const config = {
 					label: 'Gallery',
 				},
 				{
+					href: '/components/loading',
+					label: 'Loading',
+				},
+				{
 					href: '/components/modal',
 					label: 'Modal',
 				},
@@ -131,6 +135,10 @@ const config = {
 					],
 				},
 			],
+		},
+		{
+			href: '/terms_and_conditions',
+			label: 'Terms',
 		},
 	],
 	manifest_options: {

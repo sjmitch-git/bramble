@@ -15,6 +15,7 @@ export let metadata: any
 
 export default function Breadcrumbs() {
 	metadata = useMetadata({ title, description, keywords, url })
+
 	return (
 		<>
 			<h1>{title}</h1>

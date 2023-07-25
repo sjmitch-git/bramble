@@ -1,7 +1,7 @@
 'use client'
 
 import { usePosts } from '@/hooks/usePosts'
-import { Alert, Loading } from '@/components'
+import { Alert, Loading, Bars } from '@/components'
 
 export default function ClientPosts() {
 	const { data, isLoading, error } = usePosts()
@@ -14,8 +14,9 @@ export default function ClientPosts() {
 				{isLoading ? (
 					<div className='mx-auto mb-12 max-w-[6rem]'>
 						<Loading
-							className='text-info'
 							caption='Loading'
+							className='relative w-20'
+							spinner={<Bars className='text-danger' />}
 						/>
 					</div>
 				) : error ? (

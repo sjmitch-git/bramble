@@ -1,17 +1,18 @@
-import { Figure, Spinner } from '@/components'
+import { Figure } from '@/components'
 
 interface LoadingProps {
 	className?: string | undefined
 	caption?: string | undefined
+	spinner?: React.ReactNode | undefined
 }
 
-export const Loading = ({ className = '', caption = '' }: LoadingProps) => {
+export const Loading = ({ className = 'w-10', caption = '', spinner }: LoadingProps) => {
 	return (
 		<Figure
 			className={`loading ${className}`}
 			caption={caption}
 		>
-			<Spinner />
+			{spinner}
 		</Figure>
 	)
 }
