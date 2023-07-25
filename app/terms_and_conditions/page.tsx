@@ -48,7 +48,7 @@ export default function Termsandconditions() {
 
 				<p>
 					We employ the use of cookies. By accessing <strong>{name}</strong>, you agreed
-					to use cookies in agreement with <strong>{name}</strong>'s{' '}
+					to use cookies in agreement with <strong>{name}</strong>&apos;s{' '}
 					<Link href='/privacy_policy'>Privacy Policy</Link>.
 				</p>
 
@@ -114,7 +114,7 @@ export default function Termsandconditions() {
 					Website information so long as the link: (a) is not in any way deceptive; (b)
 					does not falsely imply sponsorship, endorsement or approval of the linking party
 					and its products and/or services; and (c) fits within the context of the linking
-					party’s site.
+					party&apos;s site.
 				</p>
 				<p>
 					We may consider and approve other link requests from the following types of
@@ -141,7 +141,7 @@ export default function Termsandconditions() {
 					These organizations may link to our home page so long as the link: (a) is not in
 					any way deceptive; (b) does not falsely imply sponsorship, endorsement or
 					approval of the linking party and its products or services; and (c) fits within
-					the context of the linking party’s site.
+					the context of the linking party&apos;s site.
 				</p>
 				<p>
 					If you are one of the organizations listed in paragraph 2 above and are
@@ -161,8 +161,8 @@ export default function Termsandconditions() {
 					</li>
 				</ul>
 				<p>
-					No use of <strong>{name}</strong>'s logo or other artwork will be allowed for
-					linking absent a trademark license agreement.
+					No use of <strong>{name}</strong>&apos;s logo or other artwork will be allowed
+					for linking absent a trademark license agreement.
 				</p>
 				<h3>iFrames</h3>
 				<p>
