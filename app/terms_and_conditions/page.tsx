@@ -36,11 +36,12 @@ export default function Termsandconditions() {
 
 				<p>
 					The following terminology applies to these Terms and Conditions, Privacy
-					Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your"
-					refers to you, the person log on this website and compliant to the Company’s
-					terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers
-					to our Company. "Party", "Parties", or "Us", refers to both the Client and
-					ourselves.
+					Statement and Disclaimer Notice and all Agreements: &quot;Client&quot;,
+					&quot;You&quot; and &quot;Your&quot; refers to you, the person log on this
+					website and compliant to the Company’s terms and conditions. &quot;The
+					Company&quot;, &quot;Ourselves&quot;, &quot;We&quot;, &quot;Our&quot; and
+					&quot;Us&quot;, refers to our Company. &quot;Party&quot;, &quot;Parties&quot;,
+					or &quot;Us&quot;, refers to both the Client and ourselves.
 				</p>
 
 				<h3>Cookies</h3>

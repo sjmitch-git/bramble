@@ -136,10 +136,6 @@ const config = {
 				},
 			],
 		},
-		{
-			href: '/terms_and_conditions',
-			label: 'Terms',
-		},
 	],
 	manifest_options: {
 		name: `${title} - ${description}`,
