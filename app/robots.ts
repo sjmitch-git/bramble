@@ -7,7 +7,22 @@ export default function robots() {
 			{
 				userAgent: '*',
 				allow: '/',
-				disallow: '/contact, /about, /terms_and_conditions, /privacy_policy',
+			},
+			{
+				userAgent: '*',
+				disallow: '/contact',
+			},
+			{
+				userAgent: '*',
+				disallow: '/about',
+			},
+			{
+				userAgent: '*',
+				disallow: '/terms_and_conditions',
+			},
+			{
+				userAgent: '*',
+				disallow: '/privacy_policy',
 			},
 		],
 		sitemap: `${url}/sitemap.xml`,
