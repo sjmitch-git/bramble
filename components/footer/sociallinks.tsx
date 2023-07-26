@@ -23,7 +23,7 @@ const SocialLinks = ({ socialLinks }: SocialLinksProps) => {
 			{socialLinks.map((item, index) => (
 				<>
 					{item.value && (
-						<p key={index}>
+						<p key={item.id}>
 							<a
 								href={item.value}
 								className='nobase'

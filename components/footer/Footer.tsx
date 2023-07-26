@@ -4,24 +4,26 @@ import FooterLinks from './footerlinks'
 import { ButtonToTop } from '@/components'
 
 interface FooterProps {
-	children: React.ReactNode
+	children?: React.ReactNode
 	className?: string | undefined
 	author?: string | null
 	authorUrl?: string | null
 	copywright?: boolean | null
 	socialLinks?: any[]
 	footerLinks?: any[]
+	topButton?: boolean | undefined
 }
 
-const Footer = ({
+export function Footer({
 	className = '',
 	author,
 	authorUrl,
 	copywright = true,
 	socialLinks,
 	footerLinks,
+	topButton = true,
 	children,
-}: FooterProps) => {
+}: FooterProps) {
 	return (
 		<footer className={`footer ${className}`}>
 			<div className='footer-custom'>{children}</div>
@@ -39,9 +41,7 @@ const Footer = ({
 				)}
 			</div>
 
-			<ButtonToTop className='fixed bottom-4 right-4 bg-secondary' />
+			{topButton && <ButtonToTop className='fixed bottom-4 right-4 bg-secondary' />}
 		</footer>
 	)
 }
-
-export default Footer

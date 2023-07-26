@@ -125,6 +125,10 @@ const config = {
 					label: 'Figure',
 				},
 				{
+					href: '/components/footer',
+					label: 'Footer',
+				},
+				{
 					href: '/components/gallery',
 					label: 'Gallery',
 				},

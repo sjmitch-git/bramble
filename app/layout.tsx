@@ -16,10 +16,9 @@ const url = config.siteMetadata.url
 const image = config.siteMetadata.image
 
 import Header from '@/components/header'
-import Footer from '@/components/footer'
 import SEO from '@/components/seo'
 import { Navbrand } from '@/components/navbar'
-import { Spinner } from '@/components'
+import { Spinner, Footer } from '@/components'
 
 const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
 	ssr: false,
@@ -83,6 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					<main>
 						<article data-testid='article'>
 							<Providers>{children}</Providers>
+							<hr />
 						</article>
 					</main>
 					<Footer
