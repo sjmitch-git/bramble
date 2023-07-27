@@ -16,6 +16,7 @@ const NavToggle = ({ onClick, open = false }: NavToggleProps) => {
 				onClick={onClick}
 			>
 				<Bars3Icon />
+				<span className='sr-only'>Toggle Sidebar</span>
 			</Button>
 		</div>
 	)

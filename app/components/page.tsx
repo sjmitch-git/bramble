@@ -15,6 +15,7 @@ export default function Components() {
 	return (
 		<>
 			<h1>Components</h1>
+			<p>Page under construction</p>
 			<nav>
 				<ul>
 					<li>

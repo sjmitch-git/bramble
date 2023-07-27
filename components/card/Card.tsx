@@ -34,7 +34,6 @@ export const Card = ({
 	badge,
 	badgeStyle,
 }: CardProps) => {
-	console.log(title, image)
 	return (
 		<>
 			<div className={`card ${layout} ${className}`}>
