@@ -1370,7 +1370,6 @@ tabindex?: number | undefined
 
 }`}
 			</Codeblock>
-			<hr />
 		</>
 	)
 }

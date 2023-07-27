@@ -97,8 +97,6 @@ caption?: boolean | undefined`}
 	}
 }`}
 			</Codeblock>
-
-			<hr />
 		</>
 	)
 }

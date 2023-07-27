@@ -21,7 +21,6 @@ const NavbarTemplate = () => {
 	<Navbar />
 </header>`}
 			</Codeblock>
-			<hr />
 		</>
 	)
 }

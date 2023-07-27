@@ -254,8 +254,6 @@ const getRGBvalue = (value: number) => {
 />`}
 				</Codeblock>
 			</div>
-
-			<hr />
 		</>
 	)
 }

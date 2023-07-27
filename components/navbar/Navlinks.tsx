@@ -63,6 +63,7 @@ const Navlinks = () => {
 										) : (
 											<ChevronDownIcon />
 										)}
+										<span className='sr-only'>Toggle Links</span>
 									</Button>
 								)}
 							</Link>

@@ -436,7 +436,6 @@ return (
 className: string | undefined // // Any Tailwind classes can be added here
 label: string | undefined // aria-label`}</Codeblock>
 			</section>
-			<hr />
 		</>
 	)
 }

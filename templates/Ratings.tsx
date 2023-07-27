@@ -134,8 +134,6 @@ const RatingsTemplate = () => {
 					/>
 				</h3>
 			</div>
-
-			<hr />
 		</>
 	)
 }

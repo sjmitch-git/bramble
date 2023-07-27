@@ -22,7 +22,7 @@ const useMetadata = ({ title, description, keywords, url }: MetadataProps) => {
 		openGraph: {
 			title: title,
 			description: description,
-			url: host + url,
+			url: host + '/' + url,
 			images: [
 				{
 					url: `${image}`,

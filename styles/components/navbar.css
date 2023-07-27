@@ -1,14 +1,13 @@
 @layer components {
+	.navbar {
+		@apply flex items-center justify-between gap-4;
 
-    .navbar {
-        @apply flex justify-between items-center gap-4;
-
-        .brand {
+		/*  .brand {
             @apply hidden md:block;
-        }
-    }
+        } */
+	}
 
-    .navbrand {
+	/*    .navbrand {
         @apply font-mono;
 
         a {
@@ -18,66 +17,65 @@
         .brand {
             @apply my-0 normal-case text-4xl tracking-widest text-dark;
         }
-    }
+    } */
 
-    .navlinks {
-        @apply text-lg;
+	.navlinks {
+		@apply text-lg;
 
-        ul {
-                @apply flex gap-4 flex-col md:flex-row;
+		ul {
+			@apply flex flex-col gap-4 md:flex-row;
 
-            & ul {
-                @apply ms-0 bg-light border block;
+			& ul {
+				@apply ms-0 block border bg-light;
 
-                & a:hover {
-                    @apply bg-primary text-light;
-                }
-            }
+				& a:hover {
+					@apply bg-primary text-light;
+				}
+			}
+		}
 
-        }
+		li {
+			@apply relative flex flex-wrap items-center whitespace-nowrap;
 
-        li {
-            @apply whitespace-nowrap flex items-center relative flex-wrap;
+			& li li {
+				@apply indent-2;
+			}
+		}
 
-            & li li {
-                @apply indent-2;
-            }
-        }
+		li a {
+			@apply flex w-full items-center gap-1 px-2 hover:!transform-none;
+		}
 
-        li a {
-            @apply flex items-center gap-1 hover:!transform-none w-full px-2;
-        }
+		.wrap {
+			@apply relative left-2 top-2 z-50 max-h-0 overflow-y-auto overflow-x-hidden overscroll-contain transition-all duration-500 ease-in-out md:absolute md:left-auto md:right-2 md:top-8 md:shadow-lg;
 
-        .wrap {
-            @apply relative md:absolute z-50 left-2 md:left-auto top-2 md:top-8 md:right-2 md:shadow-lg transition-all duration-500 max-h-0 ease-in-out overflow-y-auto overflow-x-hidden overscroll-contain; 
+			& a:hover {
+				@apply text-light;
+			}
+		}
 
-            & a:hover {
-                @apply text-light;
-            }
-        }
+		li.show .wrap {
+			@apply max-h-96 min-w-[100px] border md:max-h-96;
+		}
 
-        li.show .wrap {
-            @apply max-h-96 md:max-h-96 border min-w-[100px];
-        }
+		.inner {
+			@apply fixed -right-full bottom-0 top-0 z-50 w-80 bg-neutral px-4 pt-12 transition-all duration-500 ease-in-out md:static md:w-auto md:bg-transparent md:p-0;
 
-        .inner {
-            @apply fixed md:static -right-full transition-all duration-500 top-0 bottom-0 ease-in-out w-80 md:w-auto z-50 bg-neutral md:bg-transparent pt-12 px-4 md:p-0;
+			&.open {
+				@apply right-0 md:right-4;
+			}
+		}
 
-            &.open {
-                @apply right-0 md:right-4;
-            }
-        }
+		.toggler {
+			@apply fixed right-2 top-4 z-50 md:hidden;
+		}
 
-        .toggler {
-            @apply fixed right-2 top-4 md:hidden z-50;  
-        }
+		.demo & .inner:not(.open) + .toggler {
+			@apply relative top-0;
+		}
 
-        .demo & .inner:not(.open) + .toggler {
-            @apply relative top-0;
-        }
-
-        .demo & .open + .toggler {
-            @apply fixed;
-        }
-    }
+		.demo & .open + .toggler {
+			@apply fixed;
+		}
+	}
 }

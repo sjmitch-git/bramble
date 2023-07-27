@@ -17,8 +17,7 @@ const image = config.siteMetadata.image
 
 import Header from '@/components/header'
 import SEO from '@/components/seo'
-import { Navbrand } from '@/components/navbar'
-import { Spinner, Footer } from '@/components'
+import { Brand, Spinner, Footer } from '@/components'
 
 const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
 	ssr: false,
@@ -98,10 +97,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 							className='mx-auto w-full max-w-lg text-center'
 						/>
 
-						<Navbrand
-							height={280}
-							width={280}
-							layout='flex flex-col'
+						<Brand
+							height={180}
+							width={180}
+							layout='flex flex-col mx-auto'
+							className='text-4xl'
 						/>
 					</Footer>
 				</div>

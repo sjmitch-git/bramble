@@ -141,8 +141,6 @@ const BadgeTemplate = () => {
 					</Badge>
 				</h2>
 			</div>
-
-			<hr />
 		</>
 	)
 }

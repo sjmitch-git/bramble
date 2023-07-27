@@ -192,8 +192,6 @@ const AlertTemplate = () => {
 					/>
 				)}
 			</div>
-
-			<hr />
 		</>
 	)
 }

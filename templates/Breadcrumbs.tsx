@@ -103,7 +103,6 @@ return (
 --breadcrumb-separator-rtl: /005C;
 `}</Codeblock>
 			</div>
-			<hr />
 		</>
 	)
 }

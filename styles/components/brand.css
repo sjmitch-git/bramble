@@ -1,6 +1,11 @@
 @layer components {
+	.brand {
+		a {
+			@apply flex items-center gap-4 hover:!transform-none;
+		}
 
-    .brand {
-        @apply font-mono normal-case tracking-widest hover:!transform-none;
-    }
+		.brand-name {
+			@apply my-0 hidden font-mono normal-case tracking-widest text-current hover:!transform-none md:block;
+		}
+	}
 }

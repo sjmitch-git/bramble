@@ -1,4 +1,12 @@
-import { FacebookIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '@/components'
+import {
+	DevIcon,
+	FacebookIcon,
+	GithubIcon,
+	InstagramIcon,
+	LinkedinIcon,
+	TwitterIcon,
+	YoutubeIcon,
+} from '@/components'
 
 interface SocialLinksProps {
 	socialLinks: any[]
@@ -7,14 +15,20 @@ interface SocialLinksProps {
 const SocialLinks = ({ socialLinks }: SocialLinksProps) => {
 	const getIcon = (key: string) => {
 		switch (key) {
+			case 'dev':
+				return <DevIcon />
 			case 'facebook':
 				return <FacebookIcon />
 			case 'github':
 				return <GithubIcon />
+			case 'instagram':
+				return <InstagramIcon />
 			case 'linkedin':
 				return <LinkedinIcon />
 			case 'twitter':
 				return <TwitterIcon />
+			case 'youtube':
+				return <YoutubeIcon />
 		}
 	}
 
@@ -23,7 +37,10 @@ const SocialLinks = ({ socialLinks }: SocialLinksProps) => {
 			{socialLinks.map((item, index) => (
 				<>
 					{item.value && (
-						<p key={item.id}>
+						<p
+							key={item.id}
+							className={item.id}
+						>
 							<a
 								href={item.value}
 								className='nobase'

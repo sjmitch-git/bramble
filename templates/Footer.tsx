@@ -107,12 +107,12 @@ const authorUrl = LINK TO YOUR WEBSITE
 
 			<h2>Social Links</h2>
 
-			<p>Supported links: twitter, GitHub, LinkedIn, Facebook</p>
+			<p>Supported links: Twitter, GitHub, LinkedIn, Facebook, Dev, Instagram, YouTube</p>
 
 			<Codeblock language='jsx'>
 				{`const socialLinks = [
 	{
-		id: // 'twitter' || 'github' || 'linkedin' || 'facebook',
+		id: // 'twitter' || 'github' || 'linkedin' || 'facebook' || 'dev' || 'instagram' || 'youtube',
 		value: URL LINK,
 	}
 ]

@@ -132,28 +132,28 @@ const LoadingTemplate = () => {
 			<h2>Styling</h2>
 			<Codeblock language='jsx'>
 				{`<Loading
-					className='w-10 text-sm text-info'
-					caption='Wait'
-					spinner={<Spinner />}
-				/>
+	className='w-10 text-sm text-info'
+	caption='Wait'
+	spinner={<Spinner />}
+/>
 
-				<Loading
-					className='w-20 text-base text-warning'
-					caption='Loading'
-					spinner={<Dots />}
-				/>
+<Loading
+	className='w-20 text-base text-warning'
+	caption='Loading'
+	spinner={<Dots />}
+/>
 
-				<Loading
-					className='w-32 text-xl text-danger'
-					caption='Fetching'
-					spinner={<Clock />}
-				/>
+<Loading
+	className='w-32 text-xl text-danger'
+	caption='Fetching'
+	spinner={<Clock />}
+/>
 
-				<Loading
-					className='w-40 text-2xl text-primary'
-					caption='Buffering'
-                    spinner={<Bars />}
-				/>
+<Loading
+	className='w-40 text-2xl text-primary'
+	caption='Buffering'
+	spinner={<Bars />}
+/>
 					
 `}
 			</Codeblock>
@@ -272,8 +272,6 @@ return (
 					
 `}
 			</Codeblock>
-
-			<hr />
 		</>
 	)
 }

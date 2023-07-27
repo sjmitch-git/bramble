@@ -121,8 +121,6 @@ import {Carousel} from '@/components''
 </div>`}
 				</Codeblock>
 			</div>
-
-			<hr />
 		</>
 	)
 }

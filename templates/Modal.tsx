@@ -99,8 +99,6 @@ const closeModal = () => {
 	/>
 )}`}
 			</Codeblock>
-
-			<hr />
 		</>
 	)
 }

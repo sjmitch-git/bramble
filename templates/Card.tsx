@@ -300,7 +300,6 @@ const CardTemplate = () => {
     ...
 />`}
 			</Codeblock>
-			<hr />
 		</>
 	)
 }

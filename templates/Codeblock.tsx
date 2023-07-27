@@ -76,7 +76,6 @@ const Codeblock = ({ language, children }: CodeblockProps) => {
 export default Codeblock
 `}</Codeblock>
 			</div>
-			<hr />
 		</>
 	)
 }

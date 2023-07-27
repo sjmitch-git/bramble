@@ -269,8 +269,6 @@ caption?: string | undefined`}
 }
 `}
 			</Codeblock>
-
-			<hr />
 		</>
 	)
 }

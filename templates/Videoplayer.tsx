@@ -28,7 +28,6 @@ className?: string | undefined
 formats?: any[] | undefined
 poster?: string | undefined`}
 			</Codeblock>
-			<hr />
 		</>
 	)
 }

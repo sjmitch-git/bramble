@@ -41,6 +41,7 @@ export const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
 			onClick={onClick}
 			onBlur={onBlur}
 			ref={ref}
+			role='button'
 		>
 			{children}
 		</button>

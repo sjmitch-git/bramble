@@ -80,7 +80,6 @@ dividers?: boolean | undefined
 </div>`}
 				</Codeblock>
 			</div>
-			<hr />
 		</>
 	)
 }

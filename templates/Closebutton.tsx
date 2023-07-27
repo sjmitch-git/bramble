@@ -195,8 +195,7 @@ const CloseButtonTemplate = () => {
 <CloseButton className='lg ...' />
 
 <CloseButton className='xl ...' />`}</Codeblock>
-			<hr />
-		</>
+			</>
 	)
 }
 

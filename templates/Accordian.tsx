@@ -153,7 +153,6 @@ import Users from '@/data/users.json'
 </div>`}
 				</Codeblock>
 			</div>
-			<hr />
 		</>
 	)
 }
