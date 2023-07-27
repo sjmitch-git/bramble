@@ -24,6 +24,10 @@ export default function robots() {
 				userAgent: '*',
 				disallow: '/privacy_policy',
 			},
+			{
+				userAgent: '*',
+				disallow: '/posts',
+			},
 		],
 		sitemap: `${url}/sitemap.xml`,
 		host: url,

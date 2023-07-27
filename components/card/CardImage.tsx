@@ -16,6 +16,7 @@ interface DataProps {
 }
 
 const CardImage = ({ title, image }: CardProps) => {
+	console.log(title, image)
 	const [img, setImg] = useState<DataProps>({ name: '', src: '' })
 	const [modal, setModal] = useState(false)
 

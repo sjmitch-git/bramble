@@ -1,5 +1,3 @@
-'use client'
-
 import useMetadata from '@/hooks/useMetadata'
 
 import PaginationTemplate from '@/templates/Pagination'

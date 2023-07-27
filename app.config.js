@@ -39,6 +39,18 @@ const config = {
 				id: 'facebook',
 				value: process.env.NEXT_PUBLIC_AUTHOR_FACEBOOK || null,
 			},
+			{
+				id: 'dev',
+				value: process.env.NEXT_PUBLIC_AUTHOR_DEV || null,
+			},
+			{
+				id: 'instagram',
+				value: process.env.NEXT_PUBLIC_AUTHOR_INSTAGRAM || null,
+			},
+			{
+				id: 'youtube',
+				value: process.env.NEXT_PUBLIC_AUTHOR_YOUTUBE || null,
+			},
 		],
 	},
 	labels: {

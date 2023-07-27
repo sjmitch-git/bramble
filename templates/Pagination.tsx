@@ -1,5 +1,3 @@
-'use client'
-
 import { Codeblock, Pagination } from '@/components'
 
 const PaginationTemplate = () => {
