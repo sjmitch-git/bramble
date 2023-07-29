@@ -62,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				></Script>
 				{/* prettier-ignore */}
 				<Script
+					id='ga-script'
 					strategy="afterInteractive"
 					dangerouslySetInnerHTML={{
 						__html: `window.dataLayer = window.dataLayer || [];
