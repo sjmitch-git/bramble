@@ -8,7 +8,7 @@ interface FooterProps {
 	className?: string | undefined
 	author?: string | null
 	authorUrl?: string | null
-	copywright?: boolean | null
+	copyright?: boolean | null
 	socialLinks?: any[]
 	footerLinks?: any[]
 	topButton?: boolean | undefined
@@ -18,7 +18,7 @@ export function Footer({
 	className = '',
 	author,
 	authorUrl,
-	copywright = true,
+	copyright = true,
 	socialLinks,
 	footerLinks,
 	topButton = true,
@@ -33,7 +33,7 @@ export function Footer({
 
 				{socialLinks && <SocialLinks socialLinks={socialLinks} />}
 
-				{copywright && (
+				{copyright && (
 					<Copyright
 						author={author}
 						authorUrl={authorUrl}

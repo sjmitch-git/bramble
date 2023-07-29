@@ -1,11 +1,14 @@
 import Navlinks from './Navlinks'
-import { Navbrand } from './Navbrand'
-import { Brand } from '@/components'
 
-export const Navbar = () => {
+interface NavBarProps {
+	className?: string | undefined
+	children: React.ReactNode
+}
+
+export const Navbar = ({ className = '', children }: NavBarProps) => {
 	return (
-		<nav className={`navbar`}>
-			<Brand className='text-4xl' />
+		<nav className={`navbar ${className}`}>
+			{children}
 			<Navlinks />
 		</nav>
 	)

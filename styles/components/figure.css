@@ -3,7 +3,7 @@
 		@apply h-auto w-full;
 
 		&:has(.video) {
-			@apply aspect-video;
+			@apply relative aspect-video;
 		}
 
 		&:has([data-nimg='fill']) {

@@ -4,7 +4,7 @@ import {
 	GithubIcon,
 	InstagramIcon,
 	LinkedinIcon,
-	TwitterIcon,
+	XIcon,
 	YoutubeIcon,
 } from '@/components'
 
@@ -26,7 +26,7 @@ const SocialLinks = ({ socialLinks }: SocialLinksProps) => {
 			case 'linkedin':
 				return <LinkedinIcon />
 			case 'twitter':
-				return <TwitterIcon />
+				return <XIcon />
 			case 'youtube':
 				return <YoutubeIcon />
 		}

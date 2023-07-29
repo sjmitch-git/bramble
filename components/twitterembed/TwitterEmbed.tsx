@@ -5,6 +5,8 @@ import React, { useCallback } from 'react'
 interface TwitterEmbedProps {
 	handle: string
 	limit?: number
+	height?: number
+	width?: number
 	className?: string
 	chrome?: string
 	theme?: string
@@ -20,24 +22,25 @@ export const TwitterEmbed = ({
 	lang = 'en',
 	status,
 	theme,
+	...props
 }: TwitterEmbedProps) => {
-	const embedRef = useCallback((embedRefNode: any) => {
+	let embedRef = useCallback((embedRefNode: any) => {
 		const script = document.createElement('script')
 		script.setAttribute('src', 'https://platform.twitter.com/widgets.js')
-		script.setAttribute('async', 'true')
+		script.setAttribute('defer', 'true')
 		embedRefNode ? embedRefNode.appendChild(script) : null
 	}, [])
 
 	return (
 		<>
 			<div
-				className={`twitter-wrap ${className}`}
+				className={`twitter-wrap text-center ${className}`}
 				ref={embedRef}
 			>
 				{status ? (
 					<>
 						<blockquote
-							className='twitter-tweet'
+							className='twitter-tweet text-center'
 							data-theme={theme}
 							data-lang={lang}
 						>
@@ -46,12 +49,13 @@ export const TwitterEmbed = ({
 					</>
 				) : (
 					<a
-						className='twitter-timeline'
+						className='twitter-timeline text-center'
 						href={`https://twitter.com/${handle}`}
 						data-tweet-limit={limit}
 						data-chrome={chrome}
 						data-theme={theme}
 						data-lang={lang}
+						data-height={props.height}
 					>
 						Tweets from @{handle}
 					</a>

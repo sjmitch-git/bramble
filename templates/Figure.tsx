@@ -236,7 +236,7 @@ caption?: string | undefined`}
 	@apply w-full h-auto;
 
 	&:has(.video) {
-		@apply aspect-video;
+		@apply aspect-video relative;
 	}
 
 	&:has([data-nimg='fill']) {

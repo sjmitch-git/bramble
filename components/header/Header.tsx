@@ -1,17 +1,10 @@
-import { Breadcrumbs } from '@/components'
+interface HeaderProps {
+	className?: string
+	children: React.ReactNode
+}
 
-import { Navbar } from '@/components/navbar'
-
-const Header = () => {
-	return (
-		<header className='header'>
-			<Navbar />
-			<Breadcrumbs
-				size='lg'
-				className='pt-6 md:pt-12'
-			/>
-		</header>
-	)
+const Header = ({ className = '', children }: HeaderProps) => {
+	return <header className={`header ${className}`}>{children}</header>
 }
 
 export default Header

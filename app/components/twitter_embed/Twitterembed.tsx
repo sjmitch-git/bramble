@@ -3,8 +3,9 @@ import useMetadata from '@/hooks/useMetadata'
 import TwitterembedTemplate from '@/templates/Twitterembed'
 
 const title = 'Twitter Embed'
-const description = 'Twitter Embed description ...'
-const keywords = 'Twitter Embed Component'
+const description =
+	'Examples and usage of the "Twitter Embed" component for both single tweets and profile timelines'
+const keywords = 'Lazy Loading'
 const url = 'components/twitter_embed'
 
 export let metadata: any

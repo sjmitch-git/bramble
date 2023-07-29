@@ -235,7 +235,6 @@ export default function Termsandconditions() {
 					nature.
 				</p>
 			</div>
-			<hr />
 		</>
 	)
 }

@@ -1,7 +1,7 @@
 import config from '@/app.config'
 
 const themecolor = config.manifest_options.theme_color
-const author = config.siteMetadata.author
+const { author, authorTwitter } = config.siteMetadata
 
 const SEO = () => {
 	return (
@@ -94,6 +94,18 @@ const SEO = () => {
 			<meta
 				name='theme-color'
 				content={`${themecolor}`}
+			/>
+			<link
+				rel='me'
+				href={authorTwitter}
+			/>
+			<meta
+				name='twitter:dnt'
+				content='on'
+			/>
+			<meta
+				name='twitter:widgets:csp'
+				content='on'
 			/>
 		</>
 	)

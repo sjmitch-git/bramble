@@ -1,23 +1,7 @@
 @layer components {
 	.navbar {
 		@apply flex items-center justify-between gap-4;
-
-		/*  .brand {
-            @apply hidden md:block;
-        } */
 	}
-
-	/*    .navbrand {
-        @apply font-mono;
-
-        a {
-            @apply flex gap-4 items-center hover:!transform-none;
-        }
-
-        .brand {
-            @apply my-0 normal-case text-4xl tracking-widest text-dark;
-        }
-    } */
 
 	.navlinks {
 		@apply text-lg;
@@ -59,7 +43,7 @@
 		}
 
 		.inner {
-			@apply fixed -right-full bottom-0 top-0 z-50 w-80 bg-neutral px-4 pt-12 transition-all duration-500 ease-in-out md:static md:w-auto md:bg-transparent md:p-0;
+			@apply fixed -right-full bottom-0 top-0 z-50 w-80 border-l bg-white px-4 pt-12 transition-all duration-500 ease-in-out md:static md:w-auto md:bg-transparent md:p-0;
 
 			&.open {
 				@apply right-0 md:right-4;

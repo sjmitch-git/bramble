@@ -11,14 +11,11 @@ import config from '@/app.config'
 
 import { siteName } from '@/shared/metadata/'
 
-const title = config.siteMetadata.title
-const description = config.siteMetadata.description
-const url = config.siteMetadata.url
-const image = config.siteMetadata.image
+const { title, description, url, image } = config.siteMetadata
 
 import Header from '@/components/header'
 import SEO from '@/components/seo'
-import { Brand, Spinner, Footer } from '@/components'
+import { Brand, Spinner, Footer, Breadcrumbs, Navbar } from '@/components'
 
 const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
 	ssr: false,
@@ -74,11 +71,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`,
 					}}
 				/>
+
 				<SEO />
 			</head>
 			<body className={inter.className}>
 				<div className='wrapper'>
-					<Header />
+					<Header>
+						<Navbar>
+							<Brand className='text-4xl' />
+						</Navbar>
+						<Breadcrumbs
+							size='lg'
+							className='pt-6 md:pt-12'
+						/>
+					</Header>
 					<main>
 						<article data-testid='article'>
 							<Providers>{children}</Providers>

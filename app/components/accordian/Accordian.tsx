@@ -3,7 +3,8 @@ import useMetadata from '@/hooks/useMetadata'
 import AccordianTemplate from '@/templates/Accordian'
 
 const title = 'Accordian'
-const description = 'Build vertically collapsing accordions'
+const description =
+	'Examples and usage of the "Accordian" component to build data-driven vertically collapsing accordions, with customizable layout and styling'
 const keywords = 'Accordian Component'
 const url = 'components/accordian'
 
