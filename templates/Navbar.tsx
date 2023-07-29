@@ -1,7 +1,7 @@
 'use client'
 
-import { Navbar } from '@/components/navbar'
-import { Codeblock } from '@/components'
+import { Navbar } from '@/components'
+import { Codeblock, Brand } from '@/components'
 
 const NavbarTemplate = () => {
 	return (
@@ -10,15 +10,19 @@ const NavbarTemplate = () => {
 
 			<div className='mb-8 border p-4'>
 				<header className='header demo'>
-					<Navbar />
+					<Navbar>
+						<Brand className='text-4xl' />
+					</Navbar>
 				</header>
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Navbar} from '@/components/navbar'
+				{`import {Navbar, Brand} from '@/components'
 				
 <header className='header'>
-	<Navbar />
+	<Navbar>
+		<Brand className='text-4xl' />
+	</Navbar>
 </header>`}
 			</Codeblock>
 		</>
