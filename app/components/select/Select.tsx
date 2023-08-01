@@ -3,7 +3,8 @@ import useMetadata from '@/hooks/useMetadata'
 import SelectTemplate from '@/templates/Select'
 
 const title = 'Select'
-const description = 'Select description TBD'
+const description =
+	'Examples and useage of the data-driven "Select" component, with customizable styles, sizes, layout and "optgroup" display'
 const keywords = 'Select Component'
 const url = 'components/select'
 

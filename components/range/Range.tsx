@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 
 interface RangeProps {
+	name?: string
 	min?: number
 	max?: number
 	step?: number
@@ -16,6 +17,7 @@ interface RangeProps {
 
 export const Range = ({
 	onRangeChange,
+	name,
 	min = 0,
 	max = 100,
 	initial = 0,
@@ -53,6 +55,7 @@ export const Range = ({
 		<>
 			<input
 				type='range'
+				name={name}
 				min={min}
 				max={max}
 				step={step}

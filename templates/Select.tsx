@@ -569,8 +569,8 @@ return (
 			</p>
 
 			<div className='mb-0 flex flex-wrap items-center justify-center gap-12 bg-gray-300 p-4'>
-				<label className='label'>
-					Select Fruit
+				<label className='label row'>
+					<span>Select Fruit</span>
 					<Select
 						className='dark'
 						onChange={handleChange}
@@ -594,8 +594,8 @@ return (
 					</Select>
 				</label>
 
-				<label className='label text-3xl'>
-					Select Fruit
+				<label className='label row text-3xl'>
+					<span>Select Fruit</span>
 					<Select
 						className='text-size-inherit dark'
 						onChange={handleChange}
@@ -620,8 +620,8 @@ return (
 				</label>
 			</div>
 			<div className='mb-8'>
-				<Codeblock language='jsx'>{`<label className='label'>
-	Select Fruit
+				<Codeblock language='jsx'>{`<label className='label row'>
+	<span>Select Fruit</span>
 	<Select
 		className='dark'
 		onChange={handleChange}
@@ -645,8 +645,8 @@ return (
 	</Select>
 </label>
 
-<label className='label text-3xl'>
-	Select Fruit
+<label className='label row text-3xl'>
+	<span>Select Fruit</span>
 	<Select
 		className='dark text-size-inherit'
 		onChange={handleChange}
@@ -672,8 +672,8 @@ return (
 `}</Codeblock>
 			</div>
 			<div className='mb-0 flex flex-wrap items-center justify-center gap-12 bg-gray-300 p-4'>
-				<label className='label col'>
-					Select Fruit
+				<label className='label'>
+					<span>Select Fruit</span>
 					<Select
 						className='dark'
 						onChange={handleChange}
@@ -697,8 +697,8 @@ return (
 					</Select>
 				</label>
 
-				<label className='label col'>
-					Select Fruit
+				<label className='label'>
+					<span>Select Fruit</span>
 					<Select
 						className='dark text-3xl'
 						onChange={handleChange}
@@ -722,8 +722,8 @@ return (
 					</Select>
 				</label>
 
-				<label className='label col text-3xl'>
-					Select Fruit
+				<label className='label text-3xl'>
+					<span>Select Fruit</span>
 					<Select
 						className='text-size-inherit dark'
 						onChange={handleChange}
@@ -748,8 +748,8 @@ return (
 				</label>
 			</div>
 			<div className='mb-8'>
-				<Codeblock language='jsx'>{`<label className='label col'>
-	Select Fruit
+				<Codeblock language='jsx'>{`<label className='label'>
+	<span>Select Fruit</span>
 	<Select
 		className='dark'
 		onChange={handleChange}
@@ -1004,8 +1004,8 @@ return (
 				An asterisk (<span className='text-danger'>*</span>) indicates a required field
 			</p>
 			<div className='mb-0 flex flex-col flex-wrap justify-start gap-12 bg-gray-300 p-4'>
-				<label className='label col me-auto text-xl'>
-					Select Drink
+				<label className='label me-auto text-xl'>
+					<span>Select Fruit</span>
 					<Select
 						className='text-size-inherit dark'
 						onChange={handleDrinksChange}
@@ -1048,8 +1048,8 @@ return (
 						</optgroup>
 					</Select>
 				</label>
-				<label className='label text-xl'>
-					Select Drink
+				<label className='label row me-auto text-xl'>
+					<span>Select Fruit</span>
 					<Select
 						className='text-size-inherit dark'
 						onChange={handleDrinksChange}
@@ -1099,8 +1099,8 @@ return (
 				className='mb-0 flex flex-col flex-wrap justify-start gap-12 bg-gray-300 p-4'
 				dir='rtl'
 			>
-				<label className='label col me-auto text-xl'>
-					Select Drink
+				<label className='label me-auto text-xl'>
+					<span>Select Fruit</span>
 					<Select
 						className='text-size-inherit dark'
 						onChange={handleDrinksChange}
@@ -1143,8 +1143,8 @@ return (
 						</optgroup>
 					</Select>
 				</label>
-				<label className='label text-xl'>
-					Select Drink
+				<label className='label row text-xl'>
+					<span>Select Fruit</span>
 					<Select
 						className='text-size-inherit dark'
 						onChange={handleDrinksChange}

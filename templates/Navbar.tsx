@@ -1,5 +1,3 @@
-'use client'
-
 import { Navbar } from '@/components'
 import { Codeblock, Brand } from '@/components'
 

@@ -34,6 +34,7 @@ const config = {
 			'Codeblock',
 			'Dialog',
 			'Figure',
+			'Form',
 			'Gallery',
 			'Modal',
 			'Navbar',
@@ -164,6 +165,10 @@ const config = {
 				{
 					href: '/components/figure',
 					label: 'Figure',
+				},
+				{
+					href: '/components/form',
+					label: 'Form',
 				},
 				{
 					href: '/components/footer',

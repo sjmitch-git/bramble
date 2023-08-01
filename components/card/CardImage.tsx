@@ -16,7 +16,6 @@ interface DataProps {
 }
 
 const CardImage = ({ title, image }: CardProps) => {
-
 	const [img, setImg] = useState<DataProps>({ name: '', src: '' })
 	const [modal, setModal] = useState(false)
 
@@ -41,6 +40,7 @@ const CardImage = ({ title, image }: CardProps) => {
 				<Figure className={aspect}>
 					<Image
 						fill
+						sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 						src={image}
 						className='img'
 						alt={title}

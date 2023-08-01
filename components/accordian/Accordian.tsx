@@ -20,13 +20,13 @@ interface AccordianProps {
 	layout?: string | 'flush' | undefined
 }
 
-export function Accordian({
+export const Accordian = ({
 	size = '',
 	className = '',
 	data,
 	opened,
 	layout = '',
-}: AccordianProps) {
+}: AccordianProps) => {
 	const [open, setOpen] = useState('')
 
 	useEffect(() => {
@@ -61,3 +61,5 @@ export function Accordian({
 		</div>
 	)
 }
+
+export default Accordian
