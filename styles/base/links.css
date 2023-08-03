@@ -16,6 +16,10 @@
 		@apply cursor-default text-info;
 	}
 
+	a:focus-visible {
+		@apply outline-none ring ring-accent;
+	}
+
 	a[target='_blank']:not(.nobase):after {
 		@apply relative content-['_↗'];
 	}

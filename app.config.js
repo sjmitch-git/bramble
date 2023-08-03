@@ -116,6 +116,10 @@ const config = {
 					label: 'Accordian',
 				},
 				{
+					href: '/components/autocomplete',
+					label: 'Autocomplete',
+				},
+				{
 					href: '/components/alert',
 					label: 'Alert',
 				},
@@ -179,6 +183,10 @@ const config = {
 					label: 'Gallery',
 				},
 				{
+					href: '/components/input',
+					label: 'Input',
+				},
+				{
 					href: '/components/loading',
 					label: 'Loading',
 				},
@@ -205,6 +213,10 @@ const config = {
 				{
 					href: '/components/select',
 					label: 'Select',
+				},
+				{
+					href: '/components/switch',
+					label: 'Switch',
 				},
 				{
 					href: '/components/table',

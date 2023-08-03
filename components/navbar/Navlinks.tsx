@@ -56,7 +56,7 @@ const Navlinks = () => {
 										className='xs link p-0'
 										onClick={(e) => handleClick(e, link.label)}
 										onBlur={(e) => handleBlur(e)}
-										tabindex={1}
+										role='none'
 									>
 										{show === link.label ? (
 											<ChevronUpIcon />

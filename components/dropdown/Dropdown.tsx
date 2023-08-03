@@ -66,6 +66,7 @@ export const Dropdown = ({
 									title='Dropdown Menu'
 								>
 									{show === link.label ? <ChevronUpIcon /> : <ChevronDownIcon />}
+									<span className='sr-only'>Toggle dropdown menu</span>
 								</Button>
 							)}
 						</Link>

@@ -13,6 +13,7 @@ interface ButtonProps {
 	type?: 'submit' | 'reset' | 'button' | undefined
 	disabled?: boolean | undefined
 	tabindex?: number | undefined
+	role?: string | undefined
 }
 
 export type Ref = HTMLButtonElement
@@ -28,6 +29,7 @@ export const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
 		onClick,
 		onBlur,
 		tabindex = undefined,
+		role = 'button',
 		children,
 	} = props
 	return (
@@ -41,7 +43,7 @@ export const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
 			onClick={onClick}
 			onBlur={onBlur}
 			ref={ref}
-			role='button'
+			role={role}
 		>
 			{children}
 		</button>
