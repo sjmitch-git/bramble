@@ -17,10 +17,10 @@ import Header from '@/components/header'
 import SEO from '@/components/seo'
 import { Brand, Spinner, Footer, Breadcrumbs, Navbar } from '@/components'
 
-const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
+/* const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
 	ssr: false,
 	loading: () => <Spinner className='aspect-square w-11 text-info' />,
-})
+}) */
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -99,11 +99,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 						footerLinks={footerLinks}
 						className=''
 					>
-						<TwitterEmbed
+						{/* <TwitterEmbed
 							handle='brambleUI'
 							status='1681278654268035073'
 							className='mx-auto w-full max-w-lg text-center'
-						/>
+						/> */}
 
 						<Brand
 							height={180}
