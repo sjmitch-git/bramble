@@ -27,7 +27,7 @@ export const Form = ({
 	btnLabel = 'Submit',
 	closeLabel = 'ok',
 	btnStyles = '',
-	closeStyles = 'dark outline',
+	closeStyles,
 	legend,
 	className = '',
 	children,
