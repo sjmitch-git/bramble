@@ -1,0 +1,63 @@
+@layer components {
+	.switch {
+		@apply h-8 w-auto flex-row-reverse items-center gap-4;
+
+		.labeltext {
+			@apply grow text-left;
+		}
+
+		&.reverse {
+			@apply flex-row;
+
+			.labeltext {
+				@apply text-right;
+			}
+		}
+
+		input {
+			@apply hidden;
+
+			&:checked + .slider {
+				&.info {
+					@apply bg-info;
+				}
+
+				&.warning {
+					@apply bg-warning;
+				}
+
+				&.success {
+					@apply bg-success;
+				}
+
+				&.danger {
+					@apply bg-danger;
+				}
+			}
+
+			&:focus + .slider {
+				@apply shadow-md;
+			}
+
+			&:checked + .slider:before {
+				@apply translate-x-7;
+			}
+		}
+	}
+
+	.slider {
+		@apply relative bottom-0 left-0 right-0 top-0 h-10 w-[67px] cursor-pointer bg-neutral transition duration-500;
+
+		&.round {
+			@apply rounded-full;
+
+			&:before {
+				@apply rounded-full;
+			}
+		}
+
+		&:before {
+			@apply absolute bottom-1 left-1 h-8 w-8 bg-white transition duration-500 content-[''];
+		}
+	}
+}

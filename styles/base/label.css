@@ -20,20 +20,12 @@
 			}
 		}
 
-		&:has(> :required) span::after {
+		&:has(> :required) span:not(.slider)::after {
 			@apply text-danger content-['_*'];
 		}
 
 		&:has(span.file) {
 			@apply btn rounded;
 		}
-
-		/* &:not(.col):has(> :required)::after {
-            @apply text-danger content-['_*'] -top-2 start-0 absolute
-        }
-
-        &.col:has(> :required)::after {
-            @apply text-danger content-['_*'] top-0 end-0 absolute
-        } */
 	}
 }

@@ -6,6 +6,12 @@
 			background-color: rgba(0, 0, 0, 0.8);
 		}
 
+		.form {
+			legend {
+				@apply text-3xl;
+			}
+		}
+
 		.message {
 			@apply mb-8;
 		}

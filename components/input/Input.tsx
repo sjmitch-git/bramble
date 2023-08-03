@@ -71,6 +71,7 @@ export const Input = ({
 						className='link absolute right-0 top-0 !p-0 focus:ring-0 active:!bg-transparent'
 						size='sm'
 						onClick={toggleType}
+						tabindex={1}
 					>
 						<EyeIcon />
 					</Button>

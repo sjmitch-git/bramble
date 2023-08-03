@@ -1,5 +1,8 @@
 export * from './alert'
+
 export * from './accordian'
+export { default } from './accordian'
+
 export { Autocomplete } from './autocomplete'
 export * from './badge'
 export * from './badgegroup'
@@ -26,6 +29,7 @@ export * from './range'
 export * from './ratings'
 export * from './select'
 export * from './spinners'
+export * from './switch'
 export * from './table'
 export * from './video'
 export * from './videoplayer'

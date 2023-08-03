@@ -2,47 +2,56 @@
 
 import { useRef, useEffect } from 'react'
 
-import { Button, CloseButton } from '@/components'
+import { Button, CloseButton, Form } from '@/components'
 
 interface DialogProps {
 	open?: boolean
 	modal?: boolean
 	title?: string | undefined
-	message?: string | undefined
-	node?: React.ReactNode | undefined
 	btnLabel?: string | undefined
+	btnIcon?: React.ReactNode | undefined
 	btnStyles?: string | undefined
 	addOpenButton?: boolean | undefined
+	onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void
 	children: React.ReactNode
+	closeLabel?: string | undefined
+	closeStyles?: string | undefined
 }
 
 export const Dialog = ({
 	open = false,
 	modal = false,
 	title,
-	message,
-	node,
 	addOpenButton = true,
 	btnLabel = 'Open dialog',
+	btnIcon,
 	btnStyles = '',
+	closeLabel,
+	closeStyles = 'dark outline rounded',
+	onSubmit,
 	children,
 }: DialogProps) => {
 	const dialog = useRef<HTMLDialogElement>(null!)
 
 	useEffect(() => {
 		if (open) {
-			if (modal) dialog.current.showModal()
-			else dialog.current.show()
+			if (modal) {
+				dialog.current.showModal()
+				document.body.style.overflow = 'hidden'
+			} else dialog.current.show()
 		}
 	}, [open, modal])
 
 	const closeDialog = () => {
 		dialog.current.close()
+		document.body.style.overflow = ''
 	}
 
 	const openDialog = () => {
-		if (modal) dialog.current.showModal()
-		else dialog.current.show()
+		if (modal) {
+			dialog.current.showModal()
+			document.body.style.overflow = 'hidden'
+		} else dialog.current.show()
 	}
 
 	return (
@@ -59,24 +68,30 @@ export const Dialog = ({
 						onClick={closeDialog}
 					/>
 				)}
-				<form method='dialog'>
-					{title && <h2>{title}</h2>}
-					{message && (
-						<div
-							className='message'
-							dangerouslySetInnerHTML={{ __html: message }}
-						></div>
-					)}
-					{node && <div className='node'>{node}</div>}
-					<div className='flex justify-center gap-4'>{children}</div>
-				</form>
+
+				<Form
+					method='dialog'
+					legend={title}
+					btnLabel={btnLabel}
+					closeLabel={closeLabel}
+					closeStyles={closeStyles}
+					name='login'
+					btnStyles='rounded'
+					onSubmit={onSubmit}
+					className='justify-center'
+					onClick={closeDialog}
+				>
+					{children}
+				</Form>
 			</dialog>
 			{addOpenButton && (
 				<Button
 					className={btnStyles}
 					onClick={openDialog}
+					title={title}
 				>
-					{btnLabel}
+					{btnIcon || btnLabel}
+					{btnIcon && <span className='sr-only'>{title}</span>}
 				</Button>
 			)}
 		</>

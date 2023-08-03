@@ -1,17 +1,22 @@
+'use client'
+
 import { Button } from '@/components'
 
 interface FormProps {
 	action?: string
-	method?: 'get' | 'post'
+	method?: 'get' | 'post' | 'dialog'
 	autocomplete?: 'on' | 'off'
 	name?: string
 	legend?: string
 	btnLabel?: string
 	btnStyles?: string
+	closeLabel?: string
+	closeStyles?: string
 	className?: string | undefined
 	children: React.ReactNode
 	valid?: boolean
-	onSubmit?: (e: any) => void | boolean | undefined
+	onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void
+	onClick?: (e: React.FormEvent<HTMLInputElement>) => void
 }
 
 export const Form = ({
@@ -20,11 +25,14 @@ export const Form = ({
 	autocomplete = 'off',
 	name = 'form',
 	btnLabel = 'Submit',
+	closeLabel = 'ok',
 	btnStyles = '',
+	closeStyles = 'dark outline',
 	legend,
 	className = '',
 	children,
 	onSubmit,
+	onClick,
 }: FormProps) => {
 	return (
 		<form
@@ -38,12 +46,25 @@ export const Form = ({
 			<fieldset>
 				{legend && <legend>{legend}</legend>}
 				{children}
-				<Button
-					type='submit'
-					className={`${btnStyles}`}
-				>
-					{btnLabel}
-				</Button>
+				<div className='actions'>
+					{onSubmit && (
+						<Button
+							type='submit'
+							className={`${btnStyles}`}
+						>
+							{btnLabel}
+						</Button>
+					)}
+					{method === 'dialog' && (
+						<Button
+							className={closeStyles}
+							type='button'
+							onClick={onClick}
+						>
+							{closeLabel}
+						</Button>
+					)}
+				</div>
 			</fieldset>
 		</form>
 	)

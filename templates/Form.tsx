@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-import { Codeblock, Form, Input, Range, Autocomplete } from '@/components'
+import { Codeblock, Form, Input, Range, Autocomplete, Switch } from '@/components'
 
 import data from '@/data/countries.json'
 
@@ -38,6 +38,11 @@ const FormTemplate = () => {
 	const onDateChange = (event: any) => {
 		const target = event.target
 		target.name === 'depart' ? setDepart(target.value) : setReturn(target.value)
+	}
+
+	const onSwitchChange = (event: any) => {
+		const target = event.target
+		console.log({ event })
 	}
 
 	const handleAudioChange = (value: number) => {
@@ -328,6 +333,25 @@ const FormTemplate = () => {
 						autocomplete='country name'
 						placeholder='Select your country'
 						onchange={onListChange}
+					/>
+
+					<p id='switch'>Switch?</p>
+
+					<Switch
+						label='I agree to terms and conditions'
+						name='terms'
+						required={true}
+						onchange={onSwitchChange}
+					/>
+
+					<Switch
+						label='I agree to terms and conditions'
+						className='reverse'
+						name='termssquare'
+						required={true}
+						round={false}
+						switchColor='danger'
+						onchange={onSwitchChange}
 					/>
 				</Form>
 			</div>
