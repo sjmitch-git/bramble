@@ -49,5 +49,3 @@ export const Autocomplete = ({
 		</>
 	)
 }
-
-export default Autocomplete

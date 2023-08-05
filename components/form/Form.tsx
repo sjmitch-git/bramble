@@ -19,7 +19,7 @@ interface FormProps {
 	onClick?: (e: React.FormEvent<HTMLInputElement>) => void
 }
 
-export const Form = ({
+export function Form({
 	action,
 	method = 'get',
 	autocomplete = 'off',
@@ -33,7 +33,7 @@ export const Form = ({
 	children,
 	onSubmit,
 	onClick,
-}: FormProps) => {
+}: FormProps) {
 	return (
 		<form
 			onSubmit={onSubmit}

@@ -34,18 +34,24 @@ export const Dialog = ({
 	const dialog = useRef<HTMLDialogElement>(null!)
 
 	useEffect(() => {
+		const handleClose = () => (document.body.style.overflow = '')
+
+		if (dialog && dialog.current) dialog.current.addEventListener('close', handleClose, false)
+
 		if (open) {
 			if (modal) {
 				dialog.current.showModal()
 				document.body.style.overflow = 'hidden'
 			} else dialog.current.show()
 		}
+		return () => {
+			handleClose()
+			if (dialog && dialog.current)
+				dialog.current.removeEventListener('close', handleClose, false)
+		}
 	}, [open, modal])
 
-	const closeDialog = () => {
-		dialog.current.close()
-		document.body.style.overflow = ''
-	}
+	const closeDialog = () => dialog.current.close()
 
 	const openDialog = () => {
 		if (modal) {

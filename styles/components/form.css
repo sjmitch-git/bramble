@@ -58,6 +58,10 @@
 
 		.hint {
 			@apply hidden text-start text-sm;
+
+			&.show {
+				@apply inline-block w-full;
+			}
 		}
 
 		.actions {

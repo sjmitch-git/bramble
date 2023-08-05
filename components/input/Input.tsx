@@ -24,6 +24,7 @@ interface InputProps {
 	accept?: string
 	value?: any
 	checked?: boolean
+	hintShow?: boolean
 	onchange?: React.ChangeEventHandler<HTMLInputElement>
 }
 
@@ -42,6 +43,7 @@ export const Input = ({
 	hint,
 	value,
 	checked,
+	hintShow,
 	accept,
 	placeholder,
 	list,
@@ -104,9 +106,7 @@ export const Input = ({
 				list={list}
 				onChange={onchange}
 			/>
-			{hint && <div className='hint'>{hint}</div>}
+			{hint && <div className={`hint ${hintShow ? 'show' : ''}`}>{hint}</div>}
 		</label>
 	)
 }
-
-export default Input

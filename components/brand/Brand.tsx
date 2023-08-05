@@ -28,7 +28,12 @@ export const Brand = ({ height = 70, width = 70, className = '', layout = '' }: 
 					alt={name}
 					className='brand-image'
 				/>
-				<h3 className='brand-name text-size-inherit'>{name}</h3>
+				<h3
+					className='brand-name text-size-inherit'
+					translate='no'
+				>
+					{name}
+				</h3>
 			</Link>
 		</div>
 	)

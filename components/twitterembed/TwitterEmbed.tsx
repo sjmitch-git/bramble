@@ -24,7 +24,7 @@ export const TwitterEmbed = ({
 	theme,
 	...props
 }: TwitterEmbedProps) => {
-	let embedRef = useCallback((embedRefNode: any) => {
+	const embedRef = useCallback((embedRefNode: any) => {
 		const script = document.createElement('script')
 		script.setAttribute('src', 'https://platform.twitter.com/widgets.js')
 		script.setAttribute('defer', 'true')

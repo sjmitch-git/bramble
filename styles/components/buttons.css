@@ -1,198 +1,211 @@
 @layer components {
+	.btn {
+		@apply flex items-center justify-center bg-primary p-[var(--button-p)] text-base font-semibold uppercase tracking-widest text-white shadow outline-0 transition;
 
-    .btn {
-        @apply flex bg-primary items-center font-semibold text-white p-[var(--button-p)] justify-center text-base uppercase transition outline-0 tracking-widest shadow;
+		.vertical & {
+			@apply justify-start;
+		}
 
-        .vertical & {
-            @apply justify-start
-        }
+		.right & {
+			@apply justify-between;
+		}
 
-        .right & {
-            @apply justify-between
-        }
+		/* SIZES */
+		&.xs,
+		.xs > & {
+			@apply p-[var(--button-p-xs)] text-xs;
+		}
 
-        /* SIZES */
-        &.xs, .xs > & {
-            @apply text-xs p-[var(--button-p-xs)];
-        }
+		&.sm,
+		.sm > & {
+			@apply p-[var(--button-p-sm)] text-sm;
+		}
 
-        &.sm, .sm > & {
-            @apply text-sm p-[var(--button-p-sm)];
-        }
+		&.lg,
+		.lg > & {
+			@apply p-[var(--button-p-lg)] text-xl md:text-2xl;
+		}
 
-        &.lg, .lg > & {
-            @apply text-xl md:text-2xl p-[var(--button-p-lg)];
-        }
+		&.xl,
+		.xl > & {
+			@apply p-[var(--button-p-xl)] text-4xl;
+		}
 
-        &.xl, .xl > & {
-            @apply text-4xl p-[var(--button-p-xl)];
-        }
+		/* ICON MARGIN - button with icon and text*/
+		&:not(.icon):has(> svg) {
+			@apply gap-1;
 
-        /* ICON MARGIN - button with icon and text*/
-        &:not(.icon):has(> svg) {
-            @apply gap-1;
+			& span {
+				@apply hidden md:inline;
+			}
+		}
 
-            & span {
-                @apply hidden md:inline;
-            }
-        }
+		/* ICON SIZES */
+		& > svg {
+			@apply w-8;
+		}
 
-        /* ICON SIZES */
-        & > svg {
-            @apply w-8;
-        }
+		&.xs > svg,
+		.xs > & > svg {
+			@apply w-4;
+		}
 
-        &.xs > svg, .xs > & > svg {
-            @apply w-4;
-        }
+		&.sm > svg,
+		.sm > & > svg {
+			@apply w-6;
+		}
 
-        &.sm > svg, .sm > & > svg {
-            @apply w-6;
-        }
+		&.lg > svg,
+		.lg > & > svg {
+			@apply w-8 md:w-10;
+		}
 
-        &.lg > svg, .lg > & > svg{
-            @apply w-8 md:w-10;
-        }
+		&.xl > svg,
+		.xl > & > svg {
+			@apply w-14;
+		}
 
-        &.xl > svg, .xl > & > svg {
-            @apply w-14;
-        }
+		/* CORNERS */
+		&.rounded {
+			@apply rounded-md;
+		}
 
-        /* CORNERS */
-        &.rounded {
-            @apply rounded-md;
-        }
+		&.pill {
+			@apply rounded-full px-[var(--button-p-lg)];
+		}
 
-        &.pill {
-            @apply rounded-full px-[var(--button-p-lg)];
-        }
+		/* COLOURS */
+		&.primary {
+			@apply bg-primary;
+		}
 
-        /* COLOURS */
-        &.primary {
-            @apply bg-primary;
-        }
+		&.secondary {
+			@apply bg-secondary;
+		}
 
-        &.secondary {
-            @apply bg-secondary;
-        }
+		&.info {
+			@apply bg-info;
+		}
 
-        &.info {
-            @apply bg-info;
-        }
+		&.success {
+			@apply bg-success;
+		}
 
-        &.success {
-            @apply bg-success;
-        }
+		&.warning {
+			@apply bg-warning;
+		}
 
-        &.warning {
-            @apply bg-warning;
-        }
+		&.danger,
+		&.error {
+			@apply bg-danger;
+		}
 
-        &.danger {
-            @apply bg-danger;
-        }
+		&.dark {
+			@apply bg-dark;
+		}
 
-        &.dark {
-            @apply bg-dark;
-        }
+		&.light {
+			@apply bg-light text-dark;
+		}
 
-        &.light {
-            @apply bg-light text-dark;
-        }
+		&.link {
+			@apply bg-transparent text-primary !shadow-none;
+		}
 
-        &.link {
-            @apply bg-transparent text-primary !shadow-none;
-        }
+		/* OUTLINE */
+		&.outline {
+			@apply border-4 border-solid border-current bg-light text-current;
 
-        /* OUTLINE */
-        &.outline {
-            @apply bg-light border-solid border-4 border-current text-current;
+			&.primary {
+				@apply text-primary;
+			}
 
-            &.primary {
-                @apply text-primary;
-            }
+			&.secondary {
+				@apply text-secondary;
+			}
 
-            &.secondary {
-                @apply text-secondary;
-            }
+			&.info {
+				@apply text-info;
+			}
 
-            &.info {
-                @apply text-info;
-            }
+			&.success {
+				@apply text-success;
+			}
 
-            &.success {
-                @apply text-success;
-            }
+			&.warning {
+				@apply text-warning;
+			}
 
-            &.warning {
-                @apply text-warning;
-            }
+			&.danger,
+			&.error {
+				@apply text-danger;
+			}
 
-            &.danger {
-                @apply text-danger;
-            }
+			&.dark {
+				@apply text-dark;
+			}
 
-            &.dark {
-                @apply text-dark;
-            }
+			&.light {
+				@apply bg-dark text-light;
+			}
 
-            &.light {
-                @apply text-light bg-dark;
-            }
+			/* OUTLINE BORDERS */
+			&.xs,
+			.xs > & {
+				@apply border;
+			}
 
-            /* OUTLINE BORDERS */
-            &.xs, .xs > & {
-                @apply border;
-            }
+			&.sm,
+			.sm > & {
+				@apply border-2;
+			}
 
-            &.sm, .sm > & {
-                @apply border-2;
-            }
+			&.lg,
+			.lg > & {
+				@apply border-6 md:border-8;
+			}
 
-            &.lg, .lg > & {
-                @apply border-6 md:border-8;
-            }
+			&.xl,
+			.xl > & {
+				@apply border-12;
+			}
+		}
 
-            &.xl, .xl > & {
-                @apply border-12;
-            }
-        }
+		/* STATE */
+		&:hover {
+			@apply scale-105 bg-blend-darken shadow-lg;
+		}
 
-        /* STATE */
-        &:hover {
-            @apply scale-105 shadow-lg bg-blend-darken;
-        }
+		&:disabled,
+		&.disabled {
+			@apply pointer-events-none scale-100 cursor-default border-[var(--disabled-color)] bg-[var(--neutral-color)] !text-[var(--disabled-color)];
+		}
 
-        &:disabled, &.disabled {
-            @apply cursor-default scale-100 !text-[var(--disabled-color)] border-[var(--disabled-color)] bg-[var(--neutral-color)] pointer-events-none;
-        }
+		&:focus {
+			@apply scale-110 ring ring-accent;
+		}
 
-        &:focus {
-            @apply scale-110 ring ring-accent;
-        }
+		&:focus-visible {
+			@apply ring ring-accent;
+		}
 
-        &:focus-visible {
-            @apply ring ring-accent;
-        }
+		&:active:not(.dropdown):not(.menu_btn),
+		&.active {
+			@apply scale-100 cursor-default bg-tertiary !text-dark ring-0;
+		}
 
-        &:active:not(.dropdown):not(.menu_btn), &.active {
-            @apply cursor-default bg-tertiary !text-dark scale-100 ring-0;
-        }
+		/* ICONS */
+		&.icon {
+			@apply aspect-square;
 
-        /* ICONS */
-        &.icon {
-            @apply aspect-square;
+			&.circle {
+				@apply rounded-full;
+			}
+		}
 
-            &.circle {
-                @apply rounded-full;
-            }                        
-        }
-
-        /* BADGE */
-        &:has(> .badge) {
-            @apply relative;
-        }
-
-    }
-
+		/* BADGE */
+		&:has(> .badge) {
+			@apply relative;
+		}
+	}
 }

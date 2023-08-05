@@ -7,7 +7,7 @@ const NavbarTemplate = () => {
 
 			<h3>Round</h3>
 
-			<div className='mb-8 bg-light p-4'>
+			<div className='mb-8 bg-light px-2 py-4 md:p-4'>
 				<Switch
 					label='I agree to terms and conditions'
 					name='terms'
@@ -27,7 +27,7 @@ const NavbarTemplate = () => {
 
 			<h3>Square</h3>
 
-			<div className='mb-8 bg-light p-4'>
+			<div className='mb-8 bg-light px-2 py-4 md:p-4'>
 				<Switch
 					label='I agree to terms and conditions'
 					name='terms'

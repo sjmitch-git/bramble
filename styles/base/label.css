@@ -1,6 +1,6 @@
 @layer base {
 	label {
-		@apply relative flex cursor-pointer flex-col items-start gap-1;
+		@apply relative flex cursor-pointer flex-col flex-wrap items-start gap-1;
 
 		&.row {
 			@apply flex-row items-center gap-4;

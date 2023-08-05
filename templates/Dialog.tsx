@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 import { useState } from 'react'
 
 import { Alert, Codeblock, Dialog, Input } from '@/components'
@@ -153,6 +155,14 @@ const DialogTemplate = () => {
 						pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
 						hint='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters'
 					/>
+
+					<Input
+						type='checkbox'
+						label='Keep me signed in'
+						name='remember'
+						hint="Don't tick if you are using public or shared device"
+						hintShow={true}
+					/>
 				</Dialog>
 			</div>
 
@@ -192,6 +202,13 @@ const handleSubmit = (e: any) => {
 		pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
 		hint='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters'
 	/>
+
+	<Input
+		type='checkbox'
+		label='Keep me signed in'
+		name='remember'
+	/>
+
 </Dialog>
 `}
 				</Codeblock>
@@ -208,6 +225,8 @@ const handleSubmit = (e: any) => {
 					modal={true}
 					onSubmit={handleSubmit}
 				>
+					<p>Please fill in this form to create an account.</p>
+
 					<Input
 						label='Email'
 						name='email'
@@ -238,6 +257,22 @@ const handleSubmit = (e: any) => {
 						className='peer-invalid:hidden'
 						pattern={password}
 					/>
+
+					<Input
+						type='checkbox'
+						label='Remember me'
+						name='remember'
+					/>
+
+					<p className='text-base'>
+						By creating an account you agree to our{' '}
+						<Link
+							href='../terms_and_conditions'
+							target='_blank'
+						>
+							Terms & Conditions
+						</Link>
+					</p>
 				</Dialog>
 			</div>
 

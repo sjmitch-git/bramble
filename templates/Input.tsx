@@ -86,7 +86,7 @@ const InputTemplate = () => {
 
 			<h3>Radios</h3>
 
-			<div className='form mb-8 justify-start gap-8 bg-light p-4'>
+			<div className='form mb-8 flex-wrap justify-start gap-8 bg-light p-4'>
 				<Input
 					label='17 years or younger'
 					name='age'

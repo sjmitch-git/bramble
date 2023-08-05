@@ -223,6 +223,10 @@ const config = {
 					label: 'Table',
 				},
 				{
+					href: '/components/toast',
+					label: 'Toast',
+				},
+				{
 					href: '/components/twitter_embed',
 					label: 'Twitter Embed',
 				},

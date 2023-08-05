@@ -42,7 +42,6 @@ const FormTemplate = () => {
 
 	const onSwitchChange = (event: any) => {
 		const target = event.target
-		console.log({ event })
 	}
 
 	const handleAudioChange = (value: number) => {
@@ -316,6 +315,7 @@ const FormTemplate = () => {
 						placeholder='Link to your blog'
 						type='url'
 					/>
+
 					<Input
 						label='LinkedIn'
 						name='linkedin'
