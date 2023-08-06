@@ -3,7 +3,8 @@ import useMetadata from '@/hooks/useMetadata'
 import SwitchTemplate from '@/templates/Switch'
 
 const title = 'Switch'
-const description = 'Switch description TBD'
+const description =
+	'Customize checkboxes with the "Switch" component, with display, layout, and colour options.'
 const keywords = 'Switch Component'
 const url = 'components/switch'
 

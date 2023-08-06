@@ -56,6 +56,14 @@
 			}
 		}
 
+		.thin & {
+			@apply h-2 w-[60px];
+
+			&:before {
+				@apply -top-3 left-0 bg-inherit duration-100;
+			}
+		}
+
 		&:before {
 			@apply absolute bottom-1 left-1 h-8 w-8 bg-white transition duration-500 content-[''];
 		}
