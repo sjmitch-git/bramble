@@ -34,6 +34,7 @@ export const Dialog = ({
 	const dialog = useRef<HTMLDialogElement>(null!)
 
 	useEffect(() => {
+		const dialogRef = dialog.current
 		const handleClose = () => (document.body.style.overflow = '')
 
 		if (dialog && dialog.current) dialog.current.addEventListener('close', handleClose, false)
@@ -46,8 +47,7 @@ export const Dialog = ({
 		}
 		return () => {
 			handleClose()
-			if (dialog && dialog.current)
-				dialog.current.removeEventListener('close', handleClose, false)
+			if (dialogRef) dialogRef.removeEventListener('close', handleClose, false)
 		}
 	}, [open, modal])
 

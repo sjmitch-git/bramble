@@ -20,7 +20,7 @@ export function Toast() {
 			if (timer) clearTimeout(timer)
 			if (show) setShow(false)
 		}
-	}, [show])
+	}, [show, setShow, autohide])
 
 	return (
 		<div

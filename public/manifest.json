@@ -1,6 +1,6 @@
 {
 	"name": "Bramble UI",
-	"short_name": "Bramble",
+	"short_name": "BUI",
 	"description": "A Next.js 13 starter and library of resuable UI components for React",
 	"scope": "/",
 	"start_url": "/",
