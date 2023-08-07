@@ -243,6 +243,10 @@ const config = {
 				},
 			],
 		},
+		/* {
+			href: '/docs',
+			label: 'Docs',
+		} */
 	],
 	manifest_options: {
 		name: `${title} - ${description}`,

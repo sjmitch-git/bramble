@@ -120,7 +120,7 @@ const FormTemplate = () => {
 				<a href='#radio'>
 					<code>input[type='radio']</code>
 				</a>
-				,
+				,{' '}
 				<a href='#password'>
 					<code>input[type='password']</code>
 				</a>
@@ -154,7 +154,7 @@ const FormTemplate = () => {
 				</a>
 			</p>
 
-			<div className='mb-8 flex justify-center border bg-light p-4'>
+			<div className='mb-8 flex justify-center border bg-light p-1 md:p-4'>
 				<Form
 					legend='Input Types'
 					autocomplete='on'
@@ -162,7 +162,7 @@ const FormTemplate = () => {
 					name='inputexamples'
 					btnStyles='mx-auto rounded'
 					onSubmit={onsubmit}
-					className='w-96 rounded bg-white p-4 text-center'
+					className='w-96 rounded bg-white p-2 text-center'
 				>
 					<p id='text'>What's your name?</p>
 
@@ -352,6 +352,14 @@ const FormTemplate = () => {
 						round={false}
 						switchColor='danger'
 						onchange={onSwitchChange}
+					/>
+
+					<Switch
+						label='Warning'
+						name='terms'
+						className='thin'
+						switchColor='warning'
+						checked={true}
 					/>
 				</Form>
 			</div>
