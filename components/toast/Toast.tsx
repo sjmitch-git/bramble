@@ -1,6 +1,7 @@
 'use client'
 
 import { useContext, useEffect } from 'react'
+import useTimeout from '@/hooks/useTimeout'
 
 import { ToastContext } from '@/contexts/toast.context'
 
@@ -8,17 +9,12 @@ import { CloseButton } from '@/components'
 
 export function Toast() {
 	const { state, show, setShow, message, position, autohide } = useContext(ToastContext)
+	const [clear, reset] = useTimeout(() => setShow(false), 3000)
 
 	useEffect(() => {
-		let timer: any
-		if (show && autohide) {
-			timer = setTimeout(() => {
-				setShow(false)
-			}, 3000)
-		}
+		if (show && autohide) clear()
 		return () => {
-			if (timer) clearTimeout(timer)
-			if (show) setShow(false)
+			reset()
 		}
 	}, [show, setShow, autohide])
 

@@ -2,26 +2,12 @@
 
 import Link from 'next/link'
 
-import { useContext } from 'react'
-import { ToastContext } from '@/contexts/toast.context'
+import UseToast from '@/hooks/useToast'
 
 import { Codeblock, Button } from '@/components'
 
 const ToastTemplate = () => {
-	const { setState, setShow, setMessage, setPosition, setAutohide } = useContext(ToastContext)
-
-	const showToast = (
-		position: string,
-		state: string,
-		message: React.ReactNode,
-		autohide: boolean = true
-	) => {
-		setShow(true)
-		setMessage(message)
-		setState(state)
-		setPosition(position)
-		setAutohide(autohide)
-	}
+	const [showToast] = UseToast()
 
 	return (
 		<>
@@ -30,7 +16,11 @@ const ToastTemplate = () => {
 			<h3>Position</h3>
 
 			<div className='mb-8 flex flex-wrap gap-4 border p-4'>
-				<Button onClick={() => showToast('top right', 'info', '"top right"')}>
+				<Button
+					onClick={() =>
+						showToast('top right', 'bg-white border text-dark', '"top right"')
+					}
+				>
 					Top Right
 				</Button>
 				<Button onClick={() => showToast('middle right', 'info', '"middle right"')}>
@@ -126,26 +116,44 @@ const ToastTemplate = () => {
 				</Button>
 			</div>
 
+			<h3>Autohide</h3>
+
+			<p>
+				Component will close automatically by default. Set <code>autohide</code> to{' '}
+				<code>false</code> to disable.
+			</p>
+
+			<div className='mb-8 flex flex-wrap gap-4 border p-4'>
+				<Button
+					onClick={() => showToast('top center', 'success', '"middle center"', false)}
+				>
+					Disabled Autohide
+				</Button>
+			</div>
+
+			<Codeblock language='jsx'>
+				{`<Button
+    onClick={() => showToast('top center', 'success', '"middle center"', false)}
+>
+    Disabled Autohide
+</Button>`}
+			</Codeblock>
+
+			<hr />
+
 			<h2>Usage</h2>
 
 			<Codeblock language='jsx'>
-				{`import { useContext } from 'react'
-import { ToastContext } from '@/contexts/toast.context'
+				{`import UseToast from '@/hooks/useToast' // import custom hook
 
-const { setState, setShow, setMessage, setPosition, setAutohide } = useContext(ToastContext)
+const [showToast] = UseToast()
 
-const showToast = (
-    position: string,
-    state: string,
-    message: React.ReactNode,
-    autohide: boolean = true
-) => {
-    setShow(true)
-    setMessage(message)
-    setState(state)
-    setPosition(position)
-    setAutohide(autohide)
-}
+// showToast(position, state, message, autohide)
+// options:
+// position X = 'top' | middle | 'bottom'
+// position Y = 'left' | center | 'right'
+// state = 'info' | 'success' | 'warning' | 'danger' || any Tailwind classes eg: 'bg-white border text-dark'
+// message = string | React Node
 
 <!-- POSITION -->
 <Button onClick={() => showToast('top right', 'info', '"top right"')}>
@@ -211,27 +219,31 @@ const showToast = (
 `}
 			</Codeblock>
 
-			<h3>Autohide</h3>
-
-			<p>
-				Component will close automatically by default. Set <code>autohide</code> to{' '}
-				<code>false</code> to disable.
-			</p>
-
-			<div className='mb-8 flex flex-wrap gap-4 border p-4'>
-				<Button
-					onClick={() => showToast('top center', 'success', '"middle center"', false)}
-				>
-					Disabled Autohide
-				</Button>
-			</div>
+			<h2>Custom Hook</h2>
 
 			<Codeblock language='jsx'>
-				{`<Button
-    onClick={() => showToast('top center', 'success', '"middle center"', false)}
->
-    Disabled Autohide
-</Button>`}
+				{`import { useContext } from 'react'
+import { ToastContext } from '@/contexts/toast.context'
+
+export default function useToast() {
+	const { setShow, setState, setMessage, setPosition, setAutohide } = useContext(ToastContext)
+
+	function showToast(
+		position: string,
+		state: string,
+		message: React.ReactNode,
+		autohide: boolean = true
+	) {
+		setShow(true)
+		setMessage(message)
+		setState(state)
+		setPosition(position)
+		setAutohide(autohide)
+	}
+
+	return [showToast]
+}
+`}
 			</Codeblock>
 		</>
 	)
