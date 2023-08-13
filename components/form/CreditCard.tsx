@@ -66,11 +66,17 @@ export const CreditCard = ({
 	useEffect(() => {
 		const d = new Date()
 		setYear(d.getFullYear())
-	}, [setYear])
+	}, [])
 
 	const handleChange = (e: any) => {
 		let type = getType(e.target.value.toLowerCase())
 		if (type) setType(type)
+	}
+
+	const onsubmit = (e: any) => {
+		e.preventDefault()
+		const data = new FormData(e.target)
+		console.log(Object.fromEntries(data.entries()))
 	}
 
 	return (
@@ -81,7 +87,7 @@ export const CreditCard = ({
 			legend={legend}
 			btnLabel={btnLabel}
 			btnStyles={btnStyles}
-			onSubmit={onSubmit}
+			onSubmit={onsubmit}
 			className={className}
 		>
 			<p>Select your card</p>
@@ -105,62 +111,68 @@ export const CreditCard = ({
 				onchange={handleChange}
 			/>
 
-			<Input
-				label='Name on card'
-				name='ccname'
-				autocomplete='cc-name'
-				required={true}
-				pattern='[a-zA-Z]+'
-			/>
+			{type && (
+				<>
+					<p>{type.name}</p>
 
-			<Input
-				label='Card number'
-				name='cardnumber'
-				autocomplete='cc-number'
-				hint={type?.hint}
-				pattern={type?.validate}
-				required={true}
-			/>
+					<Input
+						label='Name on card'
+						name='cc-name'
+						autocomplete='cc-name'
+						required={true}
+						pattern='[a-z A-Z]+'
+					/>
 
-			<Input
-				label='CVC'
-				type='number'
-				name='cc-csc'
-				autocomplete='cc-csc'
-				min='100'
-				max='999'
-				required={true}
-				className='w-16'
-			/>
+					<Input
+						label='Card number'
+						name='cc-number'
+						autocomplete='cc-number'
+						hint={type?.hint}
+						pattern={type?.validate}
+						required={true}
+					/>
 
-			<p>Expiry date</p>
+					<Input
+						label='CVC'
+						type='number'
+						name='cc-csc'
+						autocomplete='cc-csc'
+						min='100'
+						max='999'
+						required={true}
+						className='w-16'
+					/>
 
-			<div className='flex gap-4'>
-				<Input
-					type='number'
-					label='Month'
-					name='cc-exp-month'
-					autocomplete='cc-exp-month'
-					required={true}
-					placeholder='MM'
-					pattern='0[1-9]|1[0-2]'
-					className='w-16'
-					min='01'
-					max='12'
-				/>
+					<p>Expiry date</p>
 
-				<Input
-					type='number'
-					label='Year'
-					name='cc-exp-year'
-					autocomplete='cc-exp-year'
-					required={true}
-					placeholder='YYYY'
-					className='w-24'
-					min={year}
-					max={year + 10}
-				/>
-			</div>
+					<div className='flex gap-4'>
+						<Input
+							type='telephone'
+							label='Month'
+							name='cc-exp-month'
+							autocomplete='cc-exp-month'
+							required={true}
+							placeholder='MM'
+							pattern='0[1-9]|1[0-2]'
+							className='w-16 text-right'
+							min='01'
+							max='12'
+						/>
+
+						<Input
+							type='number'
+							label='Year'
+							name='cc-exp-year'
+							autocomplete='cc-exp-year'
+							required={true}
+							placeholder='YYYY'
+							className='w-20 text-right'
+							min={year}
+							max={year + 10}
+						/>
+					</div>
+				</>
+			)}
 		</Form>
 	)
 }
