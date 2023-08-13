@@ -163,6 +163,10 @@ const config = {
 					label: 'Dialog',
 				},
 				{
+					href: '/components/drawer',
+					label: 'Drawer',
+				},
+				{
 					href: '/components/dropdown',
 					label: 'Dropdown',
 				},

@@ -2,23 +2,11 @@
 
 import { forwardRef } from 'react'
 
-interface ButtonProps {
-	size?: string | undefined
-	className?: string | undefined
-	id?: string | undefined
-	title?: string | undefined
-	children: React.ReactNode
-	onClick?: (e: any) => void | undefined
-	onBlur?: (e: any) => void | undefined
-	type?: 'submit' | 'reset' | 'button' | undefined
-	disabled?: boolean | undefined
-	tabindex?: number | undefined
-	role?: string | undefined
-}
+import { Button as TButton } from '@/types'
 
 export type Ref = HTMLButtonElement
 
-export const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
+export const Button = forwardRef<Ref, TButton>((props, ref) => {
 	const {
 		size = '',
 		className = 'primary',

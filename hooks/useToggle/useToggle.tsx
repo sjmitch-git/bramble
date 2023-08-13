@@ -9,3 +9,12 @@ export default function useToggle(defaultValue: boolean) {
 
 	return [value, toggleValue]
 }
+
+/*
+usage in component
+
+const [value, toggleValue] = useToggle(false)
+
+<button onClick=(toggleValue)>Toggle</button>
+
+*/

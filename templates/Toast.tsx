@@ -14,13 +14,8 @@ const ToastTemplate = () => {
 			<h2>Examples</h2>
 
 			<h3>Position</h3>
-
 			<div className='mb-8 flex flex-wrap gap-4 border p-4'>
-				<Button
-					onClick={() =>
-						showToast('top right', 'bg-white border text-dark', '"top right"')
-					}
-				>
+				<Button onClick={() => showToast('top right', 'info', '"top right"')}>
 					Top Right
 				</Button>
 				<Button onClick={() => showToast('middle right', 'info', '"middle right"')}>
@@ -30,7 +25,6 @@ const ToastTemplate = () => {
 					Bottom Right
 				</Button>
 			</div>
-
 			<div className='mb-8 flex flex-wrap gap-4 border p-4'>
 				<Button onClick={() => showToast('top center', 'info', '"top center"')}>
 					Top Center
@@ -42,7 +36,6 @@ const ToastTemplate = () => {
 					Bottom Center
 				</Button>
 			</div>
-
 			<div className='mb-8 flex flex-wrap gap-4 border p-4'>
 				<Button onClick={() => showToast('top left', 'info', '"top left"')}>
 					Top Left
@@ -54,9 +47,7 @@ const ToastTemplate = () => {
 					Bottom Left
 				</Button>
 			</div>
-
 			<h3>State</h3>
-
 			<div className='mb-8 flex flex-wrap gap-4 border p-4'>
 				<Button
 					className='info'
@@ -83,11 +74,8 @@ const ToastTemplate = () => {
 					Error
 				</Button>
 			</div>
-
 			<h3>Message</h3>
-
 			<h4>String</h4>
-
 			<div className='mb-8 flex flex-wrap gap-4 border p-4'>
 				<Button
 					className='info'
@@ -96,9 +84,7 @@ const ToastTemplate = () => {
 					String
 				</Button>
 			</div>
-
 			<h4>Node</h4>
-
 			<div className='mb-8 flex flex-wrap gap-4 border p-4'>
 				<Button
 					className='info'
@@ -115,14 +101,11 @@ const ToastTemplate = () => {
 					Node
 				</Button>
 			</div>
-
 			<h3>Autohide</h3>
-
 			<p>
 				Component will close automatically by default. Set <code>autohide</code> to{' '}
 				<code>false</code> to disable.
 			</p>
-
 			<div className='mb-8 flex flex-wrap gap-4 border p-4'>
 				<Button
 					onClick={() => showToast('top center', 'success', '"middle center"', false)}
@@ -130,7 +113,6 @@ const ToastTemplate = () => {
 					Disabled Autohide
 				</Button>
 			</div>
-
 			<Codeblock language='jsx'>
 				{`<Button
     onClick={() => showToast('top center', 'success', '"middle center"', false)}
@@ -138,11 +120,8 @@ const ToastTemplate = () => {
     Disabled Autohide
 </Button>`}
 			</Codeblock>
-
 			<hr />
-
 			<h2>Usage</h2>
-
 			<Codeblock language='jsx'>
 				{`import UseToast from '@/hooks/useToast' // import custom hook
 
@@ -218,9 +197,7 @@ const [showToast] = UseToast()
 </Button>
 `}
 			</Codeblock>
-
 			<h2>Custom Hook</h2>
-
 			<Codeblock language='jsx'>
 				{`import { useContext } from 'react'
 import { ToastContext } from '@/contexts/toast.context'

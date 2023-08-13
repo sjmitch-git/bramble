@@ -16,7 +16,7 @@
 			&:has(.checkbox),
 			&:has(.color),
 			&:has(.radio) {
-				@apply flex-row-reverse;
+				@apply flex-row-reverse flex-wrap;
 			}
 		}
 

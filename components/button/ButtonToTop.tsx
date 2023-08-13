@@ -16,7 +16,7 @@ export const ButtonToTop = ({ size = '', className = '', disabled = false }: But
 	const button = useRef<HTMLButtonElement>(null!)
 
 	useEffect(() => {
-		if (button) button.current.style.display = 'none'
+		if (button && button.current) button.current.style.display = 'none'
 	}, [button])
 
 	const ScrollToTop = () => {

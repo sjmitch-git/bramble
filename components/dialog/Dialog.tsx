@@ -4,33 +4,20 @@ import { useRef, useEffect } from 'react'
 
 import { Button, CloseButton, Form } from '@/components'
 
-interface DialogProps {
-	open?: boolean
-	modal?: boolean
-	title?: string | undefined
-	btnLabel?: string | undefined
-	btnIcon?: React.ReactNode | undefined
-	btnStyles?: string | undefined
-	addOpenButton?: boolean | undefined
-	onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void
-	children: React.ReactNode
-	closeLabel?: string | undefined
-	closeStyles?: string | undefined
-}
+import { Dialog as TDialog } from '@/types'
 
 export const Dialog = ({
 	open = false,
-	modal = false,
+	modal = true,
+	addForm = false,
 	title,
 	addOpenButton = true,
 	btnLabel = 'Open dialog',
 	btnIcon,
 	btnStyles = '',
-	closeLabel,
-	closeStyles = 'dark outline rounded',
 	onSubmit,
 	children,
-}: DialogProps) => {
+}: TDialog) => {
 	const dialog = useRef<HTMLDialogElement>(null!)
 
 	useEffect(() => {
@@ -75,20 +62,22 @@ export const Dialog = ({
 					/>
 				)}
 
-				<Form
-					method='dialog'
-					legend={title}
-					btnLabel={btnLabel}
-					closeLabel={closeLabel}
-					closeStyles={closeStyles}
-					name='login'
-					btnStyles='rounded'
-					onSubmit={onSubmit}
-					className='justify-center'
-					onClick={closeDialog}
-				>
-					{children}
-				</Form>
+				{addForm ? (
+					<Form
+						method='dialog'
+						legend={title}
+						btnLabel={btnLabel}
+						name='login'
+						btnStyles='rounded'
+						onSubmit={onSubmit}
+						className={`${addForm ? 'hideactions' : ''} justify-center`}
+						onClick={closeDialog}
+					>
+						{children}
+					</Form>
+				) : (
+					<div>{children}</div>
+				)}
 			</dialog>
 			{addOpenButton && (
 				<Button

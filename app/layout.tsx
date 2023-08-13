@@ -4,6 +4,7 @@ import Script from 'next/script'
 
 import Providers from '@/utils/provider'
 import ToastContextProvider from '@/providers/toast-provider'
+import DrawerContextProvider from '@/providers/drawer-provider'
 import '@/styles/index.css'
 import 'prismjs/themes/prism-tomorrow.min.css'
 import { Inter } from 'next/font/google'
@@ -77,43 +78,45 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			</head>
 			<body className={inter.className}>
 				<ToastContextProvider>
-					<div className='wrapper'>
-						<Header>
-							<Navbar>
-								<Brand className='text-4xl' />
-							</Navbar>
-							<Breadcrumbs
-								size='lg'
-								className='pt-6 md:pt-12'
-							/>
-						</Header>
-						<main>
-							<article data-testid='article'>
-								<Providers>{children}</Providers>
-								<hr />
-							</article>
-						</main>
-						<Footer
-							author={authorName}
-							authorUrl={authorUrl}
-							socialLinks={social}
-							footerLinks={footerLinks}
-							className=''
-						>
-							{/* <TwitterEmbed
+					<DrawerContextProvider>
+						<div className='wrapper'>
+							<Header>
+								<Navbar>
+									<Brand className='text-4xl' />
+								</Navbar>
+								<Breadcrumbs
+									size='lg'
+									className='pt-6 md:pt-12'
+								/>
+							</Header>
+							<main>
+								<article data-testid='article'>
+									<Providers>{children}</Providers>
+									<hr />
+								</article>
+							</main>
+							<Footer
+								author={authorName}
+								authorUrl={authorUrl}
+								socialLinks={social}
+								footerLinks={footerLinks}
+								className=''
+							>
+								{/* <TwitterEmbed
 							handle='brambleUI'
 							status='1681278654268035073'
 							className='mx-auto w-full max-w-lg text-center'
 						/> */}
 
-							<Brand
-								height={180}
-								width={180}
-								layout='flex flex-col mx-auto'
-								className='text-4xl'
-							/>
-						</Footer>
-					</div>
+								<Brand
+									height={180}
+									width={180}
+									layout='flex flex-col mx-auto'
+									className='text-4xl'
+								/>
+							</Footer>
+						</div>
+					</DrawerContextProvider>
 				</ToastContextProvider>
 			</body>
 		</html>

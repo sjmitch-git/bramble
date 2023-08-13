@@ -1,0 +1,39 @@
+@layer components {
+	.drawer {
+		@apply invisible fixed left-0 z-50 flex min-w-full items-center justify-center duration-500;
+		transform-style: preserve-3d;
+
+		&.top {
+			@apply top-0 -translate-y-full;
+		}
+
+		&.bottom {
+			@apply bottom-0 translate-y-full;
+		}
+
+		&::before {
+			@apply absolute bottom-0 left-0 right-0 top-0 z-[-1] bg-gray-950 opacity-0 transition-opacity duration-500 content-['_'];
+			transform: translateZ(-1px);
+		}
+
+		&.show {
+			@apply visible translate-y-0;
+
+			&::before {
+				@apply h-[100vh] opacity-50;
+			}
+
+			&.top::before {
+				@apply h-[200vh];
+			}
+
+			&.bottom::before {
+				@apply translate-y-[-100%];
+			}
+		}
+
+		.message {
+			@apply mx-auto w-full lg:max-w-6xl;
+		}
+	}
+}

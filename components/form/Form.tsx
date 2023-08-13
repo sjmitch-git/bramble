@@ -2,38 +2,24 @@
 
 import { Button } from '@/components'
 
-interface FormProps {
-	action?: string
-	method?: 'get' | 'post' | 'dialog'
-	autocomplete?: 'on' | 'off'
-	name?: string
-	legend?: string
-	btnLabel?: string
-	btnStyles?: string
-	closeLabel?: string
-	closeStyles?: string
-	className?: string | undefined
-	children: React.ReactNode
-	valid?: boolean
-	onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void
-	onClick?: (e: React.FormEvent<HTMLInputElement>) => void
-}
+import { Form as TForm } from '@/types'
 
-export function Form({
+export const Form = ({
 	action,
 	method = 'get',
 	autocomplete = 'off',
 	name = 'form',
 	btnLabel = 'Submit',
-	closeLabel = 'ok',
 	btnStyles = '',
-	closeStyles,
+	closeLabel,
+	closeStyles = '',
 	legend,
+	layout = 'column',
 	className = '',
 	children,
 	onSubmit,
-	onClick,
-}: FormProps) {
+	onclick,
+}: TForm) => {
 	return (
 		<form
 			onSubmit={onSubmit}
@@ -43,9 +29,9 @@ export function Form({
 			autoComplete={autocomplete}
 			className={`form ${className}`}
 		>
-			<fieldset>
+			<fieldset className={layout}>
 				{legend && <legend>{legend}</legend>}
-				{children}
+				<div className='inputs'>{children}</div>
 				<div className='actions'>
 					{onSubmit && (
 						<Button
@@ -55,11 +41,11 @@ export function Form({
 							{btnLabel}
 						</Button>
 					)}
-					{method === 'dialog' && (
+					{closeLabel && (
 						<Button
 							className={closeStyles}
 							type='button'
-							onClick={onClick}
+							onClick={onclick}
 						>
 							{closeLabel}
 						</Button>

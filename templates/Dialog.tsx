@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { useState } from 'react'
 
-import { Alert, Codeblock, Dialog, Input } from '@/components'
+import { Alert, Codeblock, Dialog, Button, Login, Register } from '@/components'
 import { UserIcon } from '@heroicons/react/24/solid'
 
 const handleSubmit = (e: any) => {
@@ -21,22 +21,6 @@ const DialogTemplate = () => {
 	}
 	return (
 		<>
-			<h2>Basic</h2>
-			<div className='h-80 bg-neutral p-4 text-center'>
-				<Dialog
-					title='Dialog Title'
-					addOpenButton={false}
-					open={true}
-				>
-					<div>
-						<p className='mb-0 text-xl'>
-							The <code>dialog</code> element is a useful element for representing any
-							kind of dialog in HTML.
-						</p>
-					</div>
-				</Dialog>
-			</div>
-
 			<h2>Modal</h2>
 
 			<div className='bg-light p-4 text-center'>
@@ -44,13 +28,21 @@ const DialogTemplate = () => {
 					title='Modal Example'
 					btnLabel='Open Modal'
 					btnStyles='primary solid pill'
-					modal={true}
+					addForm={true}
 				>
 					<div>
 						<p className='mb-0 text-xl'>
 							The <code>dialog</code> element is a useful element for representing any
 							kind of dialog in HTML.
 						</p>
+						<div className='actions'>
+							<Button
+								className='dark rounded outline'
+								type='submit'
+							>
+								OK!
+							</Button>
+						</div>
 					</div>
 				</Dialog>
 			</div>
@@ -60,28 +52,25 @@ const DialogTemplate = () => {
 					{`import { Button, Dialog } from '@/components'
 
 <Dialog
-	title='Dialog Title'
-	message='The <code>dialog</code> element is a useful element for representing any
-			kind of dialog in HTML.'
+	title='Modal Example'
 	btnLabel='Open Modal'
 	btnStyles='primary solid pill'
-	modal={true}
+	addForm={true}
 >
-	<!-- Enter your html here -->
-	<Button
-		className='primary rounded outline'
-		type='submit'
-	>
-		Agree
-	</Button>
-	<Button
-		className='dark rounded outline'
-		type='submit'
-	>
-		Cancel
-	</Button>
-	<!-- END: Enter your html here -->
-
+	<div>
+		<p className='mb-0 text-xl'>
+			The <code>dialog</code> element is a useful element for representing any
+			kind of dialog in HTML.
+		</p>
+		<div className='actions'>
+			<Button
+				className='dark rounded outline'
+				type='submit'
+			>
+				OK!
+			</Button>
+		</div>
+	</div>
 </Dialog>`}
 				</Codeblock>
 			</div>
@@ -92,13 +81,21 @@ const DialogTemplate = () => {
 				<Dialog
 					btnLabel='Open Alert'
 					btnStyles='info pill'
-					modal={true}
+					addForm={true}
 				>
 					<Alert
 						className={`danger solid mb-0 mt-16 text-start`}
 						status='Alert'
 						message='An important message for the user.'
 					/>
+					<div className='actions'>
+						<Button
+							className='dark rounded outline'
+							type='submit'
+						>
+							OK!
+						</Button>
+					</div>
 				</Dialog>
 			</div>
 
@@ -109,13 +106,21 @@ const DialogTemplate = () => {
 <Dialog
 	btnLabel='Open Alert'
 	btnStyles='info pill'
-	modal={true}
+	addForm={true}
 >
 	<Alert
 		className={\`danger solid mb-0 mt-16 text-start\`}
 		status='Alert'
 		message='An important message for the user.'
 	/>
+	<div className='actions'>
+		<Button
+			className='dark rounded outline'
+			type='submit'
+		>
+			OK!
+		</Button>
+	</div>
 </Dialog>
 `}
 				</Codeblock>
@@ -133,42 +138,17 @@ const DialogTemplate = () => {
 					btnIcon={<UserIcon />}
 					btnLabel='Login'
 					btnStyles='icon circle outline dark lg !p-1'
-					closeLabel='Cancel'
-					modal={true}
-					onSubmit={handleSubmit}
 				>
-					<Input
-						label='Username'
-						name='username'
-						autocomplete='username'
-						type='text'
-						required={true}
-						hint='Either Username or email address'
-					/>
-
-					<Input
-						label='Password'
-						name='password'
-						autocomplete='current-password'
-						type='password'
-						required={true}
-						pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
-						hint='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters'
-					/>
-
-					<Input
-						type='checkbox'
-						label='Keep me signed in'
-						name='remember'
-						hint="Don't tick if you are using public or shared device"
-						hintShow={true}
+					<Login
+						method='dialog'
+						onSubmit={handleSubmit}
 					/>
 				</Dialog>
 			</div>
 
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`import { Input, Dialog } from '@/components'
+					{`import { Login, Dialog } from '@/components'
 import { UserIcon } from '@heroicons/react/24/solid'
 
 const handleSubmit = (e: any) => {
@@ -179,36 +159,13 @@ const handleSubmit = (e: any) => {
 <Dialog
 	title='Login'
 	btnIcon={<UserIcon />}
-	btnStyles='icon circle outline dark lg p-1'
-	closeLabel='Cancel'
-	modal={true}
-	onSubmit={handleSubmit}
+	btnLabel='Login'
+	btnStyles='icon circle outline dark lg !p-1'
 >
-	<Input
-		label='Username'
-		name='username'
-		autocomplete='username'
-		type='text'
-		required={true}
-		hint='Either Username or email address'
+	<Login
+		method='dialog'
+		onSubmit={handleSubmit}
 	/>
-
-	<Input
-		label='Password'
-		name='password'
-		autocomplete='current-password'
-		type='password'
-		required={true}
-		pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
-		hint='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters'
-	/>
-
-	<Input
-		type='checkbox'
-		label='Keep me signed in'
-		name='remember'
-	/>
-
 </Dialog>
 `}
 				</Codeblock>
@@ -218,111 +175,34 @@ const handleSubmit = (e: any) => {
 
 			<div className='bg-light p-4 text-center'>
 				<Dialog
-					title='Register'
-					btnLabel='Register'
+					title='Sign Up'
+					btnLabel='Sign Up'
 					btnStyles='link normal-case'
-					closeLabel='Cancel'
-					modal={true}
-					onSubmit={handleSubmit}
 				>
-					<p>Please fill in this form to create an account.</p>
-
-					<Input
-						label='Email'
-						name='email'
-						autocomplete='email'
-						type='email'
-						required={true}
-						hint='Enter a valid email address'
+					<Register
+						method='dialog'
+						onSubmit={handleSubmit}
 					/>
-
-					<Input
-						label='Password'
-						name='password'
-						autocomplete='new-password'
-						type='password'
-						required={true}
-						onchange={handleChange}
-						className='peer'
-						pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
-						hint='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters'
-					/>
-
-					<Input
-						label='Confirm Password'
-						name='confirmpassword'
-						autocomplete='new-password'
-						type='password'
-						required={true}
-						className='peer-invalid:hidden'
-						pattern={password}
-					/>
-
-					<Input
-						type='checkbox'
-						label='Remember me'
-						name='remember'
-					/>
-
-					<p className='text-base'>
-						By creating an account you agree to our{' '}
-						<Link
-							href='../terms_and_conditions'
-							target='_blank'
-						>
-							Terms & Conditions
-						</Link>
-					</p>
 				</Dialog>
 			</div>
 
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`import { Input, Dialog } from '@/components'
+					{`import { Register, Dialog } from '@/components'
 
-const [password, setPassword] = useState('')
-
-const handleChange = (e: any) => {
-	setPassword(e.target.value)
+const handleSubmit = (e: any) => {
+	const data = new FormData(e.target)
+	console.log(Object.fromEntries(data.entries()))
 }
 					
 <Dialog
-	title='Register'
-	btnLabel='Register'
+	title='Sign Up'
+	btnLabel='Sign Up'
 	btnStyles='link normal-case'
-	closeLabel='Cancel'
-	modal={true}
-	onSubmit={handleSubmit}
 >
-	<Input
-		label='Email'
-		name='email'
-		autocomplete='email'
-		type='email'
-		required={true}
-		hint='Enter a valid email address'
-	/>
-
-	<Input
-		label='Password'
-		name='password'
-		autocomplete='new-password'
-		type='password'
-		required={true}
-		onchange={handleChange}
-		className='peer'
-		pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
-		hint='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters'
-	/>
-
-	<Input
-		label='Confirm Password'
-		name='confirmpassword'
-		autocomplete='new-password'
-		type='password'
-		required={true}
-		className='peer-invalid:hidden'
-		pattern={password}  // valid if the value equals 'password' input value
+	<Register
+		method='dialog'
+		onSubmit={handleSubmit}
 	/>
 </Dialog>
 `}

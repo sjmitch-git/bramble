@@ -1,0 +1,9 @@
+@layer components {
+	.counter {
+		@apply flex items-center gap-4;
+
+		.number {
+			@apply hidden;
+		}
+	}
+}

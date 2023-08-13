@@ -9,7 +9,7 @@ const AlertTemplate = () => {
 
 	return (
 		<>
-			<h2>Usage xx</h2>
+			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
 					{`import {Alert} from '@/components'

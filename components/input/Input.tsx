@@ -1,12 +1,12 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { forwardRef, useState } from 'react'
 
-import { Button } from '@/components'
+import { PasswordToggle } from '@/components'
 
-import { EyeIcon } from '@heroicons/react/24/solid'
+import { Input as TInput } from '@/types'
 
-interface InputProps {
+/* interface InputProps {
 	type?: string
 	autocomplete?: string
 	name?: string
@@ -19,6 +19,8 @@ interface InputProps {
 	className?: string | undefined
 	labelStyles?: string | undefined
 	required?: boolean
+	readonly?: boolean
+	tabindex?: number
 	min?: number | string
 	max?: number | string
 	accept?: string
@@ -26,39 +28,41 @@ interface InputProps {
 	checked?: boolean
 	hintShow?: boolean
 	onchange?: React.ChangeEventHandler<HTMLInputElement>
-}
+	oninput?: React.ChangeEventHandler<HTMLInputElement>
+} */
 
-export const Input = ({
-	type = 'text',
-	autocomplete,
-	name,
-	className = '',
-	labelStyles = '',
-	label,
-	required,
-	min,
-	max,
-	pattern,
-	title,
-	hint,
-	value,
-	checked,
-	hintShow,
-	accept,
-	placeholder,
-	list,
-	onchange,
-}: InputProps) => {
-	const ref = useRef<HTMLInputElement>(null!)
+export type InputRef = HTMLInputElement
+
+export const Input = forwardRef<InputRef, TInput>(function Input(props, ref) {
+	const {
+		type = 'text',
+		autocomplete,
+		name,
+		className = '',
+		labelStyles = '',
+		label,
+		required,
+		readonly = false,
+		tabindex,
+		min,
+		max,
+		pattern,
+		title,
+		hint,
+		value,
+		checked,
+		hintShow,
+		accept,
+		placeholder,
+		list,
+		onchange,
+		hidden,
+	} = props
 
 	const [toggletype, setToggleType] = useState(type)
 
-	const toggleType = () => {
-		const currenttype = ref.current.type
-		if (currenttype === 'password') ref.current.type = 'text'
-		else ref.current.type = 'password'
-		setToggleType(ref.current.type)
-	}
+	const toggleType = () =>
+		toggletype === 'password' ? setToggleType('text') : setToggleType('password')
 
 	return (
 		<label
@@ -67,24 +71,16 @@ export const Input = ({
 			}`}
 		>
 			<span className={type}>
-				{label || value}{' '}
-				{type === 'password' && (
-					<Button
-						className='link absolute right-0 top-0 !p-0 active:!bg-transparent'
-						size='sm'
-						onClick={toggleType}
-						title='Toggle password visibility'
-					>
-						<EyeIcon />
-						<span className='sr-only'>Toggle password visibility</span>
-					</Button>
-				)}
+				{label || value} {type === 'password' && <PasswordToggle onClick={toggleType} />}
 			</span>
 			<input
 				type={toggletype || type}
 				name={name}
 				autoComplete={autocomplete}
 				required={required}
+				hidden={hidden}
+				readOnly={readonly}
+				tabIndex={tabindex}
 				className={`input ${className} ${
 					type === 'checkbox'
 						? 'form-checkbox'
@@ -105,8 +101,9 @@ export const Input = ({
 				accept={accept}
 				list={list}
 				onChange={onchange}
+				onInput={onchange}
 			/>
 			{hint && <div className={`hint ${hintShow ? 'show' : ''}`}>{hint}</div>}
 		</label>
 	)
-}
+})

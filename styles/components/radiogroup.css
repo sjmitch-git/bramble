@@ -1,0 +1,13 @@
+@layer components {
+	.radiogroup {
+		@apply grid grid-cols-3 gap-4;
+
+		input {
+			@apply absolute z-[-1];
+		}
+
+		.label:has(input:checked) {
+			@apply border-6	 border-accent;
+		}
+	}
+}

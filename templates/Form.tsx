@@ -2,7 +2,21 @@
 
 import { useState, useEffect } from 'react'
 
-import { Codeblock, Form, Input, Range, Autocomplete, Switch } from '@/components'
+import {
+	Codeblock,
+	Form,
+	Input,
+	Range,
+	Autocomplete,
+	Switch,
+	Counter,
+	Login,
+	Register,
+	NewsLetter,
+	User,
+	CreditCard,
+	RadioGroup,
+} from '@/components'
 
 import data from '@/data/countries.json'
 
@@ -18,6 +32,7 @@ const FormTemplate = () => {
 		size: '',
 	})
 	const [audio, setAudio] = useState(0.5)
+	const [number, setNumber] = useState(1)
 
 	useEffect(() => {
 		const formatDate = (d: any) => {
@@ -80,7 +95,6 @@ const FormTemplate = () => {
 	return (
 		<>
 			<h2>Usage</h2>
-
 			<Codeblock language='jsx'>
 				{`import { Form, Input, Range, Autocomplete } from '@/components'
 				
@@ -104,7 +118,6 @@ const FormTemplate = () => {
 		/>
 </Form>`}
 			</Codeblock>
-
 			<h2>Inputs</h2>
 
 			<p>
@@ -153,14 +166,15 @@ const FormTemplate = () => {
 					<code>input[type='text'] list</code>
 				</a>
 			</p>
-
 			<div className='mb-8 flex justify-center border bg-light p-1 md:p-4'>
 				<Form
 					legend='Input Types'
 					autocomplete='on'
 					btnLabel='Submit'
 					name='inputexamples'
-					btnStyles='mx-auto rounded'
+					btnStyles='rounded'
+					closeLabel='Cancel'
+					closeStyles='dark outline rounded'
 					onSubmit={onsubmit}
 					className='w-96 rounded bg-white p-2 text-center'
 				>
@@ -294,6 +308,22 @@ const FormTemplate = () => {
 						max={9}
 					/>
 
+					<p id='counter'>
+						Using <code>Counter</code> component
+					</p>
+
+					<Counter
+						label='Maximum of 9'
+						labelStyles='items-center'
+						name='pax2'
+						value={1}
+						min={1}
+						max={9}
+						onCountChange={(value) => {
+							setNumber(value)
+						}}
+					/>
+
 					<p id='range'>Volume Control</p>
 
 					<Range
@@ -355,218 +385,124 @@ const FormTemplate = () => {
 					/>
 
 					<Switch
-						label='Warning'
+						label='Thin version'
 						name='terms'
 						className='thin'
 						switchColor='warning'
-						checked={true}
 					/>
 				</Form>
 			</div>
-
 			<hr />
-
 			<h2>Examples</h2>
-
 			<h3>Login</h3>
-
 			<div className='mb-4 flex justify-center border bg-light p-4'>
-				<Form
-					method='post'
-					legend='Login'
-					btnLabel='Login'
-					name='login'
-					btnStyles='mx-auto rounded'
+				<Login
+					btnStyles='rounded'
 					onSubmit={onsubmit}
 					className='w-80 rounded bg-white p-4 text-center'
-				>
-					<Input
-						label='Username'
-						name='username'
-						autocomplete='username'
-						type='text'
-						required={true}
-						hint='Either Username or email address'
-					/>
-
-					<Input
-						label='Password'
-						name='password'
-						autocomplete='current-password'
-						type='password'
-						required={true}
-						pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
-						hint='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters'
-					/>
-				</Form>
+				/>
 			</div>
 			<Codeblock language='jsx'>
-				{`import { Form, Input } from '@/components'
+				{`import { Login } from '@/components'
 
 const onsubmit = (event: any) => {
 	// do something...
 }
 
-<Form
+<Login
 	method='post'
-	legend='Login'
-	btnLabel='Login'
-	name='login'
-	btnStyles='mx-auto rounded'
+	btnStyles='rounded'
 	onSubmit={onsubmit}
 	className='w-80 rounded bg-white p-4 text-center'
->
-	<Input
-		label='Username'
-		name='username'
-		autocomplete='username'
-		type='text'
-		required={true}
-		hint='Either Username or email address'
-	/>
-
-	<Input
-		label='Password'
-		name='password'
-		autocomplete='current-password'
-		type='password'
-		required={true}
-		pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
-		hint='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters'
-	/>
-</Form>`}
+/>`}
 			</Codeblock>
 
-			<h3>Personal Details</h3>
-
+			<h3>Register / Sign-up</h3>
 			<div className='mb-4 flex justify-center border bg-light p-4'>
-				<Form
-					legend='Personal Details'
+				<Register
+					btnStyles='rounded'
 					onSubmit={onsubmit}
-					name='personaldetails'
 					className='w-80 rounded bg-white p-4 text-center'
-				>
-					<Input
-						label='Name'
-						name='name'
-						autocomplete='name'
-						required={true}
-					/>
-
-					<Input
-						label='Street'
-						name='address'
-						autocomplete='address'
-						required={true}
-					/>
-
-					<Input
-						label='City / Town'
-						name='town'
-						autocomplete='post town'
-						required={true}
-					/>
-
-					<Input
-						label='Zip / Post Code'
-						name='postalcode'
-						autocomplete='postal code'
-						required={true}
-					/>
-
-					<Autocomplete
-						data={data}
-						list='countries'
-						label='Country'
-						name='country'
-						autocomplete='country name'
-						required={true}
-					/>
-
-					<Input
-						label='Phone'
-						type='tel'
-						name='phone'
-						autocomplete='phone'
-					/>
-
-					<Input
-						label='Email'
-						type='email'
-						name='email'
-						autocomplete='email'
-						required={true}
-					/>
-				</Form>
+				/>
 			</div>
-
 			<Codeblock language='jsx'>
-				{`import { Form, Input, Autocomplete } from '@/components'
-
-const data = ["Afghanistan","Albania","Algeria","Andorra","Angola"...
+				{`import { Register } from '@/components'
 
 const onsubmit = (event: any) => {
 	// do something...
 }
 
-<Form
-	legend='Personal Details'
+<Register
+	btnStyles='rounded'
 	onSubmit={onsubmit}
-	name='personaldetails'
 	className='w-80 rounded bg-white p-4 text-center'
->
-	<Input
-		label='Name'
-		name='name'
-		autocomplete='name'
-		required={true}
-	/>
+/>`}
+			</Codeblock>
 
-	<Input
-		label='Street'
-		name='address'
-		autocomplete='address'
-		required={true}
-	/>
+			<h3>User</h3>
+			<div className='mb-4 flex justify-center border bg-light p-4'>
+				<User
+					btnStyles='rounded'
+					onSubmit={onsubmit}
+					className='w-80 rounded bg-white p-4 text-center'
+				/>
+			</div>
+			<Codeblock language='jsx'>
+				{`import { User } from '@/components'
 
-	<Input
-		label='City / Town'
-		name='town'
-		autocomplete='post town'
-		required={true}
-	/>
+const onsubmit = (event: any) => {
+	// do something...
+}
 
-	<Input
-		label='Zip / Post Code'
-		name='postalcode'
-		autocomplete='postal code'
-		required={true}
-	/>
+<Register
+	btnStyles='rounded'
+	onSubmit={onsubmit}
+	className='w-80 rounded bg-white p-4 text-center'
+/>`}
+			</Codeblock>
 
-	<Autocomplete
-		data={data}
-		list='countries'
-		label='Country'
-		name='country'
-		autocomplete='country name'
-		required={true}
-	/>
+			<h3>Card Details</h3>
+			<div className='mb-4 flex justify-center border bg-light p-4'>
+				<CreditCard
+					btnStyles='rounded'
+					onSubmit={onsubmit}
+					className='w-80 rounded bg-white p-4 text-center'
+				/>
+			</div>
+			<Codeblock language='jsx'>
+				{`import { CreditCard } from '@/components'
 
-	<Input
-		label='Phone'
-		type='tel'
-		name='phone'
-		autocomplete='phone'
-	/>
+const onsubmit = (event: any) => {
+	// do something...
+}
 
-	<Input
-		label='Email'
-		type='email'
-		name='email'
-		autocomplete='email'
-		required={true}
-	/>
-</Form>`}
+<CreditCard
+	btnStyles='rounded'
+	onSubmit={onsubmit}
+	className='w-80 rounded bg-white p-4 text-center'
+/>`}
+			</Codeblock>
+
+			<h3>Newsletter</h3>
+			<div className='mb-4 flex justify-center border bg-light p-4'>
+				<NewsLetter
+					btnStyles='rounded'
+					onSubmit={onsubmit}
+					className='w-80 rounded bg-white p-4 text-center'
+				/>
+			</div>
+			<Codeblock language='jsx'>
+				{`import { NewsLetter } from '@/components'
+
+const onsubmit = (event: any) => {
+	// do something...
+}
+
+<NewsLetter
+	btnStyles='rounded'
+	onSubmit={onsubmit}
+	className='w-80 rounded bg-white p-4 text-center'
+/>`}
 			</Codeblock>
 		</>
 	)
