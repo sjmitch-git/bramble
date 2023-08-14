@@ -147,18 +147,6 @@ export const CreditCard = ({
 					<p>Expiry date</p>
 
 					<div className='flex gap-4'>
-						{/* <Input
-							type='telephone'
-							label='Month'
-							name='cc-exp-month'
-							autocomplete='cc-exp-month'
-							required={true}
-							placeholder='MM'
-							pattern='0[1-9]|1[0-2]'
-							className='w-16 text-right'
-							min='01'
-							max='12'
-						/> */}
 						<label className='label'>
 							<span>Month</span>
 							<Select
@@ -166,6 +154,8 @@ export const CreditCard = ({
 								name='cc-exp-month'
 								required={true}
 								onChange={handleChange}
+								className='form-select'
+								nocaret={true}
 							>
 								<option
 									value=''
@@ -191,6 +181,8 @@ export const CreditCard = ({
 								name='cc-exp-year'
 								required={true}
 								onChange={handleChange}
+								className='form-select'
+								nocaret={true}
 							>
 								<option
 									value=''
@@ -209,18 +201,6 @@ export const CreditCard = ({
 								))}
 							</Select>
 						</label>
-
-						{/* <Input
-							type='number'
-							label='Year'
-							name='cc-exp-year'
-							autocomplete='cc-exp-year'
-							required={true}
-							placeholder='YYYY'
-							className='w-20 text-right'
-							min={year}
-							max={year + 10}
-						/> */}
 					</div>
 				</>
 			)}

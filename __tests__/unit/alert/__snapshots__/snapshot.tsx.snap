@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Alert unchanged 1`] = `
+<div>
+  <blockquote
+    class="alert "
+    data-testid="alert"
+    role="alert"
+  >
+    <div
+      class="message"
+    >
+      A message for the user
+    </div>
+  </blockquote>
+</div>
+`;

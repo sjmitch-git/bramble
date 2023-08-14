@@ -77,6 +77,7 @@ export const Input = forwardRef<InputRef, TInput>(function Input(props, ref) {
 				list={list}
 				onChange={onchange}
 				onInput={onchange}
+				data-testid='input'
 			/>
 			{hint && <div className={`hint ${hintShow ? 'show' : ''}`}>{hint}</div>}
 		</label>

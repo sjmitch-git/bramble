@@ -25,6 +25,7 @@ export const Button = forwardRef<ButtonRef, TButton>(function Button(props, ref)
 			type={type}
 			title={title}
 			id={id}
+			data-testid={id}
 			className={`btn ${size} ${className}`}
 			disabled={disabled}
 			tabIndex={tabindex}

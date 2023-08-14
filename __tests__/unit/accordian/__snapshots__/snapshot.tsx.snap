@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Accordian unchanged 1`] = `
+<div>
+  <div
+    class="accordian  "
+    data-testid="accordian"
+  >
+    <div
+      class="accordian-container "
+    >
+      <h3
+        class="accordion-header false"
+      >
+        Jeanette Penddreth
+        <button
+          class="btn  circle icon !static bg-light text-3xl text-primary"
+          role="button"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </h3>
+      <section
+        class="accordion-content"
+      >
+        <div>
+          <p>
+            <strong>
+              Ugh umami
+            </strong>
+             butcher 
+            <a
+              href="#"
+            >
+              pickled kogi
+            </a>
+             stumptown, 
+            <em>
+              subway tile
+            </em>
+             gatekeep flexitarian. Bespoke meggings health goth meh ascot listicle, cronut vaporware. Marfa church-key cred, kinfolk mlkshk tousled roof party XOXO readymade solarpunk tbh adaptogen. Raclette williamsburg chicharrones, +1 retro hashtag freegan sustainable tumblr polaroid deep v tote bag godard.
+          </p>
+        </div>
+      </section>
+    </div>
+    <div
+      class="accordian-container "
+    >
+      <h3
+        class="accordion-header false"
+      >
+        Giavani Frediani
+        <button
+          class="btn  circle icon !static bg-light text-3xl text-primary"
+          role="button"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </h3>
+      <section
+        class="accordion-content"
+      >
+        <div>
+          <p>
+            <strong>
+              Technologies
+            </strong>
+          </p>
+          <ul
+            class="list-disc list-inside"
+          >
+            <li>
+              Blue bottle
+            </li>
+            <li>
+              Sriracha heirloom distillery
+            </li>
+            <li>
+              Offal roof party
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div
+      class="accordian-container "
+    >
+      <h3
+        class="accordion-header false"
+      >
+        Noell Bea
+        <button
+          class="btn  circle icon !static bg-light text-3xl text-primary"
+          role="button"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </h3>
+      <section
+        class="accordion-content"
+      >
+        <div>
+          <p>
+            Meh vice gatekeep flexitarian banjo lo-fi. Chicharrones mixtape 8-bit, iceland intelligentsia mlkshk direct trade pug.
+          </p>
+           
+          <p>
+            Pabst microdosing yes plz williamsburg, blog taxidermy put a bird on it ramps lyft. Next level meditation pok pok fashion axe JOMO scenester.
+          </p>
+        </div>
+      </section>
+    </div>
+    <div
+      class="accordian-container "
+    >
+      <h3
+        class="accordion-header false"
+      >
+        Willard Valek
+        <button
+          class="btn  circle icon !static bg-light text-3xl text-primary"
+          role="button"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </h3>
+      <section
+        class="accordion-content"
+      >
+        <div>
+          <p>
+            Copper mug fam hexagon street art mixtape tumblr occupy ramps slow-carb air plant. Truffaut vegan cupping migas. Humblebrag bruh viral tumblr, whatever 90's butcher post-ironic meditation street art copper mug flannel.
+          </p>
+          <a
+            class="btn mx-auto"
+            href="#"
+          >
+            More
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;

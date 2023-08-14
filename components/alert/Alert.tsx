@@ -14,6 +14,7 @@ export function Alert({ className = '', message, status = '', onClick }: AlertPr
 		<blockquote
 			className={`alert ${className}`}
 			role='alert'
+			data-testid='alert'
 		>
 			{status && <h4 className='status'>{status}</h4>}
 			<div

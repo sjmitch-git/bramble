@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect, ReactEventHandler } from 'react'
+import { useState, useRef } from 'react'
 import { PlusIcon, MinusIcon } from '@heroicons/react/24/solid'
 
 import { Input, Button } from '@/components'
@@ -21,7 +21,7 @@ interface CounterProps {
 export const Counter = ({
 	name = 'number',
 	label,
-	labelStyles,
+	labelStyles = '',
 	btnStyles = 'icon circle dark outline',
 	className = '',
 	min = 0,
@@ -51,13 +51,18 @@ export const Counter = ({
 	}
 
 	return (
-		<div className={`counter ${className}`}>
+		<div
+			className={`counter ${className}`}
+			data-testid='counter'
+		>
 			<Button
 				className={btnStyles}
 				disabled={total === min}
 				size='sm'
 				onClick={minus}
-				aria-label='Minus'
+				aria-role='Minus'
+				title='Minus'
+				id='minus'
 			>
 				<MinusIcon />
 				<span className='sr-only'>Minus</span>
@@ -70,18 +75,26 @@ export const Counter = ({
 				value={total}
 				ref={input}
 				onchange={handleChange}
+				data-testid='input'
 			/>
 			<Button
 				className={btnStyles}
 				disabled={total === max}
 				size='sm'
 				onClick={plus}
-				aria-label='Add'
+				aria-label='Plus'
+				title='Plus'
+				id='plus'
 			>
 				<PlusIcon />
 				<span className='sr-only'>Add</span>
 			</Button>
-			<div className={`label ${labelStyles}`}>{label}</div>
+			<div
+				className={`label ${labelStyles}`}
+				data-testid='label'
+			>
+				{label}
+			</div>
 		</div>
 	)
 }

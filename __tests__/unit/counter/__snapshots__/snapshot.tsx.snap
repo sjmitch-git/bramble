@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Counter unchanged 1`] = `
+<div>
+  <div
+    class="counter "
+    data-testid="counter"
+  >
+    <button
+      class="btn sm icon circle dark outline"
+      data-testid="minus"
+      disabled=""
+      id="minus"
+      role="button"
+      title="Minus"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M3.75 12a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z"
+          fill-rule="evenodd"
+        />
+      </svg>
+      <span
+        class="sr-only"
+      >
+        Minus
+      </span>
+    </button>
+    <label
+      class="label  "
+    >
+      <span
+        class="number"
+      >
+        1
+         
+      </span>
+      <input
+        class="input  form-input"
+        data-testid="input"
+        max="3"
+        min="1"
+        name="number"
+        type="number"
+        value="1"
+      />
+    </label>
+    <button
+      class="btn sm icon circle dark outline"
+      data-testid="plus"
+      id="plus"
+      role="button"
+      title="Plus"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+          fill-rule="evenodd"
+        />
+      </svg>
+      <span
+        class="sr-only"
+      >
+        Add
+      </span>
+    </button>
+    <div
+      class="label "
+      data-testid="label"
+    >
+      Maximum of 3
+    </div>
+  </div>
+</div>
+`;

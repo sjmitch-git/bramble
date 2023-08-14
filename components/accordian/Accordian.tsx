@@ -34,7 +34,7 @@ export const Accordian = ({
 	}, [opened])
 
 	return (
-		<div className={`accordian ${size} ${className}`}>
+		<div className={`accordian ${size} ${className}`} data-testid='accordian'>
 			{data?.map((item, _index) => (
 				<div
 					className={`accordian-container ${layout}`}

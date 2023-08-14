@@ -1,51 +1,49 @@
 @layer components {
+	.select {
+		@apply cursor-pointer p-3 text-base capitalize;
 
-        .select {
-            @apply cursor-pointer text-base p-3 capitalize;
+		&:disabled {
+			@apply cursor-default;
+		}
 
-            &:disabled {
-                @apply cursor-default;
-            }
+		&:required {
+			@apply cursor-default;
+		}
 
-            &:required {
-                @apply cursor-default;
-            }
+		&.text-xs {
+			@apply p-1;
+		}
 
-            &.text-xs {
-                @apply p-1;
-            }
+		&.text-xs {
+			@apply p-2;
+		}
 
-            &.text-xs {
-                @apply p-2;
-            }
+		&.text-lg {
+			@apply p-4;
+		}
 
-            &.text-lg {
-                @apply p-4;
-            }
+		&.text-xl {
+			@apply p-4;
+		}
 
-            &.text-xl {
-                @apply p-4;
-            }
+		&.light {
+			@apply bg-light;
+		}
 
-            &.light {
-                @apply bg-light;
-            }
+		&.dark {
+			@apply bg-dark text-light;
+		}
 
-            &.dark {
-                @apply bg-dark text-light;
-            }
+		&.circle {
+			@apply aspect-square appearance-none rounded-full;
+		}
 
-            &.circle {
-                @apply rounded-full appearance-none aspect-square;
-            }
+		&.nocaret {
+			@apply appearance-none bg-none;
+		}
 
-            &.nocaret {
-                @apply appearance-none;
-            }
-
-             &:focus-visible {
-                @apply ring ring-accent;
-            }
-        }
-
+		&:focus-visible {
+			@apply ring ring-accent;
+		}
+	}
 }
