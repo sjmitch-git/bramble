@@ -12,12 +12,13 @@ import {
 	JcbIcon,
 	MasterCardIcon,
 	VisaIcon,
+	Select,
 } from '@/components'
 
 import { Form as TForm } from '@/types'
 
 import data from '@/data/cards.json'
-//import months from '@/data/months.json'
+import months from '@/data/months.json'
 
 interface TData {
 	id: string
@@ -146,7 +147,7 @@ export const CreditCard = ({
 					<p>Expiry date</p>
 
 					<div className='flex gap-4'>
-						<Input
+						{/* <Input
 							type='telephone'
 							label='Month'
 							name='cc-exp-month'
@@ -157,9 +158,59 @@ export const CreditCard = ({
 							className='w-16 text-right'
 							min='01'
 							max='12'
-						/>
+						/> */}
+						<label className='label'>
+							<span>Month</span>
+							<Select
+								title='Expiry Month'
+								name='cc-exp-month'
+								required={true}
+								onChange={handleChange}
+							>
+								<option
+									value=''
+									disabled
+									hidden
+								>
+									MM
+								</option>
+								{months.map((el) => (
+									<option
+										key={el}
+										value={el}
+									>
+										{el}
+									</option>
+								))}
+							</Select>
+						</label>
 
-						<Input
+						<label className='label'>
+							<span>Year</span>
+							<Select
+								name='cc-exp-year'
+								required={true}
+								onChange={handleChange}
+							>
+								<option
+									value=''
+									disabled
+									hidden
+								>
+									YYYY
+								</option>
+								{[...new Array(10)].map((_el, index) => (
+									<option
+										key={index}
+										value={(index + year).toString()}
+									>
+										{index + year}
+									</option>
+								))}
+							</Select>
+						</label>
+
+						{/* <Input
 							type='number'
 							label='Year'
 							name='cc-exp-year'
@@ -169,7 +220,7 @@ export const CreditCard = ({
 							className='w-20 text-right'
 							min={year}
 							max={year + 10}
-						/>
+						/> */}
 					</div>
 				</>
 			)}

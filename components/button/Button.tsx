@@ -4,9 +4,9 @@ import { forwardRef } from 'react'
 
 import { Button as TButton } from '@/types'
 
-export type Ref = HTMLButtonElement
+export type ButtonRef = HTMLButtonElement
 
-export const Button = forwardRef<Ref, TButton>((props, ref) => {
+export const Button = forwardRef<ButtonRef, TButton>(function Button(props, ref) {
 	const {
 		size = '',
 		className = 'primary',
@@ -37,5 +37,3 @@ export const Button = forwardRef<Ref, TButton>((props, ref) => {
 		</button>
 	)
 })
-
-Button.displayName = 'Button'

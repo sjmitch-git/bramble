@@ -11,13 +11,13 @@ interface DataProps {
 	body: string
 }
 
-interface AccordianProps {
-	size?: string | 'sm' | 'lg' | undefined
-	className?: string | undefined
+type AccordianProps = {
+	size?: string | 'sm' | 'lg'
+	className?: string
 	onClick?: () => void | undefined
 	data: DataProps[]
-	opened?: string | undefined
-	layout?: string | 'flush' | undefined
+	opened?: string
+	layout?: string | 'flush'
 }
 
 export const Accordian = ({

@@ -6,31 +6,6 @@ import { PasswordToggle } from '@/components'
 
 import { Input as TInput } from '@/types'
 
-/* interface InputProps {
-	type?: string
-	autocomplete?: string
-	name?: string
-	label?: string
-	title?: string
-	hint?: string
-	placeholder?: string
-	list?: string
-	pattern?: string
-	className?: string | undefined
-	labelStyles?: string | undefined
-	required?: boolean
-	readonly?: boolean
-	tabindex?: number
-	min?: number | string
-	max?: number | string
-	accept?: string
-	value?: any
-	checked?: boolean
-	hintShow?: boolean
-	onchange?: React.ChangeEventHandler<HTMLInputElement>
-	oninput?: React.ChangeEventHandler<HTMLInputElement>
-} */
-
 export type InputRef = HTMLInputElement
 
 export const Input = forwardRef<InputRef, TInput>(function Input(props, ref) {
