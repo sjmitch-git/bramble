@@ -11,7 +11,7 @@
 		"build-storybook": "storybook build",
 		"prettier": "prettier --write .",
 		"prepare": "husky install",
-		"test": "jest --verbose --watch"
+		"test": "jest --verbose --watch --detectOpenHandles"
 	},
 	"dependencies": {
 		"@heroicons/react": "^2.0.18",

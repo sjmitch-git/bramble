@@ -34,7 +34,10 @@ export const Accordian = ({
 	}, [opened])
 
 	return (
-		<div className={`accordian ${size} ${className}`} data-testid='accordian'>
+		<div
+			className={`accordian ${size} ${className}`}
+			data-testid='accordian'
+		>
 			{data?.map((item, _index) => (
 				<div
 					className={`accordian-container ${layout}`}
@@ -51,9 +54,13 @@ export const Accordian = ({
 							onClick={() => setOpen(`${open === item.id ? '' : item.id}`)}
 						>
 							{open === item.id ? <MinusIcon /> : <PlusIcon />}
+							<span className='sr-only'>Toggle section</span>
 						</Button>
 					</h3>
-					<section className='accordion-content'>
+					<section
+						className='accordion-content'
+						role='section'
+					>
 						<div dangerouslySetInnerHTML={{ __html: item.body }}></div>
 					</section>
 				</div>

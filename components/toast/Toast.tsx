@@ -8,7 +8,7 @@ import { ToastContext } from '@/contexts/toast.context'
 import { CloseButton } from '@/components'
 
 export function Toast() {
-	const { state, show, setShow, message, position, autohide } = useContext(ToastContext)
+	const { state = '', show, setShow, message, position = '', autohide } = useContext(ToastContext)
 	const [clear, reset] = useTimeout(() => setShow(false), 3000)
 
 	useEffect(() => {
@@ -26,7 +26,7 @@ export function Toast() {
 		>
 			{!autohide && (
 				<CloseButton
-					className='sm circle icon absolute -right-2 -top-2 bg-transparent'
+					className='sm icon absolute right-1 top-1 bg-transparent p-0 shadow-none'
 					onClick={() => setShow(false)}
 				/>
 			)}
