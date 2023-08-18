@@ -10,7 +10,7 @@ exports[`renders Accordian unchanged 1`] = `
       class="accordian-container "
     >
       <h3
-        class="accordion-header false"
+        class="accordion-header "
       >
         Jeanette Penddreth
         <button
@@ -30,10 +30,16 @@ exports[`renders Accordian unchanged 1`] = `
               fill-rule="evenodd"
             />
           </svg>
+          <span
+            class="sr-only"
+          >
+            Toggle section
+          </span>
         </button>
       </h3>
       <section
         class="accordion-content"
+        role="section"
       >
         <div>
           <p>
@@ -59,7 +65,7 @@ exports[`renders Accordian unchanged 1`] = `
       class="accordian-container "
     >
       <h3
-        class="accordion-header false"
+        class="accordion-header "
       >
         Giavani Frediani
         <button
@@ -79,10 +85,16 @@ exports[`renders Accordian unchanged 1`] = `
               fill-rule="evenodd"
             />
           </svg>
+          <span
+            class="sr-only"
+          >
+            Toggle section
+          </span>
         </button>
       </h3>
       <section
         class="accordion-content"
+        role="section"
       >
         <div>
           <p>
@@ -110,7 +122,7 @@ exports[`renders Accordian unchanged 1`] = `
       class="accordian-container "
     >
       <h3
-        class="accordion-header false"
+        class="accordion-header "
       >
         Noell Bea
         <button
@@ -130,10 +142,16 @@ exports[`renders Accordian unchanged 1`] = `
               fill-rule="evenodd"
             />
           </svg>
+          <span
+            class="sr-only"
+          >
+            Toggle section
+          </span>
         </button>
       </h3>
       <section
         class="accordion-content"
+        role="section"
       >
         <div>
           <p>
@@ -150,7 +168,7 @@ exports[`renders Accordian unchanged 1`] = `
       class="accordian-container "
     >
       <h3
-        class="accordion-header false"
+        class="accordion-header "
       >
         Willard Valek
         <button
@@ -170,10 +188,16 @@ exports[`renders Accordian unchanged 1`] = `
               fill-rule="evenodd"
             />
           </svg>
+          <span
+            class="sr-only"
+          >
+            Toggle section
+          </span>
         </button>
       </h3>
       <section
         class="accordion-content"
+        role="section"
       >
         <div>
           <p>

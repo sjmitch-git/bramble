@@ -1,6 +1,7 @@
 import { act, render, screen } from '@testing-library/react'
 import fireEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
+import { logRoles } from '@testing-library/dom'
 
 import { Accordian } from '@/components'
 
@@ -25,6 +26,7 @@ describe('Accordian Component', () => {
 		buttons = screen.getAllByRole('button')
 		headers = screen.getAllByRole('heading')
 		sections = screen.getAllByRole('section')
+		//logRoles(component)
 	})
 
 	it('should render all elements', () => {

@@ -1,3 +1,21 @@
+export type Alert = {
+	className?: string
+	status?: string
+	message: string
+	onClick?: () => void | undefined
+} & React.HTMLAttributes<HTMLQuoteElement>
+
+export type Autocomplete = {
+	data: any[]
+	list: string
+	name?: string
+	autocomplete?: string
+	label?: string
+	required?: boolean
+	placeholder?: string
+	onchange?: React.ChangeEventHandler<HTMLInputElement>
+} & React.HTMLAttributes<HTMLInputElement>
+
 export type Button = {
 	size?: string | undefined
 	className?: string | undefined

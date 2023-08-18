@@ -207,6 +207,10 @@ const config = {
 					label: 'Pagination',
 				},
 				{
+					href: '/components/radiogroup',
+					label: 'Radio Group',
+				},
+				{
 					href: '/components/range',
 					label: 'Range',
 				},

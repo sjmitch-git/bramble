@@ -44,7 +44,7 @@ export const Accordian = ({
 					key={item.id}
 				>
 					<h3
-						className={`accordion-header ${open === item.id && 'open'}`}
+						className={`accordion-header ${open === item.id ? 'open' : ''}`}
 						onClick={() => setOpen(`${open === item.id ? '' : item.id}`)}
 					>
 						{item.title}

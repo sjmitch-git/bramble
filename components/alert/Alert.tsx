@@ -2,21 +2,22 @@
 
 import { CloseButton } from '@/components'
 
-interface AlertProps {
-	className?: string | undefined
-	status?: string | undefined
-	message: string
-	onClick?: () => void | undefined
-}
+import { Alert as TAlert } from '@/types'
 
-export function Alert({ className = '', message, status = '', onClick }: AlertProps) {
+export function Alert({ className = '', message, status = '', onClick }: TAlert) {
 	return (
 		<blockquote
 			className={`alert ${className}`}
 			role='alert'
-			data-testid='alert'
 		>
-			{status && <h4 className='status'>{status}</h4>}
+			{status && (
+				<h4
+					className='status'
+					role='heading'
+				>
+					{status}
+				</h4>
+			)}
 			<div
 				className='message'
 				dangerouslySetInnerHTML={{ __html: message }}

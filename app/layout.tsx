@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import Script from 'next/script'
-//import dynamic from 'next/dynamic'
 
 import Providers from '@/utils/provider'
 
@@ -18,12 +17,7 @@ const { title, description, url, image } = config.siteMetadata
 
 import Header from '@/components/header'
 import SEO from '@/components/seo'
-import { Brand, Spinner, Footer, Breadcrumbs, Navbar, Toast } from '@/components'
-
-/* const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
-	ssr: false,
-	loading: () => <Spinner className='aspect-square w-11 text-info' />,
-}) */
+import { Brand, Footer, Breadcrumbs, Navbar } from '@/components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -102,12 +96,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 							footerLinks={footerLinks}
 							className=''
 						>
-							{/* <TwitterEmbed
-							handle='brambleUI'
-							status='1681278654268035073'
-							className='mx-auto w-full max-w-lg text-center'
-						/> */}
-
 							<Brand
 								height={180}
 								width={180}

@@ -96,6 +96,7 @@ export const CreditCard = ({
 			<RadioGroup
 				data={data}
 				name='cc-type'
+				icons={true}
 				getIcon={getIcon}
 				onChange={handleChange}
 				selected={type?.id}

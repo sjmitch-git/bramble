@@ -1,15 +1,6 @@
 import { Input } from '@/components'
 
-interface AutocompleteProps {
-	data: any[]
-	list: string
-	name?: string
-	autocomplete?: string
-	label?: string
-	required?: boolean
-	placeholder?: string
-	onchange?: React.ChangeEventHandler<HTMLInputElement>
-}
+import { Autocomplete as TAutocomplete } from '@/types'
 
 export const Autocomplete = ({
 	data,
@@ -20,7 +11,7 @@ export const Autocomplete = ({
 	name,
 	placeholder = 'Please Select',
 	onchange,
-}: AutocompleteProps) => {
+}: TAutocomplete) => {
 	return (
 		<>
 			<Input
@@ -36,6 +27,7 @@ export const Autocomplete = ({
 			<datalist
 				className='datalist'
 				id={list}
+				data-testid='datalist'
 			>
 				{data.map((el, index) => (
 					<option

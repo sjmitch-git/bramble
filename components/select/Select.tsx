@@ -26,7 +26,7 @@ export const Select = ({
 }: SelectProps) => {
 	return (
 		<select
-			className={`select ${className} ${nocaret && 'nocaret'}`}
+			className={`select ${className} ${nocaret ? 'nocaret' : ''}`}
 			title={title}
 			id={id}
 			onChange={onChange}

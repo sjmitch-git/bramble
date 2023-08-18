@@ -3,11 +3,33 @@
 		@apply grid grid-cols-3 gap-4;
 
 		input {
-			@apply absolute z-[-1];
+			@apply absolute -right-10 z-[-1];
+		}
+
+		&:not(.icons) .label {
+			@apply min-h-[52px] p-2;
+
+			&:has(input:checked) {
+				@apply bg-secondary text-light;
+			}
+		}
+
+		.label {
+			@apply overflow-hidden;
+
+			&:hover,
+			&:focus-within,
+			&:focus {
+				@apply scale-105;
+			}
 		}
 
 		.label:has(input:checked) {
-			@apply border-6	 border-accent;
+			@apply ring-2 ring-info;
+		}
+
+		.radio {
+			@apply text-size-inherit text-center;
 		}
 	}
 }

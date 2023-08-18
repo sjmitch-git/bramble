@@ -1,14 +1,18 @@
 @layer components {
 	.drawer {
-		@apply invisible fixed left-0 z-50 flex min-w-full items-center justify-center duration-500;
+		@apply invisible fixed left-0 z-50 flex items-center justify-center duration-500;
 		transform-style: preserve-3d;
 
 		&.top {
-			@apply top-0 -translate-y-full;
+			@apply top-0 min-w-full -translate-y-full;
 		}
 
 		&.bottom {
-			@apply bottom-0 translate-y-full;
+			@apply bottom-0 min-w-full translate-y-full;
+		}
+
+		&.right {
+			@apply left-auto right-0 top-0 min-h-full max-w-xs translate-x-full overflow-y-auto;
 		}
 
 		&::before {
@@ -17,18 +21,31 @@
 		}
 
 		&.show {
-			@apply visible translate-y-0;
+			@apply visible;
+
+			&.top,
+			&.bottom {
+				@apply translate-y-0;
+			}
+
+			&.right {
+				@apply translate-x-0;
+			}
 
 			&::before {
 				@apply h-[100vh] opacity-50;
 			}
 
 			&.top::before {
-				@apply h-[200vh];
+				@apply left-auto right-0 h-[200vh] min-w-full;
 			}
 
 			&.bottom::before {
 				@apply translate-y-[-100%];
+			}
+
+			&.right::before {
+				@apply min-w-full;
 			}
 		}
 
