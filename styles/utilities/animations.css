@@ -1,0 +1,20 @@
+@layer utilities {
+	.flipY {
+		animation: flipy 1s;
+		visibility: visible;
+		opacity: 100;
+	}
+
+	@keyframes flipy {
+		0% {
+			transform: rotateX(-90deg);
+			visibility: hidden;
+			opacity: 0;
+		}
+		100% {
+			transform: rotateX(0deg);
+			visibility: visible;
+			opacity: 100;
+		}
+	}
+}

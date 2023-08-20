@@ -1,5 +1,3 @@
-'use client'
-
 import { createContext } from 'react'
 
 interface ToastContextProps {
@@ -24,7 +22,7 @@ const initialState: ToastContextProps = {
 	setPosition: () => {},
 	show: false,
 	setShow: () => {},
-	autohide: true,
+	autohide: false,
 	setAutohide: () => {},
 }
 

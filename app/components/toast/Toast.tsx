@@ -4,7 +4,7 @@ import ToastTemplate from '@/templates/Toast'
 
 const title = 'Toast'
 const description =
-	'Examples and usage of the "Toast" component, which creates push notifications alerting the user'
+	'Examples and usage of the "Toast" global component, which creates push notifications alerting the user'
 const keywords = 'Toast Component, Context Api'
 const url = 'components/toast'
 

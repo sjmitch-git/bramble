@@ -1,9 +1,9 @@
 @layer components {
 	.toast {
-		@apply invisible fixed z-100 flex min-w-[250px] scale-y-[-1] items-center rounded p-4 text-light opacity-0 shadow-lg transition-all;
+		@apply invisible fixed z-100 flex min-w-[250px] items-center rounded px-6 py-4 text-light opacity-0 transition-opacity duration-700;
 
 		&.show {
-			@apply visible scale-y-100 opacity-100;
+			@apply visible opacity-100;
 		}
 
 		&.bottom {
@@ -54,6 +54,16 @@
 
 			a {
 				@apply !text-current underline;
+			}
+		}
+
+		.btn[title='Close'] {
+			@apply hidden;
+		}
+
+		&.dismissable {
+			.btn[title='Close'] {
+				@apply block;
 			}
 		}
 	}

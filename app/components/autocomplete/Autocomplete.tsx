@@ -3,7 +3,8 @@ import useMetadata from '@/hooks/useMetadata'
 import AutocompleteTemplate from '@/templates/Autocomplete'
 
 const title = 'Autocomplete'
-const description = 'Examples and usage of the "Autocomplete" component ...'
+const description =
+	"Examples and usage of the 'Autocomplete' component, an input field of type 'list' with a datalist dropdown of data options."
 const keywords = 'Autocomplete Component'
 const url = 'components/autocomplete'
 

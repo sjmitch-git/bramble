@@ -8,7 +8,14 @@ import { ToastContext } from '@/contexts/toast.context'
 import { CloseButton } from '@/components'
 
 export function Toast() {
-	const { state = '', show, setShow, message, position = '', autohide } = useContext(ToastContext)
+	const {
+		state = '',
+		show,
+		setShow,
+		message,
+		position = '',
+		autohide = false,
+	} = useContext(ToastContext)
 	const [clear, reset] = useTimeout(() => setShow(false), 3000)
 
 	useEffect(() => {
@@ -16,17 +23,17 @@ export function Toast() {
 		return () => {
 			reset()
 		}
-	}, [show, setShow, autohide])
+	}, [show, autohide])
 
 	return (
 		<div
-			className={`toast ${state} ${position} ${show ? 'show' : ''}`}
+			className={`toast group ${state} ${position} ${show ? 'show' : ''}`}
 			id='toast'
 			role='alert'
 		>
 			{!autohide && (
 				<CloseButton
-					className='sm icon absolute right-1 top-1 bg-transparent p-0 shadow-none'
+					className='sm absolute right-0 top-0 bg-transparent !p-0 text-dark shadow-none'
 					onClick={() => setShow(false)}
 				/>
 			)}

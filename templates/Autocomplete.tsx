@@ -3,6 +3,10 @@ import { Codeblock, Autocomplete } from '@/components'
 import data from '@/data/countries.json'
 
 const AutocompleteTemplate = () => {
+	const onchange = (event: any) => {
+		// do something...
+	}
+
 	return (
 		<>
 			<h2>Usage</h2>
@@ -15,6 +19,7 @@ const AutocompleteTemplate = () => {
 					name='country'
 					autocomplete='country name'
 					placeholder='Select your country'
+					onchange={onchange}
 				/>
 			</div>
 
@@ -22,6 +27,10 @@ const AutocompleteTemplate = () => {
 				{`import {Autocomplete} from '@/components'
                 
 const data = ["Afghanistan","Albania","Algeria","Andorra","Angola"...
+
+const onchange = (event: any) => {
+	// do something...
+}
 				
 <Autocomplete
     data={data}
@@ -30,6 +39,7 @@ const data = ["Afghanistan","Albania","Algeria","Andorra","Angola"...
     name='country'
     autocomplete='country name'
     placeholder='Select your country'
+	onchange={onchange}
 />`}
 			</Codeblock>
 		</>

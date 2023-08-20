@@ -2,10 +2,10 @@ import useMetadata from '@/hooks/useMetadata'
 
 import RadioGroupTemplate from '@/templates/Radiogroup'
 
-const title = 'RadioGroup'
+const title = 'Radio Group'
 const description =
-	"Examples and usage of the 'RadioGroup' component. Versions with labels, icons, or emojis."
-const keywords = 'RadioGroup Component'
+	"Examples and usage of the 'Radio Group' component. Versions with labels, icons, or emojis."
+const keywords = 'Radio Group Component'
 const url = 'components/radiogroup'
 
 export let metadata: any

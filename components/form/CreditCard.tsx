@@ -100,6 +100,7 @@ export const CreditCard = ({
 				getIcon={getIcon}
 				onChange={handleChange}
 				selected={type?.id}
+				labelStyles='rounded-lg'
 			/>
 
 			<Input

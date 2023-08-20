@@ -8,14 +8,18 @@ export default function useToast() {
 		position: string,
 		state: string,
 		message: React.ReactNode,
-		autohide: boolean = true
+		autohide?: boolean
 	) {
-		setShow(true)
 		setMessage(message)
 		setState(state)
 		setPosition(position)
-		setAutohide(autohide)
+		setAutohide(autohide || false)
+		setShow(true)
 	}
 
-	return [showToast]
+	function closeToast() {
+		setShow(false)
+	}
+
+	return { showToast, closeToast }
 }

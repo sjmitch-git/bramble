@@ -12,8 +12,8 @@ const DrawerTemplate = () => {
 	const onsubmit = (e: any) => {
 		e.preventDefault()
 		closeDrawer()
-		const data = new FormData(e.target)
-		console.log(Object.fromEntries(data.entries()))
+		//const data = new FormData(e.target)
+		//console.log(Object.fromEntries(data.entries()))
 	}
 
 	const oncancel = (e: any) => {
