@@ -1,29 +1,9 @@
 @layer components {
 	.select {
-		@apply cursor-pointer p-3 text-base capitalize;
+		@apply cursor-pointer text-base capitalize;
 
 		&:disabled {
 			@apply cursor-default;
-		}
-
-		&:required {
-			@apply cursor-default;
-		}
-
-		&.text-xs {
-			@apply p-1;
-		}
-
-		&.text-xs {
-			@apply p-2;
-		}
-
-		&.text-lg {
-			@apply p-4;
-		}
-
-		&.text-xl {
-			@apply p-4;
 		}
 
 		&.light {
@@ -39,7 +19,7 @@
 		}
 
 		&.nocaret {
-			@apply appearance-none bg-none;
+			@apply appearance-none bg-none px-[0.75rem];
 		}
 
 		&:focus-visible {

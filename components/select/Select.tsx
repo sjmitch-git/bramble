@@ -10,6 +10,8 @@ interface SelectProps {
 	disabled?: boolean | undefined
 	required?: boolean | undefined
 	nocaret?: boolean | undefined
+	labelStyles?: string
+	label?: string
 }
 
 export const Select = ({
@@ -21,20 +23,25 @@ export const Select = ({
 	value,
 	onChange,
 	disabled,
-	required,
+	required = false,
 	nocaret,
+	labelStyles = '',
+	label,
 }: SelectProps) => {
 	return (
-		<select
-			className={`select ${className} ${nocaret ? 'nocaret' : ''}`}
-			title={title}
-			id={id}
-			onChange={onChange}
-			value={value}
-			required={required}
-			disabled={disabled}
-		>
-			{children}
-		</select>
+		<label className={`label ${labelStyles}`}>
+			<span>{label}</span>
+			<select
+				className={`select form-select ${className} ${nocaret ? 'nocaret' : ''}`}
+				title={title}
+				id={id}
+				onChange={onChange}
+				value={value}
+				required={required}
+				disabled={disabled}
+			>
+				{children}
+			</select>
+		</label>
 	)
 }

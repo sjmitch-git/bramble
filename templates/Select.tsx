@@ -55,10 +55,9 @@ const data = [
     
 return (			
 	<Select
-		className='text-xs'
 		onChange={handleChange}
 		value={fruit}
-		id='select01'
+		label='Fruit'
 	>
 		<option
 			value=''
@@ -77,102 +76,13 @@ return (
 		))}
 	</Select>
 
-	<Select
-		className='light text-sm'
-		onChange={handleChange}
-		value={fruit}
-		id='select01'
-	>
-		<option
-			value=''
-			disabled
-			hidden
-		>
-			Select
-		</option>
-		{data.map((el, index) => (
-			<option
-				key={index}
-				value={el.name}
-			>
-				{el.name}
-			</option>
-		))}
-	</Select>
-
-	<Select
-		className='dark'
-		onChange={handleChange}
-		value={fruit}
-	>
-		<option
-			value=''
-			disabled
-			hidden
-		>
-			Select
-		</option>
-		{data.map((el, index) => (
-			<option
-				key={index}
-				value={el.name}
-			>
-				{el.name}
-			</option>
-		))}
-	</Select>
-
-	<Select
-		className='bg-info text-light outline text-xl'
-		onChange={handleChange}
-		value={fruit}
-	>
-		<option
-			value=''
-			disabled
-			hidden
-		>
-			Select
-		</option>
-		{data.map((el, index) => (
-			<option
-				key={index}
-				value={el.name}
-			>
-				{el.name}
-			</option>
-		))}
-	</Select>
-
-	<Select
-		className='bg-success text-light outline outline-4 text-3xl'
-		onChange={handleChange}
-		value={fruit}
-	>
-		<option
-			value=''
-			disabled
-			hidden
-		>
-			Select
-		</option>
-		{data.map((el, index) => (
-			<option
-				key={index}
-				value={el.name}
-			>
-				{el.name}
-			</option>
-		))}
-	</Select>
 )`}
 				</Codeblock>
 			</div>
 
 			<h2>Sizes</h2>
 			<p>
-				Add TailwindCSS font-size utility class to <code>className</code> attribute:{' '}
-				<code>className='text-xs'</code>
+				Add TailwindCSS font-size utility class to <code>className</code> attribute.
 			</p>
 			<div className='mb-8 flex flex-wrap items-center justify-center gap-4 bg-gray-300 p-4'>
 				<Select
@@ -180,6 +90,7 @@ return (
 					onChange={handleChange}
 					value={fruit}
 					id='select01'
+					label='"text-xs"'
 				>
 					<option
 						value=''
@@ -203,6 +114,7 @@ return (
 					onChange={handleChange}
 					value={fruit}
 					id='select01'
+					label='"text-sm"'
 				>
 					<option
 						value=''
@@ -222,9 +134,10 @@ return (
 				</Select>
 
 				<Select
-					className='dark'
+					className='light'
 					onChange={handleChange}
 					value={fruit}
+					label='default size'
 				>
 					<option
 						value=''
@@ -244,9 +157,10 @@ return (
 				</Select>
 
 				<Select
-					className='bg-info text-xl text-light outline'
+					className='text-xl'
 					onChange={handleChange}
 					value={fruit}
+					label='"text-xl"'
 				>
 					<option
 						value=''
@@ -266,9 +180,10 @@ return (
 				</Select>
 
 				<Select
-					className='bg-success text-3xl text-light outline outline-4'
+					className='text-3xl'
 					onChange={handleChange}
 					value={fruit}
+					label='"text-3xl"'
 				>
 					<option
 						value=''
@@ -289,13 +204,15 @@ return (
 			</div>
 			<h2>Emojis</h2>
 			<p>
-				Emojis can be used in <code>option</code> element, unlike <code>svg</code>.
+				Emojis can be used in <code>option</code> element. Add{' '}
+				<code>nocaret=&#123;true&#125;</code>.
 			</p>
 			<div className='mb-8 flex flex-wrap items-center justify-center gap-4 bg-gray-300 p-4'>
 				<Select
 					className='circle dark text-sm'
 					onChange={handleChange}
 					value={fruit}
+					nocaret={true}
 				>
 					<option
 						value=''
@@ -318,6 +235,7 @@ return (
 					className='circle dark text-xl'
 					onChange={handleChange}
 					value={fruit}
+					nocaret={true}
 				>
 					<option
 						value=''
@@ -340,6 +258,7 @@ return (
 					className='circle dark text-3xl'
 					onChange={handleChange}
 					value={fruit}
+					nocaret={true}
 				>
 					<option
 						value=''
@@ -362,6 +281,7 @@ return (
 					className='circle dark text-5xl'
 					onChange={handleChange}
 					value={fruit}
+					nocaret={true}
 				>
 					<option
 						value=''
@@ -384,6 +304,7 @@ return (
 					className='circle dark text-7xl'
 					onChange={handleChange}
 					value={fruit}
+					nocaret={true}
 				>
 					<option
 						value=''
@@ -428,9 +349,10 @@ return (
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
 					{`<Select
-	className='dark circle text-sm'
+	className='dark circle'
 	onChange={handleChange}
 	value={fruit}
+	nocaret={true}
 >
 	<option
 		value=''
@@ -449,98 +371,12 @@ return (
 	))}
 </Select>
 
-<Select
-	className='dark circle text-xl'
-	onChange={handleChange}
-	value={fruit}
->
-	<option
-		value=''
-		disabled
-		hidden
-	>
-		➕
-	</option>
-	{data.map((el, index) => (
-		<option
-			key={index}
-			value={el.name}
-		>
-			{el.emoji}
-		</option>
-	))}
-</Select>
-
-<Select
-	className='dark circle text-3xl'
-	onChange={handleChange}
-	value={fruit}
->
-	<option
-		value=''
-		disabled
-		hidden
-	>
-		➕
-	</option>
-	{data.map((el, index) => (
-		<option
-			key={index}
-			value={el.name}
-		>
-			{el.emoji}
-		</option>
-	))}
-</Select>
-
-<Select
-	className='dark circle text-5xl'
-	onChange={handleChange}
-	value={fruit}
->
-	<option
-		value=''
-		disabled
-		hidden
-	>
-		➕
-	</option>
-	{data.map((el, index) => (
-		<option
-			key={index}
-			value={el.name}
-		>
-			{el.emoji}
-		</option>
-	))}
-</Select>
-
-<Select
-	className='dark circle text-7xl'
-	onChange={handleChange}
-	value={fruit}
->
-	<option
-		value=''
-		disabled
-		hidden
-	>
-		➕
-	</option>
-	{data.map((el, index) => (
-		<option
-			key={index}
-			value={el.name}
-		>
-			{el.emoji}
-		</option>
-	))}
-</Select>
-
+// with emoji and text 
 <Select
 	className='dark rounded-lg text-3xl'
 	onChange={handleChange}
 	value={fruit}
+	nocaret={true}
 >
 	<option
 		value=''
@@ -564,270 +400,90 @@ return (
 			<h2>Labels</h2>
 
 			<p>
-				Use <code>text-size-inherit</code> on <code>select</code> to inherit{' '}
-				<code>label</code> font-size.
+				Add <code>labelStyles='row'</code> for inline display.
 			</p>
 
 			<div className='mb-0 flex flex-wrap items-center justify-center gap-12 bg-gray-300 p-4'>
-				<label className='label row'>
-					<span>Select Fruit</span>
-					<Select
-						className='dark'
-						onChange={handleChange}
-						value={fruit}
+				<Select
+					className='dark'
+					onChange={handleChange}
+					value={fruit}
+					label='Select Fruit'
+				>
+					<option
+						value=''
+						disabled
+						hidden
 					>
+						Select
+					</option>
+					{data.map((el, index) => (
 						<option
-							value=''
-							disabled
-							hidden
+							key={index}
+							value={el.name}
 						>
-							Select
+							{el.name}
 						</option>
-						{data.map((el, index) => (
-							<option
-								key={index}
-								value={el.name}
-							>
-								{el.name}
-							</option>
-						))}
-					</Select>
-				</label>
+					))}
+				</Select>
 
-				<label className='label row text-3xl'>
-					<span>Select Fruit</span>
-					<Select
-						className='text-size-inherit dark'
-						onChange={handleChange}
-						value={fruit}
+				<Select
+					className='dark'
+					onChange={handleChange}
+					value={fruit}
+					label='Select Fruit'
+					labelStyles='row'
+				>
+					<option
+						value=''
+						disabled
+						hidden
 					>
+						Select
+					</option>
+					{data.map((el, index) => (
 						<option
-							value=''
-							disabled
-							hidden
+							key={index}
+							value={el.name}
 						>
-							Select
+							{el.name}
 						</option>
-						{data.map((el, index) => (
-							<option
-								key={index}
-								value={el.name}
-							>
-								{el.name}
-							</option>
-						))}
-					</Select>
-				</label>
+					))}
+				</Select>
 			</div>
 			<div className='mb-8'>
-				<Codeblock language='jsx'>{`<label className='label row'>
-	<span>Select Fruit</span>
-	<Select
-		className='dark'
-		onChange={handleChange}
-		value={fruit}
+				<Codeblock language='jsx'>{`<Select
+	className='dark'
+	onChange={handleChange}
+	value={fruit}
+	label='Select Fruit'
+	labelStyles='row' // add this
+>
+	<option
+		value=''
+		disabled
+		hidden
 	>
+		Select
+	</option>
+	{data.map((el, index) => (
 		<option
-			value=''
-			disabled
-			hidden
+			key={index}
+			value={el.name}
 		>
-			Select
+			{el.name}
 		</option>
-		{data.map((el, index) => (
-			<option
-				key={index}
-				value={el.name}
-			>
-				{el.name}
-			</option>
-		))}
-	</Select>
-</label>
-
-<label className='label row text-3xl'>
-	<span>Select Fruit</span>
-	<Select
-		className='dark text-size-inherit'
-		onChange={handleChange}
-		value={fruit}
-	>
-		<option
-			value=''
-			disabled
-			hidden
-		>
-			Select
-		</option>
-		{data.map((el, index) => (
-			<option
-				key={index}
-				value={el.name}
-			>
-				{el.name}
-			</option>
-		))}
-	</Select>
-</label>
+	))}
+</Select>
 `}</Codeblock>
 			</div>
-			<div className='mb-0 flex flex-wrap items-center justify-center gap-12 bg-gray-300 p-4'>
-				<label className='label'>
-					<span>Select Fruit</span>
-					<Select
-						className='dark'
-						onChange={handleChange}
-						value={fruit}
-					>
-						<option
-							value=''
-							disabled
-							hidden
-						>
-							Select
-						</option>
-						{data.map((el, index) => (
-							<option
-								key={index}
-								value={el.name}
-							>
-								{el.name}
-							</option>
-						))}
-					</Select>
-				</label>
 
-				<label className='label'>
-					<span>Select Fruit</span>
-					<Select
-						className='dark text-3xl'
-						onChange={handleChange}
-						value={fruit}
-					>
-						<option
-							value=''
-							disabled
-							hidden
-						>
-							Select
-						</option>
-						{data.map((el, index) => (
-							<option
-								key={index}
-								value={el.name}
-							>
-								{el.name}
-							</option>
-						))}
-					</Select>
-				</label>
-
-				<label className='label text-3xl'>
-					<span>Select Fruit</span>
-					<Select
-						className='text-size-inherit dark'
-						onChange={handleChange}
-						value={fruit}
-					>
-						<option
-							value=''
-							disabled
-							hidden
-						>
-							Select
-						</option>
-						{data.map((el, index) => (
-							<option
-								key={index}
-								value={el.name}
-							>
-								{el.name}
-							</option>
-						))}
-					</Select>
-				</label>
-			</div>
-			<div className='mb-8'>
-				<Codeblock language='jsx'>{`<label className='label'>
-	<span>Select Fruit</span>
-	<Select
-		className='dark'
-		onChange={handleChange}
-		value={fruit}
-	>
-		<option
-			value=''
-			disabled
-			hidden
-		>
-			Select
-		</option>
-		{data.map((el, index) => (
-			<option
-				key={index}
-				value={el.name}
-			>
-				{el.name}
-			</option>
-		))}
-	</Select>
-</label>
-
-<label className='label col'>
-	Select Fruit
-	<Select
-		className='dark text-3xl'
-		onChange={handleChange}
-		value={fruit}
-	>
-		<option
-			value=''
-			disabled
-			hidden
-		>
-			Select
-		</option>
-		{data.map((el, index) => (
-			<option
-				key={index}
-				value={el.name}
-			>
-				{el.name}
-			</option>
-		))}
-	</Select>
-</label>
-
-<label className='label col text-3xl'>
-	Select Fruit
-	<Select
-		className='dark text-size-inherit'
-		onChange={handleChange}
-		value={fruit}
-	>
-		<option
-			value=''
-			disabled
-			hidden
-		>
-			Select
-		</option>
-		{data.map((el, index) => (
-			<option
-				key={index}
-				value={el.name}
-			>
-				{el.name}
-			</option>
-		))}
-	</Select>
-</label>`}</Codeblock>
-			</div>
 			<h2 id='numbers'>Numbers</h2>
 			<div className='mb-0 flex flex-wrap items-center justify-center gap-12 bg-gray-300 p-4'>
 				<Select
 					className='lg dark'
-					title='Select Page'
+					label='Select Page'
+					labelStyles='row'
 					onChange={handleChange}
 				>
 					{[...new Array(24)].map((_el, index) => (
@@ -841,7 +497,12 @@ return (
 				</Select>
 			</div>
 			<Codeblock language='jsx'>
-				{`<Select>
+				{`<Select
+	className='lg dark'
+	label='Select Page'
+	labelStyles='row'
+	onChange={handleChange}
+>
 	{[...new Array(24)].map((_el, index) => (
 		<option
 			key={index}
@@ -854,49 +515,47 @@ return (
 			</Codeblock>
 			<h2>Optgroup</h2>
 			<div className='mb-0 flex flex-wrap items-center justify-center gap-12 bg-gray-300 p-4'>
-				<label className='label col text-xl'>
-					Select Drink
-					<Select
-						className='text-size-inherit dark'
-						onChange={handleDrinksChange}
-						value={drink}
-						nocaret={true}
+				<Select
+					className='text-size-inherit dark'
+					onChange={handleDrinksChange}
+					value={drink}
+					nocaret={true}
+					label='Select Drink'
+				>
+					<option
+						value=''
+						disabled
+						hidden
 					>
-						<option
-							value=''
-							disabled
-							hidden
-						>
-							➕ Select
-						</option>
-						<optgroup label='Non-Alchoholic'>
-							{drinks.map(
-								(el, index) =>
-									!el.alcoholic && (
-										<option
-											key={index}
-											value={el.name}
-										>
-											{el.emoji} {el.name}
-										</option>
-									)
-							)}
-						</optgroup>
-						<optgroup label='Alchoholic'>
-							{drinks.map(
-								(el, index) =>
-									el.alcoholic && (
-										<option
-											key={index}
-											value={el.name}
-										>
-											{el.emoji} {el.name}
-										</option>
-									)
-							)}
-						</optgroup>
-					</Select>
-				</label>
+						➕ Select
+					</option>
+					<optgroup label='Non-Alchoholic'>
+						{drinks.map(
+							(el, index) =>
+								!el.alcoholic && (
+									<option
+										key={index}
+										value={el.name}
+									>
+										{el.emoji} {el.name}
+									</option>
+								)
+						)}
+					</optgroup>
+					<optgroup label='Alchoholic'>
+						{drinks.map(
+							(el, index) =>
+								el.alcoholic && (
+									<option
+										key={index}
+										value={el.name}
+									>
+										{el.emoji} {el.name}
+									</option>
+								)
+						)}
+					</optgroup>
+				</Select>
 			</div>
 			<Codeblock language='jsx'>
 				{`const drinks = [
@@ -908,190 +567,184 @@ return (
 		{ name: 'whiskey', emoji: '🥃', alcoholic: true },
 ]
 
-<label className='label col text-xl'>
-	Select Drink
-	<Select
-		className='dark text-size-inherit'
-		onChange={handleDrinksChange}
-		value={drink}
-		nocaret={true}
+<Select
+	className='dark text-size-inherit'
+	onChange={handleDrinksChange}
+	value={drink}
+	nocaret={true}
+>
+	<option
+		value=''
+		disabled
+		hidden
 	>
-		<option
-			value=''
-			disabled
-			hidden
-		>
-			➕ Select
-		</option>
-		<optgroup label='Non-Alchoholic'>
-			{drinks.map(
-				(el, index) =>
-					!el.alcoholic && (
-						<option
-							key={index}
-							value={el.name}
-						>
-							{el.emoji} {el.name}
-						</option>
-					)
-			)}
-		</optgroup>
-		<optgroup label='Alchoholic'>
-			{drinks.map(
-				(el, index) =>
-					el.alcoholic && (
-						<option
-							key={index}
-							value={el.name}
-						>
-							{el.emoji} {el.name}
-						</option>
-					)
-			)}
-		</optgroup>
-	</Select>
-</label>`}
+		➕ Select
+	</option>
+	<optgroup label='Non-Alchoholic'>
+		{drinks.map(
+			(el, index) =>
+				!el.alcoholic && (
+					<option
+						key={index}
+						value={el.name}
+					>
+						{el.emoji} {el.name}
+					</option>
+				)
+		)}
+	</optgroup>
+	<optgroup label='Alchoholic'>
+		{drinks.map(
+			(el, index) =>
+				el.alcoholic && (
+					<option
+						key={index}
+						value={el.name}
+					>
+						{el.emoji} {el.name}
+					</option>
+				)
+		)}
+	</optgroup>
+</Select>
+`}
 			</Codeblock>
 			<h2>Disabled</h2>
 			<div className='mb-0 flex flex-wrap items-center justify-center gap-12 bg-gray-300 p-4'>
-				<label className='label col text-xl'>
-					Select Drink
-					<Select
-						className='text-size-inherit dark'
-						onChange={handleDrinksChange}
-						nocaret={true}
-						disabled={true}
+				<Select
+					className='text-size-inherit dark'
+					onChange={handleDrinksChange}
+					nocaret={true}
+					disabled={true}
+					label='Select Drink'
+				>
+					<option
+						value=''
+						disabled
+						hidden
 					>
-						<option
-							value=''
-							disabled
-							hidden
-						>
-							➕ Select
-						</option>
-						<optgroup label='Non-Alchoholic'>
-							{drinks.map(
-								(el, index) =>
-									!el.alcoholic && (
-										<option
-											key={index}
-											value={el.name}
-										>
-											{el.emoji} {el.name}
-										</option>
-									)
-							)}
-						</optgroup>
-						<optgroup label='Alchoholic'>
-							{drinks.map(
-								(el, index) =>
-									el.alcoholic && (
-										<option
-											key={index}
-											value={el.name}
-										>
-											{el.emoji} {el.name}
-										</option>
-									)
-							)}
-						</optgroup>
-					</Select>
-				</label>
+						➕ Select
+					</option>
+					<optgroup label='Non-Alchoholic'>
+						{drinks.map(
+							(el, index) =>
+								!el.alcoholic && (
+									<option
+										key={index}
+										value={el.name}
+									>
+										{el.emoji} {el.name}
+									</option>
+								)
+						)}
+					</optgroup>
+					<optgroup label='Alchoholic'>
+						{drinks.map(
+							(el, index) =>
+								el.alcoholic && (
+									<option
+										key={index}
+										value={el.name}
+									>
+										{el.emoji} {el.name}
+									</option>
+								)
+						)}
+					</optgroup>
+				</Select>
 			</div>
 			<Codeblock language='jsx'>{`<Select disabled={true}`}</Codeblock>
 			<h2>Required</h2>
 			<p>
 				An asterisk (<span className='text-danger'>*</span>) indicates a required field
 			</p>
-			<div className='mb-0 flex flex-col flex-wrap justify-start gap-12 bg-gray-300 p-4'>
-				<label className='label me-auto text-xl'>
-					<span>Select Fruit</span>
-					<Select
-						className='text-size-inherit dark'
-						onChange={handleDrinksChange}
-						value={drink}
-						nocaret={true}
-						required={true}
+			<div className='mb-0 flex justify-center gap-12 bg-gray-300 p-4'>
+				<Select
+					className='text-size-inherit dark'
+					label='Select Drink'
+					onChange={handleDrinksChange}
+					value={drink}
+					nocaret={true}
+					required={true}
+				>
+					<option
+						value=''
+						disabled
+						hidden
 					>
-						<option
-							value=''
-							disabled
-							hidden
-						>
-							➕ Select
-						</option>
-						<optgroup label='Non-Alchoholic'>
-							{drinks.map(
-								(el, index) =>
-									!el.alcoholic && (
-										<option
-											key={index}
-											value={el.name}
-										>
-											{el.emoji} {el.name}
-										</option>
-									)
-							)}
-						</optgroup>
-						<optgroup label='Alchoholic'>
-							{drinks.map(
-								(el, index) =>
-									el.alcoholic && (
-										<option
-											key={index}
-											value={el.name}
-										>
-											{el.emoji} {el.name}
-										</option>
-									)
-							)}
-						</optgroup>
-					</Select>
-				</label>
-				<label className='label row me-auto text-xl'>
-					<span>Select Fruit</span>
-					<Select
-						className='text-size-inherit dark'
-						onChange={handleDrinksChange}
-						value={drink}
-						nocaret={true}
-						required={true}
+						➕ Select
+					</option>
+					<optgroup label='Non-Alchoholic'>
+						{drinks.map(
+							(el, index) =>
+								!el.alcoholic && (
+									<option
+										key={index}
+										value={el.name}
+									>
+										{el.emoji} {el.name}
+									</option>
+								)
+						)}
+					</optgroup>
+					<optgroup label='Alchoholic'>
+						{drinks.map(
+							(el, index) =>
+								el.alcoholic && (
+									<option
+										key={index}
+										value={el.name}
+									>
+										{el.emoji} {el.name}
+									</option>
+								)
+						)}
+					</optgroup>
+				</Select>
+
+				<Select
+					className='text-size-inherit dark'
+					label='Select Drink'
+					labelStyles='row'
+					onChange={handleDrinksChange}
+					value={drink}
+					nocaret={true}
+					required={true}
+				>
+					<option
+						value=''
+						disabled
+						hidden
 					>
-						<option
-							value=''
-							disabled
-							hidden
-						>
-							➕ Select
-						</option>
-						<optgroup label='Non-Alchoholic'>
-							{drinks.map(
-								(el, index) =>
-									!el.alcoholic && (
-										<option
-											key={index}
-											value={el.name}
-										>
-											{el.emoji} {el.name}
-										</option>
-									)
-							)}
-						</optgroup>
-						<optgroup label='Alchoholic'>
-							{drinks.map(
-								(el, index) =>
-									el.alcoholic && (
-										<option
-											key={index}
-											value={el.name}
-										>
-											{el.emoji} {el.name}
-										</option>
-									)
-							)}
-						</optgroup>
-					</Select>
-				</label>
+						➕ Select
+					</option>
+					<optgroup label='Non-Alchoholic'>
+						{drinks.map(
+							(el, index) =>
+								!el.alcoholic && (
+									<option
+										key={index}
+										value={el.name}
+									>
+										{el.emoji} {el.name}
+									</option>
+								)
+						)}
+					</optgroup>
+					<optgroup label='Alchoholic'>
+						{drinks.map(
+							(el, index) =>
+								el.alcoholic && (
+									<option
+										key={index}
+										value={el.name}
+									>
+										{el.emoji} {el.name}
+									</option>
+								)
+						)}
+					</optgroup>
+				</Select>
 			</div>
 			<Codeblock language='jsx'>{`<Select required={true} ...`}</Codeblock>
 			<h2>RTL</h2>
@@ -1099,94 +752,92 @@ return (
 				className='mb-0 flex flex-col flex-wrap justify-start gap-12 bg-gray-300 p-4'
 				dir='rtl'
 			>
-				<label className='label me-auto text-xl'>
-					<span>Select Fruit</span>
-					<Select
-						className='text-size-inherit dark'
-						onChange={handleDrinksChange}
-						value={drink}
-						nocaret={true}
-						required={true}
+				<Select
+					className='text-size-inherit dark'
+					label='Select Fruit'
+					onChange={handleDrinksChange}
+					value={drink}
+					nocaret={true}
+					required={true}
+				>
+					<option
+						value=''
+						disabled
+						hidden
 					>
-						<option
-							value=''
-							disabled
-							hidden
-						>
-							➕ Select
-						</option>
-						<optgroup label='Non-Alchoholic'>
-							{drinks.map(
-								(el, index) =>
-									!el.alcoholic && (
-										<option
-											key={index}
-											value={el.name}
-										>
-											{el.emoji} {el.name}
-										</option>
-									)
-							)}
-						</optgroup>
-						<optgroup label='Alchoholic'>
-							{drinks.map(
-								(el, index) =>
-									el.alcoholic && (
-										<option
-											key={index}
-											value={el.name}
-										>
-											{el.emoji} {el.name}
-										</option>
-									)
-							)}
-						</optgroup>
-					</Select>
-				</label>
-				<label className='label row text-xl'>
-					<span>Select Fruit</span>
-					<Select
-						className='text-size-inherit dark'
-						onChange={handleDrinksChange}
-						value={drink}
-						nocaret={true}
-						required={true}
+						➕ Select
+					</option>
+					<optgroup label='Non-Alchoholic'>
+						{drinks.map(
+							(el, index) =>
+								!el.alcoholic && (
+									<option
+										key={index}
+										value={el.name}
+									>
+										{el.emoji} {el.name}
+									</option>
+								)
+						)}
+					</optgroup>
+					<optgroup label='Alchoholic'>
+						{drinks.map(
+							(el, index) =>
+								el.alcoholic && (
+									<option
+										key={index}
+										value={el.name}
+									>
+										{el.emoji} {el.name}
+									</option>
+								)
+						)}
+					</optgroup>
+				</Select>
+
+				<Select
+					className='text-size-inherit dark'
+					label='Select Fruit'
+					labelStyles='row'
+					onChange={handleDrinksChange}
+					value={drink}
+					nocaret={true}
+					required={true}
+				>
+					<option
+						value=''
+						disabled
+						hidden
 					>
-						<option
-							value=''
-							disabled
-							hidden
-						>
-							➕ Select
-						</option>
-						<optgroup label='Non-Alchoholic'>
-							{drinks.map(
-								(el, index) =>
-									!el.alcoholic && (
-										<option
-											key={index}
-											value={el.name}
-										>
-											{el.emoji} {el.name}
-										</option>
-									)
-							)}
-						</optgroup>
-						<optgroup label='Alchoholic'>
-							{drinks.map(
-								(el, index) =>
-									el.alcoholic && (
-										<option
-											key={index}
-											value={el.name}
-										>
-											{el.emoji} {el.name}
-										</option>
-									)
-							)}
-						</optgroup>
-					</Select>
-				</label>
+						➕ Select
+					</option>
+					<optgroup label='Non-Alchoholic'>
+						{drinks.map(
+							(el, index) =>
+								!el.alcoholic && (
+									<option
+										key={index}
+										value={el.name}
+									>
+										{el.emoji} {el.name}
+									</option>
+								)
+						)}
+					</optgroup>
+					<optgroup label='Alchoholic'>
+						{drinks.map(
+							(el, index) =>
+								el.alcoholic && (
+									<option
+										key={index}
+										value={el.name}
+									>
+										{el.emoji} {el.name}
+									</option>
+								)
+						)}
+					</optgroup>
+				</Select>
 			</div>
 		</>
 	)
