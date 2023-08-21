@@ -2,6 +2,7 @@ import { FC } from 'react'
 
 import ToastContextProvider from '@/providers/toast-provider'
 import DrawerContextProvider from '@/providers/drawer-provider'
+import SidebarContextProvider from '@/providers/sidebar-provider'
 
 export type Children = {
 	children?: React.ReactNode
@@ -9,9 +10,11 @@ export type Children = {
 
 const AppContextProvider: FC<Children> = ({ children }) => {
 	return (
-		<ToastContextProvider>
-			<DrawerContextProvider>{children}</DrawerContextProvider>
-		</ToastContextProvider>
+		<SidebarContextProvider>
+			<ToastContextProvider>
+				<DrawerContextProvider>{children}</DrawerContextProvider>
+			</ToastContextProvider>
+		</SidebarContextProvider>
 	)
 }
 

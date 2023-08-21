@@ -1,10 +1,8 @@
 'use client'
 
-import Link from 'next/link'
-
 import UseDrawer from '@/hooks/useDrawer'
 
-import { Codeblock, Button, Form, Input, NewsLetter } from '@/components'
+import { Codeblock, NewsLetter } from '@/components'
 
 const DrawerTemplate = () => {
 	const { showDrawer, closeDrawer } = UseDrawer()
@@ -36,13 +34,6 @@ const DrawerTemplate = () => {
 import { NewsLetter } from '@/components' // import component to be added to drawer.
 
 const { showDrawer, closeDrawer } = UseDrawer() // expose functionality from custom hook
-
-// open drawer
-const onsubmit = (e: any) => {
-	e.preventDefault()
-	closeDrawer()
-	...
-}
 
 // close drawer
 const oncancel = (e: any) => {
@@ -119,49 +110,7 @@ const oncancel = (e: any) => {
 								onSubmit={onsubmit}
 								onclick={oncancel}
 							/>,
-							'bg-info text-light pb-8',
-							'bottom'
-						)
-					}
-				>
-					show drawer bottom
-				</button>
-			</div>
-			<h3>Right</h3>
-			<div className='mb-12 flex gap-8'>
-				<button
-					className='btn'
-					onClick={() =>
-						showDrawer(
-							<NewsLetter
-								layout='row'
-								closeLabel='Cancel'
-								closeStyles='dark outline'
-								onSubmit={onsubmit}
-								onclick={oncancel}
-							/>,
-							'bg-info text-light pb-8',
-							'right'
-						)
-					}
-				>
-					show drawer right
-				</button>
-			</div>
-			<h3>Bottom</h3>
-			<div className='mb-12 flex gap-8'>
-				<button
-					className='btn'
-					onClick={() =>
-						showDrawer(
-							<NewsLetter
-								layout='row'
-								closeLabel='Cancel'
-								closeStyles='dark outline'
-								onSubmit={onsubmit}
-								onclick={oncancel}
-							/>,
-							'bg-info text-light pb-8',
+							'bg-light text-dark pb-8',
 							'bottom'
 						)
 					}

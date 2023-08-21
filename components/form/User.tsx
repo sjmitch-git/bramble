@@ -10,9 +10,12 @@ export const User = ({
 	legend = 'User Details',
 	btnLabel = 'Submit',
 	btnStyles = '',
+	closeLabel,
+	closeStyles,
 	layout = 'column',
 	className = 'group p-4 md:px-0',
 	onSubmit,
+	onclick,
 }: TForm) => {
 	return (
 		<Form
@@ -23,7 +26,10 @@ export const User = ({
 			btnLabel={btnLabel}
 			btnStyles={btnStyles}
 			onSubmit={onSubmit}
+			onclick={onclick}
 			className={className}
+			closeLabel={closeLabel}
+			closeStyles={closeStyles}
 		>
 			<Input
 				label='Name'

@@ -25,7 +25,7 @@ export const ButtonToTop = ({ size = '', className = '', disabled = false }: But
 	}
 
 	const scrollFunction = (h: number) => {
-		if (!button) return
+		if (!button || !button.current) return
 		if (document.body.scrollTop > h || document.documentElement.scrollTop > h) {
 			button.current.style.display = 'block'
 		} else {

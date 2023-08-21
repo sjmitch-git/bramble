@@ -223,6 +223,10 @@ const config = {
 					label: 'Select',
 				},
 				{
+					href: '/components/sidebar',
+					label: 'Sidebar',
+				},
+				{
 					href: '/components/switch',
 					label: 'Switch',
 				},

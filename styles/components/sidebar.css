@@ -1,0 +1,29 @@
+@layer components {
+	.sidebar {
+		@apply invisible fixed bottom-0 top-0 z-100 max-w-sm duration-500;
+
+		&.right {
+			@apply left-auto right-0 translate-x-full border-l-2 border-neutral;
+
+			&.show {
+				@apply translate-x-0;
+			}
+		}
+
+		&.left {
+			@apply left-0 right-auto -translate-x-full;
+
+			&.show {
+				@apply translate-x-0;
+			}
+		}
+
+		&.show {
+			@apply visible;
+		}
+
+		.inner {
+			@apply max-h-full overflow-y-auto p-4 pt-8;
+		}
+	}
+}
