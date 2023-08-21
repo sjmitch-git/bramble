@@ -71,7 +71,7 @@ export const Pagination = ({
 		>
 			<Buttongroup
 				size={size}
-				className={`mb-2 ${vertical && 'vertical'} ${minimal && 'minimal'}`}
+				className={`mb-2 items-center ${vertical && 'vertical'} ${minimal && 'minimal'}`}
 			>
 				<Link
 					href={`${pathname}?${buildParams('1')}`}
@@ -93,9 +93,10 @@ export const Pagination = ({
 				</Link>
 				<Select
 					title='Select Page'
-					className={`${size}`}
+					className={`${size} border-none`}
 					value={selectValue}
 					onChange={handleChange}
+					nocaret={true}
 				>
 					{[...new Array(totalPages)].map((el, index) => (
 						<option

@@ -1,3 +1,5 @@
+'use client'
+
 import { Codeblock, Autocomplete } from '@/components'
 
 import data from '@/data/countries.json'
