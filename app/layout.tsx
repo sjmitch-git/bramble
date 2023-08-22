@@ -68,7 +68,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`,
 					}}
 				/>
-
+				<meta
+					name='google-site-verification'
+					content='Ws4t6yaR0RsGkflU774SwgOj3duRsycUnDwyXY3SSD0'
+				/>
 				<SEO />
 			</head>
 			<body className={inter.className}>
