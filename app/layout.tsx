@@ -70,7 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				/>
 				<meta
 					name='google-site-verification'
-					content='Ws4t6yaR0RsGkflU774SwgOj3duRsycUnDwyXY3SSD0'
+					content={`${process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION}`}
 				/>
 				<SEO />
 			</head>
