@@ -2,9 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 
-import Link from 'next/link'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-
 import { roundUp } from '@smitch/js-lib'
 
 import {
@@ -14,11 +11,13 @@ import {
 	ChevronDoubleLeftIcon,
 } from '@heroicons/react/24/solid'
 
-import { Buttongroup, Select } from '@/components'
+import { Buttongroup, Select, Button } from '@/components'
 
 interface PaginationProps {
 	className?: string | undefined
 	size?: string
+	page: string
+	onChange: (e: any) => void
 	theme?: 'dark' | 'light' | undefined
 	range: number
 	results: number
@@ -30,67 +29,75 @@ interface PaginationProps {
 
 export const Pagination = ({
 	className = '',
+	page,
+	onChange,
 	range,
 	results,
 	size,
 	theme,
 	feedback = true,
 	vertical = false,
-	icons = false,
+	icons = true,
 	minimal = false,
 }: PaginationProps) => {
-	const [selectValue, setselectValue] = useState('1')
-	const router = useRouter()
-	const searchParams = useSearchParams()
-	let params = searchParams.toString()
+	const [selectValue, setselectValue] = useState(page)
 
 	useEffect(() => {
-		setselectValue(searchParams.get('page') || '1')
-	}, [searchParams])
-
-	const pathname = usePathname()
+		setselectValue(page)
+	}, [page])
 
 	const totalPages = roundUp(results / range)
 
-	const buildParams = (p: string) => {
-		return !params
-			? `page=${p}`
-			: searchParams.has('page')
-			? params.replace(`page=${selectValue}`, `page=${p}`)
-			: `${params}&page=${p}`
-	}
+	const handleChange = (e: React.FormEvent<HTMLSelectElement>): void =>
+		onChange(e.currentTarget.value)
 
-	const handleChange = (e: React.FormEvent<HTMLSelectElement>): void => {
-		router.push(`${pathname}?${buildParams(e.currentTarget.value)}`)
-	}
+	const handleOnClick = (page: string) => onChange(page)
 
 	return (
 		<nav
 			className={`pagination ${className} ${theme}`}
-			aria-label='...'
+			aria-label='pagination'
 		>
 			<Buttongroup
 				size={size}
-				className={`mb-2 items-center ${vertical && 'vertical'} ${minimal && 'minimal'}`}
+				className={`mb-2 items-center ${vertical ? 'vertical' : ''} ${
+					minimal ? 'minimal' : ''
+				}`}
 			>
-				<Link
-					href={`${pathname}?${buildParams('1')}`}
-					className={`btn link ${Number(selectValue) === 1 && 'disabled'} ${
-						icons && 'rtl:rotate-180'
-					}`}
+				<Button
 					title='First Page'
-				>
-					{icons ? <ChevronDoubleLeftIcon /> : 'First'}
-				</Link>
-				<Link
-					href={`${pathname}?${buildParams(`${Number(selectValue) - 1}`)}`}
-					className={`btn link ${Number(selectValue) === 1 && 'disabled'} ${
+					onClick={() => handleOnClick('1')}
+					className={`btn link ${Number(selectValue) === 1 ? 'disabled' : ''} ${
 						icons && 'rtl:rotate-180'
 					}`}
-					title='Previous Page'
 				>
-					{icons ? <ChevronLeftIcon /> : 'Prev'}
-				</Link>
+					{icons ? (
+						<>
+							<ChevronDoubleLeftIcon />
+							<span className='sr-only'>First Page</span>
+						</>
+					) : (
+						'First'
+					)}
+				</Button>
+
+				<Button
+					title='Previous Page'
+					onClick={() => handleOnClick(`${Number(selectValue) - 1}`)}
+					className={`btn link ${Number(selectValue) === 1 ? 'disabled' : ''} ${
+						icons && 'rtl:rotate-180'
+					}`}
+				>
+					{icons ? (
+						<>
+							<ChevronLeftIcon />
+							<span className='sr-only'>Previous Page</span>
+						</>
+					) : (
+						'Prev'
+					)}
+				</Button>
+
 				<Select
 					title='Select Page'
 					className={`${size} border-none`}
@@ -107,24 +114,40 @@ export const Pagination = ({
 						</option>
 					))}
 				</Select>
-				<Link
-					href={`${pathname}?${buildParams(`${Number(selectValue) + 1}`)}`}
+
+				<Button
 					title='Next Page'
-					className={`btn link ${Number(selectValue) === totalPages && 'disabled'} ${
+					onClick={() => handleOnClick(`${Number(selectValue) + 1}`)}
+					className={`btn link ${Number(selectValue) === totalPages ? 'disabled' : ''} ${
 						icons && 'rtl:rotate-180'
 					}`}
 				>
-					{icons ? <ChevronRightIcon /> : 'Next'}
-				</Link>
-				<Link
-					href={`${pathname}?${buildParams(`${totalPages}`)}`}
+					{icons ? (
+						<>
+							<ChevronRightIcon />
+							<span className='sr-only'>Next Page</span>
+						</>
+					) : (
+						'Next'
+					)}
+				</Button>
+
+				<Button
 					title='Last Page'
-					className={`btn link ${Number(selectValue) === totalPages && 'disabled'} ${
+					onClick={() => handleOnClick(totalPages.toString())}
+					className={`btn link ${Number(selectValue) === totalPages ? 'disabled' : ''} ${
 						icons && 'rtl:rotate-180'
 					}`}
 				>
-					{icons ? <ChevronDoubleRightIcon /> : 'Last'}
-				</Link>
+					{icons ? (
+						<>
+							<ChevronDoubleRightIcon />
+							<span className='sr-only'>Last Page</span>
+						</>
+					) : (
+						'Last'
+					)}
+				</Button>
 			</Buttongroup>
 			{feedback && (
 				<div className={`feedback ${size}`}>

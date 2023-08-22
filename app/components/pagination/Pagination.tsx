@@ -3,7 +3,8 @@ import useMetadata from '@/hooks/useMetadata'
 import PaginationTemplate from '@/templates/Pagination'
 
 const title = 'Pagination'
-const description = 'Pagination description TBD'
+const description =
+	'Examples and usage of the Pagination component, allowing the user to navigate between pages of content.'
 const keywords = 'Pagination Component'
 const url = 'components/pagination'
 

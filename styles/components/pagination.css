@@ -1,71 +1,68 @@
 @layer components {
+	.pagination {
+		@apply flex flex-col items-center justify-center gap-1;
 
-    .pagination {
+		& .btn-group {
+			@apply rounded-lg;
 
-        @apply flex flex-col gap-1 justify-center items-center;
+			&.vertical .btn {
+				@apply mx-auto;
+			}
 
-        & .btn-group {
-            @apply rounded-lg; 
+			&.minimal {
+				& select,
+				& .btn:first-child,
+				& .btn:last-child {
+					@apply hidden;
+				}
+			}
+		}
 
-            &.vertical .btn {
-                @apply mx-auto;
-            }
+		&.dark .btn-group {
+			@apply bg-dark;
+		}
 
-            &.minimal {
+		&.light .btn-group {
+			@apply bg-light;
+		}
 
-                & select, & .btn:first-child, & .btn:last-child {
-                    @apply hidden;
-                }
-            }
-        }
+		& .btn.disabled {
+			@apply !bg-transparent;
+		}
 
-        &.dark .btn-group {
-            @apply bg-dark
-        }
+		& select {
+			@apply mx-auto p-2 text-xl;
 
-        &.light .btn-group {
-            @apply bg-light
-        }
+			&:hover,
+			&:focus {
+				@apply !bg-accent !text-dark;
+			}
+		}
 
-        & a.disabled {
-            @apply !bg-transparent;
-        }
+		&.dark select {
+			@apply bg-dark text-light;
+		}
 
-        & select {
-            @apply p-2 text-xl mx-auto;
+		&.light select {
+			@apply bg-light text-dark;
+		}
 
-            &:hover, &:focus{
-                @apply !bg-accent !text-dark;
-            }
-        }
+		& .sm select {
+			@apply text-sm;
+		}
 
-        &.dark select {
-            @apply bg-dark text-light;
-        }
+		& .lg select {
+			@apply text-[2rem];
+		}
+	}
 
-        &.light select {
-            @apply bg-light text-dark;
-        }
+	.feedback {
+		&.sm {
+			@apply text-sm;
+		}
 
-        & .sm select {
-            @apply text-sm;
-        }
-
-        & .lg select {
-            @apply text-[2rem];
-        }
-        
-    }
-
-    .feedback {
-        
-        &.sm {
-            @apply text-sm;
-        }
-
-        &.lg {
-            @apply text-xl;
-        }
-    }
-
+		&.lg {
+			@apply text-xl;
+		}
+	}
 }
