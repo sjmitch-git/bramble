@@ -1,0 +1,29 @@
+@layer components {
+	.tabs {
+		@apply flex flex-col;
+
+		nav {
+			@apply flex items-center justify-center gap-4 border-b border-dark;
+		}
+
+		.tabwrap {
+			@apply border p-4;
+
+			& > div {
+				@apply hidden;
+
+				&.active {
+					@apply block;
+				}
+			}
+		}
+	}
+
+	.tab {
+		@apply rounded-t-lg border bg-neutral px-4 py-2;
+
+		&.active {
+			@apply cursor-default bg-dark text-light;
+		}
+	}
+}

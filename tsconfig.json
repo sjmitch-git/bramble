@@ -20,6 +20,7 @@
 			}
 		],
 		"paths": {
+			"@/ui": ["./components/ui"],
 			"@/sections": ["./components/sections"],
 			"@/*": ["./*"]
 		}

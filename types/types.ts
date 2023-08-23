@@ -87,3 +87,10 @@ export type Input = {
 	onchange?: React.ChangeEventHandler<HTMLInputElement>
 	oninput?: React.ChangeEventHandler<HTMLInputElement>
 } & React.HTMLAttributes<HTMLInputElement>
+
+export type Tab = {
+	id: string
+	activeId?: string
+	title: string
+	onclick: (id: string) => void | undefined
+} & React.HTMLAttributes<HTMLButtonElement>

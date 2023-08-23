@@ -1,0 +1,67 @@
+'use client'
+
+import { Tab } from './Tab'
+
+import { useCallback, useState, useEffect } from 'react'
+
+interface TabsProps {
+	className?: string | undefined
+	children: React.ReactNode
+	defaultActiveId?: string
+}
+
+import { Tab as TTab } from '@/types'
+
+export const Tabs = ({ className = '', defaultActiveId = '', children }: TabsProps) => {
+	const [tabs, setTabs] = useState<TTab[]>(null!)
+	const [activeId, setActiveId] = useState<string>(defaultActiveId)
+	const [nodes, setNodes] = useState<React.ReactNode[]>(null!)
+
+	const content = useCallback((contentRefNode: any) => {
+		if (contentRefNode) {
+			let arr: any[] = []
+			const buildTabs = (item: any, index: number) => {
+				const tabObject = {
+					id: item.id,
+					title: item.title,
+				}
+				arr.push(tabObject)
+				if (children.length === index + 1) setTabs(arr)
+			}
+			const children = [...contentRefNode.children]
+			setNodes(children)
+			children.forEach(buildTabs)
+		}
+	}, [])
+
+	useEffect(() => {
+		const setActive = (item: any) =>
+			item.id === activeId ? item.classList.add('active') : item.classList.remove('active')
+		if (activeId && nodes) nodes.forEach(setActive)
+	}, [activeId])
+
+	const handleClick = (id: string) => setActiveId(id)
+
+	return (
+		<div className={`tabs ${className}`}>
+			<nav>
+				{tabs &&
+					tabs.map((tab) => (
+						<Tab
+							id={tab.id}
+							title={tab.title}
+							key={tab.id}
+							activeId={activeId}
+							onclick={handleClick}
+						/>
+					))}
+			</nav>
+			<div
+				ref={content}
+				className='tabwrap'
+			>
+				{children}
+			</div>
+		</div>
+	)
+}

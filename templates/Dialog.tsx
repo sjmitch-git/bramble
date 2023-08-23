@@ -1,10 +1,9 @@
 'use client'
 
-import Link from 'next/link'
-
 import { useState } from 'react'
 
 import { Alert, Codeblock, Dialog, Button, Login, Register } from '@/components'
+import { Tabs } from '@/ui'
 import { UserIcon } from '@heroicons/react/24/solid'
 
 const handleSubmit = (e: any) => {
@@ -129,6 +128,84 @@ const DialogTemplate = () => {
 			<hr />
 
 			<h2>Examples</h2>
+
+			<h3>Login / Register</h3>
+
+			<div className='mb-4 bg-light p-4 text-center'>
+				<Dialog
+					title='Login / Regsiter'
+					btnLabel='Login / Register'
+					btnStyles='outline dark'
+				>
+					<Tabs
+						className='w-full pt-12'
+						defaultActiveId='LogIn'
+					>
+						<div
+							id='LogIn'
+							title='Log In'
+							className='active'
+						>
+							<Login
+								method='dialog'
+								onSubmit={handleSubmit}
+							/>
+						</div>
+						<div
+							id='SignUp'
+							title='Sign Up'
+						>
+							<Register
+								method='dialog'
+								onSubmit={handleSubmit}
+							/>
+						</div>
+					</Tabs>
+				</Dialog>
+			</div>
+			<div className='mb-12'>
+				<Codeblock language='jsx'>
+					{`import { Login, Register, Dialog } from '@/components'
+import { Tabs } from '@/ui'
+
+const handleSubmit = (e: any) => {
+	const data = new FormData(e.target)
+	console.log(Object.fromEntries(data.entries()))
+}
+					
+<Dialog
+	title='Login / Regsiter'
+	btnLabel='Login / Register'
+	btnStyles='outline dark'
+>
+	<Tabs
+		className='w-full pt-12'
+		defaultActiveId='LogIn'
+	>
+		<div
+			id='LogIn'
+			title='Log In'
+			className='active'
+		>
+			<Login
+				method='dialog'
+				onSubmit={handleSubmit}
+			/>
+		</div>
+		<div
+			id='SignUp'
+			title='Sign Up'
+		>
+			<Register
+				method='dialog'
+				onSubmit={handleSubmit}
+			/>
+		</div>
+	</Tabs>
+</Dialog>
+`}
+				</Codeblock>
+			</div>
 
 			<h3>Login</h3>
 
