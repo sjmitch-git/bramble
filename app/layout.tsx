@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 
 import AppContextProvider from '@/providers/app.provider'
 
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 						<FooterSection />
 					</div>
 				</AppContextProvider>
+				<Analytics />
 			</body>
 		</html>
 	)
