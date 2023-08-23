@@ -1,7 +1,4 @@
 import { Metadata } from 'next'
-import Script from 'next/script'
-
-import Providers from '@/utils/provider'
 
 import AppContextProvider from '@/providers/app.provider'
 
@@ -15,9 +12,7 @@ import { siteName } from '@/shared/metadata/'
 
 const { title, description, url, image } = config.siteMetadata
 
-import Header from '@/components/header'
-import SEO from '@/components/seo'
-import { Brand, Footer, Breadcrumbs, Navbar } from '@/components'
+import { FooterSection, HeadSection, HeaderSection, MainSection } from '@/sections'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -36,8 +31,8 @@ export const metadata: Metadata = {
 			{
 				url: `${image}`,
 				secureUrl: `${url}${image}`,
-				width: 429,
-				height: 429,
+				width: 430,
+				height: 430,
 				alt: `${title}`,
 			},
 		],
@@ -47,65 +42,15 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-	const { footerLinks } = config
-	const { authorName, authorUrl, social } = config.author
 	return (
 		<html lang='en'>
-			<head>
-				<Script
-					strategy='afterInteractive'
-					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-				></Script>
-				{/* prettier-ignore */}
-				<Script
-					id='ga-script'
-					strategy="afterInteractive"
-					dangerouslySetInnerHTML={{
-						__html: `window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments)}
-                        gtag('js', new Date());
-
-                        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`,
-					}}
-				/>
-				<meta
-					name='google-site-verification'
-					content={`${process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION}`}
-				/>
-				<SEO />
-			</head>
+			<HeadSection />
 			<body className={inter.className}>
 				<AppContextProvider>
 					<div className='wrapper'>
-						<Header>
-							<Navbar>
-								<Brand className='text-4xl' />
-							</Navbar>
-							<Breadcrumbs
-								size='lg'
-								className='pt-6 md:pt-12'
-							/>
-						</Header>
-						<main>
-							<article data-testid='article'>
-								<Providers>{children}</Providers>
-								<hr />
-							</article>
-						</main>
-						<Footer
-							author={authorName}
-							authorUrl={authorUrl}
-							socialLinks={social}
-							footerLinks={footerLinks}
-							className=''
-						>
-							<Brand
-								height={180}
-								width={180}
-								layout='flex flex-col mx-auto'
-								className='text-4xl'
-							/>
-						</Footer>
+						<HeaderSection />
+						<MainSection>{children}</MainSection>
+						<FooterSection />
 					</div>
 				</AppContextProvider>
 			</body>

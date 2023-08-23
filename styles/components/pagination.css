@@ -30,6 +30,10 @@
 			@apply !bg-transparent;
 		}
 
+		& .label {
+			@apply gap-0;
+		}
+
 		& select {
 			@apply mx-auto p-2 text-xl;
 
