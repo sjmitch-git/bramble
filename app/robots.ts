@@ -28,6 +28,10 @@ export default function robots() {
 				userAgent: '*',
 				disallow: '/posts',
 			},
+			{
+				userAgent: '*',
+				disallow: '/components',
+			},
 		],
 		sitemap: `${url}/sitemap.xml`,
 		host: url,

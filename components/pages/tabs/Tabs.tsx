@@ -138,42 +138,6 @@ const TabsPage = () => {
     </div>
 </Tabs>`}
 			</Codeblock>
-
-			<h2>CSS</h2>
-
-			<Codeblock language='css'>
-				{`.tabs {
-    @apply flex flex-col;
-
-    .tabbar {
-        @apply border-b border-neutral;
-    }
-
-    .tablist {
-        @apply -mb-[1px] flex items-center justify-center gap-1;
-    }
-
-    .tab {
-        @apply rounded-t-lg px-4 py-2 text-primary;
-
-        &.active {
-            @apply cursor-default border border-neutral border-b-transparent bg-white text-dark;
-        }
-    }
-
-    .tabwrap {
-        @apply border border-t-0 border-neutral bg-white p-4;
-
-        & > div {
-            @apply hidden;
-
-            &.active {
-                @apply block;
-            }
-        }
-    }
-}`}
-			</Codeblock>
 		</>
 	)
 }

@@ -74,25 +74,25 @@ const [showToast] = UseToast()
 			<div className='mb-8 flex flex-wrap gap-4 border p-4'>
 				<Button
 					className='info'
-					onClick={() => showToast('top right', 'info', '"info"', true)}
+					onClick={() => showToast('middle center', 'info', '"info"', true)}
 				>
 					Info
 				</Button>
 				<Button
 					className='success'
-					onClick={() => showToast('top right', 'success', '"success"', true)}
+					onClick={() => showToast('middle center', 'success', '"success"', true)}
 				>
 					Success
 				</Button>
 				<Button
 					className='warning'
-					onClick={() => showToast('top right', 'warning', '"warning"', true)}
+					onClick={() => showToast('middle center', 'warning', '"warning"', true)}
 				>
 					Warning
 				</Button>
 				<Button
 					className='error'
-					onClick={() => showToast('top right', 'error', '"error"', true)}
+					onClick={() => showToast('middle center', 'error', '"error"', true)}
 				>
 					Error
 				</Button>
@@ -100,7 +100,7 @@ const [showToast] = UseToast()
 					className='error outline'
 					onClick={() =>
 						showToast(
-							'top right',
+							'middle center',
 							'bg-white border-2 border-error text-error',
 							'"custom"',
 							true
@@ -120,32 +120,32 @@ const [showToast] = UseToast()
 <!-- STATE -->
 <Button
     className='info'
-    onClick={() => showToast('top right', 'info', '"info"')}
+    onClick={() => showToast('middle center', 'info', '"info"')}
 >
     Info
 </Button>
 <Button
     className='success'
-    onClick={() => showToast('top right', 'success', '"success"')}
+    onClick={() => showToast('middle center', 'success', '"success"')}
 >
     Success
 </Button>
 <Button
     className='warning'
-    onClick={() => showToast('top right', 'warning', '"warning"')}
+    onClick={() => showToast('middle center', 'warning', '"warning"')}
 >
     Warning
 </Button>
 <Button
     className='danger'
-    onClick={() => showToast('top right', 'error', '"error"')}
+    onClick={() => showToast('middle center', 'error', '"error"')}
 >
     Error
 </Button>
 <Button
 	className='error outline'
 	onClick={() =>
-		showToast('top right', 'bg-white border-2 border-error text-error', '"custom"', true)
+		showToast('middle center', 'bg-white border-2 border-error text-error', '"custom"', true)
 	}
 >
 	Custom
@@ -186,7 +186,7 @@ const [showToast] = UseToast()
 					className='info'
 					onClick={() => setLoading(!loading)}
 				>
-					Loading
+					Toggle Loading
 				</Button>
 			</div>
 			<Codeblock language='jsx'>
@@ -241,110 +241,6 @@ const [showToast] = UseToast()
 >
 	Dismissable
 </Button>`}
-			</Codeblock>
-
-			<hr />
-
-			<h2>Toast Context</h2>
-			<Codeblock language='jsx'>
-				{`import { createContext } from 'react'
-
-interface ToastContextProps {
-	state: string
-	setState: (state: string) => void
-	message: React.ReactNode
-	setMessage: (message: React.ReactNode) => void
-	position: string
-	setPosition: (position: string) => void
-	show: boolean
-	setShow: (show: boolean) => void
-	autohide: boolean
-	setAutohide: (fadeout: boolean) => void
-}
-
-const initialState: ToastContextProps = {
-	state: '',
-	setState: () => {},
-	message: '',
-	setMessage: () => {},
-	position: '',
-	setPosition: () => {},
-	show: false,
-	setShow: () => {},
-	autohide: false,
-	setAutohide: () => {},
-}
-
-export const ToastContext = createContext<ToastContextProps>(initialState)
-
-`}
-			</Codeblock>
-			<h2>Custom Hook</h2>
-			<Codeblock language='jsx'>
-				{`import { useContext } from 'react'
-
-import { ToastContext } from '@/contexts/toast.context'
-
-export default function useToast() {
-	const { setShow, setState, setMessage, setPosition, setAutohide } = useContext(ToastContext)
-
-	function showToast(
-		position: string,
-		state: string,
-		message: React.ReactNode,
-		autohide: boolean
-	) {
-		setMessage(message)
-		setState(state)
-		setPosition(position)
-		setAutohide(autohide)
-		setShow(true)
-	}
-
-	function closeToast() {
-		setShow(false)
-	}
-
-	return { showToast, closeToast }
-}
-`}
-			</Codeblock>
-
-			<h2>Toast Context Provider</h2>
-			<Codeblock language='jsx'>
-				{`'use client'
-
-import { useContext, useState } from 'react'
-import { ToastContext } from '@/contexts/toast.context'
-import { Toast } from '@/ui'
-
-export default function ToastContextProvider({ children }: { children: React.ReactNode }) {
-	const initialState = useContext(ToastContext)
-	const [show, setShow] = useState(initialState.show)
-	const [message, setMessage] = useState(initialState.message)
-	const [state, setState] = useState(initialState.state)
-	const [position, setPosition] = useState(initialState.position)
-	const [autohide, setAutohide] = useState(initialState.autohide)
-	const contextValues = {
-		message,
-		setMessage,
-		show,
-		setShow,
-		state,
-		setState,
-		position,
-		setPosition,
-		autohide,
-		setAutohide,
-	}
-	return (
-		<ToastContext.Provider value={contextValues}>
-			{children}
-			<Toast />
-		</ToastContext.Provider>
-	)
-}
-`}
 			</Codeblock>
 		</>
 	)

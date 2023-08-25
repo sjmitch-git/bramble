@@ -107,152 +107,152 @@ const config = {
 	],
 	siteLinks: [
 		{
-			href: '/components',
-			label: 'Components',
+			href: '/ui',
+			label: 'UI',
 
 			links: [
 				{
-					href: '/components/accordian',
+					href: '/ui/accordian',
 					label: 'Accordian',
 				},
 				{
-					href: '/components/autocomplete',
+					href: '/ui/autocomplete',
 					label: 'Autocomplete',
 				},
 				{
-					href: '/components/alert',
+					href: '/ui/alert',
 					label: 'Alert',
 				},
 				{
-					href: '/components/badge',
+					href: '/ui/badge',
 					label: 'Badge',
 				},
 				{
-					href: '/components/breadcrumbs',
+					href: '/ui/breadcrumbs',
 					label: 'Breadcrumbs',
 				},
 				{
-					href: '/components/buttons',
+					href: '/ui/buttons',
 					label: 'Buttons',
 
 					links: [
 						{
-							href: '/components/buttons/button_group',
+							href: '/ui/buttons/button_group',
 							label: 'Button Group',
 						},
 						{
-							href: '/components/buttons/close_button',
+							href: '/ui/buttons/close_button',
 							label: 'Close Button',
 						},
 					],
 				},
 				{
-					href: '/components/card',
+					href: '/ui/card',
 					label: 'Card',
 				},
 				{
-					href: '/components/carousel',
+					href: '/ui/carousel',
 					label: 'Carousel',
 				},
 				{
-					href: '/components/codeblock',
+					href: '/ui/codeblock',
 					label: 'Codeblock',
 				},
 				{
-					href: '/components/dialog',
+					href: '/ui/dialog',
 					label: 'Dialog',
 				},
 				{
-					href: '/components/drawer',
+					href: '/ui/drawer',
 					label: 'Drawer',
 				},
 				{
-					href: '/components/dropdown',
+					href: '/ui/dropdown',
 					label: 'Dropdown',
 				},
 				{
-					href: '/components/figure',
+					href: '/ui/figure',
 					label: 'Figure',
 				},
 				{
-					href: '/components/form',
+					href: '/ui/form',
 					label: 'Form',
 				},
 				{
-					href: '/components/footer',
+					href: '/ui/footer',
 					label: 'Footer',
 				},
 				{
-					href: '/components/gallery',
+					href: '/ui/gallery',
 					label: 'Gallery',
 				},
 				{
-					href: '/components/input',
+					href: '/ui/input',
 					label: 'Input',
 				},
 				{
-					href: '/components/loading',
+					href: '/ui/loading',
 					label: 'Loading',
 				},
 				{
-					href: '/components/modal',
+					href: '/ui/modal',
 					label: 'Modal',
 				},
 				{
-					href: '/components/navbar',
+					href: '/ui/navbar',
 					label: 'Navbar',
 				},
 				{
-					href: '/components/pagination',
+					href: '/ui/pagination',
 					label: 'Pagination',
 				},
 				{
-					href: '/components/radiogroup',
+					href: '/ui/radiogroup',
 					label: 'Radio Group',
 				},
 				{
-					href: '/components/range',
+					href: '/ui/range',
 					label: 'Range',
 				},
 				{
-					href: '/components/ratings',
+					href: '/ui/ratings',
 					label: 'Ratings',
 				},
 				{
-					href: '/components/select',
+					href: '/ui/select',
 					label: 'Select',
 				},
 				{
-					href: '/components/sidebar',
+					href: '/ui/sidebar',
 					label: 'Sidebar',
 				},
 				{
-					href: '/components/switch',
+					href: '/ui/switch',
 					label: 'Switch',
 				},
 				{
-					href: '/components/table',
+					href: '/ui/table',
 					label: 'Table',
 				},
 				{
-					href: '/components/tabs',
+					href: '/ui/tabs',
 					label: 'Tabs',
 				},
 				{
-					href: '/components/toast',
+					href: '/ui/toast',
 					label: 'Toast',
 				},
 				{
-					href: '/components/twitter_embed',
+					href: '/ui/twitter_embed',
 					label: 'Twitter Embed',
 				},
 				{
-					href: '/components/video',
+					href: '/ui/video',
 					label: 'Video',
 
 					links: [
 						{
-							href: '/components/video/video_player',
+							href: '/ui/video/video_player',
 							label: 'Video Player',
 						},
 					],
