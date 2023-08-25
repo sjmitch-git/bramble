@@ -21,7 +21,7 @@ const ButtonsgroupTemplate = () => {
 			<section id='usage'>
 				<h2>Usage</h2>
 				<p>
-					Related: <Link href='/components/buttons'>Buttons</Link>
+					Related: <Link href='/ui/buttons'>Buttons</Link>
 				</p>
 				<div className='mb-0 flex flex-wrap justify-start gap-4 bg-gray-300 p-4'>
 					<Buttongroup>
