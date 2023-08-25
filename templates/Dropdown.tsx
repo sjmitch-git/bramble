@@ -1,4 +1,4 @@
-import { Codeblock, Dropdown } from '@/components'
+import { Codeblock, Dropdown } from '@/ui'
 
 import config from '@/app.config'
 
@@ -41,7 +41,7 @@ const DropdownTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {Dropdown} from '@/components'
+					{`import {Dropdown} from '@/ui'
 
 const data = [
 	{

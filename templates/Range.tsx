@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { round } from '@smitch/js-lib'
 
-import { Codeblock, Range } from '@/components'
+import { Codeblock, Range } from '@/ui'
 
 const RangeTemplate = () => {
 	const [range, setRange] = useState(0)
@@ -59,7 +59,7 @@ const RangeTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {Range} from '@/components'
+					{`import {Range} from '@/ui'
 
 const [range, setRange] = useState(0)
 

@@ -2,7 +2,7 @@
 
 import { useContext, useState } from 'react'
 import { SidebarContext } from '@/contexts/sidebar.context'
-import { Sidebar } from '@/components'
+import { Sidebar } from '@/ui'
 
 export default function SidebarContextProvider({ children }: { children: React.ReactNode }) {
 	const initialState = useContext(SidebarContext)

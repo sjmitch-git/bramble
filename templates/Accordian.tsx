@@ -1,4 +1,4 @@
-import { Accordian, Alert, Codeblock } from '@/components'
+import { Accordian, Alert, Codeblock } from '@/ui'
 
 import Users from '@/data/users.json'
 
@@ -9,7 +9,7 @@ const AccordianTemplate = () => {
 
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {Accordian} from '@/components'
+					{`import {Accordian} from '@/ui'
 import Users from '@/data/users.json'
                     
 <Accordian

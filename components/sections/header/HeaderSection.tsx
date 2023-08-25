@@ -1,4 +1,4 @@
-import { Header, Breadcrumbs, Brand, Navbar } from '@/components'
+import { Header, Breadcrumbs, Brand, Navbar } from '@/ui'
 
 export const HeaderSection = () => {
 	return (

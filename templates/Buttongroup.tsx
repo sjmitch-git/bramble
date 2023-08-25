@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import { PlayIcon, PauseIcon, StopIcon } from '@heroicons/react/24/solid'
 
-import { Button, Buttongroup, Codeblock } from '@/components'
+import { Button, Buttongroup, Codeblock } from '@/ui'
 
 const ButtonsgroupTemplate = () => {
 	const [toggle, setToggle] = useState(false)
@@ -48,7 +48,7 @@ const ButtonsgroupTemplate = () => {
 				</div>
 				<div className='mb-8'>
 					<Codeblock language='jsx'>
-						{`import { Button, Buttongroup } from '@/components'
+						{`import { Button, Buttongroup } from '@/ui'
 
 const handleClick = () => {
 	alert('You clicked me!')

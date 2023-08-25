@@ -2,7 +2,7 @@
 
 import { useContext, useState } from 'react'
 import { DrawerContext } from '@/contexts/drawer.context'
-import { Drawer } from '@/components'
+import { Drawer } from '@/ui'
 
 export default function DrawerContextProvider({ children }: { children: React.ReactNode }) {
 	const initialState = useContext(DrawerContext)

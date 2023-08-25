@@ -1,6 +1,6 @@
 'use client'
 
-import { Codeblock, Autocomplete } from '@/components'
+import { Codeblock, Autocomplete } from '@/ui'
 
 import data from '@/data/countries.json'
 
@@ -26,7 +26,7 @@ const AutocompleteTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Autocomplete} from '@/components'
+				{`import {Autocomplete} from '@/ui'
                 
 const data = ["Afghanistan","Albania","Algeria","Andorra","Angola"...
 

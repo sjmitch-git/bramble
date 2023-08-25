@@ -2,9 +2,9 @@
 
 import dynamic from 'next/dynamic'
 
-import { Codeblock, Spinner, Alert } from '@/components'
+import { Codeblock, Spinner } from '@/ui'
 
-const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
+const TwitterEmbed = dynamic(() => import('@/components/ui/twitterembed/TwitterEmbed'), {
 	ssr: false,
 	loading: () => <Spinner className='aspect-square w-11 text-info' />,
 })
@@ -19,9 +19,9 @@ const TwitterembedTemplate = () => {
 			<Codeblock language='jsx'>
 				{`import dynamic from 'next/dynamic'
 
-import { Spinner } from '@/components'
+import { Spinner } from '@/ui'
 
-const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
+const TwitterEmbed = dynamic(() => import('@/components/ui/twitterembed/TwitterEmbed'), {
 	ssr: false,
 	loading: () => <Spinner className='aspect-square w-11 text-info' />,
 })
@@ -56,7 +56,7 @@ const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbe
 								<code>theme</code>
 							</td>
 							<td>
-								<code>dark</code>
+								<code>dark, light</code>
 							</td>
 							<td>
 								<code>light</code>

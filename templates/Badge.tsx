@@ -1,4 +1,4 @@
-import { Badge, Button, Codeblock } from '@/components'
+import { Badge, Button, Codeblock } from '@/ui'
 
 import { StarIcon } from '@heroicons/react/24/solid'
 
@@ -8,7 +8,7 @@ const BadgeTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {Badge} from '@/components'
+					{`import {Badge} from '@/ui'
                     
 <h1>
     My Latest Blog Post <Badge className='bg-info'>New</Badge>

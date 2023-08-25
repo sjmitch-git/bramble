@@ -1,4 +1,4 @@
-import { Codeblock, Ratings } from '@/components'
+import { Codeblock, Ratings } from '@/ui'
 
 const RatingsTemplate = () => {
 	return (
@@ -6,7 +6,7 @@ const RatingsTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {Ratings} from '@/components'
+					{`import {Ratings} from '@/ui'
                     
 <h2>
     Savoy Grill

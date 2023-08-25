@@ -1,5 +1,5 @@
-import { Navbar } from '@/components'
-import { Codeblock, Brand } from '@/components'
+import { Navbar } from '@/ui'
+import { Codeblock, Brand } from '@/ui'
 
 const NavbarTemplate = () => {
 	return (
@@ -15,7 +15,7 @@ const NavbarTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Navbar, Brand} from '@/components'
+				{`import {Navbar, Brand} from '@/ui'
 				
 <header className='header'>
 	<Navbar>

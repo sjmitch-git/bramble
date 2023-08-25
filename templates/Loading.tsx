@@ -1,11 +1,11 @@
-import { Codeblock, Loading, Spinner, Dots, Clock, Bars, Pulse, SpinDots, Wifi } from '@/components'
+import { Codeblock, Loading, Spinner, Dots, Clock, Bars, Pulse, SpinDots, Wifi } from '@/ui'
 
 const LoadingTemplate = () => {
 	return (
 		<>
 			<h2>Basic Usage</h2>
 			<Codeblock language='jsx'>
-				{`import { Loading, Spinner, Dots, Clock, Bars } from '@/components'
+				{`import { Loading, Spinner, Dots, Clock, Bars } from '@/ui'
      
 <Loading spinner={<Spinner />} />
 
@@ -190,7 +190,7 @@ const LoadingTemplate = () => {
 			<h2>Spinners</h2>
 
 			<Codeblock language='jsx'>
-				{`import { Spinner, Dots, Clock, Bars, Pulse, SpinDots, Wifi } from '@/components'
+				{`import { Spinner, Dots, Clock, Bars, Pulse, SpinDots, Wifi } from '@/ui'
 				
 <Spinner />
 
@@ -254,7 +254,7 @@ const LoadingTemplate = () => {
 			<Codeblock language='jsx'>
 				{`import dynamic from 'next/dynamic'
 				
-import { Spinner } from '@/components'
+import { Spinner } from '@/ui'
 				
 const TwitterEmbed = dynamic(() => import('@/components/twitterembed/TwitterEmbed'), {
 	ssr: false,

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-import { Codeblock, Pagination } from '@/components'
+import { Codeblock, Pagination } from '@/ui'
 
 const PaginationTemplate = () => {
 	const [page, setPage] = useState('1')
@@ -16,7 +16,7 @@ const PaginationTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {Pagination} from '@/components'
+					{`import {Pagination} from '@/ui'
 
 const [page, setPage] = useState('1')
 

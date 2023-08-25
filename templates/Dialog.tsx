@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { Alert, Codeblock, Dialog, Button, Login, Register } from '@/components'
+import { Alert, Codeblock, Dialog, Button, Login, Register } from '@/ui'
 import { Tabs } from '@/ui'
 import { UserIcon } from '@heroicons/react/24/solid'
 
@@ -48,7 +48,7 @@ const DialogTemplate = () => {
 
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import { Button, Dialog } from '@/components'
+					{`import { Button, Dialog } from '@/ui'
 
 <Dialog
 	title='Modal Example'
@@ -100,7 +100,7 @@ const DialogTemplate = () => {
 
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import { Alert, Button, Dialog } from '@/components'
+					{`import { Alert, Button, Dialog } from '@/ui'
 					
 <Dialog
 	btnLabel='Open Alert'
@@ -165,7 +165,7 @@ const DialogTemplate = () => {
 			</div>
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`import { Login, Register, Dialog } from '@/components'
+					{`import { Login, Register, Dialog } from '@/ui'
 import { Tabs } from '@/ui'
 
 const handleSubmit = (e: any) => {
@@ -225,7 +225,7 @@ const handleSubmit = (e: any) => {
 
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`import { Login, Dialog } from '@/components'
+					{`import { Login, Dialog } from '@/ui'
 import { UserIcon } from '@heroicons/react/24/solid'
 
 const handleSubmit = (e: any) => {
@@ -265,7 +265,7 @@ const handleSubmit = (e: any) => {
 
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`import { Register, Dialog } from '@/components'
+					{`import { Register, Dialog } from '@/ui'
 
 const handleSubmit = (e: any) => {
 	const data = new FormData(e.target)

@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 
-import { Figure, Codeblock, Modal } from '@/components'
+import { Figure, Codeblock, Modal } from '@/ui'
 
 const ModalTemplate = () => {
 	const [modal, setModal] = useState(false)
@@ -54,7 +54,7 @@ const ModalTemplate = () => {
 			<Codeblock language='jsx'>
 				{`import Image from 'next/image'
 				
-import { Figure, Modal } from '@/components'
+import { Figure, Modal } from '@/ui'
 
 interface DataProps {
 	name: string

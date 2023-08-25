@@ -2,7 +2,7 @@
 
 import { useContext, useState } from 'react'
 import { ToastContext } from '@/contexts/toast.context'
-import { Toast } from '@/components'
+import { Toast } from '@/ui'
 
 export default function ToastContextProvider({ children }: { children: React.ReactNode }) {
 	const initialState = useContext(ToastContext)

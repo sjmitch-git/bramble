@@ -1,4 +1,4 @@
-import { Brand, Footer } from '@/components'
+import { Brand, Footer } from '@/ui'
 
 import config from '@/app.config'
 

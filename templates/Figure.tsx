@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Figure, Codeblock, Video } from '@/components'
+import { Figure, Codeblock, Video } from '@/ui'
 
 const FigureTemplate = () => {
 	return (
@@ -10,7 +10,7 @@ const FigureTemplate = () => {
 				Using <code>img</code>
 			</h3>
 			<Codeblock language='jsx'>
-				{`import {Figure} from '@/components'
+				{`import {Figure} from '@/ui'
      
 <Figure
 	caption='Beagle' 	// optional

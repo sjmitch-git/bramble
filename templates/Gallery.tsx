@@ -1,4 +1,4 @@
-import { Codeblock, Gallery } from '@/components'
+import { Codeblock, Gallery } from '@/ui'
 
 import dogs from '@/data/dogs.json'
 
@@ -7,7 +7,7 @@ const GalleryTemplate = () => {
 		<>
 			<h2>Usage</h2>
 			<Codeblock language='jsx'>
-				{`import {Gallery} from '@/components'
+				{`import {Gallery} from '@/ui'
 
 import dogs from '@/data/dogs.json'
 

@@ -11,7 +11,7 @@ import {
 	JcbIcon,
 	MasterCardIcon,
 	VisaIcon,
-} from '@/components'
+} from '@/ui'
 
 import data from '@/data/cards.json'
 
@@ -85,7 +85,7 @@ const RadioGroupTemplate = () => {
 			<Codeblock language='jsx'>
 				{`import {
 	RadioGroup
-} from '@/components'
+} from '@/ui'
 
 const data = [
 	{
@@ -168,7 +168,7 @@ const handleChange = (e: any) => {
 	JcbIcon,
 	MasterCardIcon,
 	VisaIcon,
-} from '@/components'
+} from '@/ui'
 
 const data = [
 	{
@@ -244,7 +244,7 @@ const handleChange = (e: any) => {
 			<Codeblock language='jsx'>
 				{`import {
 	RadioGroup,
-} from '@/components'
+} from '@/ui'
 
 const data = [
 	{ id: 'apples', emoji: '🍏' },

@@ -1,4 +1,4 @@
-import { Codeblock, Switch } from '@/components'
+import { Codeblock, Switch } from '@/ui'
 
 const SwitchTemplate = () => {
 	return (
@@ -16,7 +16,7 @@ const SwitchTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Switch} from '@/components'
+				{`import {Switch} from '@/ui'
 				
 <Switch
 	label='I agree to terms and conditions'
@@ -38,7 +38,7 @@ const SwitchTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Switch} from '@/components'
+				{`import {Switch} from '@/ui'
 				
 <Switch
 	label='I agree to terms and conditions'
@@ -71,7 +71,7 @@ const SwitchTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Switch} from '@/components'
+				{`import {Switch} from '@/ui'
 				
 <Switch
 	label='I agree to terms and conditions'
@@ -102,7 +102,7 @@ const SwitchTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Switch} from '@/components'
+				{`import {Switch} from '@/ui'
 				
 <Switch
 	label='I agree to terms and conditions'

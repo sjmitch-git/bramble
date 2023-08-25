@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-import { Alert, Codeblock } from '@/components'
+import { Alert, Codeblock } from '@/ui'
 
 const AlertTemplate = () => {
 	const [error, setError] = useState('Page could not be found!')
@@ -12,7 +12,7 @@ const AlertTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {Alert} from '@/components'
+					{`import {Alert} from '@/ui'
                     
 <Alert
     className='info' // 'info' | 'success' | 'warning' | 'error' | 'danger'

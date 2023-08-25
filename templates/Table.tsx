@@ -1,6 +1,6 @@
 'use client'
 
-import { Codeblock, Table } from '@/components'
+import { Codeblock, Table } from '@/ui'
 
 import data from '@/data/carts.json'
 
@@ -10,7 +10,7 @@ const TableTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {Table} from '@/components'
+					{`import {Table} from '@/ui'
 import data from '@/data/carts.json'
                     
 <Table

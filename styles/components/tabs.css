@@ -2,12 +2,24 @@
 	.tabs {
 		@apply flex flex-col;
 
-		nav {
-			@apply flex items-center justify-center gap-4 border-b border-dark;
+		.tabbar {
+			@apply border-b border-neutral;
+		}
+
+		.tablist {
+			@apply -mb-[1px] flex items-stretch justify-center gap-1;
+		}
+
+		.tab {
+			@apply rounded-t-lg px-4 py-2 text-primary;
+
+			&.active {
+				@apply cursor-default border border-neutral border-b-transparent bg-white text-dark;
+			}
 		}
 
 		.tabwrap {
-			@apply border p-4;
+			@apply border border-t-0 border-neutral bg-white p-4;
 
 			& > div {
 				@apply hidden;
@@ -16,14 +28,6 @@
 					@apply block;
 				}
 			}
-		}
-	}
-
-	.tab {
-		@apply rounded-t-lg border bg-neutral px-4 py-2;
-
-		&.active {
-			@apply cursor-default bg-dark text-light;
 		}
 	}
 }

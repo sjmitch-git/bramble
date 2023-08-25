@@ -1,6 +1,6 @@
 'use client'
 
-import { Card, Codeblock } from '@/components'
+import { Card, Codeblock } from '@/ui'
 
 import Dogs from '@/data/dogs.json'
 import Data from '@/data/toasters.json'
@@ -25,7 +25,7 @@ const CardTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Card} from '@/components'
+				{`import {Card} from '@/ui'
 				
 <Card
     title={name}

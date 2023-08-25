@@ -1,6 +1,6 @@
 'use client'
 
-import { Tab } from './Tab'
+import { TabBar } from './TabBar'
 
 import { useCallback, useState, useEffect } from 'react'
 
@@ -44,18 +44,11 @@ export const Tabs = ({ className = '', defaultActiveId = '', children }: TabsPro
 
 	return (
 		<div className={`tabs ${className}`}>
-			<nav>
-				{tabs &&
-					tabs.map((tab) => (
-						<Tab
-							id={tab.id}
-							title={tab.title}
-							key={tab.id}
-							activeId={activeId}
-							onclick={handleClick}
-						/>
-					))}
-			</nav>
+			<TabBar
+				tabs={tabs}
+				activeId={activeId}
+				onclick={handleClick}
+			/>
 			<div
 				ref={content}
 				className='tabwrap'

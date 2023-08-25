@@ -1,4 +1,4 @@
-import { Footer, Codeblock } from '@/components'
+import { Footer, Codeblock } from '@/ui'
 
 import config from '@/app.config'
 
@@ -12,7 +12,7 @@ const FooterTemplate = () => {
 				Add to <code>layout.tsx</code>
 			</p>
 			<Codeblock language='jsx'>
-				{`import {Footer} from '@/components'
+				{`import {Footer} from '@/ui'
      
 <Footer />
 `}

@@ -1,4 +1,4 @@
-import { Breadcrumbs, Codeblock } from '@/components'
+import { Breadcrumbs, Codeblock } from '@/ui'
 
 const BreadcrumbsTemplate = () => {
 	return (
@@ -6,7 +6,7 @@ const BreadcrumbsTemplate = () => {
 			<h2>Usage</h2>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {Breadcrumbs} from '@/components'
+					{`import {Breadcrumbs} from '@/ui'
 
 return (			
 	<Breadcrumbs />

@@ -16,7 +16,7 @@ import {
 	User,
 	CreditCard,
 	RadioGroup,
-} from '@/components'
+} from '@/ui'
 
 import data from '@/data/countries.json'
 
@@ -96,7 +96,7 @@ const FormTemplate = () => {
 		<>
 			<h2>Usage</h2>
 			<Codeblock language='jsx'>
-				{`import { Form, Input, Range, Autocomplete } from '@/components'
+				{`import { Form, Input, Range, Autocomplete } from '@/ui'
 				
 <Form 
 	legend='Input Types'
@@ -403,7 +403,7 @@ const FormTemplate = () => {
 				/>
 			</div>
 			<Codeblock language='jsx'>
-				{`import { Login } from '@/components'
+				{`import { Login } from '@/ui'
 
 const onsubmit = (event: any) => {
 	// do something...
@@ -426,7 +426,7 @@ const onsubmit = (event: any) => {
 				/>
 			</div>
 			<Codeblock language='jsx'>
-				{`import { Register } from '@/components'
+				{`import { Register } from '@/ui'
 
 const onsubmit = (event: any) => {
 	// do something...
@@ -448,7 +448,7 @@ const onsubmit = (event: any) => {
 				/>
 			</div>
 			<Codeblock language='jsx'>
-				{`import { User } from '@/components'
+				{`import { User } from '@/ui'
 
 const onsubmit = (event: any) => {
 	// do something...
@@ -470,7 +470,7 @@ const onsubmit = (event: any) => {
 				/>
 			</div>
 			<Codeblock language='jsx'>
-				{`import { CreditCard } from '@/components'
+				{`import { CreditCard } from '@/ui'
 
 const onsubmit = (event: any) => {
 	// do something...
@@ -492,7 +492,7 @@ const onsubmit = (event: any) => {
 				/>
 			</div>
 			<Codeblock language='jsx'>
-				{`import { NewsLetter } from '@/components'
+				{`import { NewsLetter } from '@/ui'
 
 const onsubmit = (event: any) => {
 	// do something...

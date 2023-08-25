@@ -235,6 +235,10 @@ const config = {
 					label: 'Table',
 				},
 				{
+					href: '/components/tabs',
+					label: 'Tabs',
+				},
+				{
 					href: '/components/toast',
 					label: 'Toast',
 				},

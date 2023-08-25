@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { Codeblock, Select } from '@/components'
+import { Codeblock, Select } from '@/ui'
 
 const SelectTemplate = () => {
 	const [fruit, setFruit] = useState('')
@@ -38,7 +38,7 @@ const SelectTemplate = () => {
 
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {Select} from '@/components'
+					{`import {Select} from '@/ui'
                     
 const [fruit, setFruit] = useState('')
 

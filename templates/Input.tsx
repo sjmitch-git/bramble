@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-import { Codeblock, Input } from '@/components'
+import { Codeblock, Input } from '@/ui'
 
 const InputTemplate = () => {
 	const [color, setColor] = useState('#FFFFFF')
@@ -53,7 +53,7 @@ const InputTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Input} from '@/components'
+				{`import {Input} from '@/ui'
 				
 <Input
 	label='Name'
@@ -74,7 +74,7 @@ const InputTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Input} from '@/components'
+				{`import {Input} from '@/ui'
 				
 <Input
 	label='I agree to the Terms and Conditions'
@@ -109,7 +109,7 @@ const InputTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Input} from '@/components'
+				{`import {Input} from '@/ui'
 				
 <Input
 	label='17 years or younger'
@@ -149,7 +149,7 @@ const InputTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Input} from '@/components'
+				{`import {Input} from '@/ui'
 				
 <Input
 	label='Password'
@@ -172,7 +172,7 @@ const InputTemplate = () => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Input} from '@/components'
+				{`import {Input} from '@/ui'
 
 const [color, setColor] = useState('#FFFFFF')
 
@@ -201,7 +201,7 @@ const onColorChange = (event: any) => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Input} from '@/components'
+				{`import {Input} from '@/ui'
 
 const [today, setToday] = useState('2023-08-03')
 		
@@ -226,7 +226,7 @@ const [today, setToday] = useState('2023-08-03')
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Input} from '@/components'
+				{`import {Input} from '@/ui'
 		
 <Input
 	label='Email'
@@ -257,7 +257,7 @@ const [today, setToday] = useState('2023-08-03')
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Input} from '@/components'
+				{`import {Input} from '@/ui'
 
 const [image, SetImage] = useState({
 	src: '',
@@ -302,7 +302,7 @@ const onFileChange = (e: any) => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Input} from '@/components'
+				{`import {Input} from '@/ui'
 		
 <Input
 	label='Maximum of 9'
@@ -327,7 +327,7 @@ const onFileChange = (e: any) => {
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Input} from '@/components'
+				{`import {Input} from '@/ui'
 		
 <Input
 	label='Blog'

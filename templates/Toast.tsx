@@ -2,7 +2,7 @@
 
 import UseToast from '@/hooks/useToast'
 
-import { Codeblock, Button, Spinner } from '@/components'
+import { Codeblock, Button, Spinner } from '@/ui'
 import { useEffect, useState } from 'react'
 
 const ToastTemplate = () => {
@@ -190,7 +190,7 @@ const [showToast] = UseToast()
 				</Button>
 			</div>
 			<Codeblock language='jsx'>
-				{`import { Spinner } from '@/components'
+				{`import { Spinner } from '@/ui'
 				
 <Button
 	className='info'
@@ -316,7 +316,7 @@ export default function useToast() {
 
 import { useContext, useState } from 'react'
 import { ToastContext } from '@/contexts/toast.context'
-import { Toast } from '@/components'
+import { Toast } from '@/ui'
 
 export default function ToastContextProvider({ children }: { children: React.ReactNode }) {
 	const initialState = useContext(ToastContext)

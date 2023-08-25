@@ -1,11 +1,11 @@
-import { Codeblock, VideoPlayer } from '@/components'
+import { Codeblock, VideoPlayer } from '@/ui'
 
 const VideoplayerTemplate = () => {
 	return (
 		<>
 			<h2>Usage</h2>
 			<Codeblock language='jsx'>
-				{`import {VideoPlayer} from '@/components'
+				{`import {VideoPlayer} from '@/ui'
                 
 <VideoPlayer
     src='https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'

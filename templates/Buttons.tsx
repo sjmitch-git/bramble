@@ -14,7 +14,7 @@ import {
 	PlusIcon,
 } from '@heroicons/react/24/solid'
 
-import { Button, Codeblock } from '@/components'
+import { Button, Codeblock } from '@/ui'
 
 const ButtonsTemplate = () => {
 	const [toggle, setToggle] = useState(false)
@@ -33,7 +33,7 @@ const ButtonsTemplate = () => {
 			</div>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {Button} from '@/components'
+					{`import {Button} from '@/ui'
 
 const label = 'Click'
 

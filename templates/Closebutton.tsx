@@ -1,6 +1,6 @@
 'use client'
 
-import { CloseButton, Codeblock } from '@/components'
+import { CloseButton, Codeblock } from '@/ui'
 
 const CloseButtonTemplate = () => {
 	const handleClick = () => {
@@ -15,7 +15,7 @@ const CloseButtonTemplate = () => {
 			</div>
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {CloseButton} from '@/components'
+					{`import {CloseButton} from '@/ui'
 
 <CloseButton onClick={handleClick} />`}
 				</Codeblock>
@@ -195,7 +195,7 @@ const CloseButtonTemplate = () => {
 <CloseButton className='lg ...' />
 
 <CloseButton className='xl ...' />`}</Codeblock>
-			</>
+		</>
 	)
 }
 
