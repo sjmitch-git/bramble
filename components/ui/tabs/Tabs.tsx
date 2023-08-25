@@ -6,13 +6,14 @@ import { useCallback, useState, useEffect } from 'react'
 
 interface TabsProps {
 	className?: string | undefined
+	tabStyles?: string | undefined
 	children: React.ReactNode
 	defaultActiveId?: string
 }
 
 import { Tab as TTab } from '@/types'
 
-export const Tabs = ({ className = '', defaultActiveId = '', children }: TabsProps) => {
+export const Tabs = ({ className = '', defaultActiveId = '', tabStyles, children }: TabsProps) => {
 	const [tabs, setTabs] = useState<TTab[]>(null!)
 	const [activeId, setActiveId] = useState<string>(defaultActiveId)
 	const [nodes, setNodes] = useState<React.ReactNode[]>(null!)
@@ -46,6 +47,7 @@ export const Tabs = ({ className = '', defaultActiveId = '', children }: TabsPro
 		<div className={`tabs ${className}`}>
 			<TabBar
 				tabs={tabs}
+				tabStyles={tabStyles}
 				activeId={activeId}
 				onclick={handleClick}
 			/>

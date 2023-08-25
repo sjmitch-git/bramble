@@ -8,15 +8,14 @@ import { Tab as TTab } from '@/types'
 
 interface TabBarProps {
 	className?: string | undefined
+	tabStyles?: string | undefined
 	defaultActiveId?: string
-    tabs: TTab[]
-    activeId: string
-    onclick: (id: string) => void | undefined
+	tabs: TTab[]
+	activeId: string
+	onclick: (id: string) => void | undefined
 }
 
-
-
-export const TabBar = ({ tabs, onclick, activeId }: TabBarProps) => {
+export const TabBar = ({ tabs, onclick, activeId, tabStyles }: TabBarProps) => {
 	return (
 		<nav className='tabbar'>
 			{tabs ? (
@@ -27,6 +26,7 @@ export const TabBar = ({ tabs, onclick, activeId }: TabBarProps) => {
 								id={tab.id}
 								title={tab.title}
 								activeId={activeId}
+								tabStyles={tabStyles}
 								onclick={onclick}
 							/>
 						</li>

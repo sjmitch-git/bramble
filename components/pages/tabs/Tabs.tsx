@@ -2,6 +2,13 @@
 
 import { Codeblock, Tabs, Login, Register } from '@/ui'
 
+const data = [
+	{ name: 'apples', emoji: '🍏', body: '<p>Some content about <strong>apples</strong></p>' },
+	{ name: 'bananas', emoji: '🍌', body: '<p>Some content about <strong>bananas</strong></p>' },
+	{ name: 'grapes', emoji: '🍇', body: '<p>Some content about <strong>grapes</strong></p>' },
+	{ name: 'lemons', emoji: '🍋', body: '<p>Some content about <strong>lemons</strong></p>' },
+]
+
 const TabsPage = () => {
 	const handleSubmit = (e: any) => {
 		e.preventdefault()
@@ -76,6 +83,57 @@ const TabsPage = () => {
     >
         <div>Tab 4 content</div>
     </div>
+</Tabs>`}
+			</Codeblock>
+
+			<h2>Emojis</h2>
+
+			<div className='mb-4 border bg-light p-4'>
+				<Tabs
+					className='mx-auto w-full max-w-md pt-12'
+					defaultActiveId='tab0'
+					tabStyles='text-3xl'
+				>
+					{data.map((item, index) => (
+						<div
+							id={`tab${index}`}
+							key={`tab${index}`}
+							title={item.emoji}
+							className={`${index === 0 ? 'active' : ''}`}
+						>
+							<h3>{item.name}</h3>
+							<div dangerouslySetInnerHTML={{ __html: item.body }} />
+						</div>
+					))}
+				</Tabs>
+			</div>
+
+			<Codeblock language='jsx'>
+				{`import {Tabs } from '@/ui'
+
+const data = [
+	{ name: 'apples', emoji: '🍏', body: '<p>Some content about <strong>apples</strong></p>' },
+	{ name: 'bananas', emoji: '🍌', body: '<p>Some content about <strong>bananas</strong></p>' },
+	{ name: 'grapes', emoji: '🍇', body: '<p>Some content about <strong>grapes</strong></p>' },
+	{ name: 'lemons', emoji: '🍋', body: '<p>Some content about <strong>lemons</strong></p>' },
+]
+				
+<Tabs
+	className='mx-auto w-full max-w-md pt-12'
+	defaultActiveId='tab0'
+	tabStyles='text-3xl'
+>
+	{data.map((item, index) => (
+		<div
+			id={\`tab\${index}\`}
+			key={\`tab\${index}\`}
+			title={item.emoji}
+			className={\`\${index === 0 ? 'active' : ''}\`}
+		>
+			<h3>{item.name}</h3>
+			<div dangerouslySetInnerHTML={{__html: item.body}}/>
+		</div>
+	))}
 </Tabs>`}
 			</Codeblock>
 

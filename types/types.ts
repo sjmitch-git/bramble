@@ -92,5 +92,6 @@ export type Tab = {
 	id: string
 	activeId?: string
 	title: string
+	tabStyles?: string | undefined
 	onclick: (id: string) => void | undefined
 } & React.HTMLAttributes<HTMLButtonElement>
