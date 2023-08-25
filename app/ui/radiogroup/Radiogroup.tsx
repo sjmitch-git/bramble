@@ -4,9 +4,10 @@ import RadioGroupTemplate from '@/templates/Radiogroup'
 
 const title = 'Radio Group'
 const description =
-	"Examples and usage of the 'Radio Group' component. Versions with labels, icons, or emojis."
-const keywords = 'Radio Group Component'
-const url = 'components/radiogroup'
+	"Streamline options selection with Bramble UI's radiogroup component. Create efficient and user-friendly web interfaces with modern radio button functionality."
+const keywords =
+	'Bramble UI radiogroup component, Options selection streamlining, User-friendly web interfaces, Modern radio button functionality, Web form optimization, Web development resources, Interactive UI elements, Bramble UI showcase, Efficient user interactions, Web design enhancement'
+const url = 'ui/radiogroup'
 
 export let metadata: any
 

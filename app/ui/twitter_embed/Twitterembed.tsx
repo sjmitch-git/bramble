@@ -4,9 +4,10 @@ import TwitterembedTemplate from '@/templates/Twitterembed'
 
 const title = 'Twitter Embed'
 const description =
-	'Examples and usage of the "Twitter Embed" component for both single tweets and profile timelines'
-const keywords = 'Lazy Loading'
-const url = 'components/twitter_embed'
+	"Integrate Twitter content seamlessly with Bramble UI's Twitter embed component. Enhance your web design with modern social media integrations."
+const keywords =
+	'Bramble UI Twitter embed, Seamless content integration, Modern social media integration, Web design enhancement, User-friendly interfaces, Social media integrations, Web development resources, Interactive UI elements, Bramble UI showcase, Engaging web experiences'
+const url = 'ui/twitter_embed'
 
 export let metadata: any
 

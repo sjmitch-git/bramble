@@ -3,9 +3,11 @@ import useMetadata from '@/hooks/useMetadata'
 import CloseButtonTemplate from '@/templates/Closebutton'
 
 const title = 'Close Button'
-const description = 'Close Button description TBD'
-const keywords = 'Close Button Component'
-const url = 'components/buttons/close_button'
+const description =
+	"Enhance user interactions with Bramble UI's close button component. Create intuitive and accessible web interfaces for seamless user experiences."
+const keywords =
+	'Bramble UI close button, User interaction enhancement, Intuitive web interfaces, Accessible UI components, Seamless user experiences, Modern web design, Interactive elements, Bramble UI showcase, User-friendly web development, Button customization'
+const url = 'ui/buttons/close_button'
 
 export let metadata: any
 

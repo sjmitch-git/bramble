@@ -3,9 +3,10 @@ import useMetadata from '@/hooks/useMetadata'
 import InputTemplate from '@/templates/Input'
 
 const title = 'Input'
-const description = 'Input description TBD'
-const keywords = 'Input Component'
-const url = 'components/input'
+const description = 'Enhance user input with Bramble UI\'s input components. Create intuitive and interactive web forms for seamless user interactions and data collection'
+const keywords =
+	'Bramble UI input components, Enhance user input, Intuitive web forms, Interactive input elements, User-friendly web design, Data collection improvement, Web development resources, Modern UI components, Bramble UI showcase, Seamless user interactions'
+const url = 'ui/input'
 
 export let metadata: any
 

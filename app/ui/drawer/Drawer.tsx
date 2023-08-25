@@ -4,9 +4,10 @@ import DrawerTemplate from '@/templates/Drawer'
 
 const title = 'Drawer'
 const description =
-	'Usage and examples of the Drawer component, a global horizontal overlay with top or bottom positioning'
-const keywords = 'Drawer Component'
-const url = 'components/drawer'
+	"Utilize Bramble UI's drawer component for efficient content navigation. Create modern and user-friendly web interfaces with dynamic drawer functionality"
+const keywords =
+	'Bramble UI drawer component, Efficient content navigation, Modern web interfaces, User-friendly UI design, Dynamic drawer functionality, Web development resources, Interactive UI elements, Bramble UI showcase, Seamless user experiences, Web content organizationt'
+const url = 'ui/drawer'
 
 export let metadata: any
 

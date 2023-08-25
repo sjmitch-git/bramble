@@ -5,7 +5,7 @@ import RangeTemplate from '@/templates/Range'
 const title = 'Range'
 const description = 'Range description TBD'
 const keywords = 'Range Component'
-const url = 'components/range'
+const url = 'ui/range'
 
 export let metadata: any
 

@@ -1,7 +1,8 @@
 // set default app config
 const name = 'Bramble'
 const title = 'Bramble UI Component Library'
-const description = 'A Next.js 13 boilerplate and library of reusable UI components for React'
+const description =
+	'Elevate your web projects with Bramble UI. Explore a collection of interactive components and tools to create modern and engaging user interfaces.'
 
 const config = {
 	siteMetadata: {
@@ -16,37 +17,8 @@ const config = {
 		authorTwitter: process.env.NEXT_PUBLIC_AUTHOR_TWITTER || 'yourTwitterHandle',
 		image: '/logo.png',
 		siteLanguage: `en`,
-		keywords: [
-			'Components',
-			'Next.js',
-			'ReactJS',
-			'TailwindCSS',
-			'Accordian',
-			'Alert',
-			'Badge',
-			'Breadcrumbs',
-			'Buttons',
-			'Button Group',
-			'Close Button',
-			'Card',
-			'Carousel',
-			'Dropdown',
-			'Codeblock',
-			'Dialog',
-			'Figure',
-			'Form',
-			'Gallery',
-			'Modal',
-			'Navbar',
-			'Pagination',
-			'Range',
-			'Ratings',
-			'Select',
-			'Table',
-			'Twitter Embed',
-			'Video',
-			'Video Player',
-		],
+		keywords:
+			'Bramble UI components, Interactive web tools, Modern user interfaces, Web design resources, User experience enhancement, Web development toolkit, UI building blocks, Engaging UI elements, Interactive design elements, Bramble UI showcase, ReactJS, NextJs, Next 13, TailwindCSS',
 	},
 	author: {
 		authorName: process.env.NEXT_PUBLIC_AUTHOR_NAME || null,
@@ -108,7 +80,7 @@ const config = {
 	siteLinks: [
 		{
 			href: '/ui',
-			label: 'UI',
+			label: 'Ui',
 
 			links: [
 				{

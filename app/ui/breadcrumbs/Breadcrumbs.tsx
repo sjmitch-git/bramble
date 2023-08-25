@@ -7,9 +7,11 @@ import BreadcrumbsTemplate from '@/templates/Breadcrumbs'
 } */
 
 const title = 'Breadcrumbs'
-const description = 'Indicate the current page’s location within a navigational hierarchy'
-const keywords = 'Breadcrumbs Component'
-const url = 'components/breadcrumbs'
+const description =
+	"Navigate effectively through Bramble UI's breadcrumbs component. Streamline user journeys and provide clear website navigation for improved user experiences."
+const keywords =
+	'Bramble UI breadcrumbs, Effective navigation, User journey streamlining, Clear website navigation, User experience enhancement, Modern web design, Seamless navigation components, Bramble UI showcase, Web development resources, User-friendly interfaces'
+const url = 'ui/breadcrumbs'
 
 export let metadata: any
 

@@ -4,9 +4,10 @@ import DialogTemplate from '@/templates/Dialog'
 
 const title = 'Dialog'
 const description =
-	'The dialog element is a useful element for representing any kind of dialog in HTML'
-const keywords = 'Dialog Component'
-const url = 'components/dialog'
+	"Craft user-friendly dialog boxes with Bramble UI's dialog component. Enhance user interactions and create seamless web experiences with modern dialogs."
+const keywords =
+	'Bramble UI dialog component, User-friendly dialog boxes, Enhance user interactions, Seamless web experiences, Modern dialog design, Web development resources, Interactive UI elements, Bramble UI showcase, User interface design, Dialog box implementation'
+const url = 'ui/dialog'
 
 export let metadata: any
 

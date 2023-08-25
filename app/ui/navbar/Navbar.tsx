@@ -3,9 +3,9 @@ import useMetadata from '@/hooks/useMetadata'
 import NavbarTemplate from '@/templates/Navbar'
 
 const title = 'Navbar'
-const description = 'Navbar description TBD'
-const keywords = 'Navbar Component'
-const url = 'components/navbar'
+const description = 'Craft effective navigation with Bramble UI\'s navbar component. Design modern and user-friendly web interfaces with dynamic navbar features.'
+const keywords = 'Bramble UI navbar component, Effective navigation design, Modern web interfaces, User-friendly UI elements, Dynamic navbar features, Web development resources, Interactive UI elements, Bramble UI showcase, Seamless user experiences, Web navigation optimization'
+const url = 'ui/navbar'
 
 export let metadata: any
 

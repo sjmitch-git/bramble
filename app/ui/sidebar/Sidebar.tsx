@@ -4,9 +4,10 @@ import SidebarTemplate from '@/templates/Sidebar'
 
 const title = 'Sidebar'
 const description =
-	'Usage and examples of the Sidebar component, a vertical sliding overlay with right or left positioning'
-const keywords = 'Sidebar Component'
-const url = 'components/sidebar'
+	"Optimize content organization with Bramble UI's sidebar component. Create efficient and modern web interfaces with dynamic sidebar layouts"
+const keywords =
+	'Bramble UI sidebar component, Content organization optimization, Efficient web interfaces, Dynamic sidebar layouts, User-friendly design, Web development resources, Interactive UI elements, Bramble UI showcase, Modern user experiences, Web content navigation'
+const url = 'ui/sidebar'
 
 export let metadata: any
 

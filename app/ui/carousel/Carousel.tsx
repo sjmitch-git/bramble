@@ -3,9 +3,11 @@ import useMetadata from '@/hooks/useMetadata'
 import CarouselTemplate from '@/templates/Carousel'
 
 const title = 'Carousel'
-const description = 'Carousel TBD'
-const keywords = 'Carousel Component'
-const url = 'components/carousel'
+const description =
+	"Explore Bramble UI's interactive carousel component for dynamic content showcasing. Create captivating web experiences with modern carousel features."
+const keywords =
+	'Bramble UI carousel, Interactive content showcase, Dynamic web experiences, Modern carousel features, User-friendly web design, Web content presentation, Bramble UI showcase, Engaging user interactions, Web development resources, Captivating user experience'
+const url = 'ui/carousel'
 
 export let metadata: any
 

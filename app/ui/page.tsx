@@ -2,77 +2,82 @@ import useMetadata from '@/hooks/useMetadata'
 
 import Link from 'next/link'
 
-const title = 'Components'
-const description = 'A library of reusable components for React'
+import config from '@/app.config'
+
+const title = 'UI Components'
+const description =
+	"Explore Bramble UI's interactive components and elevate your web design. Create engaging user interfaces with modern tools and resources."
 const keywords =
-	'Components,React,React Components,Accordian,Alert,Badge,Breadcrumbs,Buttons,Button Group,Close Button,Card,Carousel,Dropdown,Codeblock,Dialog,Figure,Gallery,Modal,Navbar,Pagination,Range,Ratings,Select,Video,Video Player'
-const url = 'components'
+	'Bramble UI components, Interactive web tools, Modern user interfaces, Web design resources, User experience enhancement, Web development toolkit, UI building blocks, Engaging UI elements, Interactive design elements, Bramble UI showcase, ReactJS, NextJs, Next 13, TailwindCSS'
+
+const url = 'ui'
 
 export let metadata: any
 
 export default function Components() {
 	metadata = useMetadata({ title, description, keywords, url })
+	console.log('config', config.siteLinks)
 	return (
 		<>
-			<h1>Components</h1>
-			<p>Page under construction</p>
+			<h1>{title}</h1>
+			<p>{description}</p>
 			<nav>
 				<ul>
 					<li>
-						<Link href='./components/accordian'>Accordian</Link>
+						<Link href='./ui/accordian'>Accordian</Link>
 					</li>
 					<li>
-						<Link href='./components/alert'>Alert</Link>
+						<Link href='./ui/alert'>Alert</Link>
 					</li>
 					<li>
-						<Link href='./components/badge'>Badge</Link>
+						<Link href='./ui/badge'>Badge</Link>
 					</li>
 					<li>
-						<Link href='./components/breadcrumbs'>Breadcrumbs</Link>
+						<Link href='./ui/breadcrumbs'>Breadcrumbs</Link>
 					</li>
 					<li>
-						<Link href='./components/buttons'>Buttons</Link>
+						<Link href='./ui/buttons'>Buttons</Link>
 						<ul>
 							<li>
-								<Link href='./components/buttons/button_group'>Button Group</Link>
+								<Link href='./ui/buttons/button_group'>Button Group</Link>
 							</li>
 							<li>
-								<Link href='./components/buttons/close_button'>Close Button</Link>
+								<Link href='./ui/buttons/close_button'>Close Button</Link>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<Link href='./components/card'>Card</Link>
+						<Link href='./ui/card'>Card</Link>
 					</li>
 					<li>
-						<Link href='./components/carousel'>Carousel</Link>
+						<Link href='./ui/carousel'>Carousel</Link>
 					</li>
 					<li>
-						<Link href='./components/codeblock'>Codeblock</Link>
+						<Link href='./ui/codeblock'>Codeblock</Link>
 					</li>
 					<li>
-						<Link href='./components/dialog'>Dialog</Link>
+						<Link href='./ui/dialog'>Dialog</Link>
 					</li>
 					<li>
-						<Link href='./components/figure'>Figure</Link>
+						<Link href='./ui/figure'>Figure</Link>
 					</li>
 					<li>
-						<Link href='./components/gallery'>Gallery</Link>
+						<Link href='./ui/gallery'>Gallery</Link>
 					</li>
 					<li>
-						<Link href='./components/modal'>Modal</Link>
+						<Link href='./ui/modal'>Modal</Link>
 					</li>
 					<li>
-						<Link href='./components/pagination'>Pagination</Link>
+						<Link href='./ui/pagination'>Pagination</Link>
 					</li>
 					<li>
-						<Link href='./components/ratings'>Ratings</Link>
+						<Link href='./ui/ratings'>Ratings</Link>
 					</li>
 					<li>
-						<Link href='./components/select'>Select</Link>
+						<Link href='./ui/select'>Select</Link>
 					</li>
 					<li>
-						<Link href='./components/video'>Video</Link>
+						<Link href='./ui/video'>Video</Link>
 					</li>
 				</ul>
 			</nav>

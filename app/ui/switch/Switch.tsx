@@ -4,9 +4,10 @@ import SwitchTemplate from '@/templates/Switch'
 
 const title = 'Switch'
 const description =
-	'Customize checkboxes with the "Switch" component, with display, layout, and colour options.'
-const keywords = 'Switch Component'
-const url = 'components/switch'
+	"Implement user-friendly switches with Bramble UI's switch component. Create intuitive web interfaces and enhance user interactions with modern switches."
+const keywords =
+	'Bramble UI switch component, User-friendly switches, Intuitive web interfaces, Modern switch elements, Web design enhancement, User interaction improvement, Web development resources, Interactive UI elements, Bramble UI showcase, User experience optimization'
+const url = 'ui/switch'
 
 export let metadata: any
 

@@ -4,9 +4,10 @@ import TabsPage from '@/components/pages/tabs'
 
 const title = 'Tabs'
 const description =
-	'Examples and usage of the Tabs component, a horizontal menu toggling content display.'
-const keywords = 'Tabs Component'
-const url = 'components/tabs'
+	'Explore interactive tab examples in Bramble UI. Create seamless navigation and organized content with customizable tabs.'
+const keywords =
+	'Bramble UI tabs, Interactive tab navigation, Customizable tab examples, Organized content display, Web design enhancement, User-friendly navigation, Tabbed user interface, Tab components in Bramble UI, Web development showcase, Tabbed content presentation'
+const url = 'ui/tabs'
 
 export let metadata: any
 

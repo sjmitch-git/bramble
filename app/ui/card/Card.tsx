@@ -3,9 +3,11 @@ import useMetadata from '@/hooks/useMetadata'
 import CardTemplate from '@/templates/Card'
 
 const title = 'Card'
-const description = 'Card description TBD'
-const keywords = 'Card Component'
-const url = 'components/card'
+const description =
+	'Discover versatile card components in Bramble UI for captivating content presentation. Elevate your web design with modern card layouts and interactions.'
+const keywords =
+	'Bramble UI card components, Versatile card design, Captivating content presentation, Modern web design, Card layouts and interactions, User-friendly web development, Interactive UI elements, Web content organization, Bramble UI showcase, Engaging user experiences'
+const url = 'ui/card'
 
 export let metadata: any
 

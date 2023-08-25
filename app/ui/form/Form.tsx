@@ -4,9 +4,10 @@ import FormTemplate from '@/templates/Form'
 
 const title = 'Form'
 const description =
-	'Examples and useage of the "Form" component, with examples of "Input", "Range", and "Autocomplete" components'
-const keywords = 'Form Component'
-const url = 'components/form'
+	"Create efficient and user-friendly forms with Bramble UI's form components. Enhance data collection and validation for seamless web interactions"
+const keywords =
+	'Bramble UI form components, Efficient form creation, User-friendly forms, Data collection enhancement, Web interaction improvement, Form validation, Modern web design, Web development resources, Bramble UI showcase, User experience optimization'
+const url = 'ui/form'
 
 export let metadata: any
 

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import { OpenGraph, keyWords, host } from '../../shared/metadata'
+import { OpenGraph, host } from '../../shared/metadata'
 
 export type MetadataProps = {
 	title: string
@@ -18,7 +18,7 @@ const useMetadata = ({ title, description, keywords, url }: MetadataProps) => {
 			canonical: url,
 		},
 		description: description,
-		keywords: keywords + ',' + keyWords,
+		keywords: keywords,
 		openGraph: {
 			title: title,
 			description: description,

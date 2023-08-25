@@ -3,9 +3,11 @@ import useMetadata from '@/hooks/useMetadata'
 import AlertTemplate from '@/templates/Alert'
 
 const title = 'Alert'
-const description = 'Provide contextual feedback messages for typical user actions'
-const keywords = 'Alert Component'
-const url = 'components/alert'
+const description =
+	"Explore Bramble UI's dynamic alert components for effective communication. Enhance user interaction with interactive alerts. Discover modern web design possibilities."
+const keywords =
+	'Bramble UI alerts, Dynamic alert components, Effective communication, Interactive user alerts, Modern web design, User interaction enhancement, Web development resources, Interactive notifications, Bramble UI showcase, User experience improvement'
+const url = 'ui/alert'
 
 export let metadata: any
 

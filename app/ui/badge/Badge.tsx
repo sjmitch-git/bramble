@@ -3,9 +3,11 @@ import useMetadata from '@/hooks/useMetadata'
 import BadgeTemplate from '@/templates/Badge'
 
 const title = 'Badge'
-const description = 'Documentation and examples for badges, our small count and labeling component.'
-const keywords = 'Badge Component'
-const url = 'components/badge'
+const description =
+	"Discover versatile badges in Bramble UI's interactive examples. Enhance user experience with informative and customizable web badges."
+const keywords =
+	'Bramble UI badge examples, Interactive UI components, Informative web badges, Customizable badge implementation, User experience enhancement, Modern web development, Visual cues in UI, Web interface design, Badge versatility, Bramble UI showcase'
+const url = 'ui/badge'
 
 export let metadata: any
 

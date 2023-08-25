@@ -3,9 +3,11 @@ import useMetadata from '@/hooks/useMetadata'
 import ModalTemplate from '@/templates/Modal'
 
 const title = 'Modal'
-const description = 'Modal description TBD'
-const keywords = 'Modal Component'
-const url = 'components/modal'
+const description =
+	"Create interactive modals with Bramble UI's modal component. Enhance user interactions and design seamless web experiences with modern modals."
+const keywords =
+	'Bramble UI modal component, Interactive modals, Enhance user interactions, Seamless web experiences, Modern modal design, User-friendly design, Web development resources, Interactive UI elements, Bramble UI showcase, User interface enhancement'
+const url = 'ui/modal'
 
 export let metadata: any
 

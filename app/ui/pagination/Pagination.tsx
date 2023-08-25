@@ -4,9 +4,9 @@ import PaginationTemplate from '@/templates/Pagination'
 
 const title = 'Pagination'
 const description =
-	'Examples and usage of the Pagination component, allowing the user to navigate between pages of content.'
-const keywords = 'Pagination Component'
-const url = 'components/pagination'
+	'Implement seamless pagination with Bramble UI\'s pagination component. Create user-friendly web interfaces and navigate through content effortlessly.'
+const keywords = 'Bramble UI pagination component, Seamless pagination, User-friendly web interfaces, Content navigation, Web design enhancement, Efficient user interactions, Web development resources, Interactive UI elements, Bramble UI showcase, Content organization'
+const url = 'ui/pagination'
 
 export let metadata: any
 

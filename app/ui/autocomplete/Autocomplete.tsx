@@ -4,9 +4,10 @@ import AutocompleteTemplate from '@/templates/Autocomplete'
 
 const title = 'Autocomplete'
 const description =
-	"Examples and usage of the 'Autocomplete' component, an input field of type 'list' with a datalist dropdown of data options."
-const keywords = 'Autocomplete Component'
-const url = 'components/autocomplete'
+	"Simplify user input with Bramble UI's autocomplete component. Enhance search functionality and create efficient, user-friendly web experiences."
+const keywords =
+	'Bramble UI autocomplete, User input simplification, Search functionality enhancement, Efficient web experiences, Interactive UI components, User-friendly web design, Modern web development, Bramble UI showcase, Web form optimization, User interaction improvement'
+const url = 'ui/autocomplete'
 
 export let metadata: any
 

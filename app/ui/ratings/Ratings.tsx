@@ -3,9 +3,11 @@ import useMetadata from '@/hooks/useMetadata'
 import RatingsTemplate from '@/templates/Ratings'
 
 const title = 'Ratings'
-const description = 'Documentation and examples for badges, our small count and labeling component.'
-const keywords = 'Ratings Component'
-const url = 'components/ratings'
+const description =
+	"Fine-tune user input with Bramble UI's range component. Create interactive web interfaces with modern range sliders for precise selections."
+const keywords =
+	'Bramble UI range component, Fine-tune user input, Interactive web interfaces, Modern range sliders, User-friendly design, Web development resources, Interactive UI elements, Bramble UI showcase, Precise user selections, Web form optimization'
+const url = 'ui/ratings'
 
 export let metadata: any
 

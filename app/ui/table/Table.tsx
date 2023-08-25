@@ -3,9 +3,11 @@ import useMetadata from '@/hooks/useMetadata'
 import TableTemplate from '@/templates/Table'
 
 const title = 'Table'
-const description = 'Responsive data table with fixed-height option and built-in sorting capability'
-const keywords = 'Table Component'
-const url = 'components/table'
+const description =
+	"Organize data effectively with Bramble UI's table component. Create user-friendly web interfaces with modern table designs for seamless content presentation."
+const keywords =
+	'Bramble UI table component, Organize data effectively, User-friendly web interfaces, Modern table designs, Data presentation, Web design enhancement, Content organization, Web development resources, Interactive UI elements, Bramble UI showcase'
+const url = 'ui/table'
 
 export let metadata: any
 

@@ -3,9 +3,11 @@ import useMetadata from '@/hooks/useMetadata'
 import ButtonsTemplate from '@/templates/Buttons'
 
 const title = 'Buttons'
-const description = 'Buttons description TBD'
-const keywords = 'Buttons Component'
-const url = 'components/buttons'
+const description =
+	"Elevate user interactions with Bramble UI's versatile button components. Create engaging and interactive web interfaces for a modern user experience"
+const keywords =
+	'Bramble UI buttons, Versatile button components, User interaction enhancement, Engaging web interfaces, Modern user experience, Interactive UI elements, Web design flexibility, Bramble UI showcase, User-friendly web development, Button customization'
+const url = 'ui/buttons'
 
 export let metadata: any
 

@@ -3,9 +3,11 @@ import useMetadata from '@/hooks/useMetadata'
 import GalleryTemplate from '@/templates/Gallery'
 
 const title = 'Gallery'
-const description = 'Gallery description TBD'
-const keywords = 'Gallery Component'
-const url = 'components/gallery'
+const description =
+	"Explore Bramble UI's gallery component for stunning image showcases. Elevate your web design with modern gallery layouts and captivating visuals."
+const keywords =
+	'Bramble UI gallery component, Image showcases, Modern gallery layouts, Web design enhancement, Captivating visuals, User-friendly interfaces, Web development resources, Interactive UI elements, Bramble UI showcase, Engaging user experiences'
+const url = 'ui/gallery'
 
 export let metadata: any
 

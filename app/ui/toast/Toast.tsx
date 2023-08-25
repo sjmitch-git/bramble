@@ -4,9 +4,10 @@ import ToastTemplate from '@/templates/Toast'
 
 const title = 'Toast'
 const description =
-	'Examples and usage of the "Toast" global component, which creates push notifications alerting the user'
-const keywords = 'Toast Component, Context Api'
-const url = 'components/toast'
+	"Display important notifications seamlessly with Bramble UI's toast component. Enhance user communication and create efficient web interfaces."
+const keywords =
+	'Bramble UI toast component, Display notifications, Enhance user communication, Efficient web interfaces, User-friendly design, Web development resources, Interactive UI elements, Bramble UI showcase, User experience improvement, Web notification system'
+const url = 'ui/toast'
 
 export let metadata: any
 

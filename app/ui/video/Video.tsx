@@ -3,9 +3,11 @@ import useMetadata from '@/hooks/useMetadata'
 import VideoTemplate from '@/templates/Video'
 
 const title = 'Video'
-const description = 'Video description TBD'
-const keywords = 'Video Component'
-const url = 'components/video'
+const description =
+	"Embed and showcase videos seamlessly with Bramble UI's video component. Enhance user engagement and create captivating web experiences."
+const keywords =
+	'Bramble UI video component, Seamless video embedding, User engagement enhancement, Captivating web experiences, Modern video integration, Web development resources, Interactive UI elements, Bramble UI showcase, Web content presentation, User experience optimization'
+const url = 'ui/video'
 
 export let metadata: any
 
