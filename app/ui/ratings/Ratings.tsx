@@ -4,9 +4,9 @@ import RatingsTemplate from '@/templates/Ratings'
 
 const title = 'Ratings'
 const description =
-	"Fine-tune user input with Bramble UI's range component. Create interactive web interfaces with modern range sliders for precise selections."
+	"Implement user ratings seamlessly with Bramble UI's ratings component. Enhance user feedback and create engaging web experiences with modern rating systems."
 const keywords =
-	'Bramble UI range component, Fine-tune user input, Interactive web interfaces, Modern range sliders, User-friendly design, Web development resources, Interactive UI elements, Bramble UI showcase, Precise user selections, Web form optimization'
+	'Bramble UI ratings component, User ratings implementation, Enhance user feedback, Engaging web experiences, Modern rating systems, Web development resources, Interactive UI elements, User-friendly design, Bramble UI showcase, User experience enhancement'
 const url = 'ui/ratings'
 
 export let metadata: any

@@ -3,8 +3,10 @@ import useMetadata from '@/hooks/useMetadata'
 import RangeTemplate from '@/templates/Range'
 
 const title = 'Range'
-const description = 'Range description TBD'
-const keywords = 'Range Component'
+const description =
+	"Fine-tune user input with Bramble UI's range component. Create interactive web interfaces with modern range sliders for precise selections."
+const keywords =
+	'Bramble UI range component, Fine-tune user input, Interactive web interfaces, Modern range sliders, User-friendly design, Web development resources, Interactive UI elements, Bramble UI showcase, Precise user selections, Web form optimization'
 const url = 'ui/range'
 
 export let metadata: any
