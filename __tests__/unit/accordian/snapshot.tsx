@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { Accordian } from '@/components'
+import { Accordian } from '@/ui'
 
 import data from '@/data/users.json'
 

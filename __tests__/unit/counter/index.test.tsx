@@ -2,7 +2,7 @@ import { act, render, screen } from '@testing-library/react'
 import fireEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
 
-import { Counter } from '@/components'
+import { Counter } from '@/ui'
 
 const value = 1
 const label_value = 'Maximum of 3'

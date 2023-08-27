@@ -1,0 +1,14 @@
+[
+	{
+		"name": "ReactJS",
+		"body": "<p className='italic'>What is ReactJS?</p><p>ReactJS is a popular JavaScript library used for building user interfaces. It allows developers to create reusable UI components and efficiently update the interface when the data changes. ReactJS is known for its component-based architecture and virtual DOM (Document Object Model) manipulation.</p>"
+	},
+	{
+		"name": "NextJS",
+		"body": "<p className='italic'>What is NextJS?</p><p>NextJS is a framework built on top of ReactJS. It provides additional features like server-side rendering, automatic code splitting, and simplified routing. NextJS is commonly used for building server-rendered React applications.</p>"
+	},
+	{
+		"name": "TailwindCSS",
+		"body": "<p className='italic'>What is TailwindCSS?</p><p>TailwindCSS is a utility-first CSS framework that provides a set of pre-defined classes to style HTML elements. It aims to give developers more control over the design by providing a highly customizable utility class approach. It is often used in conjunction with ReactJS or other frontend frameworks.</p>"
+	}
+]

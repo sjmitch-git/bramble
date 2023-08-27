@@ -3,7 +3,7 @@ import fireEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
 import { logRoles } from '@testing-library/dom'
 
-import { Accordian } from '@/components'
+import { Accordian } from '@/ui'
 
 import DATA from '@/data/users.json'
 

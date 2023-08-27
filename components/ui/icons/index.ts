@@ -13,3 +13,7 @@ export * from './DiscoverIcon'
 export * from './JcbIcon'
 export * from './MasterCardIcon'
 export * from './VisaIcon'
+
+export * from './ReactIcon'
+export * from './NextIcon'
+export * from './TailwindIcon'

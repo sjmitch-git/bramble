@@ -16,6 +16,7 @@ interface TabBarProps {
 }
 
 export const TabBar = ({ tabs, onclick, activeId, tabStyles }: TabBarProps) => {
+	console.log(tabs)
 	return (
 		<nav className='tabbar'>
 			{tabs ? (

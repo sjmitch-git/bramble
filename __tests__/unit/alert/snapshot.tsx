@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { Alert } from '@/components'
+import { Alert } from '@/ui'
 
 const message = 'A message for the user'
 

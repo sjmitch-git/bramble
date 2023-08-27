@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { Counter } from '@/components'
+import { Counter } from '@/ui'
 
 const value = 1
 const label_value = 'Maximum of 3'

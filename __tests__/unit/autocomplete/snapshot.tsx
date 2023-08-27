@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { Autocomplete } from '@/components'
+import { Autocomplete } from '@/ui'
 
 import DATA from '@/data/countries.json'
 

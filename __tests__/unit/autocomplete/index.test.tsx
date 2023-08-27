@@ -3,7 +3,7 @@ import fireEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
 import { logRoles } from '@testing-library/dom'
 
-import { Autocomplete } from '@/components'
+import { Autocomplete } from '@/ui'
 
 import { Autocomplete as TAutocomplete } from '@/types'
 

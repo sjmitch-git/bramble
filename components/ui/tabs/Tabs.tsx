@@ -9,26 +9,33 @@ interface TabsProps {
 	tabStyles?: string | undefined
 	children: React.ReactNode
 	defaultActiveId?: string
+	icons?: React.ReactNode[]
 }
 
 import { Tab as TTab } from '@/types'
 
-export const Tabs = ({ className = '', defaultActiveId = '', tabStyles, children }: TabsProps) => {
+export const Tabs = ({
+	className = '',
+	defaultActiveId = '',
+	tabStyles,
+	icons,
+	children,
+}: TabsProps) => {
 	const [tabs, setTabs] = useState<TTab[]>(null!)
 	const [activeId, setActiveId] = useState<string>(defaultActiveId)
 	const [nodes, setNodes] = useState<React.ReactNode[]>(null!)
 
 	const content = useCallback((contentRefNode: any) => {
+		let arrTabs: any[] = []
 		if (contentRefNode) {
-			let arr: any[] = []
 			const buildTabs = (item: any, index: number) => {
 				const tabObject = {
 					id: item.id,
-					title: item.title,
+					title: icons ? icons[index] : item.title,
 				}
-				arr.push(tabObject)
-				if (children.length === index + 1) setTabs(arr)
+				arrTabs.push(tabObject)
 			}
+			setTabs(arrTabs)
 			const children = [...contentRefNode.children]
 			setNodes(children)
 			children.forEach(buildTabs)

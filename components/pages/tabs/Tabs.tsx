@@ -1,6 +1,6 @@
 'use client'
 
-import { Codeblock, Tabs, Login, Register } from '@/ui'
+import { Codeblock, Tabs, Login, Register, ReactIcon, NextIcon, TailwindIcon } from '@/ui'
 
 const data = [
 	{ name: 'apples', emoji: '🍏', body: '<p>Some content about <strong>apples</strong></p>' },
@@ -8,6 +8,8 @@ const data = [
 	{ name: 'grapes', emoji: '🍇', body: '<p>Some content about <strong>grapes</strong></p>' },
 	{ name: 'lemons', emoji: '🍋', body: '<p>Some content about <strong>lemons</strong></p>' },
 ]
+
+import technologies from '@/data/tech.json'
 
 const TabsPage = () => {
 	const handleSubmit = (e: any) => {
@@ -83,6 +85,48 @@ const TabsPage = () => {
     >
         <div>Tab 4 content</div>
     </div>
+</Tabs>`}
+			</Codeblock>
+
+			<h2>Icons</h2>
+			<div className='mb-4 border bg-light p-4'>
+				<Tabs
+					className='mx-auto w-full max-w-lg'
+					defaultActiveId='tab0'
+					icons={[<ReactIcon />, <NextIcon />, <TailwindIcon />]}
+				>
+					{technologies.map((item, index) => (
+						<div
+							id={`tab${index}`}
+							key={`tab${index}`}
+							title={item.name}
+							className={`${index === 0 ? 'active' : ''}`}
+						>
+							<h3>{item.name}</h3>
+							<div dangerouslySetInnerHTML={{ __html: item.body }} />
+						</div>
+					))}
+				</Tabs>
+			</div>
+			<Codeblock language='jsx'>
+				{`import {Tabs, ReactIcon, NextIcon, TailwindIcon } from '@/ui'
+				
+<Tabs
+	className='mx-auto w-full max-w-lg'
+	defaultActiveId='tab0'
+	icons={[<ReactIcon />, <NextIcon />, <TailwindIcon />]} // add icons in correct order
+>
+	{data.map((item, index) => (
+		<div
+			id={\`tab\${index}\`}
+			key={\`tab\${index}\`}
+			title={item.name}
+			className={\`\${index === 0 ? 'active' : ''}\`}
+		>
+			<h3>{item.name}</h3>
+			<div dangerouslySetInnerHTML={{ __html: item.body }} />
+		</div>
+	))}
 </Tabs>`}
 			</Codeblock>
 

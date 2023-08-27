@@ -3,7 +3,7 @@ import fireEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
 import { logRoles } from '@testing-library/dom'
 
-import { Alert } from '@/components'
+import { Alert } from '@/ui'
 
 import { Alert as TAlert } from '@/types'
 

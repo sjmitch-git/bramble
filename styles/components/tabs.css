@@ -11,15 +11,27 @@
 		}
 
 		.tab {
-			@apply rounded-t-lg px-4 py-2 text-primary;
+			@apply rounded-t-lg border border-transparent px-4 py-2 text-primary;
 
 			&.active {
-				@apply cursor-default border border-neutral border-b-transparent bg-white text-dark;
+				@apply cursor-default border-neutral border-b-transparent bg-white text-dark shadow-lg;
+			}
+
+			&:has(svg) {
+				@apply aspect-square;
+			}
+
+			svg {
+				@apply mx-auto h-auto w-12;
 			}
 		}
 
 		.tabwrap {
 			@apply border border-t-0 border-neutral bg-white p-4;
+
+			h2 {
+				@apply mt-4 normal-case;
+			}
 
 			& > div {
 				@apply hidden;
