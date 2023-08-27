@@ -10,6 +10,7 @@ interface TabsProps {
 	children: React.ReactNode
 	defaultActiveId?: string
 	icons?: React.ReactNode[]
+	minimal?: boolean
 }
 
 import { Tab as TTab } from '@/types'
@@ -20,6 +21,7 @@ export const Tabs = ({
 	tabStyles,
 	icons,
 	children,
+	minimal = false,
 }: TabsProps) => {
 	const [tabs, setTabs] = useState<TTab[]>(null!)
 	const [activeId, setActiveId] = useState<string>(defaultActiveId)
@@ -51,7 +53,7 @@ export const Tabs = ({
 	const handleClick = (id: string) => setActiveId(id)
 
 	return (
-		<div className={`tabs ${className}`}>
+		<div className={`tabs ${minimal ? 'minimal' : ''} ${className}`}>
 			<TabBar
 				tabs={tabs}
 				tabStyles={tabStyles}

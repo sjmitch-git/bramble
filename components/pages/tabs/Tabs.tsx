@@ -88,6 +88,48 @@ const TabsPage = () => {
 </Tabs>`}
 			</Codeblock>
 
+			<h2>Minimal Layout</h2>
+
+			<div className='mb-4 border bg-light p-4'>
+				<Tabs
+					className='mx-auto w-full max-w-md pt-12'
+					defaultActiveId='tab1'
+					minimal={true}
+				>
+					<div
+						id='tab1'
+						title='Tab 1'
+						className='active'
+					>
+						<div>Tab 1 content</div>
+					</div>
+					<div
+						id='tab2'
+						title='Tab 2'
+					>
+						<div>Tab 2 content</div>
+					</div>
+					<div
+						id='tab3'
+						title='Tab 3'
+					>
+						<div>Tab 3 content</div>
+					</div>
+					<div
+						id='tab4'
+						title='Tab 4'
+					>
+						<div>Tab 4 content</div>
+					</div>
+				</Tabs>
+			</div>
+			<Codeblock language='jsx'>
+				{`<Tabs
+	...
+	minimal={true}
+>`}
+			</Codeblock>
+
 			<h2>Icons</h2>
 			<div className='mb-4 border bg-light p-4'>
 				<Tabs

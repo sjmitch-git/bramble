@@ -5,7 +5,6 @@ export const Tab = ({ id, title, activeId, tabStyles = '', onclick }: TTab) => {
 		<button
 			className={`tab ${tabStyles} ${id === activeId ? 'active' : ''}`}
 			onClick={() => onclick(id)}
-			title={title}
 		>
 			{title}
 		</button>

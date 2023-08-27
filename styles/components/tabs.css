@@ -26,6 +26,24 @@
 			}
 		}
 
+		&.minimal {
+			& .tablist {
+				@apply gap-0;
+			}
+
+			& li {
+				@apply flex-grow;
+			}
+
+			& .tab {
+				@apply w-full border-0 bg-transparent shadow-none;
+
+				&.active {
+					@apply border-b-2 border-info;
+				}
+			}
+		}
+
 		.tabwrap {
 			@apply border border-t-0 border-neutral bg-white p-4;
 
