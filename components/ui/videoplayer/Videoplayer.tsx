@@ -5,12 +5,7 @@ import React, { useState } from 'react'
 import { Video } from '@/ui'
 import VideoControls from './controls/'
 
-interface VideoPlayerProps {
-	src: string
-	poster?: string | undefined
-	className?: string | undefined
-	formats?: any[] | undefined
-}
+import { VideoPlayerProps } from './types'
 
 export const VideoPlayer = ({ src, formats, className = '', poster }: VideoPlayerProps) => {
 	const [play, setPlay] = useState(false)

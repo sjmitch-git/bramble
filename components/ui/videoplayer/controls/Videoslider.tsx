@@ -1,11 +1,6 @@
 import { useState, useEffect } from 'react'
 
-interface VideoSliderProps {
-	time: number
-	onTime?: (number: number) => void | undefined
-	duration: number
-	onScrubChange?: (number: number) => void | undefined
-}
+import { VideoSliderProps } from './types'
 
 const VideoSlider = ({ time, onTime, duration, onScrubChange }: VideoSliderProps) => {
 	useEffect(() => {

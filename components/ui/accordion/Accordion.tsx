@@ -2,31 +2,12 @@
 
 import React, { useState, useEffect } from 'react'
 
+import { AccordionProps } from './types'
+
 import { Button } from '@/ui'
 import { PlusIcon, MinusIcon } from '@heroicons/react/24/solid'
 
-interface DataProps {
-	id: string
-	title: string
-	body: string
-}
-
-type AccordianProps = {
-	size?: string | 'sm' | 'lg'
-	className?: string
-	onClick?: () => void | undefined
-	data: DataProps[]
-	opened?: string
-	layout?: string | 'flush'
-}
-
-export const Accordian = ({
-	size = '',
-	className = '',
-	data,
-	opened,
-	layout = '',
-}: AccordianProps) => {
+export const Accordion = ({ size, className = '', data, opened, layout }: AccordionProps) => {
 	const [open, setOpen] = useState('')
 
 	useEffect(() => {
@@ -35,12 +16,12 @@ export const Accordian = ({
 
 	return (
 		<div
-			className={`accordian ${size} ${className}`}
-			data-testid='accordian'
+			className={`accordion ${size ? size : ''} ${className}`}
+			data-testid='accordion'
 		>
 			{data?.map((item, _index) => (
 				<div
-					className={`accordian-container ${layout}`}
+					className={`accordion-container ${layout ? layout : ''}`}
 					key={item.id}
 				>
 					<h3

@@ -4,16 +4,7 @@ import { TabBar } from './TabBar'
 
 import { useCallback, useState, useEffect } from 'react'
 
-interface TabsProps {
-	className?: string | undefined
-	tabStyles?: string | undefined
-	children: React.ReactNode
-	defaultActiveId?: string
-	icons?: React.ReactNode[]
-	minimal?: boolean
-}
-
-import { Tab as TTab } from '@/types'
+import { TabsProps, TabProps } from './types'
 
 export const Tabs = ({
 	className = '',
@@ -23,7 +14,7 @@ export const Tabs = ({
 	children,
 	minimal = false,
 }: TabsProps) => {
-	const [tabs, setTabs] = useState<TTab[]>(null!)
+	const [tabs, setTabs] = useState<TabProps[]>(null!)
 	const [activeId, setActiveId] = useState<string>(defaultActiveId)
 	const [nodes, setNodes] = useState<React.ReactNode[]>(null!)
 

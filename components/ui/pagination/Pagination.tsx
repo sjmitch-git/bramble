@@ -13,19 +13,7 @@ import {
 
 import { Buttongroup, Select, Button } from '@/ui'
 
-interface PaginationProps {
-	className?: string | undefined
-	size?: string
-	page: string
-	onChange: (e: any) => void
-	theme?: 'dark' | 'light' | undefined
-	range: number
-	results: number
-	feedback?: boolean
-	vertical?: boolean
-	icons?: boolean
-	minimal?: boolean
-}
+import { PaginationProps } from './types'
 
 export const Pagination = ({
 	className = '',

@@ -1,19 +1,8 @@
 import { createContext } from 'react'
 
-interface ToastContextProps {
-	state: string
-	setState: (state: string) => void
-	message: React.ReactNode
-	setMessage: (message: React.ReactNode) => void
-	position: string
-	setPosition: (position: string) => void
-	show: boolean
-	setShow: (show: boolean) => void
-	autohide: boolean
-	setAutohide: (fadeout: boolean) => void
-}
+import { ToastProps } from '@/components/ui/toast/types'
 
-const initialState: ToastContextProps = {
+const initialState: ToastProps = {
 	state: '',
 	setState: () => {},
 	message: '',
@@ -26,4 +15,4 @@ const initialState: ToastContextProps = {
 	setAutohide: () => {},
 }
 
-export const ToastContext = createContext<ToastContextProps>(initialState)
+export const ToastContext = createContext<ToastProps>(initialState)

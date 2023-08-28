@@ -3,15 +3,7 @@
 import { useState } from 'react'
 import { titleCase } from '@smitch/js-lib'
 
-interface TableProps {
-	className?: string | undefined
-	data: any[]
-	height?: number | undefined
-	width?: number | undefined
-	ignore?: string[] | undefined
-	caption?: string | undefined
-	dividers?: boolean | undefined
-}
+import { TableProps } from './types'
 
 export const Table = ({ className = '', data, height, ignore, caption, dividers }: TableProps) => {
 	const [tabledata, setTabledata] = useState(data)

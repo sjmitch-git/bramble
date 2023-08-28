@@ -2,18 +2,9 @@
 
 import { createContext } from 'react'
 
-interface SidebarContextProps {
-	show: boolean
-	setShow: (show: boolean) => void
-	message: React.ReactNode
-	setMessage: (message: React.ReactNode) => void
-	state: string
-	setState: (state: string) => void
-	position: string
-	setPosition: (position: string) => void
-}
+import { SidebarProps } from '@/components/ui/sidebar/types'
 
-const initialState: SidebarContextProps = {
+const initialState: SidebarProps = {
 	show: false,
 	setShow: () => {},
 	message: '',
@@ -24,4 +15,4 @@ const initialState: SidebarContextProps = {
 	setPosition: () => {},
 }
 
-export const SidebarContext = createContext<SidebarContextProps>(initialState)
+export const SidebarContext = createContext<SidebarProps>(initialState)

@@ -2,9 +2,9 @@
 
 import { CloseButton } from '@/ui'
 
-import { Alert as TAlert } from '@/types'
+import { AlertProps } from './types'
 
-export function Alert({ className = '', message, status = '', onClick }: TAlert) {
+export const Alert = ({ className = '', message, status = '', onClick }: AlertProps) => {
 	return (
 		<blockquote
 			className={`alert ${className}`}

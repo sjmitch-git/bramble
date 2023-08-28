@@ -1,6 +1,6 @@
 import { Input } from '@/ui'
 
-import { Autocomplete as TAutocomplete } from '@/types'
+import { AutocompleteProps } from './types'
 
 export const Autocomplete = ({
 	data,
@@ -11,7 +11,7 @@ export const Autocomplete = ({
 	name,
 	placeholder = 'Please Select',
 	onchange,
-}: TAutocomplete) => {
+}: AutocompleteProps) => {
 	return (
 		<>
 			<Input

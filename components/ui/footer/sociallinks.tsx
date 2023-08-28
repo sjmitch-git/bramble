@@ -8,11 +8,9 @@ import {
 	YoutubeIcon,
 } from '@/ui'
 
-interface SocialLinksProps {
-	socialLinks: any[]
-}
+import { FooterProps } from './types'
 
-const SocialLinks = ({ socialLinks }: SocialLinksProps) => {
+const SocialLinks = ({ socialLinks = [] }: FooterProps) => {
 	const getIcon = (key: string) => {
 		switch (key) {
 			case 'dev':

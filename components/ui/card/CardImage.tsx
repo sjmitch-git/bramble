@@ -5,17 +5,14 @@ import Image from 'next/image'
 
 import { Figure, Modal } from '@/ui'
 
-interface CardProps {
-	title: string
-	image: string
-}
+import { CardProps } from './types'
 
 interface DataProps {
 	name: string
 	src: string
 }
 
-const CardImage = ({ title, image }: CardProps) => {
+const CardImage = ({ title = '', image = '' }: CardProps) => {
 	const [img, setImg] = useState<DataProps>({ name: '', src: '' })
 	const [modal, setModal] = useState(false)
 

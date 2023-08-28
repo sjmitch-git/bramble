@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react'
 
 import { Button, CloseButton, Form } from '@/ui'
 
-import { Dialog as TDialog } from '@/types'
+import { DialogProps } from './types'
 
 export const Dialog = ({
 	open = false,
@@ -17,7 +17,7 @@ export const Dialog = ({
 	btnStyles = '',
 	onSubmit,
 	children,
-}: TDialog) => {
+}: DialogProps) => {
 	const dialog = useRef<HTMLDialogElement>(null!)
 
 	useEffect(() => {

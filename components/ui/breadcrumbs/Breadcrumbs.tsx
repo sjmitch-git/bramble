@@ -5,12 +5,9 @@ import { usePathname } from 'next/navigation'
 
 import config from '@/app.config'
 
-interface BreadcrumbsProps {
-	size?: string | undefined
-	className?: string | undefined
-}
+import { BreadcrumbsProps } from './types'
 
-export const Breadcrumbs = ({ size = '', className = '' }: BreadcrumbsProps) => {
+export const Breadcrumbs = ({ size, className }: BreadcrumbsProps) => {
 	const { homeLabel } = config.labels
 
 	const pathname = usePathname()
@@ -39,7 +36,7 @@ export const Breadcrumbs = ({ size = '', className = '' }: BreadcrumbsProps) => 
 		<nav></nav>
 	) : (
 		<nav
-			className={`breadcrumbs ${size} ${className}`}
+			className={`breadcrumbs ${size ? size : ''} ${className ? className : ''}`}
 			aria-label='breadcrumb'
 		>
 			<ol>

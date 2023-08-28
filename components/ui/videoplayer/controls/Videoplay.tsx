@@ -2,12 +2,7 @@ import { PlayIcon, PauseIcon } from '@heroicons/react/24/solid'
 
 import { Button, Buttongroup } from '@/ui'
 
-interface VideoPlayProps {
-	onPlay: () => void | undefined
-	play: boolean
-	onPause: () => void | undefined
-	pause: boolean
-}
+import { VideoPlayProps } from './types'
 
 const VideoPlay = ({ onPlay, play = false, onPause }: VideoPlayProps) => {
 	return (

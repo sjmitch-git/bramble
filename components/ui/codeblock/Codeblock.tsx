@@ -5,10 +5,7 @@ import Prism from 'prismjs'
 
 require('prismjs/components/prism-jsx')
 
-interface CodeblockProps {
-	children: string
-	language: string
-}
+import { CodeblockProps } from './types'
 
 export const Codeblock = ({ language, children }: CodeblockProps) => {
 	useEffect(() => {

@@ -2,18 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-interface RangeProps {
-	name?: string
-	min?: number
-	max?: number
-	step?: number
-	clr1?: string
-	clr2?: string
-	initial?: number
-	onRangeChange: (number: number) => void | undefined
-	vertical?: boolean
-	className?: string
-}
+import { RangeProps } from './types'
 
 export const Range = ({
 	onRangeChange,
@@ -26,6 +15,10 @@ export const Range = ({
 	clr2 = '#9e9e9e',
 	vertical = false,
 	className = '',
+	label,
+	labelStyles = '',
+	feedback,
+	feedbackMessage = 'Range',
 }: RangeProps) => {
 	const [scrubRange, setScrubRange] = useState(initial)
 	const [modifier, setModifier] = useState(1)
@@ -53,18 +46,28 @@ export const Range = ({
 
 	return (
 		<>
-			<input
-				type='range'
-				name={name}
-				min={min}
-				max={max}
-				step={step}
-				value={scrubRange}
-				onChange={handleChange}
-				onPointerUp={handlePointerUp}
-				style={scrubStyle}
-				className={`range ${vertical ? 'vertical' : ''} ${className}`}
-			/>
+			<div className='range'>
+				<label className={`label ${labelStyles} ${vertical ? 'vertical' : ''}`}>
+					{label && <span>{label}</span>}
+					<input
+						type='range'
+						name={name}
+						min={min}
+						max={max}
+						step={step}
+						value={scrubRange}
+						onChange={handleChange}
+						onPointerUp={handlePointerUp}
+						style={scrubStyle}
+						className={`rangeInput ${className}`}
+					/>
+				</label>
+				{feedback && (
+					<p className='feedback'>
+						{feedbackMessage}: {scrubRange}
+					</p>
+				)}
+			</div>
 		</>
 	)
 }

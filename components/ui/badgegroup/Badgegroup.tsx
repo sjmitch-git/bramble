@@ -2,13 +2,7 @@ import { Badge } from '@/ui'
 
 import { StarIcon, HandThumbUpIcon, FaceSmileIcon } from '@heroicons/react/24/solid'
 
-interface BadgegroupProps {
-	className?: string | undefined
-	badge?: string | undefined
-	icon?: 'star' | 'smiley' | 'thumb' | undefined
-	rating: number
-	range: number
-}
+import { BadgegroupProps } from './types'
 
 export const Badgegroup = ({
 	className = '',

@@ -2,10 +2,7 @@ import { ArrowsPointingOutIcon, ArrowsPointingInIcon } from '@heroicons/react/24
 
 import { Button, Buttongroup } from '@/ui'
 
-interface VideoFullscreenProps {
-	fullscreen: boolean
-	onFullscreen?: () => void | undefined
-}
+import { VideoFullscreenProps } from './types'
 
 const VideoFullscreen = ({ onFullscreen, fullscreen }: VideoFullscreenProps) => {
 	return (

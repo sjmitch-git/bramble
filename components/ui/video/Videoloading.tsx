@@ -1,8 +1,6 @@
 import { Bars } from '@/ui'
 
-interface SpinnerProps {
-	className?: string
-}
+import {SpinnerProps} from './types'
 
 const VideoLoading = ({ className = '' }: SpinnerProps) => {
 	return (

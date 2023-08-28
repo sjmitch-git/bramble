@@ -3,26 +3,12 @@
 import CardImage from './CardImage'
 import CardBody from './CardBody'
 
-interface CardProps {
-	className?: string | undefined
-	title?: string | undefined
-	description: string
-	image?: string | undefined
-	link: string
-	linkLabel?: string | undefined
-	price?: number | undefined
-	cc?: string | undefined
-	rating?: number | undefined
-	range?: number | undefined
-	layout?: 'row' | 'column' | 'full' | undefined
-	badge?: string | undefined
-	badgeStyle?: string | undefined
-}
+import { CardProps } from './types'
 
 export const Card = ({
 	className = '',
 	title = '',
-	description,
+	description = '',
 	layout = 'column',
 	link,
 	linkLabel = 'More',

@@ -2,7 +2,7 @@
 
 import { Button } from '@/ui'
 
-import { Form as TForm } from '@/types'
+import { FormProps } from './types'
 
 export const Form = ({
 	action,
@@ -19,7 +19,7 @@ export const Form = ({
 	children,
 	onSubmit,
 	onclick,
-}: TForm) => {
+}: FormProps) => {
 	return (
 		<form
 			onSubmit={onSubmit}

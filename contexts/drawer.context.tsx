@@ -2,18 +2,9 @@
 
 import { createContext } from 'react'
 
-interface DrawerContextProps {
-	show: boolean
-	setShow: (show: boolean) => void
-	message: React.ReactNode
-	setMessage: (message: React.ReactNode) => void
-	state: string
-	setState: (state: string) => void
-	position: string
-	setPosition: (position: string) => void
-}
+import { DrawerProps } from '@/components/ui/drawer/types'
 
-const initialState: DrawerContextProps = {
+const initialState: DrawerProps = {
 	show: false,
 	setShow: () => {},
 	message: '',
@@ -24,4 +15,4 @@ const initialState: DrawerContextProps = {
 	setPosition: () => {},
 }
 
-export const DrawerContext = createContext<DrawerContextProps>(initialState)
+export const DrawerContext = createContext<DrawerProps>(initialState)

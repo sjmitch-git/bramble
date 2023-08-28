@@ -1,9 +1,4 @@
-interface ButtongroupProps {
-	size?: string | undefined
-	className?: string | undefined
-	label?: string | undefined
-	children: React.ReactNode
-}
+import { ButtongroupProps } from './types'
 
 export const Buttongroup = ({
 	size = '',

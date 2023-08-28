@@ -1,20 +1,7 @@
 import CardFooter from './CardFooter'
 import { Badge } from '@/ui'
 
-interface CardBodyProps {
-	title: string
-	description: string
-	image?: string | undefined
-	link: string
-	linkLabel?: string | undefined
-	price?: number | undefined
-	cc?: string | undefined
-	rating?: number | undefined
-	range?: number | undefined
-	layout?: 'row' | 'column' | 'full' | undefined
-	badge?: string | undefined
-	badgeStyle?: string | undefined
-}
+import { CardProps } from './types'
 
 const CardBody = ({
 	title,
@@ -27,7 +14,7 @@ const CardBody = ({
 	range,
 	badge,
 	badgeStyle,
-}: CardBodyProps) => {
+}: CardProps) => {
 	return (
 		<div className='card-body'>
 			<h5 className='title'>

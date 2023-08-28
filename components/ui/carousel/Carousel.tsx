@@ -5,22 +5,7 @@ import { Button, Card, Gallery } from '@/ui'
 
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/24/solid'
 
-interface DataProps {
-	name: string
-	src: string
-	description: string
-	link: string
-}
-
-interface CarouselProps {
-	data: DataProps[]
-	className?: string | undefined
-	theme?: string | undefined
-	caption?: boolean | undefined
-	autoplay?: boolean | undefined
-	gallery?: boolean | undefined
-	rtl?: boolean | undefined
-}
+import { CarouselProps } from './types'
 
 export const Carousel = ({
 	data,

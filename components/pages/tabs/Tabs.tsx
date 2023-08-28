@@ -231,6 +231,7 @@ const data = [
 				<Tabs
 					className='mx-auto w-full max-w-sm pt-12'
 					defaultActiveId='LogIn'
+					minimal={true}
 				>
 					<div
 						id='LogIn'

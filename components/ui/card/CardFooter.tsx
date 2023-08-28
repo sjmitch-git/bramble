@@ -2,16 +2,9 @@ import Link from 'next/link'
 import { Ratings } from '@/ui'
 import { formatCurrency } from '@smitch/js-lib'
 
-interface CardFooterProps {
-	link: string
-	linkLabel?: string | undefined
-	price?: number | undefined
-	cc?: string | undefined
-	rating?: number | undefined
-	range?: number | undefined
-}
+import { CardProps } from './types'
 
-const CardFooter = ({ rating, range, link, linkLabel = 'Moxxre', price, cc }: CardFooterProps) => {
+const CardFooter = ({ rating, range, link = '', linkLabel = 'More', price, cc }: CardProps) => {
 	return (
 		<footer className='card-footer'>
 			{rating && (

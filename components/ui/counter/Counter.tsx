@@ -5,18 +5,7 @@ import { PlusIcon, MinusIcon } from '@heroicons/react/24/solid'
 
 import { Input, Button } from '@/ui'
 
-interface CounterProps {
-	name?: string
-	min?: number
-	max?: number
-	value: number
-	step?: number
-	label?: string | undefined
-	labelStyles?: string | undefined
-	btnStyles?: string | undefined
-	className?: string | undefined
-	onCountChange: (count: number) => void
-}
+import { CounterProps } from './types'
 
 export const Counter = ({
 	name = 'number',

@@ -2,12 +2,9 @@
 
 import { useEffect, useState } from 'react'
 
-interface CopyrightProps {
-	author?: string | null
-	authorUrl?: string | null
-}
+import { FooterProps } from './types'
 
-const Copyright = ({ author, authorUrl }: CopyrightProps) => {
+const Copyright = ({ author, authorUrl }: FooterProps) => {
 	const [year, setYear] = useState<number>()
 	useEffect(() => {
 		const d = new Date()

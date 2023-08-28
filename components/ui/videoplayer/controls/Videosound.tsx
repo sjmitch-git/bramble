@@ -6,11 +6,8 @@ import { SpeakerWaveIcon, SpeakerXMarkIcon } from '@heroicons/react/24/solid'
 
 import { Button, Buttongroup } from '@/ui'
 
-interface VideoSoundProps {
-	mute: boolean
-	onMute: () => void
-	onVolume: (number: number) => void | undefined
-}
+import { VideoSoundProps } from './types'
+
 const VideoSound = ({ mute = false, onMute, onVolume }: VideoSoundProps) => {
 	const [volumeLevel, setVolumeLevel] = useState(5)
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

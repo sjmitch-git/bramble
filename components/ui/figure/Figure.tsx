@@ -1,8 +1,4 @@
-interface FigureProps {
-	className?: string | undefined
-	children: React.ReactNode
-	caption?: string | undefined
-}
+import {FigureProps} from './types'
 
 export const Figure = ({ className = '', caption = '', children }: FigureProps) => {
 	return (

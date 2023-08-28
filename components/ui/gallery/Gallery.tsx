@@ -4,18 +4,7 @@ import React, { useState } from 'react'
 
 import { Figure, Modal } from '@/ui'
 
-interface DataProps {
-	name: string
-	src: string
-}
-
-interface GalleryProps {
-	data: any[]
-	className?: string | undefined
-	style?: React.CSSProperties | undefined
-	aspect?: string | undefined
-	caption?: boolean | undefined
-}
+import { GalleryProps, DataProps } from './types'
 
 export const Gallery = ({
 	data,

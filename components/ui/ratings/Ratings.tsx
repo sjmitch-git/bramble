@@ -3,13 +3,7 @@ import { Badge } from '@/ui'
 
 import { StarIcon, HandThumbUpIcon, FaceSmileIcon, HeartIcon } from '@heroicons/react/24/solid'
 
-interface RatingsProps {
-	className?: string | undefined
-	badge?: string | undefined
-	icon?: 'star' | 'smiley' | 'thumb' | 'heart' | undefined
-	rating: number
-	range?: number | undefined
-}
+import { RatingsProps } from './types'
 
 export const Ratings = ({ className = '', rating, range, badge, icon = 'star' }: RatingsProps) => {
 	rating = round(rating)

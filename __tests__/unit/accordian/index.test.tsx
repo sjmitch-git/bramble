@@ -3,7 +3,7 @@ import fireEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
 import { logRoles } from '@testing-library/dom'
 
-import { Accordian } from '@/ui'
+import { Accordion } from '@/ui'
 
 import DATA from '@/data/users.json'
 
@@ -13,10 +13,10 @@ let buttons: HTMLElement[]
 let sections: HTMLElement[]
 const dataLength = DATA.length
 
-describe('Accordian Component', () => {
+describe('Accordion Component', () => {
 	beforeEach(() => {
 		render(
-			<Accordian
+			<Accordion
 				data={DATA}
 				opened='1'
 				onClick={function (): void {}}

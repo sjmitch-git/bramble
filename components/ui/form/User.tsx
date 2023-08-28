@@ -1,6 +1,6 @@
 import { Form, Input, Autocomplete } from '@/ui'
 
-import { Form as TForm } from '@/types'
+import { FormProps } from './types'
 
 import data from '@/data/countries.json'
 
@@ -16,7 +16,7 @@ export const User = ({
 	className = 'group p-4 md:px-0',
 	onSubmit,
 	onclick,
-}: TForm) => {
+}: FormProps) => {
 	return (
 		<Form
 			method={method}

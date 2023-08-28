@@ -1,6 +1,6 @@
 import { Form, Input } from '@/ui'
 
-import { Form as TForm } from '@/types'
+import { FormProps } from './types'
 
 export const Login = ({
 	method = 'post',
@@ -11,7 +11,7 @@ export const Login = ({
 	layout = 'column',
 	className = 'group p-4 md:px-0',
 	onSubmit,
-}: TForm) => {
+}: FormProps) => {
 	return (
 		<Form
 			method={method}

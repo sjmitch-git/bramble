@@ -1,8 +1,8 @@
 import useMetadata from '@/hooks/useMetadata'
 
-import AccordianTemplate from '@/templates/Accordian'
+import AccordianTemplate from '@/templates/Accordion'
 
-const title = 'Accordian'
+const title = 'Accordion'
 const description =
 	"Discover Bramble UI's interactive accordion component. Effortlessly organize and present content while creating a seamless and engaging user experience"
 const keywords =

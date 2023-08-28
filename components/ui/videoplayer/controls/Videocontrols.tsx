@@ -4,22 +4,7 @@ import VideoPlay from './Videoplay'
 import VideoSlider from './Videoslider'
 import VideoSound from './Videosound'
 
-interface VideoControlsProps {
-	onPlay: () => void | undefined
-	play: boolean
-	onPause: () => void | undefined
-	pause: boolean
-	time: number
-	onTime?: (number: number) => void | undefined
-	duration: number
-	onScrubChange?: (number: number) => void | undefined
-	fullscreen: boolean
-	onFullscreen?: () => void | undefined
-	mute: boolean
-	onMute: () => void | undefined
-	onVolume: (number: number) => void | undefined
-	volume: number
-}
+import { VideoControlsProps } from './types'
 
 const VideoControls = ({
 	onPlay,

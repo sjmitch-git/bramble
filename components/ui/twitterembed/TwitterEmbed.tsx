@@ -2,17 +2,7 @@
 
 import React, { useCallback } from 'react'
 
-interface TwitterEmbedProps {
-	handle: string
-	limit?: number
-	height?: number
-	width?: number
-	className?: string
-	chrome?: string
-	theme?: string
-	status?: string
-	lang?: string
-}
+import { TwitterEmbedProps } from './types'
 
 export const TwitterEmbed = ({
 	handle,

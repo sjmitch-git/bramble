@@ -1,7 +1,4 @@
-interface VideoTimeProps {
-	time: number
-	duration: number
-}
+import { VideoTimeProps } from './types'
 
 const VideoTime = ({ time, duration = 0 }: VideoTimeProps) => {
 	const toHHMMSS = (secs: any) => {

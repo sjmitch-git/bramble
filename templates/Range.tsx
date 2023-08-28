@@ -69,9 +69,10 @@ const handleRangeChange = (value: number) => {
 
 return (			
 	<Range
-        onRangeChange={handleRangeChange}
-    />
-    <p>RANGE: {range}</p>
+		onRangeChange={handleRangeChange}
+		label='Select Range'
+		feedback={true}
+	/>
 )`}
 				</Codeblock>
 			</div>
@@ -79,8 +80,11 @@ return (
 			<h2>Default</h2>
 
 			<div className='bg-light p-4'>
-				<Range onRangeChange={handleRangeChange} />
-				<p className='mx-auto py-8 text-center'>RANGE: {range}</p>
+				<Range
+					onRangeChange={handleRangeChange}
+					label='Select Range'
+					feedback={true}
+				/>
 			</div>
 
 			<h2>Options</h2>
@@ -94,7 +98,11 @@ clr2?: string       // background colour - default = '#9e9e9e'
 initial?: number    // initial range value - default = 0
 vertical?: boolean  // vertical orientation - default = false
 className?: string  // any Tailwind classes
-onRangeChange: (number: number) => void | undefined // returns range value`}
+onRangeChange: (number: number) => void | undefined // returns range value
+label?: string				// add label content
+labelStyles?: string		// label styles
+feedback?: boolean			// add feedback message
+feedbackMessage?: string	// feedback message content`}
 				</Codeblock>
 			</div>
 
@@ -104,17 +112,20 @@ onRangeChange: (number: number) => void | undefined // returns range value`}
 				<Range
 					vertical={true}
 					onRangeChange={handleRangeChange2}
-					className='absolute bottom-2 left-8'
+					className=''
+					label='Select Range'
+					feedback={true}
 				/>
-				<p className='mx-auto py-8 text-center'>RANGE: {range2}</p>
 			</div>
 			<div className='mb-8'>
 				<Codeblock language='jsx'>
 					{`<Range
-    vertical={true}
-    onRangeChange={handleRangeChange}
-    className='absolute bottom-2 left-8'
-/>`}
+	vertical={true}
+	onRangeChange={handleRangeChange2}
+	className=''
+	label='Select Range'
+	feedback={true}
+/>>`}
 				</Codeblock>
 			</div>
 
@@ -123,40 +134,38 @@ onRangeChange: (number: number) => void | undefined // returns range value`}
 			<h3>Set Colour</h3>
 
 			<div className='bg-light p-4 font-mono'>
-				<label>
-					r
+				<div className='mx-auto mb-8 flex max-w-md flex-col gap-8'>
 					<Range
 						onRangeChange={handleRedChange}
 						clr1='red'
 						initial={50}
+						label='red'
 					/>
-				</label>
-				<label>
-					g
+
 					<Range
 						onRangeChange={handleGreenChange}
 						clr1='green'
 						initial={50}
+						label='green'
 					/>
-				</label>
-				<label>
-					b
+
 					<Range
 						onRangeChange={handleBlueChange}
 						clr1='blue'
 						initial={50}
+						label='blue'
 					/>
-				</label>
-				<label>
-					a
+
 					<Range
 						onRangeChange={handleOpacityChange}
 						max={1}
 						step={0.1}
 						initial={1}
 						clr1='black'
+						label='alpha'
 					/>
-				</label>
+				</div>
+
 				<div className='flex items-center justify-center gap-4'>
 					<div className='aspect-square w-[80px] bg-white'>
 						<div
@@ -204,18 +213,21 @@ const getRGBvalue = (value: number) => {
 	onRangeChange={handleRedChange}
 	clr1='red'
 	initial={50}
+	label='r'
 />
 
 <Range
 	onRangeChange={handleGreenChange}
 	clr1='green'
 	initial={50}
+	label='g'
 />
 
 <Range
 	onRangeChange={handleBlueChange}
 	clr1='blue'
 	initial={50}
+	label='b'
 />
 
 <Range
@@ -224,7 +236,8 @@ const getRGBvalue = (value: number) => {
 	step={0.1}
 	initial={1}
 	clr1='black'
-/>
+	label='a'
+					/>
 
 <p>
 	rgba({getRGBvalue(red)},{getRGBvalue(green)},{getRGBvalue(blue)},{opacity})
@@ -240,8 +253,10 @@ const getRGBvalue = (value: number) => {
 					step={0.1}
 					initial={0.5}
 					clr1='purple'
+					label='Set Volume'
+					feedback={true}
+					feedbackMessage='Volume'
 				/>
-				<p className='mx-auto pt-8 text-center'>Volume: {audio}</p>
 			</div>
 			<div className='mb-8'>
 				<Codeblock language='jsx'>
@@ -251,6 +266,9 @@ const getRGBvalue = (value: number) => {
 	step={0.1}
 	initial={0.5}
 	clr1='purple'
+	label='Set Volume'
+	feedback={true}
+	feedbackMessage='Volume'
 />`}
 				</Codeblock>
 			</div>

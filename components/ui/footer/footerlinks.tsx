@@ -2,14 +2,12 @@
 
 import Link from 'next/link'
 
-interface FooterlinksProps {
-	links: any[]
-}
+import { FooterProps } from './types'
 
-const Footerlinks = ({ links }: FooterlinksProps) => {
+const Footerlinks = ({ footerLinks = [] }: FooterProps) => {
 	return (
 		<div className='footerlinks'>
-			{links.map((link) => (
+			{footerLinks.map((link) => (
 				<Link
 					href={link.href}
 					key={link.label}

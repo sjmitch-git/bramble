@@ -6,14 +6,7 @@ import useDisableBackButton from '@/hooks/usedisabledbackbutton'
 
 import { Figure, CloseButton } from '@/ui'
 
-interface ModalProps {
-	className?: string | undefined
-	data: {
-		src: string
-		name: string
-	}
-	onClick?: () => void | undefined
-}
+import { ModalProps } from './types'
 
 export const Modal = ({ data: { src, name }, className = '', onClick }: ModalProps) => {
 	useEffect(() => {

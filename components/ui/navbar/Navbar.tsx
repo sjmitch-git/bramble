@@ -1,9 +1,6 @@
 import Navlinks from './Navlinks'
 
-interface NavBarProps {
-	className?: string | undefined
-	children: React.ReactNode
-}
+import { NavBarProps } from './types'
 
 export const Navbar = ({ className = '', children }: NavBarProps) => {
 	return (

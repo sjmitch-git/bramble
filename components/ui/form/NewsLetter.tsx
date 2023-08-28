@@ -1,16 +1,6 @@
 import { Form, Input } from '@/ui'
 
-interface NewsLetterProps {
-	legend?: string
-	btnLabel?: string
-	btnStyles?: string
-	closeLabel?: string
-	closeStyles?: string
-	layout?: 'row' | 'column' | undefined
-	className?: string | undefined
-	onSubmit: (e: React.FormEvent<HTMLFormElement>) => void
-	onclick?: (e: React.FormEvent<HTMLButtonElement>) => void
-}
+import { FormProps } from './types'
 
 export const NewsLetter = ({
 	legend = 'Sign up for our newsletter?',
@@ -22,7 +12,7 @@ export const NewsLetter = ({
 	className = 'group p-4 md:px-0',
 	onSubmit,
 	onclick,
-}: NewsLetterProps) => {
+}: FormProps) => {
 	return (
 		<Form
 			method='post'

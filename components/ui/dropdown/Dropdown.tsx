@@ -6,18 +6,7 @@ import { useState } from 'react'
 import { Button } from '@/ui'
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
 
-interface LinksProps {
-	href: string
-	label: string
-	links?: any[]
-}
-
-interface DropdownProps {
-	size?: string | undefined
-	className?: string | undefined
-	links: LinksProps[]
-	button?: string | undefined
-}
+import { DropdownProps, LinksProps } from './types'
 
 export const Dropdown = ({
 	size = '',

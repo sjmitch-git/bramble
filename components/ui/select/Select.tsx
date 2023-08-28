@@ -1,21 +1,6 @@
-interface SelectProps {
-	size?: string | 'sm' | 'lg' | undefined
-	className?: string | undefined
-	id?: string | undefined
-	title?: string | undefined
-	children: React.ReactNode
-	value?: string | undefined
-	name?: string | undefined
-	onChange?: React.ChangeEventHandler<HTMLSelectElement> | undefined
-	disabled?: boolean | undefined
-	required?: boolean | undefined
-	nocaret?: boolean | undefined
-	labelStyles?: string
-	label?: string
-}
+import { SelectProps } from './types'
 
 export const Select = ({
-	name = 'label',
 	className = '',
 	title,
 	id,

@@ -1,7 +1,4 @@
-interface SpinnerProps {
-	className?: string | undefined
-}
-
+import { SpinnerProps } from './types'
 export const SpinDots = ({ className = '' }: SpinnerProps) => {
 	return (
 		<>

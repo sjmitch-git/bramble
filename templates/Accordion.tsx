@@ -1,18 +1,18 @@
-import { Accordian, Alert, Codeblock } from '@/ui'
+import { Accordion, Alert, Codeblock } from '@/ui'
 
 import Users from '@/data/users.json'
 
-const AccordianTemplate = () => {
+const AccordionTemplate = () => {
 	return (
 		<>
 			<h2>Usage</h2>
 
 			<div className='mb-0'>
 				<Codeblock language='jsx'>
-					{`import {Accordian} from '@/ui'
+					{`import {Accordion} from '@/ui'
 import Users from '@/data/users.json'
                     
-<Accordian
+<Accordion
 	data={Users} 	// json data
 	opened='1'		// add id to open initially
 	className=''	// add Tailwind classes here
@@ -40,14 +40,14 @@ import Users from '@/data/users.json'
 			<h3>Default Layout</h3>
 
 			<div className='mx-auto mb-4 max-w-xl'>
-				<Accordian
+				<Accordion
 					data={Users}
 					opened='1'
 				/>
 			</div>
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`<Accordian
+					{`<Accordion
 	data={Users}
 	opened='1'
 />`}
@@ -57,7 +57,7 @@ import Users from '@/data/users.json'
 			<h3>Flush Layout</h3>
 
 			<div className='mx-auto mb-4 max-w-xl'>
-				<Accordian
+				<Accordion
 					data={Users}
 					layout='flush'
 				/>
@@ -65,7 +65,7 @@ import Users from '@/data/users.json'
 
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`<Accordian
+					{`<Accordion
 	data={Users}
 	layout='flush'
 />`}
@@ -75,7 +75,7 @@ import Users from '@/data/users.json'
 			<h3>Spaced Layout</h3>
 
 			<div className='mx-auto mb-4 max-w-xl'>
-				<Accordian
+				<Accordion
 					data={Users}
 					layout='spaced'
 				/>
@@ -83,7 +83,7 @@ import Users from '@/data/users.json'
 
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`<Accordian
+					{`<Accordion
 	data={Users}
 	layout='spaced'
 />`}
@@ -97,7 +97,7 @@ import Users from '@/data/users.json'
 			<h3>Small</h3>
 
 			<div className='mx-auto mb-8 max-w-sm'>
-				<Accordian
+				<Accordion
 					data={Users}
 					size='sm'
 				/>
@@ -105,7 +105,7 @@ import Users from '@/data/users.json'
 
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`<Accordian
+					{`<Accordion
 	data={Users}
 	size='sm'
 />`}
@@ -115,7 +115,7 @@ import Users from '@/data/users.json'
 			<h3>Large</h3>
 
 			<div className='mx-auto mb-8 max-w-3xl'>
-				<Accordian
+				<Accordion
 					data={Users}
 					size='lg'
 				/>
@@ -123,7 +123,7 @@ import Users from '@/data/users.json'
 
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`<Accordian
+					{`<Accordion
 	data={Users}
 	size='lg'
 />`}
@@ -138,7 +138,7 @@ import Users from '@/data/users.json'
 				className='mx-auto mb-8 max-w-sm'
 				dir='rtl'
 			>
-				<Accordian
+				<Accordion
 					data={Users}
 					size='sm'
 				/>
@@ -147,7 +147,7 @@ import Users from '@/data/users.json'
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
 					{`<div dir='rtl'>
-	<Accordian
+	<Accordion
 		data={Users}
 		size='sm'
 	/>
@@ -158,4 +158,4 @@ import Users from '@/data/users.json'
 	)
 }
 
-export default AccordianTemplate
+export default AccordionTemplate

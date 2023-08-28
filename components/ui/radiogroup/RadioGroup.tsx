@@ -4,16 +4,7 @@ import { useEffect, useState } from 'react'
 
 import { Input } from '@/ui'
 
-import { Input as TInput } from '@/types'
-
-interface Props {
-	data: any[]
-	getIcon?: (key: string) => void
-	selected?: string
-	icons?: boolean | undefined
-}
-
-interface TRadioGroup extends TInput, Props {}
+import { RadioGroupProps } from './types'
 
 export const RadioGroup = ({
 	className = '',
@@ -24,7 +15,7 @@ export const RadioGroup = ({
 	icons = false,
 	onChange,
 	selected,
-}: TRadioGroup) => {
+}: RadioGroupProps) => {
 	const [checked, setChecked] = useState('')
 
 	useEffect(() => {

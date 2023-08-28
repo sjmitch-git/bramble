@@ -1,6 +1,5 @@
+export * from './accordion'
 export * from './alert'
-export * from './accordian'
-export * from './accordian'
 export * from './autocomplete'
 export * from './badge'
 export * from './badgegroup'

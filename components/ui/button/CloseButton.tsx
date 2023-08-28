@@ -4,12 +4,7 @@ import { Button } from './Button'
 
 import { XMarkIcon } from '@heroicons/react/24/solid'
 
-interface ButtonProps {
-	size?: string | undefined
-	className?: string | undefined
-	onClick?: () => void | undefined
-	disabled?: boolean | undefined
-}
+import { ButtonProps } from './types'
 
 export const CloseButton = ({
 	size = '',

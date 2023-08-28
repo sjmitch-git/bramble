@@ -84,8 +84,8 @@ const config = {
 
 			links: [
 				{
-					href: '/ui/accordian',
-					label: 'Accordian',
+					href: '/ui/accordion',
+					label: 'Accordion',
 				},
 				{
 					href: '/ui/autocomplete',

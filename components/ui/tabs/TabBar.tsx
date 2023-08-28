@@ -4,16 +4,7 @@ import { Tab } from './Tab'
 
 import { Spinner } from '@/ui'
 
-import { Tab as TTab } from '@/types'
-
-interface TabBarProps {
-	className?: string | undefined
-	tabStyles?: string | undefined
-	defaultActiveId?: string
-	tabs: TTab[]
-	activeId: string
-	onclick: (id: string) => void | undefined
-}
+import { TabBarProps } from './types'
 
 export const TabBar = ({ tabs, onclick, activeId, tabStyles }: TabBarProps) => {
 	return (

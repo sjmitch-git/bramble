@@ -15,12 +15,12 @@ import {
 	Select,
 } from '@/ui'
 
-import { Form as TForm } from '@/types'
+import { FormProps } from './types'
 
 import data from '@/data/cards.json'
 import months from '@/data/months.json'
 
-interface TData {
+interface DataProps {
 	id: string
 	name: string
 	validate: string
@@ -44,7 +44,7 @@ const getIcon = (key: string) => {
 	}
 }
 
-const getType = (id: string): TData | undefined => {
+const getType = (id: string): DataProps | undefined => {
 	for (let index = 0; index < data.length; index++) {
 		if (data[index].id === id) return data[index]
 	}
@@ -60,8 +60,8 @@ export const CreditCard = ({
 	layout = 'column',
 	className = 'group p-4 md:px-0',
 	onSubmit,
-}: TForm) => {
-	const [type, setType] = useState<TData>(null!)
+}: FormProps) => {
+	const [type, setType] = useState<DataProps>(null!)
 	const [year, setYear] = useState<number>(null!)
 
 	useEffect(() => {
@@ -74,12 +74,6 @@ export const CreditCard = ({
 		if (type) setType(type)
 	}
 
-	const onsubmit = (e: any) => {
-		e.preventDefault()
-		const data = new FormData(e.target)
-		console.log(Object.fromEntries(data.entries()))
-	}
-
 	return (
 		<Form
 			method={method}
@@ -88,7 +82,7 @@ export const CreditCard = ({
 			legend={legend}
 			btnLabel={btnLabel}
 			btnStyles={btnStyles}
-			onSubmit={onsubmit}
+			onSubmit={onSubmit}
 			className={className}
 		>
 			<p>Select your card</p>
@@ -149,60 +143,56 @@ export const CreditCard = ({
 					<p>Expiry date</p>
 
 					<div className='flex gap-4'>
-						<label className='label'>
-							<span>Month</span>
-							<Select
-								title='Expiry Month'
-								name='cc-exp-month'
-								required={true}
-								onChange={handleChange}
-								className='form-select'
-								nocaret={true}
+						<Select
+							title='Expiry Month'
+							name='cc-exp-month'
+							required={true}
+							onChange={handleChange}
+							className='form-select'
+							nocaret={true}
+							label='Month'
+						>
+							<option
+								value=''
+								disabled
+								hidden
 							>
+								MM
+							</option>
+							{months.map((el) => (
 								<option
-									value=''
-									disabled
-									hidden
+									key={el}
+									value={el}
 								>
-									MM
+									{el}
 								</option>
-								{months.map((el) => (
-									<option
-										key={el}
-										value={el}
-									>
-										{el}
-									</option>
-								))}
-							</Select>
-						</label>
+							))}
+						</Select>
 
-						<label className='label'>
-							<span>Year</span>
-							<Select
-								name='cc-exp-year'
-								required={true}
-								onChange={handleChange}
-								className='form-select'
-								nocaret={true}
+						<Select
+							name='cc-exp-year'
+							required={true}
+							onChange={handleChange}
+							className='form-select'
+							nocaret={true}
+							label='Year'
+						>
+							<option
+								value=''
+								disabled
+								hidden
 							>
+								YYYY
+							</option>
+							{[...new Array(10)].map((_el, index) => (
 								<option
-									value=''
-									disabled
-									hidden
+									key={index}
+									value={(index + year).toString()}
 								>
-									YYYY
+									{index + year}
 								</option>
-								{[...new Array(10)].map((_el, index) => (
-									<option
-										key={index}
-										value={(index + year).toString()}
-									>
-										{index + year}
-									</option>
-								))}
-							</Select>
-						</label>
+							))}
+						</Select>
 					</div>
 				</>
 			)}

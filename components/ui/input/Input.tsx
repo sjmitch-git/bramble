@@ -4,11 +4,11 @@ import { forwardRef, useState } from 'react'
 
 import { PasswordToggle } from '@/ui'
 
-import { Input as TInput } from '@/types'
+import { InputProps } from './types'
 
 export type InputRef = HTMLInputElement
 
-export const Input = forwardRef<InputRef, TInput>(function Input(props, ref) {
+export const Input = forwardRef<InputRef, InputProps>(function Input(props, ref) {
 	const {
 		type = 'text',
 		autocomplete,

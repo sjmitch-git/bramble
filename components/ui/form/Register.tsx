@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 import { Form, Input } from '@/ui'
 
-import { Form as TForm } from '@/types'
+import { FormProps } from './types'
 
 export const Register = ({
 	method = 'post',
@@ -17,7 +17,7 @@ export const Register = ({
 	layout = 'column',
 	className = 'group p-4 md:px-0',
 	onSubmit,
-}: TForm) => {
+}: FormProps) => {
 	const [password, setPassword] = useState('')
 
 	const handleChange = (e: any) => {

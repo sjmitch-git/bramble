@@ -3,16 +3,7 @@ import SocialLinks from './sociallinks'
 import FooterLinks from './footerlinks'
 import { ButtonToTop } from '@/ui'
 
-interface FooterProps {
-	children?: React.ReactNode
-	className?: string | undefined
-	author?: string | null
-	authorUrl?: string | null
-	copyright?: boolean | null
-	socialLinks?: any[]
-	footerLinks?: any[]
-	topButton?: boolean | undefined
-}
+import { FooterProps } from './types'
 
 export function Footer({
 	className = '',
@@ -29,7 +20,7 @@ export function Footer({
 			<div className='footer-custom'>{children}</div>
 
 			<div className='footer-content'>
-				{footerLinks && <FooterLinks links={footerLinks} />}
+				{footerLinks && <FooterLinks footerLinks={footerLinks} />}
 
 				{socialLinks && <SocialLinks socialLinks={socialLinks} />}
 

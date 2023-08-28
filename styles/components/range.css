@@ -1,12 +1,24 @@
 @layer components {
+	.range {
+		@apply relative;
 
-    .range {
-        @apply cursor-pointer;
+		.label {
+			@apply items-center;
+			span {
+				@apply mb-4 text-xl;
+			}
+		}
 
-        &.vertical {
-            @apply -rotate-90 origin-left w-auto;
-        }
+		.vertical {
+			@apply h-40;
 
-    }
+			input {
+				@apply relative top-12 w-auto origin-center -rotate-90;
+			}
+		}
 
+		.feedback {
+			@apply mx-auto py-8 text-center;
+		}
+	}
 }

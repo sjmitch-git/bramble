@@ -20,6 +20,19 @@ import {
 
 import data from '@/data/countries.json'
 
+const fruits = [
+	{ id: 'apples', emoji: '🍏' },
+	{ id: 'bananas', emoji: '🍌' },
+	{ id: 'grapes', emoji: '🍇' },
+	{ id: 'lemons', emoji: '🍋' },
+]
+
+const getEmoji = (key: string) => {
+	for (let i = 0; i < fruits.length; i++) {
+		if (fruits[i].id === key) return fruits[i].emoji
+	}
+}
+
 const FormTemplate = () => {
 	const [color, setColor] = useState('#FFFFFF')
 	const [today, setToday] = useState('')
@@ -165,6 +178,10 @@ const FormTemplate = () => {
 				<a href='#list'>
 					<code>input[type='text'] list</code>
 				</a>
+				,{' '}
+				<a href='#radiogroup'>
+					<code>Radio Group</code>
+				</a>
 			</p>
 			<div className='mb-8 flex justify-center border bg-light p-1 md:p-4'>
 				<Form
@@ -226,6 +243,17 @@ const FormTemplate = () => {
 							value='senior'
 						/>
 					</div>
+
+					<p id='radiogroup'>Radio Group</p>
+
+					<RadioGroup
+						data={fruits}
+						name='fruits'
+						getIcon={getEmoji}
+						icons={true}
+						className='mx-auto max-w-sm grid-cols-4'
+						labelStyles='rounded-full border-4 aspect-square text-4xl bg-dark'
+					/>
 
 					<p id='password'>Enter your password</p>
 
