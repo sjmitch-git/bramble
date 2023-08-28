@@ -23,7 +23,7 @@ export function Toast() {
 		return () => {
 			reset()
 		}
-	}, [show, autohide])
+	}, [show, autohide, clear, reset])
 
 	return (
 		<div

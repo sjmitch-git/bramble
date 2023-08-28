@@ -49,7 +49,7 @@ export const Counter = ({
 				disabled={total === min}
 				size='sm'
 				onClick={minus}
-				aria-role='Minus'
+				aria-label='Minus'
 				title='Minus'
 				id='minus'
 			>

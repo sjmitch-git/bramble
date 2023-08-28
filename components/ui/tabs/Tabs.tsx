@@ -18,22 +18,25 @@ export const Tabs = ({
 	const [activeId, setActiveId] = useState<string>(defaultActiveId)
 	const [nodes, setNodes] = useState<React.ReactNode[]>(null!)
 
-	const content = useCallback((contentRefNode: any) => {
-		let arrTabs: any[] = []
-		if (contentRefNode) {
-			const buildTabs = (item: any, index: number) => {
-				const tabObject = {
-					id: item.id,
-					title: icons ? icons[index] : item.title,
+	const content = useCallback(
+		(contentRefNode: any) => {
+			let arrTabs: any[] = []
+			if (contentRefNode) {
+				const buildTabs = (item: any, index: number) => {
+					const tabObject = {
+						id: item.id,
+						title: icons ? icons[index] : item.title,
+					}
+					arrTabs.push(tabObject)
 				}
-				arrTabs.push(tabObject)
+				setTabs(arrTabs)
+				const children = [...contentRefNode.children]
+				setNodes(children)
+				children.forEach(buildTabs)
 			}
-			setTabs(arrTabs)
-			const children = [...contentRefNode.children]
-			setNodes(children)
-			children.forEach(buildTabs)
-		}
-	}, [])
+		},
+		[icons]
+	)
 
 	useEffect(() => {
 		const setActive = (item: any) =>

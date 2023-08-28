@@ -1,10 +1,11 @@
+import Head from 'next/head'
 import Script from 'next/script'
 
 import SEO from '@/components/seo'
 
 export const HeadSection = () => {
 	return (
-		<head>
+		<Head>
 			<Script
 				strategy='afterInteractive'
 				src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -26,6 +27,6 @@ export const HeadSection = () => {
 				content={`${process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION}`}
 			/>
 			<SEO />
-		</head>
+		</Head>
 	)
 }
