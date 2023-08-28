@@ -7,8 +7,8 @@ export const FooterSection = () => {
 	const { authorName, authorUrl, social } = config.author
 	return (
 		<Footer
-			author={authorName}
-			authorUrl={authorUrl}
+			author={authorName !== null ? authorName : undefined}
+			authorUrl={authorUrl !== null ? authorUrl : undefined}
 			socialLinks={social}
 			footerLinks={footerLinks}
 			className=''
