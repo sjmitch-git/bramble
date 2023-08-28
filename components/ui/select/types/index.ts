@@ -1,6 +1,7 @@
 export interface SelectProps extends React.HTMLAttributes<HTMLElement> {
 	size?: 'sm' | 'lg'
 	className?: string
+	name?: string
 	id?: string
 	title?: string
 	children: React.ReactNode
