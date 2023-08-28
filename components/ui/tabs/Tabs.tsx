@@ -42,7 +42,7 @@ export const Tabs = ({
 		const setActive = (item: any) =>
 			item.id === activeId ? item.classList.add('active') : item.classList.remove('active')
 		if (activeId && nodes) nodes.forEach(setActive)
-	}, [activeId])
+	}, [activeId, nodes])
 
 	const handleClick = (id: string) => setActiveId(id)
 

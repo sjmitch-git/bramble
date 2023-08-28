@@ -135,7 +135,11 @@ const TabsPage = () => {
 				<Tabs
 					className='mx-auto w-full max-w-lg'
 					defaultActiveId='tab0'
-					icons={[<ReactIcon />, <NextIcon />, <TailwindIcon />]}
+					icons={[
+						<ReactIcon key='reactjs' />,
+						<NextIcon key='nextjs' />,
+						<TailwindIcon key='tailwind' />,
+					]}
 				>
 					{technologies.map((item, index) => (
 						<div

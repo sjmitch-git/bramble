@@ -42,7 +42,11 @@ export default function Home() {
 					<Tabs
 						className='mx-auto w-full max-w-lg'
 						defaultActiveId='tab0'
-						icons={[<ReactIcon />, <NextIcon />, <TailwindIcon />]}
+						icons={[
+							<ReactIcon key='reactjs' />,
+							<NextIcon key='nextjs' />,
+							<TailwindIcon key='tailwind' />,
+						]}
 					>
 						{data.map((item, index) => (
 							<div
