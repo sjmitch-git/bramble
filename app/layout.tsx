@@ -45,7 +45,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang='en'>
-			<HeadSection />
+			<head>
+				<HeadSection />
+			</head>
+
 			<body className={inter.className}>
 				<AppContextProvider>
 					<div className='wrapper'>
