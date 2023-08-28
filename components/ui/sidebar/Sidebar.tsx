@@ -16,9 +16,19 @@ export function Sidebar() {
 
 	const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
 		if (touchPosition === null) return
-		setShow(false)
-		document.body.style.overflow = ''
-		setTouchPosition(null!)
+		const diff = touchPosition - e.touches[0].clientX
+
+		if (position === 'right' && diff < -5) {
+			setShow(false)
+			document.body.style.overflow = ''
+			setTouchPosition(null!)
+		}
+
+		if (position === 'left' && diff > 5) {
+			setShow(false)
+			document.body.style.overflow = ''
+			setTouchPosition(null!)
+		}
 	}
 
 	const close = () => {
@@ -34,7 +44,7 @@ export function Sidebar() {
 		>
 			<CloseButton
 				onClick={close}
-				className='circle icon absolute right-4 top-2 !p-0 !text-dark outline'
+				className='circle icon absolute right-2 top-2 !p-0 !text-dark outline'
 				size='sm'
 			/>
 			<div className='inner'>{message}</div>

@@ -9,7 +9,7 @@ export const NewsLetter = ({
 	layout = 'column',
 	closeLabel,
 	closeStyles,
-	className = 'group p-4 md:px-0',
+	className = 'group py-4 px-0',
 	onSubmit,
 	onclick,
 }: FormProps) => {

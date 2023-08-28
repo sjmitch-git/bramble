@@ -1,6 +1,6 @@
 @layer components {
 	.sidebar {
-		@apply invisible fixed bottom-0 top-0 z-100 max-w-sm duration-500;
+		@apply invisible fixed bottom-0 top-0 z-100 max-w-sm pb-16 duration-500;
 
 		&.right {
 			@apply left-auto right-0 translate-x-full border-l-2 border-neutral;

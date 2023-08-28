@@ -1,6 +1,6 @@
 @layer components {
 	.footer {
-		@apply px-4;
+		@apply px-4 pb-16;
 
 		.footer-custom {
 			@apply mb-12 flex flex-col justify-center gap-12;

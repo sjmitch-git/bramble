@@ -32,7 +32,7 @@
 			}
 
 			&.row .actions {
-				@apply mt-auto gap-4 border-none pt-0;
+				@apply mt-auto w-full gap-4 border-none pt-0 md:w-auto;
 			}
 		}
 

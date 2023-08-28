@@ -89,7 +89,7 @@ const oncancel = (e: any) => {
 								onSubmit={onsubmit}
 								onclick={oncancel}
 							/>,
-							'bg-light text-dark',
+							'bg-light text-dark md:px-4',
 							'top'
 						)
 					}
@@ -110,7 +110,7 @@ const oncancel = (e: any) => {
 								onSubmit={onsubmit}
 								onclick={oncancel}
 							/>,
-							'bg-light text-dark pb-8',
+							'bg-light text-dark md:px-4',
 							'bottom'
 						)
 					}
