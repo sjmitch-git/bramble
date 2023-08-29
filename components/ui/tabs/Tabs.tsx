@@ -6,14 +6,14 @@ import { useCallback, useState, useEffect } from 'react'
 
 import { TabsProps, TabProps } from './types'
 
-export const Tabs = ({
+function Tabs({
 	className = '',
 	defaultActiveId = '',
 	tabStyles,
 	icons,
 	children,
 	minimal = false,
-}: TabsProps) => {
+}: TabsProps) {
 	const [tabs, setTabs] = useState<TabProps[]>(null!)
 	const [activeId, setActiveId] = useState<string>(defaultActiveId)
 	const [nodes, setNodes] = useState<React.ReactNode[]>(null!)
@@ -63,3 +63,5 @@ export const Tabs = ({
 		</div>
 	)
 }
+
+export { Tabs }

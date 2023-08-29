@@ -7,7 +7,7 @@ import { AccordionProps } from './types'
 import { Button } from '@/ui'
 import { PlusIcon, MinusIcon } from '@heroicons/react/24/solid'
 
-export const Accordion = ({ size, className = '', data, opened, layout }: AccordionProps) => {
+function Accordion({ size, className = '', data, opened, layout }: AccordionProps) {
 	const [open, setOpen] = useState('')
 
 	useEffect(() => {
@@ -49,3 +49,5 @@ export const Accordion = ({ size, className = '', data, opened, layout }: Accord
 		</div>
 	)
 }
+
+export { Accordion }

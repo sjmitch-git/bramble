@@ -65,7 +65,7 @@ showSidebar(
 								onSubmit={onsubmit}
 								onclick={oncancel}
 							/>,
-							'bg-dark text-light',
+							'bg-neutral text-dark',
 							'right'
 						)
 					}

@@ -1,8 +1,6 @@
 import useMetadata from '@/hooks/useMetadata'
 
-import Link from 'next/link'
-
-import config from '@/app.config'
+import UiPage from '@/components/pages/ui'
 
 const title = 'UI Components'
 const description =
@@ -16,71 +14,12 @@ export let metadata: any
 
 export default function Components() {
 	metadata = useMetadata({ title, description, keywords, url })
-	console.log('config', config.siteLinks)
+
 	return (
 		<>
 			<h1>{title}</h1>
 			<p>{description}</p>
-			<nav>
-				<ul>
-					<li>
-						<Link href='./ui/accordian'>Accordian</Link>
-					</li>
-					<li>
-						<Link href='./ui/alert'>Alert</Link>
-					</li>
-					<li>
-						<Link href='./ui/badge'>Badge</Link>
-					</li>
-					<li>
-						<Link href='./ui/breadcrumbs'>Breadcrumbs</Link>
-					</li>
-					<li>
-						<Link href='./ui/buttons'>Buttons</Link>
-						<ul>
-							<li>
-								<Link href='./ui/buttons/button_group'>Button Group</Link>
-							</li>
-							<li>
-								<Link href='./ui/buttons/close_button'>Close Button</Link>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<Link href='./ui/card'>Card</Link>
-					</li>
-					<li>
-						<Link href='./ui/carousel'>Carousel</Link>
-					</li>
-					<li>
-						<Link href='./ui/codeblock'>Codeblock</Link>
-					</li>
-					<li>
-						<Link href='./ui/dialog'>Dialog</Link>
-					</li>
-					<li>
-						<Link href='./ui/figure'>Figure</Link>
-					</li>
-					<li>
-						<Link href='./ui/gallery'>Gallery</Link>
-					</li>
-					<li>
-						<Link href='./ui/modal'>Modal</Link>
-					</li>
-					<li>
-						<Link href='./ui/pagination'>Pagination</Link>
-					</li>
-					<li>
-						<Link href='./ui/ratings'>Ratings</Link>
-					</li>
-					<li>
-						<Link href='./ui/select'>Select</Link>
-					</li>
-					<li>
-						<Link href='./ui/video'>Video</Link>
-					</li>
-				</ul>
-			</nav>
+			<UiPage />
 		</>
 	)
 }

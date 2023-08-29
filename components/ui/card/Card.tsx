@@ -5,7 +5,7 @@ import CardBody from './CardBody'
 
 import { CardProps } from './types'
 
-export const Card = ({
+const Card = ({
 	className = '',
 	title = '',
 	description = '',
@@ -45,3 +45,5 @@ export const Card = ({
 		</>
 	)
 }
+
+export {Card}

@@ -6,7 +6,7 @@ import { ButtonProps } from './types'
 
 export type ButtonRef = HTMLButtonElement
 
-export const Button = forwardRef<ButtonRef, ButtonProps>(function Button(props, ref) {
+const Button = forwardRef<ButtonRef, ButtonProps>(function Button(props, ref) {
 	const {
 		size,
 		className = 'primary',
@@ -38,3 +38,5 @@ export const Button = forwardRef<ButtonRef, ButtonProps>(function Button(props, 
 		</button>
 	)
 })
+
+export { Button }

@@ -1,0 +1,89 @@
+@layer components {
+	.accordion {
+		@apply text-lg;
+
+		.accordion-container {
+			@apply mb-0 border border-t-0 border-neutral p-4 first:border-t;
+
+			&:has(.open) {
+				@apply bg-[var(--info-color-25)];
+			}
+
+			&.flush {
+				@apply border-x-0 border-t-0 last:border-b-0;
+			}
+
+			&.spaced {
+				@apply mb-2 border;
+			}
+		}
+
+		&.sm {
+			& .accordion-content {
+				@apply text-sm;
+
+				& p {
+					@apply text-sm;
+				}
+
+				& .btn {
+					@apply p-1;
+				}
+			}
+
+			& .accordion-header {
+				@apply text-base;
+			}
+		}
+
+		&.lg {
+			& .accordion-content {
+				@apply text-lg;
+
+				& p {
+					@apply text-lg;
+				}
+
+				& .btn {
+					@apply p-3;
+				}
+			}
+
+			& .accordion-header {
+				@apply text-3xl;
+			}
+		}
+
+		.accordion-header {
+			@apply m-0 flex cursor-pointer items-center justify-between text-xl;
+
+			& .btn {
+				@apply hidden p-0 md:block;
+			}
+
+			&.open + * {
+				@apply max-h-48;
+			}
+		}
+
+		.accordion-content {
+			@apply max-h-0  overflow-y-auto text-base transition-all duration-500 ease-in-out;
+
+			& > div {
+				@apply pt-2;
+			}
+
+			& p {
+				@apply text-size-inherit mb-4 last:mb-0;
+			}
+
+			& ul {
+				@apply ms-4 list-inside list-disc;
+			}
+
+			& .btn {
+				@apply text-size-inherit inline-block w-auto p-2;
+			}
+		}
+	}
+}
