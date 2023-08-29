@@ -2,7 +2,7 @@ import useMetadata from '@/hooks/useMetadata'
 
 import config from '@/app.config'
 
-import { Card } from '@/components'
+import { Card } from '@/ui'
 
 const title = 'Docs'
 const description = 'Docs description TBD'

@@ -1,7 +1,7 @@
 'use client'
 
 import { usePosts } from '@/hooks/usePosts'
-import { Alert, Loading, Bars } from '@/components'
+import { Alert, Loading, Bars } from '@/ui'
 
 export default function ClientPosts() {
 	const { data, isLoading, error } = usePosts()
