@@ -1,0 +1,55 @@
+@layer components {
+	.input {
+		@apply border-gray-400 shadow-sm;
+
+		&:focus,
+		&:focus-visible {
+			@apply border-secondary ring-4 ring-accent ring-opacity-50;
+		}
+
+		&:not([type='radio']) {
+			@apply rounded-md;
+		}
+
+		&[type='text'],
+		&[type='password'],
+		&[type='url'],
+		&[type='tel'],
+		&[type='email'] {
+			@apply w-full;
+		}
+
+		&[type='color'] {
+			@apply h-12 w-12 cursor-pointer;
+		}
+
+		&[type='range'] {
+			@apply outline-none;
+		}
+
+		&[type='checkbox'],
+		&[type='radio'] {
+			@apply h-8 w-8 cursor-pointer text-secondary;
+		}
+
+		&[type='number'] {
+			@apply text-center;
+		}
+
+		&[type='number']::-webkit-inner-spin-button,
+		&[type='number']::-webkit-outer-spin-button {
+			@apply m-0 appearance-none;
+		}
+
+		&[type='date'] {
+			@apply cursor-pointer;
+		}
+
+		&:invalid {
+			@apply bg-[var(--warning-color-25)];
+			& + .hint {
+				@apply inline-block;
+			}
+		}
+	}
+}

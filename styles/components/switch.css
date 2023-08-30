@@ -2,6 +2,10 @@
 	.switch {
 		@apply h-8 w-auto flex-row-reverse items-center gap-4;
 
+		&:has(input:focus) .slider {
+			@apply border-secondary ring-4 ring-accent ring-opacity-50;
+		}
+
 		.labeltext {
 			@apply grow text-left;
 		}
@@ -15,7 +19,7 @@
 		}
 
 		input {
-			@apply hidden;
+			@apply absolute opacity-0;
 
 			&:checked + .slider {
 				&.info {

@@ -85,7 +85,7 @@ const FormTemplate = () => {
 	}
 
 	const onListChange = (event: any) => {
-		if (data.indexOf(event.target.value) !== -1) alert('You selected ' + event.target.value)
+		// if (data.indexOf(event.target.value) !== -1) alert('You selected ' + event.target.value)
 	}
 
 	const onFileChange = (e: any) => {
@@ -252,7 +252,7 @@ const FormTemplate = () => {
 						getIcon={getEmoji}
 						icons={true}
 						className='mx-auto max-w-sm grid-cols-4'
-						labelStyles='rounded-full border-4 aspect-square text-4xl bg-dark'
+						labelStyles='rounded-full p-3 text-center border-4 aspect-square text-4xl bg-dark justify-center'
 					/>
 
 					<p id='password'>Enter your password</p>
@@ -316,7 +316,7 @@ const FormTemplate = () => {
 						type='file'
 						name='file'
 						accept='image/*'
-						className='hidden'
+						className='absolute -z-[1]'
 						onchange={onFileChange}
 					/>
 					<img
@@ -355,6 +355,7 @@ const FormTemplate = () => {
 					<p id='range'>Volume Control</p>
 
 					<Range
+						className='input'
 						onRangeChange={handleAudioChange}
 						max={1}
 						step={0.1}
@@ -372,13 +373,15 @@ const FormTemplate = () => {
 						name='blog'
 						placeholder='Link to your blog'
 						type='url'
+						pattern='https://.*'
 					/>
 
 					<Input
 						label='LinkedIn'
-						name='linkedin'
+						name='url'
 						placeholder='Link to your profile'
 						type='url'
+						pattern='https://.*'
 					/>
 
 					<p id='list'>Where are you from?</p>

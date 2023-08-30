@@ -2,12 +2,6 @@
 	.form {
 		@apply flex items-center justify-between gap-4;
 
-		&:invalid {
-			& .btn[type='submit'] {
-				@apply pointer-events-none scale-100 cursor-default border-[var(--disabled-color)] bg-[var(--neutral-color)] !text-[var(--disabled-color)];
-			}
-		}
-
 		fieldset {
 			@apply flex w-full flex-col gap-6;
 
@@ -40,38 +34,6 @@
 			@apply mb-8 text-xl font-bold capitalize;
 		}
 
-		input[type='text'],
-		input[type='password'],
-		input[type='url'],
-		input[type='tel'],
-		input[type='email'] {
-			@apply w-full border text-dark;
-		}
-
-		input[type='date'] {
-			@apply w-full cursor-pointer border text-dark;
-		}
-
-		input[type='number'] {
-			@apply text-center;
-		}
-
-		input[type='checkbox'],
-		input[type='radio'] {
-			@apply h-8 w-8 cursor-pointer;
-		}
-
-		.form-color {
-			@apply h-12 w-12 cursor-pointer;
-		}
-
-		input:invalid {
-			@apply bg-accent;
-			& + .hint {
-				@apply inline-block;
-			}
-		}
-
 		.hint {
 			@apply hidden text-start text-sm;
 
@@ -82,19 +44,18 @@
 
 		.actions {
 			@apply mt-4 flex justify-around gap-4 border-t border-neutral pt-6;
+
+			button:disabled {
+				@apply invisible;
+			}
 		}
 
 		&.hideactions .inputs + .actions {
 			@apply hidden;
 		}
-	}
 
-	.radios {
-		@apply space-y-4;
-	}
-
-	input[type='number']::-webkit-inner-spin-button,
-	input[type='number']::-webkit-outer-spin-button {
-		@apply m-0 appearance-none;
+		.radios {
+			@apply space-y-4;
+		}
 	}
 }

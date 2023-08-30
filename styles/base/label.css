@@ -25,7 +25,17 @@
 		}
 
 		&:has(span.file) {
-			@apply btn rounded;
+			@apply btn m-auto w-auto rounded;
+
+			&:active,
+			&:hover,
+			&:focus {
+				@apply !transform-none;
+			}
+		}
+
+		&:has(span.file):has(input:focus) {
+			@apply border-secondary ring-4 ring-accent ring-opacity-50;
 		}
 	}
 }
