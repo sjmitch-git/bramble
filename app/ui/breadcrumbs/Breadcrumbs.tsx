@@ -1,4 +1,5 @@
 import useMetadata from '@/hooks/useMetadata'
+import useSchemaMarkup from '@/hooks/useSchemaMarkup'
 
 import BreadcrumbsTemplate from '@/templates/Breadcrumbs'
 
@@ -25,6 +26,13 @@ export default function Breadcrumbs() {
 			<div>
 				<BreadcrumbsTemplate />
 			</div>
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: useSchemaMarkup({ title, description, url }),
+				}}
+				key='jsonld'
+			/>
 		</>
 	)
 }

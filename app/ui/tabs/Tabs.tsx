@@ -1,4 +1,5 @@
 import useMetadata from '@/hooks/useMetadata'
+import useSchemaMarkup from '@/hooks/useSchemaMarkup'
 
 import TabsPage from '@/components/pages/tabs'
 

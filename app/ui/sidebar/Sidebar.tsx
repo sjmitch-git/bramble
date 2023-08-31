@@ -1,4 +1,5 @@
 import useMetadata from '@/hooks/useMetadata'
+import useSchemaMarkup from '@/hooks/useSchemaMarkup'
 
 import SidebarTemplate from '@/templates/Sidebar'
 
@@ -20,6 +21,13 @@ export default function Sidebar() {
 			<div>
 				<SidebarTemplate />
 			</div>
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: useSchemaMarkup({ title, description, url }),
+				}}
+				key='jsonld'
+			/>
 		</>
 	)
 }

@@ -1,4 +1,5 @@
 import useMetadata from '@/hooks/useMetadata'
+import useSchemaMarkup from '@/hooks/useSchemaMarkup'
 
 import AutocompleteTemplate from '@/templates/Autocomplete'
 
@@ -20,6 +21,13 @@ export default function Autocomplete() {
 			<div>
 				<AutocompleteTemplate />
 			</div>
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: useSchemaMarkup({ title, description, url }),
+				}}
+				key='jsonld'
+			/>
 		</>
 	)
 }

@@ -1,4 +1,5 @@
 import useMetadata from '@/hooks/useMetadata'
+import useSchemaMarkup from '@/hooks/useSchemaMarkup'
 
 import AccordionTemplate from '@/templates/Accordion'
 
@@ -13,6 +14,7 @@ export let metadata: any
 
 export default function Accordian() {
 	metadata = useMetadata({ title, description, keywords, url })
+
 	return (
 		<>
 			<h1>{title}</h1>
@@ -20,6 +22,13 @@ export default function Accordian() {
 			<div>
 				<AccordionTemplate />
 			</div>
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: useSchemaMarkup({ title, description, url }),
+				}}
+				key='jsonld'
+			/>
 		</>
 	)
 }

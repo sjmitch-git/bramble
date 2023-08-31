@@ -1,11 +1,13 @@
 import useMetadata from '@/hooks/useMetadata'
+import useSchemaMarkup from '@/hooks/useSchemaMarkup'
 
 import PaginationTemplate from '@/templates/Pagination'
 
 const title = 'Pagination'
 const description =
-	'Implement seamless pagination with Bramble UI\'s pagination component. Create user-friendly web interfaces and navigate through content effortlessly.'
-const keywords = 'Bramble UI pagination component, Seamless pagination, User-friendly web interfaces, Content navigation, Web design enhancement, Efficient user interactions, Web development resources, Interactive UI elements, Bramble UI showcase, Content organization'
+	"Implement seamless pagination with Bramble UI's pagination component. Create user-friendly web interfaces and navigate through content effortlessly."
+const keywords =
+	'Bramble UI pagination component, Seamless pagination, User-friendly web interfaces, Content navigation, Web design enhancement, Efficient user interactions, Web development resources, Interactive UI elements, Bramble UI showcase, Content organization'
 const url = 'ui/pagination'
 
 export let metadata: any
@@ -19,6 +21,13 @@ export default function Pagination() {
 			<div>
 				<PaginationTemplate />
 			</div>
+			<script
+				type='application/ld+json'
+				dangerouslySetInnerHTML={{
+					__html: useSchemaMarkup({ title, description, url }),
+				}}
+				key='jsonld'
+			/>
 		</>
 	)
 }

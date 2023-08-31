@@ -6,6 +6,7 @@ export const siteName = { siteName: `${title}` }
 export const authorName = { author: `${author}` }
 export const keyWords = keywords
 export const host = url
+export const home = title
 export const OpenGraph = {
 	...siteName,
 	locale: 'en-GB',
