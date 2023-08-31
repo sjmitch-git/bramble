@@ -7,7 +7,7 @@ import { SidebarContext } from '@/contexts/sidebar.context'
 import { CloseButton } from '@/ui'
 
 export function Sidebar() {
-	const { show, setShow, message, state, position } = useContext(SidebarContext)
+	const { show, setShow, body, state, position } = useContext(SidebarContext)
 	const [touchPosition, setTouchPosition] = useState<number>(null!)
 
 	const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
@@ -47,7 +47,7 @@ export function Sidebar() {
 				className='circle icon absolute right-2 top-2 !p-0 !text-dark outline'
 				size='sm'
 			/>
-			<div className='inner'>{message}</div>
+			<div className='inner'>{body}</div>
 		</aside>
 	)
 }

@@ -15,7 +15,7 @@ import {
 	Select,
 } from '@/ui'
 
-import { FormProps } from './types'
+import { FormProps } from '@/types'
 
 import data from '@/data/cards.json'
 import months from '@/data/months.json'

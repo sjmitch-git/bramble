@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 import { Form, Input } from '@/ui'
 
-import { FormProps } from './types'
+import { FormProps } from '@/types'
 
 export const Register = ({
 	method = 'post',

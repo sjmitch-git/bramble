@@ -1,6 +1,7 @@
 'use client'
 
-import { Codeblock, Tabs, Login, Register, ReactIcon, NextIcon, TailwindIcon } from '@/ui'
+import { Codeblock, Tabs, ReactIcon, NextIcon, TailwindIcon } from '@/ui'
+import { Login, Register } from '@/features'
 
 const data = [
 	{ name: 'apples', emoji: '🍏', body: '<p>Some content about <strong>apples</strong></p>' },
@@ -260,7 +261,8 @@ const data = [
 			</div>
 
 			<Codeblock language='jsx'>
-				{`import {Tabs, Login, Register } from '@/ui'
+				{`import { Tabs } from '@/ui'
+import { Login, Register } from '@/features'
 				
 <Tabs
     className='w-full pt-12'

@@ -1,6 +1,6 @@
 import { Form, Input } from '@/ui'
 
-import { FormProps } from './types'
+import { FormProps } from '@/types'
 
 export const NewsLetter = ({
 	legend = 'Sign up for our newsletter?',

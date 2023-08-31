@@ -19,7 +19,3 @@ export interface VideoProps extends React.HTMLAttributes<HTMLVideoElement> {
 	mute?: boolean
 	volume?: number
 }
-
-export interface SpinnerProps {
-	className?: string
-}

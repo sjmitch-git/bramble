@@ -2,13 +2,13 @@
 
 import { createContext } from 'react'
 
-import { SidebarProps } from '@/components/ui/sidebar/types'
+import { SidebarProps } from '@/types'
 
 const initialState: SidebarProps = {
 	show: false,
 	setShow: () => {},
-	message: '',
-	setMessage: () => {},
+	body: '',
+	setBody: () => {},
 	state: '',
 	setState: () => {},
 	position: '',

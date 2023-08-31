@@ -4,7 +4,7 @@ import AlertTemplate from '@/templates/Alert'
 
 const title = 'Alert'
 const description =
-	"Explore Bramble UI's dynamic alert components for effective communication. Enhance user interaction with interactive alerts. Discover modern web design possibilities."
+	"Explore Bramble UI's dynamic alert components for effective communication. Enhance user interaction with interactive alerts."
 const keywords =
 	'Bramble UI alerts, Dynamic alert components, Effective communication, Interactive user alerts, Modern web design, User interaction enhancement, Web development resources, Interactive notifications, Bramble UI showcase, User experience improvement'
 const url = 'ui/alert'

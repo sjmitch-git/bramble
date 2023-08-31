@@ -5,7 +5,7 @@ import { logRoles } from '@testing-library/dom'
 
 import { Autocomplete } from '@/ui'
 
-import { Autocomplete as TAutocomplete } from '@/types'
+import { AutocompleteProps } from '@/types'
 
 import DATA from '@/data/countries.json'
 
@@ -27,7 +27,7 @@ const defaultProps = {
 }
 
 describe('Autocomplete Component', () => {
-	const renderComponent = (props: TAutocomplete) => {
+	const renderComponent = (props: AutocompleteProps) => {
 		render(<Autocomplete {...props} />)
 		component = screen.getByRole('combobox')
 		datalist = screen.getByTestId('datalist')

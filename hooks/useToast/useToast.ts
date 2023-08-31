@@ -2,15 +2,10 @@ import { useContext } from 'react'
 import { ToastContext } from '@/contexts/toast.context'
 
 export default function useToast() {
-	const { setShow, setState, setMessage, setPosition, setAutohide } = useContext(ToastContext)
+	const { setShow, setState, setBody, setPosition, setAutohide } = useContext(ToastContext)
 
-	function showToast(
-		position: string,
-		state: string,
-		message: React.ReactNode,
-		autohide: boolean
-	) {
-		setMessage(message)
+	function showToast(position: string, state: string, body: React.ReactNode, autohide: boolean) {
+		setBody(body)
 		setState(state)
 		setPosition(position)
 		setAutohide(autohide)

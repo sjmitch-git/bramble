@@ -2,10 +2,10 @@ import { useContext } from 'react'
 import { SidebarContext } from '@/contexts/sidebar.context'
 
 export default function useSidebar() {
-	const { setShow, setMessage, setState, setPosition } = useContext(SidebarContext)
+	const { setShow, setBody, setState, setPosition } = useContext(SidebarContext)
 
-	function showSidebar(message: React.ReactNode, state: string, position: string) {
-		setMessage(message)
+	function showSidebar(body: React.ReactNode, state: string, position: string) {
+		setBody(body)
 		setState(state)
 		setPosition(position)
 		document.body.style.overflow = 'hidden'

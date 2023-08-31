@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 
-import { Alert, Codeblock, Dialog, Button, Login, Register } from '@/ui'
-import { Tabs } from '@/ui'
+import { Alert, Codeblock, Dialog, Button, Tabs } from '@/ui'
+import { Login, Register } from '@/features'
 import { UserIcon } from '@heroicons/react/24/solid'
 
 const handleSubmit = (e: any) => {
@@ -165,8 +165,8 @@ const DialogTemplate = () => {
 			</div>
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`import { Login, Register, Dialog } from '@/ui'
-import { Tabs } from '@/ui'
+					{`import { Dialog } from '@/ui'
+import { Login, Register } from '@/features'
 
 const handleSubmit = (e: any) => {
 	const data = new FormData(e.target)
@@ -225,7 +225,8 @@ const handleSubmit = (e: any) => {
 
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`import { Login, Dialog } from '@/ui'
+					{`import { Dialog } from '@/ui'
+import { Login } from '@/features'
 import { UserIcon } from '@heroicons/react/24/solid'
 
 const handleSubmit = (e: any) => {
@@ -265,7 +266,8 @@ const handleSubmit = (e: any) => {
 
 			<div className='mb-12'>
 				<Codeblock language='jsx'>
-					{`import { Register, Dialog } from '@/ui'
+					{`import { Dialog } from '@/ui'
+import { Register } from '@/features'
 
 const handleSubmit = (e: any) => {
 	const data = new FormData(e.target)

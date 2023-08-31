@@ -2,7 +2,8 @@
 
 import UseSidebar from '@/hooks/useSidebar'
 
-import { Codeblock, NewsLetter, User } from '@/ui'
+import { Codeblock } from '@/ui'
+import { NewsLetter, User } from '@/features'
 
 const SidebarTemplate = () => {
 	const { showSidebar, closeSidebar } = UseSidebar()
@@ -31,7 +32,7 @@ const SidebarTemplate = () => {
 				<Codeblock language='jsx'>
 					{`import UseDrawer from '@/hooks/UseSidebar'
 
-import { NewsLetter, User } from '@/ui' // import component to be added to drawer.
+import { NewsLetter, User } from '@/features' // import component to be added to drawer.
 
 const { showSidebar, closeSidebar } = UseSidebar()
 

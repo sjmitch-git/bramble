@@ -21,6 +21,8 @@
 		],
 		"paths": {
 			"@/ui": ["./components/ui"],
+			"@/types": ["./components/ui/types.ts"],
+			"@/features": ["./components/features"],
 			"@/sections": ["./components/sections"],
 			"@/*": ["./*"]
 		}

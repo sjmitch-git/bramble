@@ -12,7 +12,7 @@ export function Toast() {
 		state = '',
 		show,
 		setShow,
-		message,
+		body,
 		position = '',
 		autohide = false,
 	} = useContext(ToastContext)
@@ -37,7 +37,7 @@ export function Toast() {
 					onClick={() => setShow(false)}
 				/>
 			)}
-			<div className='message'>{message}</div>
+			<div className='body'>{body}</div>
 		</div>
 	)
 }

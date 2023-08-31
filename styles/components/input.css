@@ -45,6 +45,14 @@
 			@apply cursor-pointer;
 		}
 
+		&[type='range'] {
+			@apply h-2 w-full appearance-none rounded;
+
+			&::-webkit-slider-thumb {
+				@apply h-5 w-5 cursor-grab appearance-none rounded-full bg-current text-current;
+			}
+		}
+
 		&:invalid {
 			@apply bg-[var(--warning-color-25)];
 			& + .hint {

@@ -7,13 +7,13 @@ import { Toast } from '@/ui'
 export default function ToastContextProvider({ children }: { children: React.ReactNode }) {
 	const initialState = useContext(ToastContext)
 	const [show, setShow] = useState(initialState.show)
-	const [message, setMessage] = useState(initialState.message)
+	const [body, setBody] = useState(initialState.body)
 	const [state, setState] = useState(initialState.state)
 	const [position, setPosition] = useState(initialState.position)
 	const [autohide, setAutohide] = useState(initialState.autohide)
 	const contextValues = {
-		message,
-		setMessage,
+		body,
+		setBody,
 		show,
 		setShow,
 		state,

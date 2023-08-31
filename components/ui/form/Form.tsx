@@ -25,10 +25,6 @@ export const Form = ({
 	const form = useRef<HTMLFormElement>(null!)
 	const submitButton = useRef<HTMLButtonElement>(null!)
 
-	useEffect(() => {
-		submitButton.current.disabled = !form?.current?.checkValidity()
-	}, [])
-
 	const handleInput = () => {
 		submitButton.current.disabled = !form?.current?.checkValidity()
 	}
@@ -53,6 +49,7 @@ export const Form = ({
 							type='submit'
 							ref={submitButton}
 							className={`${btnStyles}`}
+							disabled={true}
 						>
 							{btnLabel}
 						</Button>

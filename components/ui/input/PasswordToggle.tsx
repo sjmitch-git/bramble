@@ -3,7 +3,7 @@ import { Button } from '@/ui'
 import { EyeIcon } from '@heroicons/react/24/solid'
 
 interface PasswordToggleProps {
-	onClick: (e: any) => void
+	onClick: () => void
 }
 
 export const PasswordToggle = ({ onClick }: PasswordToggleProps) => {

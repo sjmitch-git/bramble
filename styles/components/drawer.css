@@ -37,7 +37,7 @@
 			}
 		}
 
-		.message {
+		.body {
 			@apply mx-auto w-full px-4 md:px-0 lg:max-w-6xl;
 		}
 	}

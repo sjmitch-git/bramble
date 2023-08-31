@@ -1,4 +1,4 @@
-@layer base {
+@layer components {
 	label {
 		@apply relative flex grow cursor-pointer flex-col items-start gap-1 md:grow-0;
 

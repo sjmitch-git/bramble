@@ -46,7 +46,7 @@
 			@apply bg-danger;
 		}
 
-		.message {
+		.body {
 			@apply w-full text-center;
 			p {
 				@apply mb-0;

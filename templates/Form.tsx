@@ -2,21 +2,9 @@
 
 import { useState, useEffect } from 'react'
 
-import {
-	Codeblock,
-	Form,
-	Input,
-	Range,
-	Autocomplete,
-	Switch,
-	Counter,
-	Login,
-	Register,
-	NewsLetter,
-	User,
-	CreditCard,
-	RadioGroup,
-} from '@/ui'
+import { Codeblock, Form, Input, Range, Autocomplete, Switch, Counter, RadioGroup } from '@/ui'
+
+import { NewsLetter, User, Login, Register, CreditCard } from '@/features'
 
 import data from '@/data/countries.json'
 
@@ -287,6 +275,7 @@ const FormTemplate = () => {
 							min={today}
 							max={returning}
 							onchange={onDateChange}
+							required={true}
 						/>
 
 						<Input
@@ -296,6 +285,7 @@ const FormTemplate = () => {
 							value={tomorrow}
 							min={departing}
 							onchange={onDateChange}
+							required={true}
 						/>
 					</div>
 
@@ -434,7 +424,7 @@ const FormTemplate = () => {
 				/>
 			</div>
 			<Codeblock language='jsx'>
-				{`import { Login } from '@/ui'
+				{`import { Login } from '@/features'
 
 const onsubmit = (event: any) => {
 	// do something...
@@ -457,7 +447,7 @@ const onsubmit = (event: any) => {
 				/>
 			</div>
 			<Codeblock language='jsx'>
-				{`import { Register } from '@/ui'
+				{`import { Register } from '@/features'
 
 const onsubmit = (event: any) => {
 	// do something...
@@ -479,7 +469,7 @@ const onsubmit = (event: any) => {
 				/>
 			</div>
 			<Codeblock language='jsx'>
-				{`import { User } from '@/ui'
+				{`import { User } from '@/features'
 
 const onsubmit = (event: any) => {
 	// do something...
@@ -501,7 +491,7 @@ const onsubmit = (event: any) => {
 				/>
 			</div>
 			<Codeblock language='jsx'>
-				{`import { CreditCard } from '@/ui'
+				{`import { CreditCard } from '@/features'
 
 const onsubmit = (event: any) => {
 	// do something...
@@ -523,7 +513,7 @@ const onsubmit = (event: any) => {
 				/>
 			</div>
 			<Codeblock language='jsx'>
-				{`import { NewsLetter } from '@/ui'
+				{`import { NewsLetter } from '@/features'
 
 const onsubmit = (event: any) => {
 	// do something...

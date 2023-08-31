@@ -2,13 +2,13 @@
 
 import { createContext } from 'react'
 
-import { DrawerProps } from '@/components/ui/drawer/types'
+import { DrawerProps } from '@/types'
 
 const initialState: DrawerProps = {
 	show: false,
 	setShow: () => {},
-	message: '',
-	setMessage: () => {},
+	body: '',
+	setBody: () => {},
 	state: '',
 	setState: () => {},
 	position: '',

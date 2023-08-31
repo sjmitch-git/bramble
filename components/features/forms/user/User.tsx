@@ -1,6 +1,6 @@
 import { Form, Input, Autocomplete } from '@/ui'
 
-import { FormProps } from './types'
+import { FormProps } from '@/types'
 
 import data from '@/data/countries.json'
 

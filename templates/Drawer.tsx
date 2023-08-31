@@ -2,7 +2,8 @@
 
 import UseDrawer from '@/hooks/useDrawer'
 
-import { Codeblock, NewsLetter } from '@/ui'
+import { Codeblock } from '@/ui'
+import { NewsLetter } from '@/features'
 
 const DrawerTemplate = () => {
 	const { showDrawer, closeDrawer } = UseDrawer()
@@ -31,7 +32,7 @@ const DrawerTemplate = () => {
 				<Codeblock language='jsx'>
 					{`import UseDrawer from '@/hooks/useDrawer'
 
-import { NewsLetter } from '@/ui' // import component to be added to drawer.
+import { NewsLetter } from '@/features' // import component to be added to drawer.
 
 const { showDrawer, closeDrawer } = UseDrawer() // expose functionality from custom hook
 
