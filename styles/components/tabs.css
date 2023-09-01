@@ -11,7 +11,7 @@
 		}
 
 		.tab {
-			@apply rounded-t-lg border border-transparent px-4 py-2 text-secondary;
+			@apply rounded-t-lg border border-transparent px-4 py-2;
 
 			&.active {
 				@apply cursor-default border-neutral border-b-transparent bg-white text-dark shadow-lg;
@@ -36,7 +36,7 @@
 			}
 
 			& .tab {
-				@apply w-full border-0 border-b-2 border-transparent bg-transparent shadow-none transition hover:border-warning;
+				@apply w-full border-0 border-b-4 border-transparent bg-transparent shadow-none transition hover:border-warning;
 
 				&.active {
 					@apply border-info font-semibold;

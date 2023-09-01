@@ -1,19 +1,19 @@
 'use client'
 
-import { TabBar } from './TabBar'
+import TabBar from './TabBar'
 
 import { useCallback, useState, useEffect } from 'react'
 
 import { TabsProps, TabProps } from './types'
 
-function Tabs({
+export const Tabs = ({
 	className = '',
 	defaultActiveId = '',
 	tabStyles,
 	icons,
 	children,
 	minimal = false,
-}: TabsProps) {
+}: TabsProps) => {
 	const [tabs, setTabs] = useState<TabProps[]>(null!)
 	const [activeId, setActiveId] = useState<string>(defaultActiveId)
 	const [nodes, setNodes] = useState<React.ReactNode[]>(null!)
@@ -64,4 +64,4 @@ function Tabs({
 	)
 }
 
-export { Tabs }
+export default Tabs

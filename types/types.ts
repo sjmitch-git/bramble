@@ -1,7 +1,8 @@
-export type Tab = {
-	id: string
-	activeId?: string
-	title: React.ReactNode | string
-	tabStyles?: string | undefined
-	onclick: (id: string) => void | undefined
-} & React.HTMLAttributes<HTMLButtonElement>
+/* import { NextComponentType } from 'next'
+
+declare module 'next' {
+	export function dynamic<P>(
+		component: () => Promise<{ default: NextComponentType<P> }>,
+		options?: { ssr?: boolean }
+	): React.ComponentType<P>
+} */

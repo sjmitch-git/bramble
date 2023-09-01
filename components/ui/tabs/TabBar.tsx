@@ -6,7 +6,7 @@ import { Spinner } from '@/ui'
 
 import { TabBarProps } from './types'
 
-export const TabBar = ({ tabs, onclick, activeId, tabStyles }: TabBarProps) => {
+const TabBar = ({ tabs, onclick, activeId, tabStyles }: TabBarProps) => {
 	return (
 		<nav className='tabbar'>
 			{tabs ? (
@@ -29,3 +29,5 @@ export const TabBar = ({ tabs, onclick, activeId, tabStyles }: TabBarProps) => {
 		</nav>
 	)
 }
+
+export default TabBar
