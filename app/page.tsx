@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 	keywords: keywords,
 }
 
-//import HomePage from '@/components/pages/home'
 import { Spinner } from '@/ui'
 
 const HomePage = dynamic(() => import('@/components/pages/home/Home'), {
