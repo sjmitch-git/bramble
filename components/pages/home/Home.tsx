@@ -1,13 +1,4 @@
-'use client'
-
-import dynamic from 'next/dynamic'
-
 import { Dropdown, ReactIcon, NextIcon, TailwindIcon, Tabs } from '@/ui'
-
-/* const Tabs = dynamic(() => import('@/components/ui/tabs/Tabs'), {
-	ssr: false,
-	loading: () => <Spinner className='aspect-square w-11 text-info' />,
-}) */
 
 import config from '@/app.config'
 import data from '@/data/tech.json'

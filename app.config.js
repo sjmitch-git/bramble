@@ -10,7 +10,7 @@ const config = {
 		title: title,
 		titleTemplate: `%s · ${title}`,
 		description: description,
-		url: 'https://bramble-ui.vercel.app',
+		url: process.env.NEXT_PUBLIC_SITE_URL,
 		githubRepo: process.env.NEXT_PUBLIC_AUTHOR_GITHUB_REPO || null,
 		author: process.env.NEXT_PUBLIC_AUTHOR_NAME || null,
 		authorUrl: process.env.NEXT_PUBLIC_AUTHOR_URL || 'https://mitch.gatsbyjs.io/',

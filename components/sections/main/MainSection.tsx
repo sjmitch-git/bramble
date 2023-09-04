@@ -5,6 +5,7 @@ export const MainSection = ({ children }: { children: React.ReactNode }) => {
 		<main>
 			<article data-testid='article'>
 				<Providers>{children}</Providers>
+
 				<hr />
 			</article>
 		</main>

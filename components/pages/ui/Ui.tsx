@@ -15,7 +15,7 @@ const UIPage = () => {
 			<ul className='mb-12 grid gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6'>
 				{links.map((link) => (
 					<Fragment key={link.label}>
-						<li className='flex'>
+						<li className='flex' key={link.label}>
 							<Link
 								href={link.href}
 								className='btn link w-full outline'
@@ -26,7 +26,7 @@ const UIPage = () => {
 						{link.links &&
 							link.links.map((sub) => (
 								<Fragment key={sub.label}>
-									<li className='flex'>
+									<li className='flex' key={sub.label}>
 										<Link
 											href={sub.href}
 											className='btn link w-full outline'
