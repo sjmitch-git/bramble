@@ -1,6 +1,6 @@
 @layer components {
 	.btn {
-		@apply flex items-center justify-center bg-primary p-[var(--button-p)] text-base font-semibold uppercase tracking-widest text-white shadow outline-0 transition;
+		@apply no-underline flex items-center justify-center bg-primary p-[var(--button-p)] text-base font-semibold uppercase tracking-widest text-white shadow outline-0 transition;
 
 		.vertical & {
 			@apply justify-start;

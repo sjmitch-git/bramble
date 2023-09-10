@@ -1,6 +1,6 @@
 @layer components {
 	.select {
-		@apply cursor-pointer text-base capitalize;
+		@apply cursor-pointer rounded-md border-gray-400 text-base capitalize;
 
 		&:disabled {
 			@apply cursor-default;

@@ -4,7 +4,7 @@ import React from 'react'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
-//import { ApolloWrapper } from '@/lib/apollo/apollo-wrapper'
+import { ApolloWrapper } from '@/lib/apollo/apollo-wrapper'
 
 function Providers({ children }: React.PropsWithChildren) {
 	const [client] = React.useState(
@@ -12,12 +12,12 @@ function Providers({ children }: React.PropsWithChildren) {
 	)
 
 	return (
-		// <ApolloWrapper>
-		<QueryClientProvider client={client}>
-			{children}
-			<ReactQueryDevtools initialIsOpen={false} />
-		</QueryClientProvider>
-		// </ApolloWrapper>
+		<ApolloWrapper>
+			<QueryClientProvider client={client}>
+				{children}
+				<ReactQueryDevtools initialIsOpen={false} />
+			</QueryClientProvider>
+		</ApolloWrapper>
 	)
 }
 

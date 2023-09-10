@@ -26,6 +26,7 @@ export const Form = ({
 	const submitButton = useRef<HTMLButtonElement>(null!)
 
 	const handleInput = () => {
+		if (!submitButton || !submitButton.current) return
 		submitButton.current.disabled = !form?.current?.checkValidity()
 	}
 

@@ -1,6 +1,6 @@
 @layer components {
 	.dialog {
-		@apply w-full max-w-md rounded-lg bg-light text-dark shadow-lg;
+		@apply w-full max-w-[22rem] rounded-lg bg-light text-dark shadow-lg md:max-w-md;
 
 		&::backdrop {
 			background-color: rgba(0, 0, 0, 0.8);
@@ -16,8 +16,8 @@
 			@apply mb-8;
 		}
 
-		& + .btn {
+		/* & + .btn {
 			@apply mx-auto;
-		}
+		} */
 	}
 }

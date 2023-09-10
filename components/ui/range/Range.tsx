@@ -59,7 +59,7 @@ export const Range = ({
 						onChange={handleChange}
 						onPointerUp={handlePointerUp}
 						style={scrubStyle}
-						className={`rangeInput ${className}`}
+						className={`rangeInput input ${className}`}
 					/>
 				</label>
 				{feedback && (

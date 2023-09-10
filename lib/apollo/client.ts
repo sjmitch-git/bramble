@@ -9,9 +9,9 @@ export const { getClient } = registerApolloClient(() => {
 	return new NextSSRApolloClient({
 		cache: new NextSSRInMemoryCache(),
 		link: new HttpLink({
-			uri: `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
+			uri: `https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
 			headers: {
-				Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+				Authorization: `Bearer ${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
 			},
 		}),
 	})

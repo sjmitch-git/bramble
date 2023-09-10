@@ -1,24 +1,41 @@
 @layer components {
 	.range {
-		@apply relative;
+		@apply relative w-auto;
 
 		.label {
-			@apply items-center;
+			@apply pb-2;
+
 			span {
-				@apply mb-4 text-xl;
+				@apply mb-1;
 			}
 		}
 
 		.vertical {
 			@apply h-40;
 
+			span {
+				@apply mb-4 inline-block;
+			}
+
 			input {
 				@apply relative top-12 w-auto origin-center -rotate-90;
+			}
+
+			.feedback {
+				@apply pt-8;
+			}
+		}
+
+		input {
+			@apply h-2 w-full appearance-none rounded;
+
+			&::-webkit-slider-thumb {
+				@apply h-5 w-5 cursor-grab appearance-none rounded-full bg-current text-current;
 			}
 		}
 
 		.feedback {
-			@apply mx-auto py-8 text-center;
+			@apply pt-4;
 		}
 	}
 }

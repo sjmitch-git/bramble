@@ -1,3 +1,5 @@
+'use client'
+
 import { Form, Input } from '@/ui'
 
 import { FormProps } from '@/types'

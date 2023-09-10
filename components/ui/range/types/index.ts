@@ -3,6 +3,7 @@ export interface RangeProps extends React.HTMLAttributes<HTMLInputElement> {
 	min?: number
 	max?: number
 	step?: number
+	value?: number | string
 	clr1?: string
 	clr2?: string
 	initial?: number

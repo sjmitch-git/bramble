@@ -7,6 +7,7 @@ import {
 	NextSSRInMemoryCache,
 	SSRMultipartLink,
 } from '@apollo/experimental-nextjs-app-support/ssr'
+
 import { loadErrorMessages, loadDevMessages } from '@apollo/client/dev'
 import { setVerbosity } from 'ts-invariant'
 
@@ -16,11 +17,14 @@ if (process.env.NODE_ENV === 'development') {
 	loadErrorMessages()
 }
 
+const contentfulSpaceId = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID
+const contentfulAccessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
+
 function makeClient() {
 	const httpLink = new HttpLink({
-		uri: `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
+		uri: `https://graphql.contentful.com/content/v1/spaces/${contentfulSpaceId}`,
 		headers: {
-			Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+			Authorization: `Bearer ${contentfulAccessToken}`,
 		},
 	})
 

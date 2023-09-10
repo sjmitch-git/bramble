@@ -5,7 +5,7 @@ export interface SelectProps extends React.HTMLAttributes<HTMLElement> {
 	id?: string
 	title?: string
 	children: React.ReactNode
-	value?: string
+	value?: string | number
 	onChange?: React.ChangeEventHandler<HTMLSelectElement>
 	disabled?: boolean
 	required?: boolean
