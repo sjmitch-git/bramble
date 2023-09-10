@@ -19,6 +19,11 @@ type TextToSpeechProps = {
 	htmlId: string
 }
 
+const htmlToText = (htmlId: string) => {
+	const node = document.getElementById(htmlId)
+	if (node) text = useHtmlToText(node)
+}
+
 export const TextToSpeech = ({ htmlId }: TextToSpeechProps) => {
 	const [speaking, setSpeaking] = useState(false)
 	const [paused, setPaused] = useState(false)
@@ -30,8 +35,7 @@ export const TextToSpeech = ({ htmlId }: TextToSpeechProps) => {
 	const [showOptions, setShowOptions] = useState(false)
 
 	useEffect(() => {
-		const node = document.getElementById(htmlId)
-		if (node) text = useHtmlToText(node)
+		htmlToText(htmlId)
 	}, [htmlId])
 
 	useEffect(() => {
@@ -221,17 +225,6 @@ export const TextToSpeech = ({ htmlId }: TextToSpeechProps) => {
 						</Button>
 					</div>
 				</Dialog>
-				{/* <Button
-					className={`icon sm circle bg-white text-dark shadow-none transition ${
-						showOptions ? 'rotate-90' : 'rotate-0'
-					}`}
-					title='Toggle Options'
-					onClick={() => setShowOptions(!showOptions)}
-					disabled={speaking}
-				>
-					<EllipsisVerticalIcon />
-					<span className='sr-only'>Toggle Options</span>
-				</Button> */}
 			</div>
 
 			{showOptions && (

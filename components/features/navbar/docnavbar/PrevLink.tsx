@@ -11,11 +11,11 @@ import Link from 'next/link'
 import { PlayCircleIcon } from '@heroicons/react/24/solid'
 
 export default function PrevLink({ index }: DocNavBarProps) {
-	if (index === 0) return ''
-
 	const { data } = useQuery<PreviousDocResponse>(GET_DOC_PREV, {
 		variables: { index: index - 1 },
 	})
+
+	if (index === 0) return ''
 
 	if (!data || !data.previousDoc.items[0]) return ''
 	const { title, slug } = data.previousDoc.items[0]
