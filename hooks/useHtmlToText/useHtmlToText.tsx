@@ -19,7 +19,7 @@ const htmlToText = (html: HTMLElement): string => {
 		}
 	}
 
-	extractTextNodes(html)
+	if (html) extractTextNodes(html)
 
 	return textNodes.join(' ')
 }

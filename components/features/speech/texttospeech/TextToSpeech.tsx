@@ -2,7 +2,7 @@
 
 import { useEffect, useState, ChangeEvent } from 'react'
 
-import useHtmlToText from '@/hooks/useHtmlToText'
+//import useHtmlToText from '@/hooks/useHtmlToText'
 
 import { Button, Buttongroup, Select, Range, Dialog } from '@/ui'
 import {
@@ -19,9 +19,34 @@ type TextToSpeechProps = {
 	htmlId: string
 }
 
-const HtmlToText = (htmlId: string) => {
-	const node = document.getElementById(htmlId)
-	if (node) text = useHtmlToText(node)
+function useHtmlToText(htmlId: string) {
+	useEffect(() => {
+		const node = document.getElementById(htmlId)
+		if (node) {
+			const textNodes: string[] = []
+
+			const extractTextNodes = (element: HTMLElement) => {
+				for (let i = 0; i < element.childNodes.length; i++) {
+					const node = element.childNodes[i]
+
+					if (node.nodeType === Node.TEXT_NODE) {
+						if (node.textContent !== null) {
+							let textContent = node.textContent.trim()
+							if (!textContent.endsWith('.')) {
+								textContent += '.'
+							}
+							textNodes.push(textContent)
+						}
+					} else if (node.nodeType === Node.ELEMENT_NODE) {
+						extractTextNodes(node as HTMLElement)
+					}
+				}
+			}
+
+			extractTextNodes(node)
+			text = textNodes.join(' ')
+		}
+	}, [htmlId])
 }
 
 export const TextToSpeech = ({ htmlId }: TextToSpeechProps) => {
@@ -32,13 +57,8 @@ export const TextToSpeech = ({ htmlId }: TextToSpeechProps) => {
 	const [selectedRate, setSelectedRate] = useState(1.0)
 	const [selectedVolume, setSelectedVolume] = useState<number>(1)
 	const [selectedPitch, setSelectedPitch] = useState<number>(1)
-	const [showOptions, setShowOptions] = useState(false)
 
-	/* useEffect(() => {
-		HtmlToText(htmlId)
-	}, [htmlId]) */
-
-	HtmlToText(htmlId)
+	useHtmlToText(htmlId)
 
 	useEffect(() => {
 		const fetchVoices = () => {
@@ -85,7 +105,6 @@ export const TextToSpeech = ({ htmlId }: TextToSpeechProps) => {
 		utterance.pitch = selectedPitch
 		synth.speak(utterance)
 		setSpeaking(true)
-		setShowOptions(false)
 		function handleEndEvent() {
 			setSpeaking(false)
 		}
@@ -228,76 +247,6 @@ export const TextToSpeech = ({ htmlId }: TextToSpeechProps) => {
 					</div>
 				</Dialog>
 			</div>
-
-			{showOptions && (
-				<Dialog
-					title='Speech Options'
-					addForm={true}
-					btnLabel='Open Modal'
-					btnStyles='icon sm circle bg-white text-dark shadow-none'
-				>
-					<div
-						id='speechOptions'
-						className={`flex flex-col gap-4 bg-light`}
-					>
-						<div className='space-around flex gap-2'>
-							<div>
-								<Select
-									id='voiceSelect'
-									className='w-full'
-									onChange={handleVoiceChange}
-									value={selectedVoice}
-									label='Select a voice:'
-								>
-									<option value=''>Select a voice</option>
-									{voices.map((voice, index) => (
-										<option
-											key={index}
-											value={voice.name}
-										>
-											{voice.name}
-										</option>
-									))}
-								</Select>
-							</div>
-							<div>
-								<Select
-									id='rateSelect'
-									onChange={handleRateChange}
-									value={selectedRate}
-									label='Rate:'
-								>
-									<option value={0.75}>Slow</option>
-									<option value={1.0}>Normal</option>
-									<option value={1.25}>Fast</option>
-								</Select>
-							</div>
-						</div>
-
-						<div className='flex justify-around gap-4'>
-							<Range
-								id='volumeRange'
-								min={0}
-								max={1}
-								step={0.1}
-								initial={selectedVolume}
-								label='Volume:'
-								onRangeChange={handleVolumeChange}
-							/>
-
-							<Range
-								id='pitchRange'
-								min={0}
-								max={1.5}
-								step={0.1}
-								initial={selectedPitch}
-								label='Pitch:'
-								onRangeChange={handlePitchChange}
-							/>
-						</div>
-					</div>
-				</Dialog>
-			)}
 		</div>
 	)
 }
