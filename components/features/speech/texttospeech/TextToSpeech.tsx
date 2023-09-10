@@ -19,7 +19,7 @@ type TextToSpeechProps = {
 	htmlId: string
 }
 
-const htmlToText = (htmlId: string) => {
+const HtmlToText = (htmlId: string) => {
 	const node = document.getElementById(htmlId)
 	if (node) text = useHtmlToText(node)
 }
@@ -34,9 +34,11 @@ export const TextToSpeech = ({ htmlId }: TextToSpeechProps) => {
 	const [selectedPitch, setSelectedPitch] = useState<number>(1)
 	const [showOptions, setShowOptions] = useState(false)
 
-	useEffect(() => {
-		htmlToText(htmlId)
-	}, [htmlId])
+	/* useEffect(() => {
+		HtmlToText(htmlId)
+	}, [htmlId]) */
+
+	HtmlToText(htmlId)
 
 	useEffect(() => {
 		const fetchVoices = () => {
