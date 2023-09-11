@@ -47,12 +47,14 @@ export const Register = ({
 
 			<Input
 				label='Password'
+				labelStyles='peer'
 				name='password'
 				autocomplete='new-password'
 				type='password'
 				required={true}
 				onchange={handleChange}
 				className='peer'
+				min={8}
 				pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
 				hint='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters'
 			/>
@@ -63,8 +65,9 @@ export const Register = ({
 				autocomplete='new-password'
 				type='password'
 				required={true}
-				className='peer-invalid:hidden'
+				labelStyles='peer-invalid:hidden'
 				pattern={password}
+				min={8}
 			/>
 
 			<Input

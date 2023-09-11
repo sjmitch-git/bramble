@@ -4,7 +4,7 @@
 	}
 
 	.header {
-		@apply mx-auto w-full px-2 md:px-4 lg:max-w-6xl lg:px-0;
+		@apply mx-auto w-full px-2 md:px-4 lg:max-w-6xl xl:px-0;
 	}
 
 	main {

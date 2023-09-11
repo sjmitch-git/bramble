@@ -97,6 +97,7 @@ export const TextToSpeech = ({ htmlId }: TextToSpeechProps) => {
 		const voiceName = voices.find((voice) => voice.name === selectedVoice)
 		if (voiceName !== undefined) {
 			utterance.voice = voiceName
+			utterance.lang = utterance.voice.lang
 		}
 		utterance.rate = selectedRate
 		utterance.volume = selectedVolume
