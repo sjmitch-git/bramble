@@ -2,8 +2,6 @@
 
 import { useEffect, useState, ChangeEvent } from 'react'
 
-//import useHtmlToText from '@/hooks/useHtmlToText'
-
 import { Button, Buttongroup, Select, Range, Dialog } from '@/ui'
 import {
 	PauseIcon,
