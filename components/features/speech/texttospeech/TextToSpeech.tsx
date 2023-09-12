@@ -69,6 +69,7 @@ export const TextToSpeech = ({ htmlId }: TextToSpeechProps) => {
 	}, [])
 
 	useEffect(() => {
+		if (!voices.length) return
 		const defaultVoice = voices.find((voice) => voice.default)
 		if (defaultVoice) {
 			setSelectedVoice(defaultVoice.name)
@@ -189,7 +190,12 @@ export const TextToSpeech = ({ htmlId }: TextToSpeechProps) => {
 									value={selectedVoice}
 									label='Select a voice:'
 								>
-									<option value=''>Select a voice</option>
+									<option
+										value=''
+										disabled
+									>
+										Select a voice
+									</option>
 									{voices.map((voice, index) => (
 										<option
 											key={index}
