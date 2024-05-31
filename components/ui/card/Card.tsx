@@ -46,4 +46,4 @@ const Card = ({
 	)
 }
 
-export {Card}
+export { Card }

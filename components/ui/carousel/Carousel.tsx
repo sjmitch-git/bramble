@@ -11,7 +11,7 @@ export const Carousel = ({
 	data,
 	caption,
 	autoplay = false,
-	gallery,
+	gallery = false,
 	className = '',
 	theme = '',
 	rtl,
@@ -125,7 +125,7 @@ export const Carousel = ({
 									title={item.name}
 									description={item.description}
 									link={item.link}
-									className='aspect-[4/3] w-full shadow-none even:bg-dark even:text-light'
+									className='aspect-[4/3] shadow-none even:bg-dark even:text-light'
 									layout='full'
 									linkLabel={item.name}
 									key={index}

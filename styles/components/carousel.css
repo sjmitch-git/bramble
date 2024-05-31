@@ -1,51 +1,52 @@
 @layer components {
+	.carousel {
+		@apply relative flex justify-center rounded-lg border-4 border-dark bg-dark;
 
-    .carousel {
-        @apply relative flex justify-center rounded-lg border-4 border-dark bg-dark;
+		&.light {
+			@apply border-light bg-light;
+		}
 
-        &.light {
-            @apply border-light bg-light;
-        }
+		& .inner {
+			@apply relative max-w-sm overflow-hidden;
+		}
 
-        & .inner {
-            @apply max-w-sm relative overflow-hidden;
-        }
+		& .gallery {
+			@apply relative h-[300px] grid-cols-none transition-all duration-500;
 
-        & .gallery {
-            @apply grid-cols-none h-[300px] transition-all duration-500 relative;
-        }
+			& .figure {
+				@apply min-w-full;
+			}
+		}
 
-        & .cardgroup {
-            @apply flex h-[288px] transition-all duration-500 relative;
+		& .cardgroup {
+			@apply relative flex h-[288px] transition-all duration-500;
 
-            & .card-message {
-                @apply line-clamp-6 text-lg md:text-xl md:leading-normal;
-            }
+			& .card-message {
+				@apply line-clamp-6 text-lg md:text-xl md:leading-normal;
+			}
 
-            & .title {
-                @apply text-2xl;
-            }
-        }
+			& .title {
+				@apply text-2xl;
+			}
+		}
 
-        &:not(:has(.modal)) .figcaption {
-            @apply relative -top-8 text-light text-lg bg-[var(--shim-color)] !pt-1;            
-        }
+		&:not(:has(.modal)) .figcaption {
+			@apply relative -top-8 bg-[var(--shim-color)] !pt-1 text-lg text-light;
+		}
 
-        .prev-btn {
-            @apply absolute bottom-0 start-1 top-0 flex
-        }
+		.prev-btn {
+			@apply absolute bottom-0 start-1 top-0 flex;
+		}
 
-        .next-btn {
-            @apply absolute bottom-0 end-1 top-0 flex
-        }
+		.next-btn {
+			@apply absolute bottom-0 end-1 top-0 flex;
+		}
 
-        @media (hover: none) and (pointer: coarse) {
-
-            .prev-btn,
-            .next-btn {
-                display: none;
-            }
-        }
-    }
-
+		@media (hover: none) and (pointer: coarse) {
+			.prev-btn,
+			.next-btn {
+				display: none;
+			}
+		}
+	}
 }

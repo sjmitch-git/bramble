@@ -31,21 +31,22 @@ export const Gallery = ({
 				className={`gallery ${className}`}
 				style={style}
 			>
-				{data.map((item, index) => (
-					<Figure
-						caption={caption && item.name}
-						key={index}
-						className={aspect}
-					>
-						<img
-							src={item.src}
-							alt={item.name}
-							title={item.name}
-							tabIndex={0}
-							onClick={() => handleClick(index)}
-						/>
-					</Figure>
-				))}
+				{data &&
+					data.map((item, index) => (
+						<Figure
+							caption={caption && item.name}
+							key={index}
+							className={aspect}
+						>
+							<img
+								src={item.src}
+								alt={item.name}
+								title={item.name}
+								tabIndex={0}
+								onClick={() => handleClick(index)}
+							/>
+						</Figure>
+					))}
 			</div>
 
 			{modal && (
