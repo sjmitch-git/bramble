@@ -1,6 +1,6 @@
 @layer components {
 	.figure {
-		@apply h-auto w-full;
+		@apply h-auto min-w-full;
 
 		&:has(.video) {
 			@apply relative aspect-video;
