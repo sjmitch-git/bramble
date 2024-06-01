@@ -1,6 +1,6 @@
 @layer components {
 	.card {
-		@apply relative flex flex-row rounded border shadow-lg;
+		@apply relative flex flex-row rounded border bg-white shadow-lg;
 
 		&.dark {
 			@apply border-dark bg-dark text-light;
